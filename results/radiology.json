@@ -1,0 +1,387 @@
+{
+  "config": "Radiology",
+  "config_path": "radiology.yml",
+  "object_ids": [
+    "67951a807e0084c5fa71f7e5",
+    "6795c03473bf14921fb1b527",
+    "6796f8178a14699f16140677",
+    "6794b4a88d90554e606421b0",
+    "67964d8f8d90554e60731b3a",
+    "6795dc6a8a14699f160a3aef",
+    "6796c899f9f986ea7fc6548d",
+    "6794ba84a1a09a48fea7d5a9",
+    "67971d483e76d5b587377310",
+    "67961f45f9f986ea7fc0555c"
+  ],
+  "eval_result": {
+    "config_name": "radiology",
+    "num_candidates": 10,
+    "average_final_score": 71.0,
+    "average_soft_scores": [
+      {
+        "criteria_name": "radiology_expertise",
+        "reasoning": null,
+        "average_score": 7.9
+      },
+      {
+        "criteria_name": "board_certification",
+        "reasoning": null,
+        "average_score": 7.3
+      },
+      {
+        "criteria_name": "diagnostic_imaging_expertise",
+        "reasoning": null,
+        "average_score": 8.9
+      }
+    ],
+    "average_hard_scores": [
+      {
+        "criteria_name": "has_md_degree",
+        "reasoning": null,
+        "pass_rate": 0.9
+      }
+    ],
+    "individual_results": [
+      {
+        "candidate_name": "Dr Rakhee Gogoi",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/dr-rakhee-gogoi-a9b2199",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "No explicit mention of board certification (e.g., ABR, FRCR) or comparable credential is found in the profile. The candidate has MD from Assam Medical College and senior residency but no indication of a formal radiology board certification.",
+            "score": 3.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "The candidate has approximately 24 years of post-MD experience, routinely reporting 30-50 MRI and CT scans daily, plus mammography, ultrasound, and X-rays. This clearly exceeds 3+ years of experience interpreting diagnostic imaging studies.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "The candidate demonstrates strong expertise in radiology reporting, covering MRI, CT, mammography, interventional procedures, and cross-sectional body cases, including Oncoradiology. The candidate is also experienced in diagnostic workflows and administrative responsibilities for department setup. However, no explicit mention of AI applications in medical imaging.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate holds an MD degree from Assam Medical College, India, satisfying the requirement of MD from a medical school in India or the U.S.",
+            "passes": true
+          }
+        ],
+        "final_score": 70.0,
+        "raw_data": {
+          "_id": "67951a807e0084c5fa71f7e5",
+          "name": "Dr Rakhee Gogoi",
+          "linkedinId": "dr-rakhee-gogoi-a9b2199"
+        }
+      },
+      {
+        "candidate_name": "Abhishek Suman",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/abhishek-suman-9428895b",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "Candidate holds FRCR, which is a recognized board certification in Radiology.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Candidate has worked in various radiology roles, including consultant radiologist, with experience in musculoskeletal radiology and diagnostic radiology, indicating more than 3 years of experience interpreting imaging studies.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Candidate has expertise in musculoskeletal radiology and worked as a consultant radiologist; however, no explicit mention of AI applications, though diagnostic protocols and reporting expertise are implied.",
+            "score": 7.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate has an MD degree from Maulana Azad Medical College in India, satisfying the requirement.",
+            "passes": true
+          }
+        ],
+        "final_score": 80.00000000000001,
+        "raw_data": {
+          "_id": "6795c03473bf14921fb1b527",
+          "name": "Abhishek Suman",
+          "linkedinId": "abhishek-suman-9428895b"
+        }
+      },
+      {
+        "candidate_name": "Anouk S.",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/anouk-stein",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "Candidate is explicitly stated as Board Certified Radiologist.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Candidate has extensive experience working with CT and MRI scans and active involvement in radiology projects and AI-assisted diagnostic radiology, indicating well over 3 years of relevant experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Candidate has expertise in radiology reporting, AI applications in medical imaging, diagnostic workflows, and has worked on multiple AI and annotation projects in the medical imaging domain.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "No explicit mention of MD degree from a medical school in the U.S. or India; education includes Radiology Residency at Mount Sinai and Pathology Internship but no direct mention of MD degree or origin. Therefore, unable to confirm MD degree from U.S. or India.",
+            "passes": false
+          }
+        ],
+        "final_score": 0.0,
+        "raw_data": {
+          "_id": "6794b4a88d90554e606421b0",
+          "name": "Anouk S.",
+          "linkedinId": "anouk-stein"
+        }
+      },
+      {
+        "candidate_name": "Pawandeep Kohli",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/pawandeep-kohli-b9726395",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "Indian Medical Council Certified Diagnostic Radiologist since 1989. Certification is Indian equivalent, but no mention of ABR, FRCR, or U.S. board certification specifically.",
+            "score": 6.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Experienced Chief Radiologist with many years diagnosing patient illnesses with various imaging modalities including mammograms, CT scans, MRI, ultrasounds, and x-rays. This clearly exceeds 3 years of experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Has expertise in diagnostic and interventional radiology, knowledgeable and skilled in multimodality imaging techniques, and has worked with advanced imaging technology. No explicit mention of AI applications but has experience in advanced diagnostic workflows.",
+            "score": 7.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate holds an MD degree (MD in Radiodiagnosis) from Panjab University in India, clearly meeting the requirement of an MD degree from a U.S. or Indian medical school.",
+            "passes": true
+          }
+        ],
+        "final_score": 73.33333333333334,
+        "raw_data": {
+          "_id": "67964d8f8d90554e60731b3a",
+          "name": "Pawandeep Kohli",
+          "linkedinId": "pawandeep-kohli-b9726395"
+        }
+      },
+      {
+        "candidate_name": "Dr. Meenu Bansal",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/dr-meenu-bansal-604a2532",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "Candidate holds FRCR (UK) and EDiR certifications, which are well-recognized equivalents to board certification in Radiology.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Candidate has 12 years of experience interpreting CT, MRI, and USG studies, exceeding the 3-year minimum.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Candidate has expertise in radiology reporting, diagnostic protocols through extensive experience and has likely worked with advanced diagnostic workflows; however, no explicit mention of AI applications in imaging.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate holds an MD degree in Radiodiagnosis from KMC Manipal, India, satisfying the hard criterion.",
+            "passes": true
+          }
+        ],
+        "final_score": 86.66666666666667,
+        "raw_data": {
+          "_id": "6795dc6a8a14699f160a3aef",
+          "name": "Dr. Meenu Bansal",
+          "linkedinId": "dr-meenu-bansal-604a2532"
+        }
+      },
+      {
+        "candidate_name": "Kushal Parikh",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/kushalparikh1",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "The candidate is board-certified, as stated in the summary.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "The candidate has multiple years of experience interpreting a variety of imaging studies including CT and MRI, evidenced by roles such as diagnostic radiologist and radiology resident.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Demonstrated expertise in radiology reporting, diagnostic workflows, and AI applications is evident from leadership roles, advisory experience, and explicit mention of AI in healthcare projects.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "The candidate holds an MD from the University of Illinois at Chicago, a U.S. medical school.",
+            "passes": true
+          }
+        ],
+        "final_score": 93.33333333333333,
+        "raw_data": {
+          "_id": "6796c899f9f986ea7fc6548d",
+          "name": "Kushal Parikh",
+          "linkedinId": "kushalparikh1"
+        }
+      },
+      {
+        "candidate_name": "Richard Thomas",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/richard-thomas-89489a8a",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "No explicit information on board certification (e.g., ABR, FRCR) was provided in the candidate's summary.",
+            "score": 3.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Candidate has extensive years of experience interpreting CT, MRI, and other imaging modalities, including leadership roles and clinical fellowship, indicating well above 3 years of experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Candidate has held positions such as Director of Cardiac CT, Associate Magnetic Resonance Medical Director, and worked on diagnostic workflows. However, no explicit mention of AI-assisted image analysis projects, but given leadership in thoracic and cardiovascular imaging, expertise is strong.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate holds an MD degree from St. John's Medical College in India, meeting the requirement of an MD from India or the U.S.",
+            "passes": true
+          }
+        ],
+        "final_score": 66.66666666666666,
+        "raw_data": {
+          "_id": "6794ba84a1a09a48fea7d5a9",
+          "name": "Richard Thomas",
+          "linkedinId": "richard-thomas-89489a8a"
+        }
+      },
+      {
+        "candidate_name": "Dr Vikash Rustagi",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/drvikashrustagi",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "Candidate holds FRCR (UK) and EDiR (European Diploma in Radiology), which are recognized advanced radiology certifications comparable to board certification.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Candidate has 3 years of clinical experience and proficiency in interpreting X-ray, USG, CT, MRI as indicated in multiple senior roles.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Candidate demonstrates expertise in radiology reporting and diagnostic protocols across multiple modalities and shows interest and involvement in AI and machine learning innovations in medical imaging.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate has an MD degree from Topiwala National Medical College, Mumbai, India, satisfying the requirement.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "67971d483e76d5b587377310",
+          "name": "Dr Vikash Rustagi",
+          "linkedinId": "drvikashrustagi"
+        }
+      },
+      {
+        "candidate_name": "Dr Rituparna Das",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/dr-rituparna-das-44a648187",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "The candidate holds an MD and DNB in Radiodiagnosis from reputable Indian institutions, which are recognized postgraduate qualifications in Radiology in India. While there is no explicit mention of internationally recognized board certifications such as ABR or FRCR, the DNB is considered a board equivalent in India.",
+            "score": 7.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "The candidate has multiple years experience as a Consultant Radiologist and Specialist Radiology at diagnostic centers and hospitals. Expertise includes reading neuro & body CT, MRI, USG, Doppler, and radiography, demonstrating well over 3 years of diagnostic imaging experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "The candidate is skilled in diagnostic imaging and image-guided interventions, well-versed in diagnostic workflows with modern imaging modalities. However, there is no explicit mention of experience with AI applications in medical imaging.",
+            "score": 7.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "The candidate has an MD degree in Diagnostic Radiology from Banaras Hindu University, India.",
+            "passes": true
+          }
+        ],
+        "final_score": 76.66666666666666,
+        "raw_data": {
+          "_id": "67961f45f9f986ea7fc0555c",
+          "name": "Dr Rituparna Das",
+          "linkedinId": "dr-rituparna-das-44a648187"
+        }
+      },
+      {
+        "candidate_name": "Harshna V.",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/harshna-v-ab859b58",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "Candidate has completed fellowships and clinical fellow positions at prestigious U.S. institutions (Massachusetts General Hospital, Harvard Medical School), implying advanced post-graduate training, but explicit board certification (ABR, FRCR) is not mentioned in the provided data.",
+            "score": 7.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Candidate has several years of experience as Consultant Radiologist and fellowships in abdominal, cardiovascular imaging, and interventional radiology, indicating significant experience interpreting CT and MRI scans and other imaging modalities.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Candidate has extensive expertise including diagnostic and interventional radiology, experience with diagnostic workflows, and involvement with advanced imaging centers; AI-assisted image analysis is mentioned in query but not explicitly confirmed in profile, yet research fellowships and academic positions imply familiarity with advanced radiology technologies.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate holds an MD degree in Radiology from Gujarat Cancer & Research Institute, B. J. Medical College, Civil Hospital Ahmedabad in India, which satisfies the criterion of an MD degree from medical school in India.",
+            "passes": true
+          }
+        ],
+        "final_score": 80.00000000000001,
+        "raw_data": {
+          "_id": "6796f8178a14699f16140677",
+          "name": "Harshna V.",
+          "linkedinId": "harshna-v-ab859b58"
+        }
+      }
+    ]
+  }
+}

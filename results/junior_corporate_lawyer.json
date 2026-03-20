@@ -1,0 +1,442 @@
+{
+  "config": "Junior Corporate Lawyer",
+  "config_path": "junior_corporate_lawyer.yml",
+  "object_ids": [
+    "6795ac4cf9f986ea7fbc3ab5",
+    "6796e2f3a1a09a48febc72c6",
+    "679644d173bf14921fb652de",
+    "679667be73bf14921fb7bd29",
+    "67962bcf0db3e792567f8871",
+    "6795579c3eff0c142a7dd268",
+    "6794acb73e76d5b587218f3b",
+    "6795c93a52a365d11683e80e",
+    "6795b26ff9f986ea7fbc7e39",
+    "67962a4a8d90554e6071cc29"
+  ],
+  "eval_result": {
+    "config_name": "junior_corporate_lawyer",
+    "num_candidates": 10,
+    "average_final_score": 74.33333333333334,
+    "average_soft_scores": [
+      {
+        "criteria_name": "international_law_familiarity",
+        "reasoning": null,
+        "average_score": 8.8
+      },
+      {
+        "criteria_name": "ma_transaction_experience",
+        "reasoning": null,
+        "average_score": 7.7
+      },
+      {
+        "criteria_name": "contract_negotiation_skills",
+        "reasoning": null,
+        "average_score": 8.6
+      }
+    ],
+    "average_hard_scores": [
+      {
+        "criteria_name": "reputed_law_school",
+        "reasoning": null,
+        "pass_rate": 1.0
+      },
+      {
+        "criteria_name": "appropriate_experience_level",
+        "reasoning": null,
+        "pass_rate": 0.9
+      }
+    ],
+    "individual_results": [
+      {
+        "candidate_name": "Mariachiara Farina",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/mariachiara-farina-a0bba311",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "Candidate has extensive senior lawyer experience at Intesa Sanpaolo focusing on Equity Investments, M&A transactions, and extraordinary corporate transactions including due diligence and drafting share purchase agreements. This demonstrates strong support in Corporate M&A transactions.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "Candidate has significant experience drafting and negotiating various agreements such as engagement letters, NDAs, SPAs, SHAs, IRAs, ROFOs, voting agreements, and others in a corporate and banking context, indicating excellent contract negotiation skills.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "Candidate frequently advises on multi-jurisdictional business matters, coordinates cross-border transactions, and monitors legal/regulatory developments at EU and national levels, showing strong familiarity with international business law and regulatory compliance.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "Candidate has multiple years (likely well over 4 years) working as a lawyer in corporate/M&A roles at Intesa Sanpaolo, a major global banking organization, meeting the requirement for experience at a leading in-house global organization.",
+            "passes": true
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "Candidate graduated with a Master's degree in Law from Scuola Superiore 'Sant' Anna' Di Studi Universitari E Di Perfezionamento, a prestigious European institution, thus meeting the reputed law school requirement.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "6795ac4cf9f986ea7fbc3ab5",
+          "name": "Mariachiara Farina",
+          "linkedinId": "mariachiara-farina-a0bba311"
+        }
+      },
+      {
+        "candidate_name": "Marina Leonova",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/marina-leonova-b384b275",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "Candidate has 20 years of extensive experience in M&A, managing complex transactions from start to finish across multiple jurisdictions, including conducting due diligence and preparing legal documentation.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "Candidate drafts MOUs, term sheets, and master project plans involving negotiations among multiple parties, demonstrating strong contract drafting and negotiation skills.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "Candidate has broad experience with international companies, cross-border transactions, regulatory approvals, and training in solicitor practices for England and Wales, indicating high familiarity with international law.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "Candidate has 20 years of M&A experience but not explicitly as a Corporate Lawyer at a leading law firm for 2-4 years; experience is mostly in corporate roles, in-house and strategic positions rather than at a leading international law firm.",
+            "passes": false
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "Candidate graduated from Lomonosov Moscow State University, which is a reputed law school in Europe.",
+            "passes": true
+          }
+        ],
+        "final_score": 0.0,
+        "raw_data": {
+          "_id": "6796e2f3a1a09a48febc72c6",
+          "name": "Marina Leonova",
+          "linkedinId": "marina-leonova-b384b275"
+        }
+      },
+      {
+        "candidate_name": "Fran\u00e7ois De Voghel",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/fran%C3%A7ois-de-voghel-788350b",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "Has handled a number of corporate transactions including acquisitions and divestitures with experience in complex acquisitions. Demonstrates solid M&A related work throughout various senior legal counsel roles.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "Has negotiated many complex and high-value commercial and sourcing agreements and led legal workflows supporting business projects, indicating strong contract negotiation skills.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "Extensive international and multicultural legal experience supporting US and European multinational groups, and involvement in compliance and privacy, shows strong familiarity with international business law and regulatory environments.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "Has more than two years of corporate legal experience including senior counsel roles in major global organizations, as well as at international law firms, meeting the 2-4 year requirement at leading firms/organizations in Europe.",
+            "passes": true
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "Holds advanced law degrees from reputed European institutions: Eberhard-Karls-Universit\u00e4t T\u00fcbingen and Katholieke Universiteit Leuven, both leading European law schools.",
+            "passes": true
+          }
+        ],
+        "final_score": 80.00000000000001,
+        "raw_data": {
+          "_id": "679644d173bf14921fb652de",
+          "name": "Fran\u00e7ois De Voghel",
+          "linkedinId": "fran%C3%A7ois-de-voghel-788350b"
+        }
+      },
+      {
+        "candidate_name": "Caroline M.",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/caroline-m-26924b97",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "Candidate has extensive commercial and transactional experience, mainly supporting commercial negotiations and sales/transactional matters, but there is no explicit mention of direct M&A transaction experience or involvement in due diligence or corporate M&A documentation.",
+            "score": 4.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "Candidate leads sales/transactional/SaaS commercial negotiations, handles post-contract management, and supports junior counsels, indicating strong skills in drafting and negotiating various commercial agreements.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "Candidate is dual-qualified in England & Wales and Republic of Ireland, working across EMEA and Nordics, with knowledge of civil laws in Europe and multiple international qualifications. Experience in international regulatory compliance and advising on data protection further supports a strong familiarity with international business law.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "Candidate has significantly more than 2-4 years experience, including trainee solicitor experience at a top global law firm (Norton Rose Fulbright), multiple in-house legal counsel roles at major international organizations, and seems to exceed minimum requirements, so meets the experience requirement.",
+            "passes": true
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "Candidate graduated from reputable European institutions including University College London (UCL) for a Master's degree in European and International Law and Durham University in International Trade and Commercial Law. Also holds a Master's from The University of Law, all of which are recognized respected law schools in Europe.",
+            "passes": true
+          }
+        ],
+        "final_score": 70.0,
+        "raw_data": {
+          "_id": "679667be73bf14921fb7bd29",
+          "name": "Caroline M.",
+          "linkedinId": "caroline-m-26924b97"
+        }
+      },
+      {
+        "candidate_name": "Clara Bernadi Gasulla",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/clarabernadi",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "Candidate has extensive experience in Corporate, M&A, and company restructuring work. They perform due diligence procedures and draft associated legal documentation such as SPAs and SHAs. This experience aligns well with supporting M&A transactions.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "Candidate explicitly has experience negotiating, reviewing, and drafting a variety of commercial contracts and agreements at national and international levels, including sales, distribution, agency agreements, NDAs, and others.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "Candidate has a strong background in international business law, including advising international companies, cross-border contracts, and international arbitrations. Also trained with an LL.M. in International Business Law and experience liaising with outside counsel internationally.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "Candidate has at least 2 years as an International Associate and Senior Corporate Lawyer in well-known and reputed law firms, including Fieldfisher JAUSAS and Freshfields Bruckhaus Deringer, which are top-tier international law firms in Europe and internationally.",
+            "passes": true
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "Candidate holds an LL.M. from American University Washington College of Law, which is a reputed law school in the USA, and also studied at Esade Business & Law School, a leading European law school, fulfilling the requirement.",
+            "passes": true
+          }
+        ],
+        "final_score": 86.66666666666667,
+        "raw_data": {
+          "_id": "67962bcf0db3e792567f8871",
+          "name": "Clara Bernadi Gasulla",
+          "linkedinId": "clarabernadi"
+        }
+      },
+      {
+        "candidate_name": "Humberto Linares Dellepiane",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/humberto-linares-dellepiane-26837b32",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "The candidate has over a decade of experience in Corporate Law and M&A, directly involved in numerous complex transactions including the Bayer/Monsanto merger and multiple cross-border deals. He has led due diligence and transaction negotiations consistently.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "Candidate demonstrates extensive experience drafting and negotiating complex contracts, including leading contract management tool implementations and negotiating multimillion-dollar investments and acquisitions.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "The candidate has significant experience advising multinational companies across multiple jurisdictions, handling cross-border deals, and has studied and worked in Europe, indicating strong familiarity with international regulatory compliance.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "The candidate has over 10 years of relevant experience including roles as in-house legal professional and senior associate at well-recognized firms and global organizations. Although no specific USA, Europe, or Canada law firm is named except for Barcelona internship, experience at top-tier firms in Argentina and with multinational companies qualifies as appropriate.",
+            "passes": true
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "The candidate completed a Master's in Business Law from Universidad De San Andr\u00e9s, a well-regarded university in Argentina, and participated in an exchange program at Universitat Pompeu Fabra in Barcelona, a reputed European institution. While not a top US law school, the European law school experience supports passing this requirement.",
+            "passes": true
+          }
+        ],
+        "final_score": 96.66666666666667,
+        "raw_data": {
+          "_id": "6795579c3eff0c142a7dd268",
+          "name": "Humberto Linares Dellepiane",
+          "linkedinId": "humberto-linares-dellepiane-26837b32"
+        }
+      },
+      {
+        "candidate_name": "Marina Chronaki",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/marina-chronaki-942743a5",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "Candidate has experience providing legal advice on mergers and acquisitions, including due diligence, financing, regulatory issues, drafting and negotiation of transaction documents, and cross border transactions, indicating solid M&A transaction support experience.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "Candidate has drafted and negotiated a wide range of agreements, including SPA and SHA, and corporate statutes, and has experience negotiating contracts, showing strong contract negotiation skills.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "Candidate has experience with cross-border transactions, European competition law, compliance in pharmaceutical sector, and holds education from European institutions, indicating good familiarity with international regulatory requirements.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "Candidate has at least several years of experience as a corporate lawyer at established law firms in Europe, including senior associate roles advising on M&A and corporate matters, meeting the 2-4 years experience criterion at a leading European law firm.",
+            "passes": true
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "Candidate holds master's degrees from Maastricht University and Ethnikon Kai Kapodistriakon Panepistimion Athinon, and participated in an Erasmus IP program at Universit\u00e4t Salzburg, all reputed European educational institutions.",
+            "passes": true
+          }
+        ],
+        "final_score": 80.00000000000001,
+        "raw_data": {
+          "_id": "6794acb73e76d5b587218f3b",
+          "name": "Marina Chronaki",
+          "linkedinId": "marina-chronaki-942743a5"
+        }
+      },
+      {
+        "candidate_name": "Angela Campbell",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/angela-campbell-209310114",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "The candidate's roles at Taylor Wessing and Morrison Foerster involved cross-border transactions and regulatory compliance, indicating relevant experience supporting M&A transactions including legal documentation and due diligence.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "As an international business lawyer and partner, the candidate leads negotiations and drafts legal documents, showing strong contract negotiation skills.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "The candidate has a Master\u2019s in International Law, and experience advising clients on cross-border transactions and navigating international regulatory frameworks, demonstrating excellent familiarity with international business law and regulations.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "The candidate has worked as an Associate Attorney and Senior Associate at leading law firms including Morrison Foerster, Taylor Wessing (partner level), and Squire Patton Boggs. Although exact years of experience are not specified, the seniority and partner status imply sufficient experience above two years at top-tier firms in Europe and the USA.",
+            "passes": true
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "The candidate graduated with a Bachelor's degree from The George Washington University (a reputed US law school) and a Master\u2019s from Universit\u00e9 Paris-Sorbonne (a leading European institution), which meets the criteria for a reputed law school in Europe and the USA.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "6795c93a52a365d11683e80e",
+          "name": "Angela Campbell",
+          "linkedinId": "angela-campbell-209310114"
+        }
+      },
+      {
+        "candidate_name": "Ekaterina de Saugy",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/ekaterinadesaugy",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "The candidate has corporate restructuring experience, handling legal aspects related to business growth and restructuring but no explicit mention of M&A transaction support, due diligence, or legal documentation for M&A deals.",
+            "score": 5.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "Extensive experience drafting and issuing a wide range of commercial contracts (sales, purchase, NDAs, SPAs, agency, service, licensing, etc.) under various jurisdictions, indicating strong contract drafting and negotiation skills.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "Has a strong background in international compliance, trade law, international arbitration, and familiarity with laws of multiple countries (English, Ukrainian, Russian, Swiss). Also holds an LLM in International Business Law, demonstrating excellent international law knowledge.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "The candidate has over two years of experience working as a senior legal counsel and legal adviser at major international companies, which aligns with the required 2-4 years of relevant experience.",
+            "passes": true
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "The candidate graduated from Lomonosov Moscow State University (a highly reputed law school in Europe) and earned an LLM from Queen Mary University of London, which is also a well-regarded European law school.",
+            "passes": true
+          }
+        ],
+        "final_score": 76.66666666666666,
+        "raw_data": {
+          "_id": "67962a4a8d90554e6071cc29",
+          "name": "Ekaterina de Saugy",
+          "linkedinId": "ekaterinadesaugy"
+        }
+      },
+      {
+        "candidate_name": "Veronique Lanthier",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/veronique-lanthier-b87b3351",
+        "soft_scores": [
+          {
+            "criteria_name": "ma_transaction_experience",
+            "reasoning": "The candidate has transactional experience including negotiation and drafting of documentation related to restructuring and contractual terms with hotel owners and corporate initiatives at Marriott, indicating solid exposure to transactional support relevant to M&A context, though not explicitly focused on M&A deals.",
+            "score": 7.0
+          },
+          {
+            "criteria_name": "contract_negotiation_skills",
+            "reasoning": "Strong experience in negotiation and drafting documentation in a complex corporate environment across multiple jurisdictions is evident from her roles at Marriott and O'Melveny & Myers, demonstrating good above-average contract negotiation skills.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "international_law_familiarity",
+            "reasoning": "Extensive involvement in regulatory compliance across multiple jurisdictions and international trade matters demonstrates high familiarity with international business law and regulatory requirements globally.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "appropriate_experience_level",
+            "reasoning": "The candidate has several years of experience as senior counsel at Marriott and prior counsel experience at a major international law firm, exceeding 2-4 years and involving roles at leading firms and global organizations.",
+            "passes": true
+          },
+          {
+            "criteria_name": "reputed_law_school",
+            "reasoning": "The candidate graduated from Stanford Law School, which is a highly reputed law school in the USA.",
+            "passes": true
+          }
+        ],
+        "final_score": 80.0,
+        "raw_data": {
+          "_id": "6795b26ff9f986ea7fbc7e39",
+          "name": "Veronique Lanthier",
+          "linkedinId": "veronique-lanthier-b87b3351"
+        }
+      }
+    ]
+  }
+}
