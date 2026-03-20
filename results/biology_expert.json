@@ -2,36 +2,36 @@
   "config": "Biology Expert",
   "config_path": "biology_expert.yml",
   "object_ids": [
-    "6796faaba1a09a48febd52a6",
     "6794d034f9f986ea7fb48967",
     "6795545d73bf14921facfaa0",
-    "67959ef78a14699f160814f2",
+    "6796faaba1a09a48febd52a6",
     "6795be19f9f986ea7fbcfc50",
     "6794b3dd73bf14921fa6e093",
     "6795e04b3eff0c142a825c8f",
     "67952fe2a1a09a48feac6914",
     "679508588d90554e60675840",
-    "67968c7e3e76d5b58732638d"
+    "67968c7e3e76d5b58732638d",
+    "679711b53e76d5b587370bc8"
   ],
   "eval_result": {
     "config_name": "biology_expert",
     "num_candidates": 10,
-    "average_final_score": 38.333333333333336,
+    "average_final_score": 37.66666666666667,
     "average_soft_scores": [
       {
         "criteria_name": "molecular_biology_research",
         "reasoning": null,
-        "average_score": 8.4
+        "average_score": 8.5
       },
       {
         "criteria_name": "experimental_design_skills",
         "reasoning": null,
-        "average_score": 8.5
+        "average_score": 8.6
       },
       {
         "criteria_name": "teaching_mentoring_experience",
         "reasoning": null,
-        "average_score": 6.1
+        "average_score": 5.7
       }
     ],
     "average_hard_scores": [
@@ -47,45 +47,6 @@
       }
     ],
     "individual_results": [
-      {
-        "candidate_name": "Megan Rowton",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/meganrowton",
-        "soft_scores": [
-          {
-            "criteria_name": "molecular_biology_research",
-            "reasoning": "Candidate has over 16 years of experience in molecular biology, functional genomics, and related fields with extensive research background including postdoctoral and senior scientist roles. Experience includes gene editing, developmental biology, and genetics, all well-aligned with molecular biology research.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "experimental_design_skills",
-            "reasoning": "Candidate demonstrates strong technical skills in CRISPR gene editing, nucleic acid and protein purification, qPCR, western blot, FACS, RNA-seq, ATAC-seq, and data analysis with relevant software, indicating excellent experimental design and lab technique competence.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "Candidate taught General Biology and Developmental Biology courses as a teaching assistant, gained experience in scientific pedagogy, and likely mentored lab members as a senior scientist, indicating good teaching and mentoring skills.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location",
-            "reasoning": "Undergraduate location is not specified in the information provided.",
-            "passes": false
-          },
-          {
-            "criteria_name": "phd_from_top_us_university",
-            "reasoning": "PhD was obtained from Arizona State University, which is a reputable research university but generally not ranked among the top tier US universities (such as Ivy League or top 20 programs in biological sciences).",
-            "passes": false
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "6796faaba1a09a48febd52a6",
-          "name": "Megan Rowton",
-          "linkedinId": "meganrowton"
-        }
-      },
       {
         "candidate_name": "April Peterson",
         "candidate_linkedin_url": "https://www.linkedin.com/in/april-peterson-24619949",
@@ -162,6 +123,45 @@
           "_id": "6795545d73bf14921facfaa0",
           "name": "Daniel Konzman",
           "linkedinId": "dkonzman"
+        }
+      },
+      {
+        "candidate_name": "Megan Rowton",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/meganrowton",
+        "soft_scores": [
+          {
+            "criteria_name": "molecular_biology_research",
+            "reasoning": "Candidate has over 16 years of experience in molecular biology, functional genomics, and related fields with extensive research background including postdoctoral and senior scientist roles. Experience includes gene editing, developmental biology, and genetics, all well-aligned with molecular biology research.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "experimental_design_skills",
+            "reasoning": "Candidate demonstrates strong technical skills in CRISPR gene editing, nucleic acid and protein purification, qPCR, western blot, FACS, RNA-seq, ATAC-seq, and data analysis with relevant software, indicating excellent experimental design and lab technique competence.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "teaching_mentoring_experience",
+            "reasoning": "Candidate taught General Biology and Developmental Biology courses as a teaching assistant, gained experience in scientific pedagogy, and likely mentored lab members as a senior scientist, indicating good teaching and mentoring skills.",
+            "score": 7.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location",
+            "reasoning": "Undergraduate location is not specified in the information provided.",
+            "passes": false
+          },
+          {
+            "criteria_name": "phd_from_top_us_university",
+            "reasoning": "PhD was obtained from Arizona State University, which is a reputable research university but generally not ranked among the top tier US universities (such as Ivy League or top 20 programs in biological sciences).",
+            "passes": false
+          }
+        ],
+        "final_score": 0.0,
+        "raw_data": {
+          "_id": "6796faaba1a09a48febd52a6",
+          "name": "Megan Rowton",
+          "linkedinId": "meganrowton"
         }
       },
       {
@@ -282,42 +282,42 @@
         }
       },
       {
-        "candidate_name": "Jessica Witchley",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jessica-witchley-a13b58132",
+        "candidate_name": "Destiny Simpson",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/destiny-simpson-5b379b10b",
         "soft_scores": [
           {
             "criteria_name": "molecular_biology_research",
-            "reasoning": "The candidate has 8 years of post-baccalaureate experience in molecular biology and genetics, has worked as a postdoctoral researcher at UC Berkeley and UCSF, and has published during PhD studies, indicating strong research experience with publications.",
-            "score": 9.0
+            "reasoning": "Candidate has extensive research experience in molecular biology and related techniques, but no specific mention of publications in peer-reviewed journals.",
+            "score": 7.0
           },
           {
             "criteria_name": "experimental_design_skills",
-            "reasoning": "The candidate has extensive experience studying gene expression dynamics in vivo and in vitro using various tools, including cytometry, indicating familiarity with experimental design and lab techniques. However, specific mention of CRISPR, PCR, or sequencing is not provided, so a slightly conservative score is given.",
+            "reasoning": "Demonstrates familiarity with numerous lab techniques including PCR, molecular cloning, and data analysis, indicating good experimental design skills.",
             "score": 8.0
           },
           {
             "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "The candidate has strong communication skills developed by teaching biology to first-year PhD students and elementary children, and experience leading collaborative projects during PhD, demonstrating good mentoring and teaching experience.",
-            "score": 8.0
+            "reasoning": "No explicit mention of mentoring, teaching, or interdisciplinary collaboration experience in the provided information.",
+            "score": 2.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location",
-            "reasoning": "The candidate completed undergraduate studies at MIT, which is located in the U.S.",
-            "passes": true
+            "reasoning": "Undergraduate location is not specified, thus cannot confirm completion in U.S., U.K., or Canada.",
+            "passes": false
           },
           {
             "criteria_name": "phd_from_top_us_university",
-            "reasoning": "The candidate earned a PhD from UCSF, which is considered a top U.S. university in the biological sciences.",
-            "passes": true
+            "reasoning": "PhD from University of Oklahoma Health Sciences Center, which is not generally considered a top U.S. university in biology; therefore, does not meet the criterion.",
+            "passes": false
           }
         ],
-        "final_score": 83.33333333333334,
+        "final_score": 0.0,
         "raw_data": {
-          "_id": "67968c7e3e76d5b58732638d",
-          "name": "Jessica Witchley",
-          "linkedinId": "jessica-witchley-a13b58132"
+          "_id": "67952fe2a1a09a48feac6914",
+          "name": "Destiny Simpson",
+          "linkedinId": "destiny-simpson-5b379b10b"
         }
       },
       {
@@ -360,81 +360,81 @@
         }
       },
       {
-        "candidate_name": "Destiny Simpson",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/destiny-simpson-5b379b10b",
+        "candidate_name": "Jessica Witchley",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/jessica-witchley-a13b58132",
         "soft_scores": [
           {
             "criteria_name": "molecular_biology_research",
-            "reasoning": "Candidate has extensive research experience in molecular biology and related techniques, but no specific mention of publications in peer-reviewed journals.",
-            "score": 7.0
+            "reasoning": "The candidate has 8 years of post-baccalaureate experience in molecular biology and genetics, has worked as a postdoctoral researcher at UC Berkeley and UCSF, and has published during PhD studies, indicating strong research experience with publications.",
+            "score": 9.0
           },
           {
             "criteria_name": "experimental_design_skills",
-            "reasoning": "Demonstrates familiarity with numerous lab techniques including PCR, molecular cloning, and data analysis, indicating good experimental design skills.",
+            "reasoning": "The candidate has extensive experience studying gene expression dynamics in vivo and in vitro using various tools, including cytometry, indicating familiarity with experimental design and lab techniques. However, specific mention of CRISPR, PCR, or sequencing is not provided, so a slightly conservative score is given.",
             "score": 8.0
           },
           {
             "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "No explicit mention of mentoring, teaching, or interdisciplinary collaboration experience in the provided information.",
+            "reasoning": "The candidate has strong communication skills developed by teaching biology to first-year PhD students and elementary children, and experience leading collaborative projects during PhD, demonstrating good mentoring and teaching experience.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location",
+            "reasoning": "The candidate completed undergraduate studies at MIT, which is located in the U.S.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_from_top_us_university",
+            "reasoning": "The candidate earned a PhD from UCSF, which is considered a top U.S. university in the biological sciences.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "67968c7e3e76d5b58732638d",
+          "name": "Jessica Witchley",
+          "linkedinId": "jessica-witchley-a13b58132"
+        }
+      },
+      {
+        "candidate_name": "Nathan D. Palmer Ph.D.",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/dr-nathan-palmer",
+        "soft_scores": [
+          {
+            "criteria_name": "molecular_biology_research",
+            "reasoning": "The candidate has a Ph.D. in Molecular Biology with research focused on gene therapies involving CRISPR, evolutionary genetics research, and computational biology roles. This demonstrates strong research experience in molecular biology and genetics. However, specifics about publications in peer-reviewed journals are not explicitly mentioned.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "experimental_design_skills",
+            "reasoning": "Experience includes engineering CRISPR-Cas gene therapies, gene therapy AAV vector engineering, and high-throughput screening, indicating familiarity with lab techniques and experimental design including CRISPR and in vitro/in vivo methods.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "teaching_mentoring_experience",
+            "reasoning": "There is no explicit mention of mentoring, teaching, or collaboration on interdisciplinary research in the provided information.",
             "score": 2.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location",
-            "reasoning": "Undergraduate location is not specified, thus cannot confirm completion in U.S., U.K., or Canada.",
-            "passes": false
-          },
-          {
-            "criteria_name": "phd_from_top_us_university",
-            "reasoning": "PhD from University of Oklahoma Health Sciences Center, which is not generally considered a top U.S. university in biology; therefore, does not meet the criterion.",
-            "passes": false
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "67952fe2a1a09a48feac6914",
-          "name": "Destiny Simpson",
-          "linkedinId": "destiny-simpson-5b379b10b"
-        }
-      },
-      {
-        "candidate_name": "Emily Petty",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/emily-petty-a35059b5",
-        "soft_scores": [
-          {
-            "criteria_name": "molecular_biology_research",
-            "reasoning": "Has a Ph.D. in Molecular, Cellular, and Developmental Biology and postdoctoral research experience. The summary does not mention specific publications but indicates strong research background and scientific roles.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "experimental_design_skills",
-            "reasoning": "Skilled in molecular cloning, cell culture, RNAi, CRISPR, transfection, and protein expression product lines support, indicating strong familiarity with experimental design and relevant techniques.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "Holds a scientific teaching certification and has experience in scientific communication and customer-facing roles, but no explicit mention of mentoring students or formal teaching of undergraduate courses.",
-            "score": 6.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location",
-            "reasoning": "Undergraduate degree earned from Central Michigan University, which is in the U.S.",
+            "reasoning": "The candidate completed undergraduate studies at Arizona State University, which is located in the U.S.",
             "passes": true
           },
           {
             "criteria_name": "phd_from_top_us_university",
-            "reasoning": "Ph.D. obtained from University of Michigan - Rackham Graduate School, which is considered a top U.S. university.",
+            "reasoning": "The Ph.D. is from University of California, San Diego, which is ranked among the top U.S. universities.",
             "passes": true
           }
         ],
-        "final_score": 70.0,
+        "final_score": 63.33333333333334,
         "raw_data": {
-          "_id": "67959ef78a14699f160814f2",
-          "name": "Emily Petty",
-          "linkedinId": "emily-petty-a35059b5"
+          "_id": "679711b53e76d5b587370bc8",
+          "name": "Nathan D. Palmer Ph.D.",
+          "linkedinId": "dr-nathan-palmer"
         }
       }
     ]
