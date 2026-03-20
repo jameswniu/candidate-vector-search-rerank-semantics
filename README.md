@@ -14,8 +14,8 @@ You have a vector database of candidate profiles and a role spec with both hard 
 
 ## What This Does
 
-1. **Vector retrieval**: Embed a rich query (description + hard + soft criteria) with Voyage-3, retrieve top 200 from Turbopuffer via ANN search
-2. **Hard-criteria filtering**: Regex-based structural filters on degree type, field of study, and experience titles. Intentionally relaxed to preserve recall, with a fallback to the full candidate set if fewer than 15 pass
+1. **Vector retrieval**: Embed a rich query (description + hard + soft criteria) with Voyage-3, retrieve top 200 from Turbopuffer via ANN search. For 5 configs, TPUF attribute filters (degree type, start year) narrow results at query time
+2. **Hard-criteria filtering**: Python-level regex filters on degree type, field of study, and experience titles. Intentionally relaxed to preserve recall, with a fallback to the full candidate set if fewer than 15 pass
 3. **LLM reranking**: GPT-4o-mini scores each candidate on hard + soft criteria. Hard failures get score 0. Remaining candidates scored 1-10 on soft criteria fit
 
 ## Architecture
@@ -31,8 +31,9 @@ flowchart TD
     Q["Role Spec<br/>description + hard/soft criteria"]:::blue
     EMB["Voyage-3 Embedding<br/>1024-dim query vector"]:::blue
     TPUF["Turbopuffer ANN<br/>top 200 candidates"]:::purple
+    AF["TPUF Attribute Filters<br/>degree type, start year<br/>(5 configs)"]:::purple
 
-    subgraph filter ["Hard-Criteria Filter"]
+    subgraph filter ["Python Hard-Criteria Filter"]
         HF["Structural Filters<br/>degree type, field, titles"]:::orange
         FB["Fallback<br/>if < 15 pass, use full set"]:::orange
     end
@@ -45,7 +46,7 @@ flowchart TD
 
     TOP["Top 10 Candidates"]:::purple
 
-    Q --> EMB --> TPUF --> HF
+    Q --> EMB --> TPUF --> AF --> HF
     HF --> FB
     FB --> GPT
     GPT --> HARD
