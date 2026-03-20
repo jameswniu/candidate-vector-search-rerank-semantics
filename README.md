@@ -1,6 +1,7 @@
 # Candidate Search Pipeline
 
 ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)
+![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Voyage-3](https://img.shields.io/badge/embedding-Voyage--3-orange)
 ![GPT-4o-mini](https://img.shields.io/badge/reranker-GPT--4o--mini-green)
 ![Turbopuffer](https://img.shields.io/badge/vector%20DB-Turbopuffer-purple)
