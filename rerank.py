@@ -3,10 +3,11 @@
 from __future__ import annotations
 import json
 import re
+import os
 from openai import OpenAI
 
 
-OAI_KEY = "REDACTED_OPENAI_KEY"
+OAI_KEY = os.environ["OPENAI_API_KEY"]
 
 
 def rerank_candidates(

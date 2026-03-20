@@ -1,11 +1,12 @@
 """Turbopuffer client wrapper for querying the candidate collection."""
 
+import os
 from turbopuffer import Turbopuffer
 
 
-TPUF_API_KEY = "REDACTED_TPUF_KEY"
-TPUF_REGION = "aws-us-west-2"
-TPUF_NAMESPACE = "search-test-v4"
+TPUF_API_KEY = os.environ["TPUF_API_KEY"]
+TPUF_REGION = os.environ.get("TPUF_REGION", "aws-us-west-2")
+TPUF_NAMESPACE = os.environ.get("TPUF_NAMESPACE", "search-test-v4")
 
 # All attributes we care about for filtering and re-ranking
 INCLUDE_ATTRS = [

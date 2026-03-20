@@ -10,18 +10,18 @@
     "6795ce5e0db3e792567c1bea",
     "6796e2e17e0084c5fa82eaa0",
     "67962d1952a365d1168715a9",
-    "6796786352a365d11689a055",
-    "6794f1d573bf14921fa95c65"
+    "67960cd373bf14921fb4a6f1",
+    "679557b473bf14921fad1af5"
   ],
   "eval_result": {
     "config_name": "mathematics_phd",
     "num_candidates": 10,
-    "average_final_score": 34.5,
+    "average_final_score": 42.5,
     "average_soft_scores": [
       {
         "criteria_name": "research_expertise_math",
         "reasoning": null,
-        "average_score": 8.2
+        "average_score": 8.1
       },
       {
         "criteria_name": "mathematical_modeling_proficiency",
@@ -33,7 +33,7 @@
       {
         "criteria_name": "undergraduate_location_math",
         "reasoning": null,
-        "pass_rate": 0.4
+        "pass_rate": 0.5
       },
       {
         "criteria_name": "phd_math_statistics",
@@ -247,6 +247,40 @@
         }
       },
       {
+        "candidate_name": "Matthew Arvanitis",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/matthew-arvanitis-37aa1463",
+        "soft_scores": [
+          {
+            "criteria_name": "research_expertise_math",
+            "reasoning": "The candidate has a PhD in Applied Statistics and research interests including Likelihood-Free Estimation, Bayesian Inference, Copulas, and Dependence, indicating strong research expertise in applied statistics and mathematical statistics.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "mathematical_modeling_proficiency",
+            "reasoning": "Experience includes six years active duty in mathematical analysis and six years teaching assistant roles, as well as research involving Bayesian inference and likelihood-free estimation, indicating good proficiency in mathematical modeling and problem-solving.",
+            "score": 7.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location_math",
+            "reasoning": "The candidate's undergraduate institution or location is not specified, so it is unclear if this criterion is met.",
+            "passes": false
+          },
+          {
+            "criteria_name": "phd_math_statistics",
+            "reasoning": "The candidate holds a Doctorate from University of California, Riverside in Applied Statistics, which is a top U.S. university, satisfying this criterion.",
+            "passes": true
+          }
+        ],
+        "final_score": 0.0,
+        "raw_data": {
+          "_id": "6796e2e17e0084c5fa82eaa0",
+          "name": "Matthew Arvanitis",
+          "linkedinId": "matthew-arvanitis-37aa1463"
+        }
+      },
+      {
         "candidate_name": "Cameron Thieme",
         "candidate_linkedin_url": "https://www.linkedin.com/in/cameron-thieme",
         "soft_scores": [
@@ -281,105 +315,71 @@
         }
       },
       {
-        "candidate_name": "Pengbin Feng",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/pengbin-feng-533948126",
+        "candidate_name": "Ashton Wiens",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/ashton-wiens-4b4b649b",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has a PhD in applied mathematics and over 7 years of extensive research experience in applied probability, statistics, machine learning, and deep learning, with experience in both theoretical and applied research. Although no explicit peer-reviewed publications are mentioned, the extensive research roles at Amazon and academic background support strong expertise.",
+            "reasoning": "Candidate holds a PhD in Applied Mathematics and works extensively with statistical analysis, spatial statistics, and interdisciplinary statistical collaboration. Although exact publication details are not provided, the role as lead RA and involvement in research projects strongly indicate peer-reviewed research expertise in applied mathematics and statistics.",
             "score": 8.0
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Demonstrated strong proficiency in mathematical modeling, numerical algorithms, stochastic calculus, statistical inference, and quantitative research through academic teaching and industry experience. Also skilled in algorithmic problem-solving using various programming languages and machine learning frameworks.",
+            "reasoning": "Candidate demonstrates proficiency in mathematical modeling through work with spatial statistics, multivariate processes, climate modeling, predator-prey models, bifurcation analysis, and delay differential equations. Experience includes numerical analysis, HPC, and teaching differential equations, underscoring strong modeling and problem-solving capabilities.",
             "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "Undergraduate details specify a bachelor in computing math, but the location is not stated, so unclear if completed in U.S., U.K., or Canada.",
-            "passes": false
+            "reasoning": "Candidate completed undergraduate degree in Mathematics at The University of Kansas, located in the U.S.",
+            "passes": true
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "Candidate holds a PhD in Applied Mathematics from University of Southern California, which is a top U.S. university.",
+            "reasoning": "PhD obtained in Applied Mathematics from University of Colorado Boulder, which is considered a leading U.S. university. The field is relevant to mathematics/statistics.",
             "passes": true
           }
         ],
-        "final_score": 0.0,
+        "final_score": 80.0,
         "raw_data": {
-          "_id": "6794f1d573bf14921fa95c65",
-          "name": "Pengbin Feng",
-          "linkedinId": "pengbin-feng-533948126"
+          "_id": "679557b473bf14921fad1af5",
+          "name": "Ashton Wiens",
+          "linkedinId": "ashton-wiens-4b4b649b"
         }
       },
       {
-        "candidate_name": "Pengbin F.",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/pengbin-f-533948126",
+        "candidate_name": "Jennifer Lopez",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/jennifer-lopez-b91a4216",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "Candidate holds a PhD in applied mathematics, has over 7 years of extensive research experience, with strong research and industrial experience in applied probability, statistics, machine learning, and deep learning. Experience includes research scientist role at Amazon working on machine learning and statistical models, and teaching assistant role covering probability, stochastic calculus, and statistical inference courses. Although no explicit mention of peer-reviewed publications is given, the applied nature of the work and academic background strongly indicate relevant research expertise.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Candidate demonstrates proficiency in mathematical modeling and problem-solving through research and teaching in applied mathematics topics including stochastic calculus, math finance, statistics, and numerical algorithms. Industrial experience in quantitative research and financial modeling at Morgan Stanley and Ernst & Young further support strong applied mathematical modeling skills.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location_math",
-            "reasoning": "Candidate completed undergraduate studies in computing math, but location is not specified. Without clear evidence that undergraduate studies were completed in the U.S., U.K., or Canada, this criterion cannot be confirmed.",
-            "passes": false
-          },
-          {
-            "criteria_name": "phd_math_statistics",
-            "reasoning": "Candidate holds a Doctorate in Applied Mathematics from University of Southern California, a leading U.S. university, thus clearly meeting the requirement.",
-            "passes": true
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "6796786352a365d11689a055",
-          "name": "Pengbin F.",
-          "linkedinId": "pengbin-f-533948126"
-        }
-      },
-      {
-        "candidate_name": "Matthew Arvanitis",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/matthew-arvanitis-37aa1463",
-        "soft_scores": [
-          {
-            "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has a PhD in Applied Statistics and research interests including Likelihood-Free Estimation, Bayesian Inference, Copulas, and Dependence, indicating strong research expertise in applied statistics and mathematical statistics.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Experience includes six years active duty in mathematical analysis and six years teaching assistant roles, as well as research involving Bayesian inference and likelihood-free estimation, indicating good proficiency in mathematical modeling and problem-solving.",
+            "reasoning": "Candidate has a PhD in Mathematics and Statistics, strong research professional background, and experience in mathematical modeling and statistical data analysis. Although no explicit mentions of publications are given, the PhD and professional research experience in Air Force Research Laboratory imply solid research expertise in applied mathematics/statistics.",
             "score": 7.0
+          },
+          {
+            "criteria_name": "mathematical_modeling_proficiency",
+            "reasoning": "Candidate has demonstrated proficiency in mathematical modeling, Matlab programming, analytical skills, and statistical data analysis, indicating above average skills in mathematical modeling and problem-solving.",
+            "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate's undergraduate institution or location is not specified, so it is unclear if this criterion is met.",
+            "reasoning": "Undergraduate education location is not specified, so it is unclear if the candidate completed undergraduate studies in the U.S., U.K., or Canada.",
             "passes": false
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate holds a Doctorate from University of California, Riverside in Applied Statistics, which is a top U.S. university, satisfying this criterion.",
+            "reasoning": "Candidate holds a PhD in Mathematics and Statistics from the U.S. Air Force Institute of Technology, which is considered a top U.S. university for graduate education in technical fields within the military context.",
             "passes": true
           }
         ],
         "final_score": 0.0,
         "raw_data": {
-          "_id": "6796e2e17e0084c5fa82eaa0",
-          "name": "Matthew Arvanitis",
-          "linkedinId": "matthew-arvanitis-37aa1463"
+          "_id": "67960cd373bf14921fb4a6f1",
+          "name": "Jennifer Lopez",
+          "linkedinId": "jennifer-lopez-b91a4216"
         }
       }
     ]

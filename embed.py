@@ -1,9 +1,10 @@
 """Voyage-3 query embedding."""
 
+import os
 import voyageai
 
 
-VOYAGE_API_KEY = "REDACTED_VOYAGE_KEY"
+VOYAGE_API_KEY = os.environ["VOYAGE_API_KEY"]
 
 
 def embed_query(text: str) -> list[float]:
