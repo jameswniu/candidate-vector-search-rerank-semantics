@@ -6,12 +6,12 @@
     "67953af08a14699f16048a53",
     "6796368a8d90554e60724496",
     "679634ddf9f986ea7fc1172b",
+    "6796d6418d90554e60783c49",
+    "67966db0f9f986ea7fc335cf",
+    "6795ac768d90554e606d65a2",
     "6795a1f33e76d5b5872a0ded",
     "679578847e0084c5fa759b24",
-    "67962eb23eff0c142a857c52",
-    "6796ac137e0084c5fa80e544",
-    "67956d51a1a09a48feaea79f",
-    "67956e3273bf14921fadee9d"
+    "67962eb23eff0c142a857c52"
   ],
   "eval_result": {
     "config_name": "anthropology",
@@ -126,6 +126,45 @@
         }
       },
       {
+        "candidate_name": "Emily Altimare Ph.D.",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/emily-altimare-ph-d-a880bba8",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "The candidate holds a Ph.D. in Cultural Anthropology and has conducted original ethnographic research within multiple industries such as automotive, aerospace, and shipbuilding. This indicates substantial fieldwork and applied ethnographic methods across diverse cultural and industrial contexts.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "The candidate has experience editing academic publications (Medical Humanities Report, NAPA Notes) and assisting in faculty research and grant preparation, but specific mention of her own published papers, working papers, or conference presentations on anthropological/sociological topics is not provided.",
+            "score": 5.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "Extensive applied anthropology demonstrated through consulting roles focused on organizational culture, institutional change, and socio-technical systems in industries including automotive and aerospace. However, focus on labor migration is not explicitly mentioned; applied work is more on organizational and industrial anthropology.",
+            "score": 7.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "Candidate holds a completed Ph.D. in Cultural Anthropology from Michigan State University, a distinguished program in anthropology.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "The candidate's Ph.D. completion date or start date is not specified, but the experience appears advanced with multiple professional roles post-Ph.D., suggesting the program was likely started more than 3 years ago.",
+            "passes": false
+          }
+        ],
+        "final_score": 0.0,
+        "raw_data": {
+          "_id": "6796368a8d90554e60724496",
+          "name": "Emily Altimare Ph.D.",
+          "linkedinId": "emily-altimare-ph-d-a880bba8"
+        }
+      },
+      {
         "candidate_name": "Jie Gao",
         "candidate_linkedin_url": "https://www.linkedin.com/in/jie-gao-9a8985a0",
         "soft_scores": [
@@ -162,6 +201,84 @@
           "_id": "679634ddf9f986ea7fc1172b",
           "name": "Jie Gao",
           "linkedinId": "jie-gao-9a8985a0"
+        }
+      },
+      {
+        "candidate_name": "giuseppe grimaldi",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/giuseppe-grimaldi-39061143",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "The candidate has extensive ethnographic research experience across multiple countries, including Italy, Ethiopia, UK, and Israel. The PhD thesis and fieldwork in diverse contexts, plus ethnographic documentary production, demonstrate strong expertise in ethnographic methods.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "PhD thesis completed with distinction (cum laude with European label), participation as junior lecturer and involvement in exam committees indicate active academic engagement. However, no explicit mention of published papers or conference presentations within the summary.",
+            "score": 7.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "The candidate worked as a cultural manager and project coordinator applying anthropological knowledge to social promotion and integration projects, including producing a documentary and managing community events. This indicates good applied anthropology experience in interdisciplinary and real-world settings related to migration and cultural identity.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "The candidate holds a PhD in cultural and social anthropology from a recognized Italian university (Universit\u00e0 degli Studi di Milano-Bicocca); therefore, this criterion is met.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "The candidate\u2019s summary suggests completion of the PhD (PhD graduate cum laude) with no indication that the program started within the last 3 years. It appears to be a completed program, so the start date likely exceeds 3 years ago.",
+            "passes": false
+          }
+        ],
+        "final_score": 0.0,
+        "raw_data": {
+          "_id": "6796d6418d90554e60783c49",
+          "name": "giuseppe grimaldi",
+          "linkedinId": "giuseppe-grimaldi-39061143"
+        }
+      },
+      {
+        "candidate_name": "Anna Rocheva",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/annarocheva",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "Demonstrates substantial fieldwork experience conducting interviews and ethnographic research, including organizing fieldwork and leading studies in several countries, indicating strong ethnographic methods expertise.",
+            "score": 8.5
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "Has over 20 peer-reviewed publications and has presented research findings at academic and policy conferences, indicating above-average academic output quality.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "Extensive applied research on migration, labor market participation, and migrant integration with policy relevance and consulting roles with international organizations, showing strong applied anthropology experience.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "Holds a PhD in Sociology from the Institute of Sociology, RAS, fulfilling the requirement for a PhD in a relevant social science field.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "The candidate is described as a PhD candidate at the time of the experience, but also holds a completed PhD; however, the timeline of starting the PhD is not within the last 3 years and the PhD appears to be completed well before 2026.",
+            "passes": false
+          }
+        ],
+        "final_score": 0.0,
+        "raw_data": {
+          "_id": "6795ac768d90554e606d65a2",
+          "name": "Anna Rocheva",
+          "linkedinId": "annarocheva"
         }
       },
       {
@@ -204,162 +321,6 @@
         }
       },
       {
-        "candidate_name": "Dr. Lisa Katharina Johnson",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/lisa-katharina-johnson",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate has a PhD in Anthropology and experience working on migration, mobility, diversity, gender studies, and transculturality, indicating strong ethnographic research competencies across multiple regions, including the Anglophone Caribbean, North America, Europe, and West Africa.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "The candidate has held postdoctoral research positions and contributed as a researcher, indicating academic output. However, specific publications or presentations are not listed, so the quality or volume of output cannot be assessed as outstanding.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "The candidate has experience working in research related to migration and mobility and has worked at BAMF (Federal Office for Migration and Refugees), which suggests applied work linking anthropology with policy and real-world migration issues.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "Candidate holds a PhD in Cultural Anthropology from Universit\u00e4t Trier, a recognized European university, which is a relevant field.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "There is no indication that the candidate's PhD program started within the last 3 years. Given the candidate is currently postdoctoral researcher and dozent, it implies completion was earlier, therefore the criterion is not met.",
-            "passes": false
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "67962eb23eff0c142a857c52",
-          "name": "Dr. Lisa Katharina Johnson",
-          "linkedinId": "lisa-katharina-johnson"
-        }
-      },
-      {
-        "candidate_name": "Moodjalin Sudcharoen",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/mood-sudcharoen",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate has conducted doctoral research involving field studies with Burmese immigrants in Thailand and has worked with socially marginalized groups. This indicates strong ethnographic fieldwork and expertise in cultural and social systems.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "While the summary mentions a doctoral dissertation and teaching at university level, there is no explicit mention of published papers or conference presentations. The fellowship and dissertation defense indicate a solid academic profile but published outputs are not detailed.",
-            "score": 6.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "The candidate\u2019s work focuses on second-generation Burmese immigrants, social prejudices, cultural identity, and mobility, applying anthropology to migration and social issues. Experience teaching diverse populations and language translation also suggest practical application.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "The candidate holds a doctoral degree in anthropology from University of Chicago, a distinguished program in anthropology.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "The candidate completed their PhD in August 2020, which is more than 3 years ago relative to 2026, so the PhD program was not started within the last 3 years.",
-            "passes": false
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "6796ac137e0084c5fa80e544",
-          "name": "Moodjalin Sudcharoen",
-          "linkedinId": "mood-sudcharoen"
-        }
-      },
-      {
-        "candidate_name": "Shaye Soifoine",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/shayesoifoine",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate's dissertation research involves ethnography focusing on social reproduction, marriage, family structures, and life-cycle rituals in the Comoros, demonstrating significant ethnographic expertise.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "Although specific publications or presentations are not listed, the candidate has roles as a graduate research assistant and NSF fellow, indicating some academic output, but explicit evidence is limited.",
-            "score": 5.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "The candidate applies anthropology to real-world contexts such as migration, transnational circuits, and climate change, and has experience with community-based participatory research and Peace Corps service, evidencing applied experience.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "The candidate is a PhD student in Cultural Anthropology at the University of South Florida, a recognized program in anthropology.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "No explicit start date is provided to determine if the PhD began within the last 3 years, so passing cannot be confirmed.",
-            "passes": false
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "67956e3273bf14921fadee9d",
-          "name": "Shaye Soifoine",
-          "linkedinId": "shayesoifoine"
-        }
-      },
-      {
-        "candidate_name": "Dr. Sarah K\u00f6ksal",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/dr-sarah-k%C3%B6ksal-4256a3103",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "Candidate has significant experience with ethnographic methods such as participant observation, expert interviews, focus groups, and empirical interviews across multiple cultural contexts, including research on German expatriates, Chinese international students, and rural Bavaria. This demonstrates substantial fieldwork and case study research involving cultural and social systems.",
-            "score": 8.5
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "Candidate holds a doctorate in anthropology and has collaborated on research with a professor at UC Berkeley. While specific publications or conference presentations are not explicitly listed, the doctoral and postdoctoral research roles imply a good level of academic output.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "Candidate has applied anthropological theories in interdisciplinary and practical contexts including migration, identity, intercultural communication, UX research, and cultural exchange programs. This indicates both conceptual depth and practical relevance.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "Candidate holds a doctorate in anthropology from Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen, a distinguished institution, which is a relevant field.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "Candidate is described as a doctoral student and a visiting PhD student at UC Berkeley. However, the exact start date of the PhD program is not provided, and considering current year 2026 and typical timelines, it is unclear if the PhD was started within the last 3 years.",
-            "passes": false
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "67956d51a1a09a48feaea79f",
-          "name": "Dr. Sarah K\u00f6ksal",
-          "linkedinId": "dr-sarah-k%C3%B6ksal-4256a3103"
-        }
-      },
-      {
         "candidate_name": "Annelise Reid",
         "candidate_linkedin_url": "https://www.linkedin.com/in/annelise-reid-78b46282",
         "soft_scores": [
@@ -399,42 +360,81 @@
         }
       },
       {
-        "candidate_name": "Emily Altimare Ph.D.",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/emily-altimare-ph-d-a880bba8",
+        "candidate_name": "Dr. Lisa Katharina Johnson",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/lisa-katharina-johnson",
         "soft_scores": [
           {
             "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate holds a Ph.D. in Cultural Anthropology and has conducted original ethnographic research within multiple industries such as automotive, aerospace, and shipbuilding. This indicates substantial fieldwork and applied ethnographic methods across diverse cultural and industrial contexts.",
+            "reasoning": "The candidate has a PhD in Anthropology and experience working on migration, mobility, diversity, gender studies, and transculturality, indicating strong ethnographic research competencies across multiple regions, including the Anglophone Caribbean, North America, Europe, and West Africa.",
             "score": 8.0
           },
           {
             "criteria_name": "academic_output_quality",
-            "reasoning": "The candidate has experience editing academic publications (Medical Humanities Report, NAPA Notes) and assisting in faculty research and grant preparation, but specific mention of her own published papers, working papers, or conference presentations on anthropological/sociological topics is not provided.",
-            "score": 5.0
+            "reasoning": "The candidate has held postdoctoral research positions and contributed as a researcher, indicating academic output. However, specific publications or presentations are not listed, so the quality or volume of output cannot be assessed as outstanding.",
+            "score": 7.0
           },
           {
             "criteria_name": "applied_anthropology_experience",
-            "reasoning": "Extensive applied anthropology demonstrated through consulting roles focused on organizational culture, institutional change, and socio-technical systems in industries including automotive and aerospace. However, focus on labor migration is not explicitly mentioned; applied work is more on organizational and industrial anthropology.",
-            "score": 7.0
+            "reasoning": "The candidate has experience working in research related to migration and mobility and has worked at BAMF (Federal Office for Migration and Refugees), which suggests applied work linking anthropology with policy and real-world migration issues.",
+            "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "phd_in_relevant_field",
-            "reasoning": "Candidate holds a completed Ph.D. in Cultural Anthropology from Michigan State University, a distinguished program in anthropology.",
+            "reasoning": "Candidate holds a PhD in Cultural Anthropology from Universit\u00e4t Trier, a recognized European university, which is a relevant field.",
             "passes": true
           },
           {
             "criteria_name": "recent_phd_program",
-            "reasoning": "The candidate's Ph.D. completion date or start date is not specified, but the experience appears advanced with multiple professional roles post-Ph.D., suggesting the program was likely started more than 3 years ago.",
+            "reasoning": "There is no indication that the candidate's PhD program started within the last 3 years. Given the candidate is currently postdoctoral researcher and dozent, it implies completion was earlier, therefore the criterion is not met.",
             "passes": false
           }
         ],
         "final_score": 0.0,
         "raw_data": {
-          "_id": "6796368a8d90554e60724496",
-          "name": "Emily Altimare Ph.D.",
-          "linkedinId": "emily-altimare-ph-d-a880bba8"
+          "_id": "67962eb23eff0c142a857c52",
+          "name": "Dr. Lisa Katharina Johnson",
+          "linkedinId": "lisa-katharina-johnson"
+        }
+      },
+      {
+        "candidate_name": "Reona Shinam",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/reona-shinam-233862172",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "Candidate is described as a passionate anthropologist specializing in ethnography and qualitative research with a focus on migrant communities, indicating good expertise in ethnographic methods and fieldwork.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "There is no specific mention of published papers, working papers, or conference presentations in the information provided.",
+            "score": 3.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "Focus on studying migrant communities and their experiences suggests relevant applied anthropology experience, but no explicit examples of interdisciplinary or real-world application are provided.",
+            "score": 6.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "Candidate holds a PhD in Anthropology from University of Hyderabad, which is a relevant field.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "There is no information on when the PhD was started, but the candidate is already a doctoral fellow and guest faculty, suggesting the program is not recent (within the last 3 years).",
+            "passes": false
+          }
+        ],
+        "final_score": 0.0,
+        "raw_data": {
+          "_id": "67966db0f9f986ea7fc335cf",
+          "name": "Reona Shinam",
+          "linkedinId": "reona-shinam-233862172"
         }
       }
     ]
