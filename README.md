@@ -14,7 +14,7 @@ You have a vector database of candidate profiles and a role spec with both hard 
 
 ## What This Does
 
-1. **Vector retrieval**: Embed a rich query (description + hard + soft criteria) with Voyage-3, retrieve top 200 from Turbopuffer via ANN search. For 5 configs, TPUF attribute filters (degree type, start year) narrow results at query time
+1. **Vector retrieval**: Embed a rich query (description + hard + soft criteria) with Voyage-3, retrieve top 200 from Turbopuffer via ANN search. For 5 configs, Turbopuffer attribute filters (degree type, start year) narrow results at query time
 2. **Hard-criteria filtering**: Python-level regex filters on degree type, field of study, and experience titles. Intentionally relaxed to preserve recall, with a fallback to the full candidate set if fewer than 15 pass
 3. **LLM reranking**: GPT-4o-mini scores each candidate on hard + soft criteria. Hard failures get score 0. Remaining candidates scored 1-10 on soft criteria fit
 
@@ -23,8 +23,8 @@ You have a vector database of candidate profiles and a role spec with both hard 
 ```mermaid
 flowchart LR
     Q["Role Spec<br/>desc + hard/soft"] --> EMB["Voyage-3<br/>1024-dim"]
-    EMB --> TPUF["TPUF ANN<br/>top 200"]
-    TPUF --> AF["Attribute Filter<br/>degree, year, field"]
+    EMB --> Turbopuffer["Turbopuffer ANN<br/>top 200"]
+    Turbopuffer --> AF["Attribute Filter<br/>degree, year, field"]
     AF --> PF["Python Filter<br/>school, title, location"]
     PF --> LLM["GPT-4o-mini<br/>hard pass/fail<br/>soft score 1-10"]
     LLM --> TOP["Top 10"]
@@ -35,8 +35,8 @@ flowchart LR
 | Stage | What | Latency | Candidates |
 |---|---|---|---|
 | Voyage-3 embed | Encode query (desc + criteria) into 1024-dim vector | ~200ms | 1 query |
-| TPUF ANN | Approximate nearest neighbor search over ~200K profiles | ~50ms | 200K to 200 |
-| TPUF attribute filter | Push degree type, field of study, start year filters into DB query (5 configs) | ~0ms (DB-side) | 200 to 50-150 |
+| Turbopuffer ANN | Approximate nearest neighbor search over ~200K profiles | ~50ms | 200K to 200 |
+| Turbopuffer attribute filter | Push degree type, field of study, start year filters into DB query (5 configs) | ~0ms (DB-side) | 200 to 50-150 |
 | Python post-filter | Parse structured degree strings for undergrad location, school prestige, title match | ~1ms | 50-150 to 15-80 |
 | LLM rerank | GPT-4o-mini scores each candidate on hard + soft criteria in batches of 5 | ~20-40s | 15-80 to 10 |
 
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 
 export OPENAI_API_KEY="sk-..."
 export VOYAGE_API_KEY="pa-..."
-export TPUF_API_KEY="tpuf_..."
+export Turbopuffer_API_KEY="tpuf_..."
 
 python main.py                              # Run all 10 configs
 python main.py --config tax_lawyer.yml      # Run single config
@@ -107,10 +107,10 @@ Changes made:
 | Doctors (MD) | 8.0 |
 | Anthropology | 0.0 |
 
-### Run 3: TPUF attribute filters + post-filter on structured degree strings + LLM rerank (66.6 avg)
+### Run 3: Turbopuffer attribute filters + post-filter on structured degree strings + LLM rerank (66.6 avg)
 
 Changes made:
-1. **TPUF-level attribute filters:** For 5 configs, pushed degree type, field of study, and start year filters into the Turbopuffer query itself. This narrows retrieval at the database level before results hit Python.
+1. **Turbopuffer-level attribute filters:** For 5 configs, pushed degree type, field of study, and start year filters into the Turbopuffer query itself. This narrows retrieval at the database level before results hit Python.
 2. **Structured degree string parsing:** For undergrad-location checks (math, biology) and school prestige (doctors), parsed the full `yrs_::school_::degree_::fos_::start_::end_` strings to verify specific degree entries, not just array membership.
 3. **Top-school matching:** Built school name fragment lists for US/UK/CA undergrad institutions and top US medical schools to enforce location and prestige criteria in Python before LLM reranking.
 
