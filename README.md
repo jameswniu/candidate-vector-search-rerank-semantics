@@ -61,7 +61,7 @@ python main.py --no-submit                  # Run without submitting to eval end
 
 ### Run 1: Vector + strict filter + soft-only LLM rerank (46.7 avg)
 
-| Config | Score | Hard Pass |
+| Config | Run 1 | Hard Pass |
 |---|---|---|
 | Tax Lawyer | 82.7 | 100% |
 | Junior Corporate Lawyer | 82.7 | 95% |
@@ -73,6 +73,7 @@ python main.py --no-submit                  # Run without submitting to eval end
 | Anthropology | 0.0 | 50% |
 | Doctors (MD) | 0.0 | 63% |
 | Mathematics PhD | 0.0 | 20% |
+| **Average** | **46.7** | **73%** |
 
 ### Why the 0s
 
@@ -86,7 +87,7 @@ The eval endpoint uses an LLM judge for hard criteria, catching nuances that str
 
 Structured filters can enforce "has JD" or "field contains biology" but cannot evaluate "top U.S. medical school" or "PhD started recently." These require judgment, which is what the LLM reranker should handle.
 
-### Run 2: Relaxed filters + LLM hard+soft rerank
+### Run 2: Relaxed filters + LLM hard+soft rerank (52.1 avg)
 
 Changes made:
 1. **Richer query embedding:** Concatenated description + hard criteria + soft criteria before embedding, so vector retrieval pulls candidates matching the full intent, not just the role description.
@@ -106,6 +107,7 @@ Changes made:
 | Anthropology | 0.0 | **0.0** | 50% |
 | Doctors (MD) | 0.0 | **8.0** | 73% |
 | Mathematics PhD | 0.0 | **42.5** | 60% |
+| **Average** | **46.7** | **52.1** | **80%** |
 
 ### Run 3: Turbopuffer attribute filters + post-filter on structured degree strings + LLM rerank (66.6 avg)
 
