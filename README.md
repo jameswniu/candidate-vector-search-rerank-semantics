@@ -116,19 +116,19 @@ Changes made:
 2. **Structured degree string parsing:** For undergrad-location checks (math, biology) and school prestige (doctors), parsed the full `yrs_::school_::degree_::fos_::start_::end_` strings to verify specific degree entries, not just array membership.
 3. **Top-school matching:** Built school name fragment lists for US/UK/CA undergrad institutions and top US medical schools to enforce location and prestige criteria in Python before LLM reranking.
 
-| Config | Run 1 | Run 2 | Run 3 | R1 Hard | R2 Hard | R3 Hard |
-|---|---|---|---|---|---|---|
-| Tax Lawyer | 82.7 | 80.0 | **80.0** | 100% | 100% | 100% |
-| Junior Corporate Lawyer | 82.7 | 74.3 | **75.0** | 95% | 95% | 95% |
-| Mechanical Engineers | 81.7 | 92.7 | **92.0** | 95% | 100% | 100% |
-| Bankers | 73.7 | 81.3 | **81.3** | 90% | 95% | 95% |
-| Radiology | 71.3 | 71.0 | **70.3** | 90% | 90% | 90% |
-| Quantitative Finance | 43.0 | 34.0 | **65.7** | 70% | 70% | 90% |
-| Biology Expert | 32.0 | 37.7 | **71.0** | 60% | 65% | 95% |
-| Anthropology | 0.0 | 0.0 | **20.3** | 50% | 50% | 65% |
-| Doctors (MD) | 0.0 | 8.0 | **36.5** | 63% | 73% | 83% |
-| Mathematics PhD | 0.0 | 42.5 | **74.5** | 20% | 60% | 95% |
-| **Average** | **46.7** | **52.1** | **66.6** | **73%** | **80%** | **91%** |
+| Config | Run 1 | Run 2 | **Run 3** | Hard Pass |
+|---|---|---|---|---|
+| Tax Lawyer | 82.7 | 80.0 | **80.0** | 100% |
+| Junior Corporate Lawyer | 82.7 | 74.3 | **75.0** | 95% |
+| Mechanical Engineers | 81.7 | 92.7 | **92.0** | 100% |
+| Bankers | 73.7 | 81.3 | **81.3** | 95% |
+| Radiology | 71.3 | 71.0 | **70.3** | 90% |
+| Quantitative Finance | 43.0 | 34.0 | **65.7** | 90% |
+| Biology Expert | 32.0 | 37.7 | **71.0** | 95% |
+| Anthropology | 0.0 | 0.0 | **20.3** | 65% |
+| Doctors (MD) | 0.0 | 8.0 | **36.5** | 83% |
+| Mathematics PhD | 0.0 | 42.5 | **74.5** | 95% |
+| **Average** | **46.7** | **52.1** | **66.6** | **91%** |
 
 The biggest gains came from pushing hard criteria enforcement earlier in the pipeline. Configs where hard criteria map cleanly to structured fields (degree type, field of study, school name) improved the most. Anthropology remains the hardest because the eval's LLM judge determines PhD recency from the candidate's summary text, and most summaries don't state their enrollment year explicitly.
 
