@@ -2,80 +2,46 @@
   "config": "Mathematics PhD",
   "config_path": "mathematics_phd.yml",
   "object_ids": [
-    "67970105a1a09a48febd9091",
     "67953d338a14699f16049d9a",
-    "6795b664a1a09a48feb16be6",
-    "67950f91f9f986ea7fb688ed",
-    "6796d45e8a14699f1612d454",
-    "6795ce5e0db3e792567c1bea",
-    "6796e2e17e0084c5fa82eaa0",
-    "67962d1952a365d1168715a9",
-    "67960cd373bf14921fb4a6f1",
-    "679557b473bf14921fad1af5"
+    "6796d98df9f986ea7fc6f55e",
+    "6795829e8a14699f160705b2",
+    "67956afff9f986ea7fb9dfe7",
+    "67970105a1a09a48febd9091",
+    "67965d6e8a14699f160e7e5d",
+    "6796f68f7e0084c5fa83c512",
+    "679703cb3eff0c142a8cd06f",
+    "6795d5128d90554e606eda59",
+    "6795f7690db3e792567d8f95"
   ],
   "eval_result": {
     "config_name": "mathematics_phd",
     "num_candidates": 10,
-    "average_final_score": 42.5,
+    "average_final_score": 74.5,
     "average_soft_scores": [
       {
         "criteria_name": "research_expertise_math",
         "reasoning": null,
-        "average_score": 8.1
+        "average_score": 8.3
       },
       {
         "criteria_name": "mathematical_modeling_proficiency",
         "reasoning": null,
-        "average_score": 8.3
+        "average_score": 8.4
       }
     ],
     "average_hard_scores": [
       {
         "criteria_name": "undergraduate_location_math",
         "reasoning": null,
-        "pass_rate": 0.5
+        "pass_rate": 0.9
       },
       {
         "criteria_name": "phd_math_statistics",
         "reasoning": null,
-        "pass_rate": 0.8
+        "pass_rate": 1.0
       }
     ],
     "individual_results": [
-      {
-        "candidate_name": "Mike Ludkovski",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/mike-ludkovski-9623a927",
-        "soft_scores": [
-          {
-            "criteria_name": "research_expertise_math",
-            "reasoning": "Candidate is a Professor of Statistics and Applied Probability with ongoing research funded by the NSF since 2012, multiple publications in financial mathematics, stochastic modeling, and applied probability, demonstrating strong research expertise in applied mathematics and statistics.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Extensive expertise in stochastic modeling, simulation methods, and applied probability imply a high level of proficiency in mathematical modeling and algorithmic problem-solving, as well as experience in proof-based reasoning in research.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location_math",
-            "reasoning": "Completed undergraduate studies at Simon Fraser University in Canada, which meets the requirement of undergraduate studies in the U.S., U.K., or Canada.",
-            "passes": true
-          },
-          {
-            "criteria_name": "phd_math_statistics",
-            "reasoning": "PhD obtained from Princeton University in Operations Research & Financial Engineering, which is a top U.S. university and closely related to mathematics and statistics.",
-            "passes": true
-          }
-        ],
-        "final_score": 90.0,
-        "raw_data": {
-          "_id": "67970105a1a09a48febd9091",
-          "name": "Mike Ludkovski",
-          "linkedinId": "mike-ludkovski-9623a927"
-        }
-      },
       {
         "candidate_name": "Harry Crane",
         "candidate_linkedin_url": "https://www.linkedin.com/in/harry-crane-4735144",
@@ -111,275 +77,309 @@
         }
       },
       {
-        "candidate_name": "Guanning Zhang",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/guanningzhang",
+        "candidate_name": "Mickey Salins",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/mickey-salins-1b134988",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "Candidate has a PhD in Mathematics and over 5 years of research experience in mathematical modeling and quantitative research, with focus on PDE and data science. However, there is no explicit mention of peer-reviewed publications or preprints.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Candidate shows strong proficiency in mathematical modeling, quantitative research, and problem-solving, supported by experience in machine learning and analytical roles.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location_math",
-            "reasoning": "Candidate completed undergraduate studies in Mathematics and Economics at University of Delaware, which is in the U.S.",
-            "passes": true
-          },
-          {
-            "criteria_name": "phd_math_statistics",
-            "reasoning": "Candidate earned a PhD in Mathematics from The George Washington University, which is considered a top U.S. university.",
-            "passes": true
-          }
-        ],
-        "final_score": 75.0,
-        "raw_data": {
-          "_id": "6795b664a1a09a48feb16be6",
-          "name": "Guanning Zhang",
-          "linkedinId": "guanningzhang"
-        }
-      },
-      {
-        "candidate_name": "Xingye Kan",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/xingye-kan-67938319",
-        "soft_scores": [
-          {
-            "criteria_name": "research_expertise_math",
-            "reasoning": "Candidate has demonstrated research experience as a postdoctoral research associate, working on stochastic chemical reaction network models, econometric time-series analysis, and biochemical reaction systems. This involvement indicates solid research expertise in applied mathematics and statistics.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Candidate shows proficiency in mathematical modeling through development of stochastic models, parametric estimation, and analysis of complex systems using mathematical and statistical approaches, along with computational skills.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location_math",
-            "reasoning": "Candidate completed undergraduate studies at Hefei University of Technology (located in China), not in the U.S., U.K., or Canada.",
-            "passes": false
-          },
-          {
-            "criteria_name": "phd_math_statistics",
-            "reasoning": "Candidate earned a PhD in Applied Mathematics from Illinois Institute of Technology, which is a recognized U.S. university but not generally ranked among the top-tier U.S. institutions.",
-            "passes": false
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "67950f91f9f986ea7fb688ed",
-          "name": "Xingye Kan",
-          "linkedinId": "xingye-kan-67938319"
-        }
-      },
-      {
-        "candidate_name": "Alon Benhaim",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/alonbenhaim",
-        "soft_scores": [
-          {
-            "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has a PhD in Mathematics from the University of Pennsylvania, with research areas including statistical modeling, Bayesian inference, game theory, and probability. They have published peer-reviewed papers and regularly presented independent research at conferences, demonstrating strong expertise in both theoretical and applied mathematics/statistics.",
+            "reasoning": "The candidate has a PhD in Mathematics and conducts research in probability, stochastic partial differential equations, large deviations theory, and multi-scale phenomena. They have held academic positions including Associate Professor and Postdoctoral Fellow at Boston University, indicating strong research credentials likely supported by peer-reviewed publications.",
             "score": 9.0
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "The candidate's experience with statistical modeling, probability, cryptography, game theory, and data-driven performance prediction models reflect strong proficiency in mathematical modeling and algorithmic problem-solving. Additionally, experience teaching advanced math courses confirms strong proof-based reasoning skills.",
+            "reasoning": "The candidate's research areas such as stochastic PDEs and large deviations theory demonstrate advanced proficiency in mathematical modeling and proof-based reasoning. Their teaching of math classes and multiple graduate and undergraduate levels further supports strong skills in mathematical problem solving.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location_math",
+            "reasoning": "The candidate obtained their Bachelor's degree from University of Maryland, which is in the U.S., meeting the location requirement.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_math_statistics",
+            "reasoning": "The candidate has a PhD in Mathematics from University of Maryland College Park, a leading U.S. university known for strong mathematics programs, meeting the requirement for a PhD in Mathematics from a top U.S. university.",
+            "passes": true
+          }
+        ],
+        "final_score": 85.00000000000001,
+        "raw_data": {
+          "_id": "6796d98df9f986ea7fc6f55e",
+          "name": "Mickey Salins",
+          "linkedinId": "mickey-salins-1b134988"
+        }
+      },
+      {
+        "candidate_name": "Alexei Novikov",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/alexei-novikov-4724bb99",
+        "soft_scores": [
+          {
+            "criteria_name": "research_expertise_math",
+            "reasoning": "The candidate is a Visiting Professor of Mathematics at Stanford University with over 20 years of academic research experience in applied mathematics and stochastic processes. The summary indicates involvement in both theoretical and applied research, with expertise in machine learning for imaging and high-dimensional data analysis, suggesting strong peer-reviewed research contributions.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "mathematical_modeling_proficiency",
+            "reasoning": "The candidate's expertise includes stochastic processes, modeling, sparse signal recovery, and machine learning applications, which involve advanced mathematical modeling and algorithmic problem-solving. Experience developing advanced mathematical models for real-world problems indicates a high level of proficiency.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate's undergraduate location is not specified, and thus it cannot be confirmed that they completed undergraduate studies in the U.S., U.K., or Canada.",
+            "reasoning": "Candidate completed undergraduate studies at Moscow State University, which is not in the U.S., U.K., or Canada.",
             "passes": false
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate holds a PhD in Mathematics from the University of Pennsylvania, which is a top U.S. university.",
+            "reasoning": "The candidate holds a Doctorate in Mathematics from Stanford University, which is a top U.S. university, meeting the requirement for a PhD in Mathematics or Statistics from a leading institution.",
             "passes": true
           }
         ],
         "final_score": 0.0,
         "raw_data": {
-          "_id": "6796d45e8a14699f1612d454",
-          "name": "Alon Benhaim",
-          "linkedinId": "alonbenhaim"
+          "_id": "67956afff9f986ea7fb9dfe7",
+          "name": "Alexei Novikov",
+          "linkedinId": "alexei-novikov-4724bb99"
         }
       },
       {
-        "candidate_name": "Manasi Sheth",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/manasishethchandra",
+        "candidate_name": "Mike Ludkovski",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/mike-ludkovski-9623a927",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has a PhD focused on Applied and Computational Mathematics with a specialization in Statistics and demonstrated experience as a Mathematical Statistician and Biostatistician. However, no specific mention of peer-reviewed publications or preprints is available in the summary, though the roles suggest research involvement.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "The candidate is skilled in categorical data analysis, linear regression, diagnostic devices, statistical modeling, and has experience in applied mathematics and statistics, implying good proficiency in mathematical modeling and analytical problem-solving.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate's undergraduate location is not specified in the provided information, making it unclear whether the undergraduate studies were completed in the U.S., U.K., or Canada.",
-            "passes": false
-          },
-          {
-            "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate holds a PhD in Applied and Computational Mathematics focused on Statistics from Old Dominion University, a recognized U.S. university, but not typically ranked among the top U.S. universities for mathematics/statistics. Hence, does not meet the 'top U.S. university' criterion clearly.",
-            "passes": false
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "6795ce5e0db3e792567c1bea",
-          "name": "Manasi Sheth",
-          "linkedinId": "manasishethchandra"
-        }
-      },
-      {
-        "candidate_name": "Matthew Arvanitis",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/matthew-arvanitis-37aa1463",
-        "soft_scores": [
-          {
-            "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has a PhD in Applied Statistics and research interests including Likelihood-Free Estimation, Bayesian Inference, Copulas, and Dependence, indicating strong research expertise in applied statistics and mathematical statistics.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Experience includes six years active duty in mathematical analysis and six years teaching assistant roles, as well as research involving Bayesian inference and likelihood-free estimation, indicating good proficiency in mathematical modeling and problem-solving.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate's undergraduate institution or location is not specified, so it is unclear if this criterion is met.",
-            "passes": false
-          },
-          {
-            "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate holds a Doctorate from University of California, Riverside in Applied Statistics, which is a top U.S. university, satisfying this criterion.",
-            "passes": true
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "6796e2e17e0084c5fa82eaa0",
-          "name": "Matthew Arvanitis",
-          "linkedinId": "matthew-arvanitis-37aa1463"
-        }
-      },
-      {
-        "candidate_name": "Cameron Thieme",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/cameron-thieme",
-        "soft_scores": [
-          {
-            "criteria_name": "research_expertise_math",
-            "reasoning": "Candidate has a PhD in mathematics, with peer-reviewed publications in mathematical foundations of climate science and published research during postdoc on machine learning models. Demonstrates strong research expertise in both pure and applied mathematics and statistics.",
+            "reasoning": "Candidate is a Professor of Statistics and Applied Probability with ongoing research funded by the NSF since 2012, multiple publications in financial mathematics, stochastic modeling, and applied probability, demonstrating strong research expertise in applied mathematics and statistics.",
             "score": 9.0
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Candidate has extensive experience in mathematical modeling and algorithmic problem-solving, including Bayesian analysis, Markov chains, SARIMAX, neural nets, and machine learning techniques. Has taught stochastic processes and probability and implemented algorithms in Python.",
+            "reasoning": "Extensive expertise in stochastic modeling, simulation methods, and applied probability imply a high level of proficiency in mathematical modeling and algorithmic problem-solving, as well as experience in proof-based reasoning in research.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "Bachelor's degree was completed at University of Southern California, which is in the U.S.",
+            "reasoning": "Completed undergraduate studies at Simon Fraser University in Canada, which meets the requirement of undergraduate studies in the U.S., U.K., or Canada.",
             "passes": true
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "PhD is in mathematics from University of Minnesota-Twin Cities, which is a leading U.S. university.",
+            "reasoning": "PhD obtained from Princeton University in Operations Research & Financial Engineering, which is a top U.S. university and closely related to mathematics and statistics.",
             "passes": true
           }
         ],
         "final_score": 90.0,
         "raw_data": {
-          "_id": "67962d1952a365d1168715a9",
-          "name": "Cameron Thieme",
-          "linkedinId": "cameron-thieme"
+          "_id": "67970105a1a09a48febd9091",
+          "name": "Mike Ludkovski",
+          "linkedinId": "mike-ludkovski-9623a927"
         }
       },
       {
-        "candidate_name": "Ashton Wiens",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/ashton-wiens-4b4b649b",
+        "candidate_name": "Ge Liu",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/ge-liu-phd-8284bb17b",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "Candidate holds a PhD in Applied Mathematics and works extensively with statistical analysis, spatial statistics, and interdisciplinary statistical collaboration. Although exact publication details are not provided, the role as lead RA and involvement in research projects strongly indicate peer-reviewed research expertise in applied mathematics and statistics.",
+            "reasoning": "The candidate has expertise in statistical inference and stochastic processes, with involvement in research topics such as Bayesian inference, MCMC, and hierarchical modeling, indicating solid research experience likely supported by peer-reviewed publications or preprints.",
             "score": 8.0
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Candidate demonstrates proficiency in mathematical modeling through work with spatial statistics, multivariate processes, climate modeling, predator-prey models, bifurcation analysis, and delay differential equations. Experience includes numerical analysis, HPC, and teaching differential equations, underscoring strong modeling and problem-solving capabilities.",
+            "reasoning": "The candidate's expertise in predictive modeling, experimental design, advanced computational statistics, and proficiency in multiple programming languages and tools (R, C/C++, Matlab, SAS) demonstrates strong mathematical modeling and algorithmic problem-solving skills.",
             "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "Candidate completed undergraduate degree in Mathematics at The University of Kansas, located in the U.S.",
+            "reasoning": "Candidate completed undergraduate studies at Ohio University, which is in the U.S.",
             "passes": true
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "PhD obtained in Applied Mathematics from University of Colorado Boulder, which is considered a leading U.S. university. The field is relevant to mathematics/statistics.",
+            "reasoning": "Candidate holds a doctorate in Statistics from The Ohio State University, which is recognized as a leading U.S. university in this field.",
             "passes": true
           }
         ],
         "final_score": 80.0,
         "raw_data": {
-          "_id": "679557b473bf14921fad1af5",
-          "name": "Ashton Wiens",
-          "linkedinId": "ashton-wiens-4b4b649b"
+          "_id": "67965d6e8a14699f160e7e5d",
+          "name": "Ge Liu",
+          "linkedinId": "ge-liu-phd-8284bb17b"
         }
       },
       {
-        "candidate_name": "Jennifer Lopez",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jennifer-lopez-b91a4216",
+        "candidate_name": "Tom VandenBoom",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/tom-vandenboom-7437b850",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "Candidate has a PhD in Mathematics and Statistics, strong research professional background, and experience in mathematical modeling and statistical data analysis. Although no explicit mentions of publications are given, the PhD and professional research experience in Air Force Research Laboratory imply solid research expertise in applied mathematics/statistics.",
-            "score": 7.0
+            "reasoning": "The candidate holds a PhD in Mathematics with a thesis in mathematical physics and has a decade of quantitative research experience including research assistant roles and an assistant professorship in mathematics. This indicates strong research expertise in applied mathematics and probability, although specific peer-reviewed publications are not listed in the summary.",
+            "score": 8.0
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Candidate has demonstrated proficiency in mathematical modeling, Matlab programming, analytical skills, and statistical data analysis, indicating above average skills in mathematical modeling and problem-solving.",
+            "reasoning": "The candidate demonstrates proficiency in applied probability through multiple teaching and research positions and leadership roles in data science applying predictive analytics, indicating good mathematical modeling and problem-solving skills.",
             "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "Undergraduate education location is not specified, so it is unclear if the candidate completed undergraduate studies in the U.S., U.K., or Canada.",
-            "passes": false
+            "reasoning": "The candidate completed their undergraduate studies in Mathematics and Statistics at the University of Minnesota, USA.",
+            "passes": true
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "Candidate holds a PhD in Mathematics and Statistics from the U.S. Air Force Institute of Technology, which is considered a top U.S. university for graduate education in technical fields within the military context.",
+            "reasoning": "The candidate earned a PhD in Mathematics from Rice University, which is considered a top U.S. university.",
             "passes": true
           }
         ],
-        "final_score": 0.0,
+        "final_score": 80.0,
         "raw_data": {
-          "_id": "67960cd373bf14921fb4a6f1",
-          "name": "Jennifer Lopez",
-          "linkedinId": "jennifer-lopez-b91a4216"
+          "_id": "6796f68f7e0084c5fa83c512",
+          "name": "Tom VandenBoom",
+          "linkedinId": "tom-vandenboom-7437b850"
+        }
+      },
+      {
+        "candidate_name": "Tyler Skorczewski",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/tyler-skorczewski-20582b70",
+        "soft_scores": [
+          {
+            "criteria_name": "research_expertise_math",
+            "reasoning": "The candidate has a PhD in Applied Mathematics and experience as a Research Assistant Professor, involving research in mathematical modeling of blood clotting and fluid-structure interactions. This indicates active research expertise in applied mathematics with peer-reviewed work.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "mathematical_modeling_proficiency",
+            "reasoning": "The candidate shows strong proficiency in mathematical modeling through work in Computational Fluid Dynamics, Mathematical Biology, and developing high performance computing algorithms for simulations, indicating above average skill in mathematical modeling and algorithmic problem-solving.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location_math",
+            "reasoning": "The candidate completed undergraduate studies in Physics and Mathematics at University of Wisconsin-Oshkosh, which is in the U.S.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_math_statistics",
+            "reasoning": "The candidate holds a PhD in Applied Mathematics from University of California, Davis, a leading U.S. university highly regarded for its mathematics program.",
+            "passes": true
+          }
+        ],
+        "final_score": 80.0,
+        "raw_data": {
+          "_id": "679703cb3eff0c142a8cd06f",
+          "name": "Tyler Skorczewski",
+          "linkedinId": "tyler-skorczewski-20582b70"
+        }
+      },
+      {
+        "candidate_name": "Andrew Farris",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/andrew-farris-265151178",
+        "soft_scores": [
+          {
+            "criteria_name": "research_expertise_math",
+            "reasoning": "Candidate holds a Statistics PhD and has experience teaching advanced statistical topics, indicating some research expertise; however, no explicit mention of peer-reviewed publications or preprints limits evidence of strong research output.",
+            "score": 6.0
+          },
+          {
+            "criteria_name": "mathematical_modeling_proficiency",
+            "reasoning": "Extensive teaching experience in probability theory, applied regression, GLMs, and measure theoretic probability demonstrates solid proficiency in mathematical modeling and proof-based reasoning.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location_math",
+            "reasoning": "Completed undergraduate degrees at University of California, Berkeley, USA.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_math_statistics",
+            "reasoning": "Holds a PhD in Statistics from University of California, Davis, which is a leading U.S. university.",
+            "passes": true
+          }
+        ],
+        "final_score": 70.0,
+        "raw_data": {
+          "_id": "6795d5128d90554e606eda59",
+          "name": "Andrew Farris",
+          "linkedinId": "andrew-farris-265151178"
+        }
+      },
+      {
+        "candidate_name": "Amanda Koepke",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/amandakoepke",
+        "soft_scores": [
+          {
+            "criteria_name": "research_expertise_math",
+            "reasoning": "The candidate has extensive experience in statistical consulting and research, including development of new statistical methods, published work, and presentations in relevant scientific meetings. Evidence of peer-reviewed publications and preprints is present, supporting strong research expertise in applied statistics.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "mathematical_modeling_proficiency",
+            "reasoning": "The candidate has demonstrated proficiency in mathematical modeling, including use of Bayesian hierarchical models, implementation of advanced algorithms like particle marginal Metropolis-Hastings, development of statistical software, and applied problem-solving in interdisciplinary scientific contexts.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location_math",
+            "reasoning": "The candidate completed their Bachelor's degree at Texas Tech University, which is located in the United States.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_math_statistics",
+            "reasoning": "The candidate holds a doctorate in Statistics from the University of Washington, recognized as a leading U.S. university with a strong Statistics program.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "6795f7690db3e792567d8f95",
+          "name": "Amanda Koepke",
+          "linkedinId": "amandakoepke"
+        }
+      },
+      {
+        "candidate_name": "Atticus Christensen",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/atticus124",
+        "soft_scores": [
+          {
+            "criteria_name": "research_expertise_math",
+            "reasoning": "The candidate holds a PhD in Mathematics from MIT, has experience as a research assistant at MIT, and works as a Quantitative Researcher, indicating strong research expertise in applied mathematics and related fields. Although specific peer-reviewed publications are not explicitly mentioned, the background suggests active involvement in research.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "mathematical_modeling_proficiency",
+            "reasoning": "The candidate has a mathematics PhD, research experience at MIT, and works in quantitative research with interests in data science, machine learning, and algorithms, all indicating a strong proficiency in mathematical modeling and algorithmic problem-solving.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location_math",
+            "reasoning": "The candidate completed a Bachelor's degree in Mathematics at Stanford University, which is located in the U.S.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_math_statistics",
+            "reasoning": "The candidate obtained a Doctorate in Mathematics from the Massachusetts Institute of Technology, which is a leading U.S. university.",
+            "passes": true
+          }
+        ],
+        "final_score": 80.0,
+        "raw_data": {
+          "_id": "6795829e8a14699f160705b2",
+          "name": "Atticus Christensen",
+          "linkedinId": "atticus124"
         }
       }
     ]

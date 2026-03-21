@@ -3,20 +3,20 @@
   "config_path": "quantitative_finance.yml",
   "object_ids": [
     "6795ba7aa1a09a48feb19229",
-    "6795e5f47e0084c5fa79892a",
-    "679593f052a365d11681abe1",
-    "6794c9b252a365d1167a65f3",
-    "67956f018a14699f16064d00",
-    "67964830a1a09a48feb6da12",
-    "6796b68f8d90554e60770466",
-    "67951a34f9f986ea7fb6f6fa",
     "67951e948d90554e606830ec",
-    "6794c0583eff0c142a7946c7"
+    "679593f052a365d11681abe1",
+    "6796fc493eff0c142a8c9642",
+    "6794a9480db3e79256714348",
+    "6795186d0db3e79256754335",
+    "679583d68d90554e606be5e0",
+    "67955b10f9f986ea7fb93b7a",
+    "6796ee7c3e76d5b58735b306",
+    "67952f6ca1a09a48feac6303"
   ],
   "eval_result": {
     "config_name": "quantitative_finance",
     "num_candidates": 10,
-    "average_final_score": 34.0,
+    "average_final_score": 65.66666666666667,
     "average_soft_scores": [
       {
         "criteria_name": "high_stakes_environment",
@@ -26,12 +26,12 @@
       {
         "criteria_name": "python_quantitative_proficiency",
         "reasoning": null,
-        "average_score": 8.0
+        "average_score": 6.9
       },
       {
         "criteria_name": "financial_modeling_experience",
         "reasoning": null,
-        "average_score": 8.8
+        "average_score": 9.0
       }
     ],
     "average_hard_scores": [
@@ -43,7 +43,7 @@
       {
         "criteria_name": "m7_mba",
         "reasoning": null,
-        "pass_rate": 0.4
+        "pass_rate": 0.8
       }
     ],
     "individual_results": [
@@ -87,42 +87,42 @@
         }
       },
       {
-        "candidate_name": "Chirag Shah",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/chiragjshah",
+        "candidate_name": "Colin Alexander",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/colinalexandercfa",
         "soft_scores": [
           {
             "criteria_name": "financial_modeling_experience",
-            "reasoning": "Candidate has extensive experience in portfolio construction, asset allocation modeling, portfolio optimization, equity factor modeling, derivatives pricing indications through futures implied fair value calculations, and strategy back-testing, which strongly indicates practical financial modeling expertise.",
+            "reasoning": "The candidate has extensive experience applying financial modeling techniques in portfolio optimization and derivatives pricing, including work on structured products, credit correlation products, loan pricing, and portfolio performance attribution at global investment firms like UBS and Man Group.",
             "score": 9.0
           },
           {
             "criteria_name": "python_quantitative_proficiency",
-            "reasoning": "Although explicit mention of Python is not stated, the candidate is described as a front office software developer handling low latency solutions and has programming involvement in financial analytics. Given the nature of roles in quantitative finance and risk management, a good level of Python proficiency can be inferred, but no direct evidence of familiarity with financial Python libraries is presented.",
-            "score": 7.0
+            "reasoning": "The candidate is an expert Python/Pandas developer and has been responsible for development, testing, and maintenance of Python codebases related to portfolio analytics. Also proficient in other quantitative programming languages, underscoring strong quantitative Python skills.",
+            "score": 9.0
           },
           {
             "criteria_name": "high_stakes_environment",
-            "reasoning": "The candidate has worked at reputable global investment firms like Citi, Susquehanna International Group, and Sculptor Capital Management in roles connected to risk management, portfolio construction, and front office software development, all indicating experience in high-stakes environments applying quantitative methods.",
+            "reasoning": "Extensive experience working at major global investment firms such as UBS, Man Group, and Gemini in high-responsibility roles involving risk management, algorithmic trading oversight, portfolio management, and AI/ML in finance, demonstrating proven ability to apply quantitative methods in high-stakes production environments.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "m7_mba",
-            "reasoning": "The candidate holds an MBA from Columbia Business School, which is a top-tier M7 MBA program.",
-            "passes": true
+            "reasoning": "The candidate holds an MBA from London Business School, which, while prestigious, is not part of the M7 group of US business schools.",
+            "passes": false
           },
           {
             "criteria_name": "three_plus_years_quant_finance",
-            "reasoning": "Candidate has multiple roles in quantitative finance including risk management, portfolio construction, and front office software development at high-profile investment firms, indicating well over three years of relevant experience.",
+            "reasoning": "The candidate has over eighteen years of international experience in quantitative finance roles including risk modeling, portfolio optimization, derivatives pricing, and algorithmic trading related roles at global firms.",
             "passes": true
           }
         ],
-        "final_score": 83.33333333333334,
+        "final_score": 0.0,
         "raw_data": {
-          "_id": "6795e5f47e0084c5fa79892a",
-          "name": "Chirag Shah",
-          "linkedinId": "chiragjshah"
+          "_id": "67951e948d90554e606830ec",
+          "name": "Colin Alexander",
+          "linkedinId": "colinalexandercfa"
         }
       },
       {
@@ -165,276 +165,276 @@
         }
       },
       {
-        "candidate_name": "Jeyh Coleborn",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jeyh-coleborn-b708b9175",
+        "candidate_name": "Jeremiah Perry",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/jeremiahperry",
         "soft_scores": [
           {
             "criteria_name": "financial_modeling_experience",
-            "reasoning": "Candidate has extensive experience with derivatives pricing, portfolio risk and revenue attribution, quantitative analytics, and credit risk modeling across multiple roles (e.g., Head of Trading at Bank of America and Quantitative Credit Risk Analyst at BlackRock). This demonstrates solid applied financial modeling experience including portfolio and derivatives contexts.",
+            "reasoning": "Candidate has extensive experience in quantitative finance roles including portfolio management, risk analysis, and development of systematic trading strategies. The experience explicitly mentions research and maintenance of strategies involving factors like momentum and value, as well as risk management and derivatives valuation, indicating strong applied financial modeling skills including portfolio optimization and derivatives pricing.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "python_quantitative_proficiency",
+            "reasoning": "Candidate lists Python among multiple programming languages used and has developed software solutions using Python for systematic trading, research, and risk management. While there is no explicit mention of financial libraries like QuantLib, the strong programming background and use of Python in relevant quantitative finance tasks indicate high proficiency.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "high_stakes_environment",
+            "reasoning": "Candidate has worked at Goldman Sachs as Vice President in corporate treasury strategies and at global firms like Rotella Capital Management and International Fund Services, indicating exposure to high-stakes environments with applied quantitative methods in production.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "m7_mba",
+            "reasoning": "Candidate holds an MBA from The University of Chicago Booth School of Business, which is a member of the M7 group.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_quant_finance",
+            "reasoning": "Candidate has over 10 years of experience in quantitative finance-related roles including risk analysis, portfolio management, and strategy development at multiple firms.",
+            "passes": true
+          }
+        ],
+        "final_score": 86.66666666666667,
+        "raw_data": {
+          "_id": "6796fc493eff0c142a8c9642",
+          "name": "Jeremiah Perry",
+          "linkedinId": "jeremiahperry"
+        }
+      },
+      {
+        "candidate_name": "Andrew D. Kominik",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/andrewkominik",
+        "soft_scores": [
+          {
+            "criteria_name": "financial_modeling_experience",
+            "reasoning": "Candidate has extensive experience building and refining proprietary equity risk models, developing stock selection models, conducting portfolio construction research, and automating investment risk monitoring and optimization processes, which demonstrates strong financial modeling expertise.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "python_quantitative_proficiency",
+            "reasoning": "Candidate wrote Python packages for portfolio liquidity reports, stress testing, and interfacing with internal data, indicating proficient Python skills applied to quantitative finance. However, there is no explicit mention of using financial Python libraries like QuantLib.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "high_stakes_environment",
+            "reasoning": "Worked at William Blair, a global investment firm managing over $60 billion in assets, leading risk management initiatives and supporting multiple portfolio managers, showing experience in high-stakes, production quantitative finance environments.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "m7_mba",
+            "reasoning": "Candidate earned an MBA from University of Chicago Booth School of Business, which is a prestigious M7 MBA program.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_quant_finance",
+            "reasoning": "Candidate has multiple years at William Blair in quantitative roles involving risk model development, portfolio construction, and research, clearly exceeding 3 years of experience in quantitative finance.",
+            "passes": true
+          }
+        ],
+        "final_score": 86.66666666666667,
+        "raw_data": {
+          "_id": "6794a9480db3e79256714348",
+          "name": "Andrew D. Kominik",
+          "linkedinId": "andrewkominik"
+        }
+      },
+      {
+        "candidate_name": "Jingyan Wang",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/jingyan-wang75",
+        "soft_scores": [
+          {
+            "criteria_name": "financial_modeling_experience",
+            "reasoning": "The candidate demonstrates extensive experience in financial modeling, including bond pricing, option pricing, portfolio optimization, credit strategies, and derivatives pricing, with tangible achievements such as managing a $500M portfolio and designing proprietary models.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "python_quantitative_proficiency",
+            "reasoning": "The candidate lists extensive programming skills including C/C++, R, SQL, Visual Basic, and Matlab, but there is no explicit mention of Python or experience with Python financial libraries like QuantLib.",
+            "score": 3.0
+          },
+          {
+            "criteria_name": "high_stakes_environment",
+            "reasoning": "The candidate has worked at several global investment firms and hedge funds managing large portfolios, designing risk management platforms, and functioning in senior quantitative roles with real-world impact, indicating strong experience in high-stakes environments.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "m7_mba",
+            "reasoning": "The candidate holds an MBA from University of Chicago Booth, which is a top M7 business school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_quant_finance",
+            "reasoning": "The candidate has multiple years (likely well over 3) of experience in quantitative finance roles including risk modeling, portfolio management, and quant research at several global investment firms.",
+            "passes": true
+          }
+        ],
+        "final_score": 73.33333333333334,
+        "raw_data": {
+          "_id": "6795186d0db3e79256754335",
+          "name": "Jingyan Wang",
+          "linkedinId": "jingyan-wang75"
+        }
+      },
+      {
+        "candidate_name": "Quan X.",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/quanxu",
+        "soft_scores": [
+          {
+            "criteria_name": "financial_modeling_experience",
+            "reasoning": "Candidate has extensive experience in portfolio management and research focused on portfolio optimization, regime switching, statistical arbitrage, and derivatives pricing techniques, indicating strong practical financial modeling skills.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "python_quantitative_proficiency",
+            "reasoning": "No explicit mention of Python usage or libraries such as QuantLib. Programming languages listed include C++, Matlab, C#, Java, SQL, R, S Plus, Perl, and VBA but not Python.",
+            "score": 2.0
+          },
+          {
+            "criteria_name": "high_stakes_environment",
+            "reasoning": "Has worked as a Portfolio Manager at a top-tier multi-billion dollar hedge fund and at Banc of America Securities, demonstrating experience in high-stakes global investment environments with real-time trading and quantitative methods applied in production.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "m7_mba",
+            "reasoning": "Candidate possesses an MBA from Duke University's Fuqua School of Business, which is considered an M7 business school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_quant_finance",
+            "reasoning": "Candidate has roles including portfolio manager and quantitative trader/researcher at reputed financial firms for multiple years, indicating 3+ years in quantitative finance including risk modeling and algorithmic trading.",
+            "passes": true
+          }
+        ],
+        "final_score": 66.66666666666666,
+        "raw_data": {
+          "_id": "67955b10f9f986ea7fb93b7a",
+          "name": "Quan X.",
+          "linkedinId": "quanxu"
+        }
+      },
+      {
+        "candidate_name": "Neeraj Bhatia",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/neeraj-bhatia-b521a27",
+        "soft_scores": [
+          {
+            "criteria_name": "financial_modeling_experience",
+            "reasoning": "Candidate has extensive experience in portfolio management, risk modeling, capital market research, asset allocation modeling, and expertise in alpha signal research, which are direct applications of financial modeling including portfolio optimization. Derivatives pricing is not explicitly mentioned but related expertise is implied.",
             "score": 8.0
           },
           {
             "criteria_name": "python_quantitative_proficiency",
-            "reasoning": "Candidate has explicit experience using Python for manipulating large datasets and quantitative modelling, as well as Java. While no explicit mention of financial Python libraries like QuantLib is present, the description indicates proficiency with Python in quantitative finance settings.",
+            "reasoning": "Candidate explicitly mentions strong quantitative skills including Python, machine learning, and analytics. Python is listed among keywords. Exposure to specific financial libraries like QuantLib is not detailed but general Python proficiency for quantitative work is evident.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "high_stakes_environment",
+            "reasoning": "Candidate has worked at major global investment firms (Vanguard, Allspring Global Investments) in senior portfolio management and quantitative research roles, demonstrating experience in high-stakes environments applying quantitative methods.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "m7_mba",
+            "reasoning": "Candidate holds an MBA in Finance from Columbia Business School, which is a member of the M7 group.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_quant_finance",
+            "reasoning": "Candidate's roles in quantitative equity research, portfolio management, risk modeling, and algorithmic trading across multiple reputable firms clearly indicate over three years of experience in quantitative finance.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "6796ee7c3e76d5b58735b306",
+          "name": "Neeraj Bhatia",
+          "linkedinId": "neeraj-bhatia-b521a27"
+        }
+      },
+      {
+        "candidate_name": "Hailey Zhao",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/hangyi",
+        "soft_scores": [
+          {
+            "criteria_name": "financial_modeling_experience",
+            "reasoning": "Demonstrated extensive experience in portfolio optimization, multi-asset portfolio return attribution, risk budgeting, bond valuation, derivatives pricing (CDS, CDX, options on bonds), and scenario analysis at reputable firms like BlackRock and FactSet.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "python_quantitative_proficiency",
+            "reasoning": "While Python is not explicitly mentioned, experience with NLP, LLM, Machine Learning, Monte Carlo simulations, and numerical optimization suggests strong quantitative programming skills likely including Python or similar. However, no direct mention of Python or financial libraries like QuantLib.",
             "score": 7.0
           },
           {
             "criteria_name": "high_stakes_environment",
-            "reasoning": "Candidate has held senior roles at multiple premier global investment firms (Bank of America, JPMorgan Chase, BlackRock, Goldman Sachs, Credit Suisse) and has managed quantitative risk, trading, and portfolio functions supporting large-scale, high-stakes operations.",
+            "reasoning": "Has worked at BlackRock as VP and Portfolio Manager, and at Citi and FactSet in senior quantitative roles, all in global investment environments where quantitative finance skills are applied in production and client-facing settings.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "m7_mba",
-            "reasoning": "Candidate holds an MBA from The University of Chicago Booth School of Business, which is an M7 business school.",
+            "reasoning": "Earned an MBA from The University of Chicago Booth School of Business, a top M7 program.",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_quant_finance",
-            "reasoning": "Candidate has multiple roles involving quantitative finance, risk modeling, and trading analytics spanning many years across top-tier institutions indicating well over 3 years of relevant experience.",
+            "reasoning": "Over three years of quantitative finance experience including risk budgeting, portfolio optimization, systematic trading signals, and derivatives pricing roles at BlackRock, FactSet, and prior internships.",
             "passes": true
           }
         ],
-        "final_score": 80.0,
+        "final_score": 83.33333333333334,
         "raw_data": {
-          "_id": "6794c9b252a365d1167a65f3",
-          "name": "Jeyh Coleborn",
-          "linkedinId": "jeyh-coleborn-b708b9175"
+          "_id": "67952f6ca1a09a48feac6303",
+          "name": "Hailey Zhao",
+          "linkedinId": "hangyi"
         }
       },
       {
-        "candidate_name": "Randall D.",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/randall500",
+        "candidate_name": "Alex Battles",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/alex-battles",
         "soft_scores": [
           {
             "criteria_name": "financial_modeling_experience",
-            "reasoning": "Candidate has extensive experience in financial modeling including derivatives valuation, portfolio optimization with Sharpe ratio maximization, Monte Carlo simulations, and development of financial models for municipal bonds and carbon finance projects. The experience is broad and deep in real-world financial modeling problems.",
+            "reasoning": "Extensive professional roles involving portfolio risk evaluation, margin methodologies, and derivatives trading demonstrate strong experience applying financial modeling techniques, including portfolio optimization and derivatives pricing.",
             "score": 9.0
           },
           {
             "criteria_name": "python_quantitative_proficiency",
-            "reasoning": "Candidate demonstrates strong proficiency in Python for quantitative analysis, including usage of Python libraries such as Pandas, NumPy, SkLearn, Keras, TensorFlow, SciPy, and experience with algorithmic trading and machine learning model development.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "high_stakes_environment",
-            "reasoning": "Candidate has worked in high-stakes, global investment firms like JPMorgan Chase and Bank of China handling liquidity risk and regulatory reporting, as well as strategic roles at Fidelity National Information Services with large financial accounts. This shows extensive experience in high-pressure, high-stakes environments applying quantitative methods.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "m7_mba",
-            "reasoning": "Candidate holds an MBA from Carnegie Mellon University - Tepper School Of Business, which is considered a top 10 U.S. program but not part of the M7 group. M7 traditionally includes Harvard, Stanford, Wharton, Chicago, MIT Sloan, Columbia, and Northwestern Kellogg. Tepper is prestigious but not M7.",
-            "passes": false
-          },
-          {
-            "criteria_name": "three_plus_years_quant_finance",
-            "reasoning": "Candidate has multiple years of experience in quantitative finance roles specifically including risk modeling, liquidity risk, derivatives valuation, and algorithmic trading roles at global financial firms such as JPMorgan Chase, Bank of China, and in proprietary trading firms. The experience clearly exceeds 3 years.",
-            "passes": true
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "67956f018a14699f16064d00",
-          "name": "Randall D.",
-          "linkedinId": "randall500"
-        }
-      },
-      {
-        "candidate_name": "Xiaorong Zou",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/xiaorong-zou-531476108",
-        "soft_scores": [
-          {
-            "criteria_name": "financial_modeling_experience",
-            "reasoning": "Candidate has advanced knowledge and direct experience with asset pricing models, risk models like VaR/SVaR, portfolio attribute analysis, and covers a broad spectrum of financial products including derivatives. This indicates strong experience applying financial modeling techniques relevant to portfolio optimization and derivatives pricing.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "python_quantitative_proficiency",
-            "reasoning": "Candidate is proficient in Python and has experience working with Matlab and C++, demonstrating strong quantitative programming skills. While specific mention of financial libraries like QuantLib is absent, proficiency in Python combined with extensive quantitative finance experience justifies a high score.",
+            "reasoning": "Proficient in Python with experience using Pandas and Scikit-Learn. No explicit mention of QuantLib but shown ability in coding and data analytics for quantitative finance.",
             "score": 8.0
           },
           {
             "criteria_name": "high_stakes_environment",
-            "reasoning": "Candidate has held senior roles (Director, VP, Senior Manager) at major global investment banks (Bank of America, JPMorgan Chase & Co., BMO Financial Group) working on regulatory risk models and capital calculations. This strongly indicates ability to work in high-stakes environments with real-world financial applications.",
+            "reasoning": "Has held senior roles at major global financial firms (BNP Paribas, Deutsche Bank, Merrill Lynch), overseeing risk for large funds and involved in regulatory communications, indicating strong experience in high-stakes environments.",
             "score": 10.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "m7_mba",
-            "reasoning": "Candidate's highest educational credentials are a Doctorate from University of Southern California and a Master's from University of Waterloo. There is no mention of an MBA or an M7 MBA from a top U.S. program.",
-            "passes": false
-          },
-          {
-            "criteria_name": "three_plus_years_quant_finance",
-            "reasoning": "Candidate has multiple senior roles in quantitative finance spanning risk modeling, market risk, regulatory capital calculations, and quantitative research at established financial institutions over several years, clearly exceeding three years of relevant experience.",
-            "passes": true
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "67964830a1a09a48feb6da12",
-          "name": "Xiaorong Zou",
-          "linkedinId": "xiaorong-zou-531476108"
-        }
-      },
-      {
-        "candidate_name": "Puneet Vohra",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/puneet-vohra",
-        "soft_scores": [
-          {
-            "criteria_name": "financial_modeling_experience",
-            "reasoning": "The candidate has experience with portfolio hedging methodologies, multi-factor analysis, portfolio analytics, and credit analytics, indicating solid financial modeling knowledge applied to real-world problems including portfolio optimization and risk management.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "python_quantitative_proficiency",
-            "reasoning": "Extensive use of Python with SciPy stack (Pandas/NumPy/scikit-learn) for modeling, analysis, and building internal investment analytics platforms demonstrates strong proficiency with Python in quantitative settings. No direct mention of QuantLib or similar financial libraries, but overall Python quantitative skills are above average.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "high_stakes_environment",
-            "reasoning": "Experience working at global investment firms like MIO Partners with responsibilities that impact investment decisions, managing quantitative teams, and previous roles at reputable financial institutions shows capability to operate in high-stakes environments with production quantitative applications.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "m7_mba",
-            "reasoning": "The MBA is from the Indian Institute of Management Ahmedabad, a prestigious institution in India but not part of the M7 group of schools in the U.S.",
-            "passes": false
-          },
-          {
-            "criteria_name": "three_plus_years_quant_finance",
-            "reasoning": "Candidate has multiple years of experience in quantitative finance roles including quantitative development manager, quant analyst, financial engineer, and portfolio analytics spanning over several years.",
-            "passes": true
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "6796b68f8d90554e60770466",
-          "name": "Puneet Vohra",
-          "linkedinId": "puneet-vohra"
-        }
-      },
-      {
-        "candidate_name": "Evan Mellos  CFA FRM PMP",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/evan-mellos-cfa-frm-pmp-462b513",
-        "soft_scores": [
-          {
-            "criteria_name": "financial_modeling_experience",
-            "reasoning": "The candidate has extensive experience in financial modeling across multiple roles and institutions, including market risk analytics, derivatives pricing, portfolio optimization, and asset/liability management. The summary and experience descriptions highlight numerous modeling and analytic responsibilities applied to real-world financial problems.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "python_quantitative_proficiency",
-            "reasoning": "Candidate explicitly mentions Python skills as part of the quantitative analytics toolkit and has developed and managed software tools using Python, R, and other languages. The candidate uses Python for quantitative analysis and has built proprietary software tools, demonstrating solid proficiency.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "high_stakes_environment",
-            "reasoning": "Candidate has worked in senior quantitative risk roles at major global investment firms including Merrill Lynch, Citibank, UBS, Credit Suisse, AIG among others. The roles involved managing risk on multi-billion-dollar portfolios and navigating complex regulatory and compliance environments, demonstrating extensive experience in high-stakes settings.",
-            "score": 10.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "m7_mba",
-            "reasoning": "The candidate holds an MBA from Columbia Business School, which is a member of M7 group of elite U.S. MBA programs.",
+            "reasoning": "Holds an MBA in Quantitative Finance from New York University, which is considered an M7 business school.",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_quant_finance",
-            "reasoning": "With over 20 years of experience in financial risk management, including quantitative roles involving risk modeling, derivatives pricing, and financial engineering at global investment banks and financial institutions, the candidate far exceeds the minimum requirement.",
+            "reasoning": "Multiple years of experience across various roles in quantitative finance and derivatives trading dating back well beyond three years.",
             "passes": true
           }
         ],
         "final_score": 90.0,
         "raw_data": {
-          "_id": "67951a34f9f986ea7fb6f6fa",
-          "name": "Evan Mellos  CFA FRM PMP",
-          "linkedinId": "evan-mellos-cfa-frm-pmp-462b513"
-        }
-      },
-      {
-        "candidate_name": "Colin Alexander",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/colinalexandercfa",
-        "soft_scores": [
-          {
-            "criteria_name": "financial_modeling_experience",
-            "reasoning": "The candidate has extensive experience applying financial modeling techniques in portfolio optimization and derivatives pricing, including work on structured products, credit correlation products, loan pricing, and portfolio performance attribution at global investment firms like UBS and Man Group.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "python_quantitative_proficiency",
-            "reasoning": "The candidate is an expert Python/Pandas developer and has been responsible for development, testing, and maintenance of Python codebases related to portfolio analytics. Also proficient in other quantitative programming languages, underscoring strong quantitative Python skills.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "high_stakes_environment",
-            "reasoning": "Extensive experience working at major global investment firms such as UBS, Man Group, and Gemini in high-responsibility roles involving risk management, algorithmic trading oversight, portfolio management, and AI/ML in finance, demonstrating proven ability to apply quantitative methods in high-stakes production environments.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "m7_mba",
-            "reasoning": "The candidate holds an MBA from London Business School, which, while prestigious, is not part of the M7 group of US business schools.",
-            "passes": false
-          },
-          {
-            "criteria_name": "three_plus_years_quant_finance",
-            "reasoning": "The candidate has over eighteen years of international experience in quantitative finance roles including risk modeling, portfolio optimization, derivatives pricing, and algorithmic trading related roles at global firms.",
-            "passes": true
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "67951e948d90554e606830ec",
-          "name": "Colin Alexander",
-          "linkedinId": "colinalexandercfa"
-        }
-      },
-      {
-        "candidate_name": "Michael Neumann",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/michaelneumannlondon",
-        "soft_scores": [
-          {
-            "criteria_name": "financial_modeling_experience",
-            "reasoning": "Candidate has extensive experience in portfolio construction, risk management, hedging, and derivatives-related research and teaching, indicating strong financial modeling skills applied in practical and academic settings.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "python_quantitative_proficiency",
-            "reasoning": "Candidate lists Python among several programming languages used for quantitative analysis; active roles at global quant firms involved development and implementation implying significant Python use, but no explicit mention of specific financial Python libraries.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "high_stakes_environment",
-            "reasoning": "Candidate has worked at global investment firms such as Bank of America Merrill Lynch and Dimensional Fund Advisors in quantitative roles involving portfolio and risk management, trading strategy development, and direct client advisory, demonstrating experience in high-stakes environments.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "m7_mba",
-            "reasoning": "Candidate has a Master's and Doctorate in finance-related fields from European universities but no mention of an MBA degree, especially not from a Prestigious U.S. (M7) program.",
-            "passes": false
-          },
-          {
-            "criteria_name": "three_plus_years_quant_finance",
-            "reasoning": "Candidate's career includes multiple quantitative finance roles spanning well over three years, including positions in risk modeling, quant trading, portfolio management, and systematic strategy development.",
-            "passes": true
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "6794c0583eff0c142a7946c7",
-          "name": "Michael Neumann",
-          "linkedinId": "michaelneumannlondon"
+          "_id": "679583d68d90554e606be5e0",
+          "name": "Alex Battles",
+          "linkedinId": "alex-battles"
         }
       }
     ]

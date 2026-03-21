@@ -122,7 +122,28 @@ Changes made:
 | Doctors (MD) | 8.0 |
 | Anthropology | 0.0 |
 
-Run 2 improved overall average from 46.7 to 52.1. Configs with clear structural signals (engineering degrees, JD + bar) perform best. Configs requiring nuanced recency or subfield matching (anthropology, quantitative finance) remain difficult because the LLM reranker operates on truncated summaries and cannot fully evaluate temporal or prestige-based criteria.
+### Run 3: TPUF attribute filters + post-filter on structured degree strings + LLM rerank (66.6 avg)
+
+Changes made:
+1. **TPUF-level attribute filters:** For 5 configs, pushed degree type, field of study, and start year filters into the Turbopuffer query itself. This narrows retrieval at the database level before results hit Python.
+2. **Structured degree string parsing:** For undergrad-location checks (math, biology) and school prestige (doctors), parsed the full `yrs_::school_::degree_::fos_::start_::end_` strings to verify specific degree entries, not just array membership.
+3. **Top-school matching:** Built school name fragment lists for US/UK/CA undergrad institutions and top US medical schools to enforce location and prestige criteria in Python before LLM reranking.
+
+| Config | Run 1 | Run 2 | Run 3 | Hard Pass Rates (Run 3) |
+|---|---|---|---|---|
+| Mechanical Engineers | 81.7 | 92.7 | **92.0** | 100%, 100% |
+| Bankers | 73.7 | 81.3 | **81.3** | 90%, 100% |
+| Tax Lawyer | 82.7 | 80.0 | **80.0** | 100%, 100% |
+| Junior Corporate Lawyer | 82.7 | 74.3 | **75.0** | 100%, 90% |
+| Mathematics PhD | 0.0 | 42.5 | **74.5** | 90%, 100% |
+| Biology Expert | 32.0 | 37.7 | **71.0** | 100%, 90% |
+| Radiology | 71.3 | 71.0 | **70.3** | 90% |
+| Quantitative Finance | 43.0 | 34.0 | **65.7** | 100%, 80% |
+| Doctors (MD) | 0.0 | 8.0 | **36.5** | 50%, 100%, 100% |
+| Anthropology | 0.0 | 0.0 | **20.3** | 100%, 30% |
+| **Average** | **46.7** | **52.1** | **66.6** | |
+
+The biggest gains came from pushing hard criteria enforcement earlier in the pipeline. Configs where hard criteria map cleanly to structured fields (degree type, field of study, school name) improved the most. Anthropology remains the hardest because the eval's LLM judge determines PhD recency from the candidate's summary text, and most summaries don't state their enrollment year explicitly.
 
 ## Key Decisions
 
@@ -132,6 +153,24 @@ Run 2 improved overall average from 46.7 to 52.1. Configs with clear structural 
 - **Relaxed filters + strict LLM.** Better to let borderline candidates through to the LLM than to filter them out with brittle string matching.
 - **Fallback to full set.** If filters return fewer than 15 candidates, skip filtering and let the LLM sort everything.
 - **Batched LLM reranking.** Candidates scored in batches of 5 to stay within context limits while providing enough comparison context for relative scoring.
+
+## Reducing Reranker Latency
+
+The LLM reranker is the bottleneck. Currently ~50-150 candidates are scored in sequential batches of 5 via GPT-4o-mini API calls. For 10 configs, this means 100-300 serial API calls with 500ms-2s latency each.
+
+**Immediate wins:**
+1. **Async API calls.** Use `openai.AsyncClient` with `asyncio.gather()` to fire all batches concurrently. Reduces wall-clock time from O(n) to O(1) relative to batch count. Largest single improvement.
+2. **Larger batch size.** Increase from 5 to 15-20 candidates per call. Cuts total API calls by 3-4x with minimal accuracy loss since GPT-4o-mini handles longer contexts well.
+3. **Cache query embeddings.** The Voyage-3 embed call is repeated per run. Cache the 1024-dim vector keyed by query text hash.
+
+**Architectural improvements:**
+4. **Two-tier reranking.** Use Voyage's rerank endpoint (`vo.rerank(query, docs, model="rerank-2.5")`) as a fast intermediate pass to sort 200 candidates down to 20. Only send those 20 to GPT-4o-mini for nuanced hard/soft criteria judgment. The cross-encoder reranker runs in ~100ms for 200 candidates vs. ~30s for LLM scoring.
+5. **Score only what matters.** Instead of sending full summaries (500+ chars), extract only the fields relevant to the config's criteria (degrees for academic roles, titles for professional roles). Reduces input tokens by 60-70%.
+6. **Pointwise scoring.** Score each candidate independently (one LLM call per candidate) instead of listwise comparison. Enables full parallelism and eliminates batch-size constraints.
+
+**At scale:**
+7. **Pre-compute candidate feature vectors.** Extract structured features (degree type, school tier, years of experience) into a scoring matrix. Hard criteria become boolean filters on this matrix, no LLM needed. LLM reranking is reserved for soft criteria only.
+8. **Distill the reranker.** Fine-tune a small model (e.g., DeBERTa) on the LLM's scoring outputs to replace it for inference. Sub-10ms per candidate.
 
 ## What I Would Do With More Time
 

@@ -3,12 +3,12 @@
   "config_path": "radiology.yml",
   "object_ids": [
     "67951a807e0084c5fa71f7e5",
+    "67968f003e76d5b587327ee3",
     "6795c03473bf14921fb1b527",
-    "6796f8178a14699f16140677",
     "6794b4a88d90554e606421b0",
-    "67964d8f8d90554e60731b3a",
     "6795dc6a8a14699f160a3aef",
     "6796c899f9f986ea7fc6548d",
+    "6795ca013e76d5b5872b8c3c",
     "6794ba84a1a09a48fea7d5a9",
     "67971d483e76d5b587377310",
     "67961f45f9f986ea7fc0555c"
@@ -16,22 +16,22 @@
   "eval_result": {
     "config_name": "radiology",
     "num_candidates": 10,
-    "average_final_score": 71.0,
+    "average_final_score": 70.33333333333334,
     "average_soft_scores": [
       {
         "criteria_name": "radiology_expertise",
         "reasoning": null,
-        "average_score": 7.9
+        "average_score": 8.0
       },
       {
         "criteria_name": "board_certification",
         "reasoning": null,
-        "average_score": 7.3
+        "average_score": 7.1
       },
       {
         "criteria_name": "diagnostic_imaging_expertise",
         "reasoning": null,
-        "average_score": 8.9
+        "average_score": 8.8
       }
     ],
     "average_hard_scores": [
@@ -74,6 +74,40 @@
           "_id": "67951a807e0084c5fa71f7e5",
           "name": "Dr Rakhee Gogoi",
           "linkedinId": "dr-rakhee-gogoi-a9b2199"
+        }
+      },
+      {
+        "candidate_name": "Dr Swarnalakshmi Sampath",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/dr-swarnalakshmi-sampath-b6a4431a9",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "Holds Fellowship of the Royal College of Radiologists (FRCR), which is a recognized board certification or equivalent in radiology.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Has over 6 years of experience interpreting CT, MRI, ultrasound, and various imaging studies as a Consultant Radiologist and Assistant Professor.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Demonstrates extensive expertise in radiology reporting, diagnostic protocols, differential diagnosis, and AI applications in medical imaging as evident by work experience and skills listed.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Possesses an MD degree in Radiodiagnosis from Madras Medical College, India, fulfilling the requirement of an MD degree from a medical school in India.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "67968f003e76d5b587327ee3",
+          "name": "Dr Swarnalakshmi Sampath",
+          "linkedinId": "dr-swarnalakshmi-sampath-b6a4431a9"
         }
       },
       {
@@ -145,40 +179,6 @@
         }
       },
       {
-        "candidate_name": "Pawandeep Kohli",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/pawandeep-kohli-b9726395",
-        "soft_scores": [
-          {
-            "criteria_name": "board_certification",
-            "reasoning": "Indian Medical Council Certified Diagnostic Radiologist since 1989. Certification is Indian equivalent, but no mention of ABR, FRCR, or U.S. board certification specifically.",
-            "score": 6.0
-          },
-          {
-            "criteria_name": "diagnostic_imaging_expertise",
-            "reasoning": "Experienced Chief Radiologist with many years diagnosing patient illnesses with various imaging modalities including mammograms, CT scans, MRI, ultrasounds, and x-rays. This clearly exceeds 3 years of experience.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "radiology_expertise",
-            "reasoning": "Has expertise in diagnostic and interventional radiology, knowledgeable and skilled in multimodality imaging techniques, and has worked with advanced imaging technology. No explicit mention of AI applications but has experience in advanced diagnostic workflows.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_md_degree",
-            "reasoning": "Candidate holds an MD degree (MD in Radiodiagnosis) from Panjab University in India, clearly meeting the requirement of an MD degree from a U.S. or Indian medical school.",
-            "passes": true
-          }
-        ],
-        "final_score": 73.33333333333334,
-        "raw_data": {
-          "_id": "67964d8f8d90554e60731b3a",
-          "name": "Pawandeep Kohli",
-          "linkedinId": "pawandeep-kohli-b9726395"
-        }
-      },
-      {
         "candidate_name": "Dr. Meenu Bansal",
         "candidate_linkedin_url": "https://www.linkedin.com/in/dr-meenu-bansal-604a2532",
         "soft_scores": [
@@ -244,6 +244,40 @@
           "_id": "6796c899f9f986ea7fc6548d",
           "name": "Kushal Parikh",
           "linkedinId": "kushalparikh1"
+        }
+      },
+      {
+        "candidate_name": "Sanjay Gupta",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/sanjay-gupta-05126835",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "No explicit mention of board certification (ABR, FRCR, or equivalent) in the provided information.",
+            "score": 2.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Candidate has multiple years of experience in interpreting CT, MRI, X-ray, ultrasound, and mammography as detailed in clinical roles at Stanford University, Radiology Partners, and residency at Wayne State University.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Candidate demonstrates expertise in radiology reporting, diagnostic protocols, interpretation of complex imaging studies, and experience with advanced imaging workflows including 3D visualization, which aligns with expertise in diagnostic protocols and imaging analysis. Although direct involvement with AI applications is not explicitly mentioned, his work on projects involving AI-assisted image analysis is implied from the query context.",
+            "score": 7.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate holds an MD degree from Wayne State University School Of Medicine in Illinois, United States.",
+            "passes": true
+          }
+        ],
+        "final_score": 56.666666666666664,
+        "raw_data": {
+          "_id": "6795ca013e76d5b5872b8c3c",
+          "name": "Sanjay Gupta",
+          "linkedinId": "sanjay-gupta-05126835"
         }
       },
       {
@@ -346,40 +380,6 @@
           "_id": "67961f45f9f986ea7fc0555c",
           "name": "Dr Rituparna Das",
           "linkedinId": "dr-rituparna-das-44a648187"
-        }
-      },
-      {
-        "candidate_name": "Harshna V.",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/harshna-v-ab859b58",
-        "soft_scores": [
-          {
-            "criteria_name": "board_certification",
-            "reasoning": "Candidate has completed fellowships and clinical fellow positions at prestigious U.S. institutions (Massachusetts General Hospital, Harvard Medical School), implying advanced post-graduate training, but explicit board certification (ABR, FRCR) is not mentioned in the provided data.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "diagnostic_imaging_expertise",
-            "reasoning": "Candidate has several years of experience as Consultant Radiologist and fellowships in abdominal, cardiovascular imaging, and interventional radiology, indicating significant experience interpreting CT and MRI scans and other imaging modalities.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "radiology_expertise",
-            "reasoning": "Candidate has extensive expertise including diagnostic and interventional radiology, experience with diagnostic workflows, and involvement with advanced imaging centers; AI-assisted image analysis is mentioned in query but not explicitly confirmed in profile, yet research fellowships and academic positions imply familiarity with advanced radiology technologies.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_md_degree",
-            "reasoning": "Candidate holds an MD degree in Radiology from Gujarat Cancer & Research Institute, B. J. Medical College, Civil Hospital Ahmedabad in India, which satisfies the criterion of an MD degree from medical school in India.",
-            "passes": true
-          }
-        ],
-        "final_score": 80.00000000000001,
-        "raw_data": {
-          "_id": "6796f8178a14699f16140677",
-          "name": "Harshna V.",
-          "linkedinId": "harshna-v-ab859b58"
         }
       }
     ]

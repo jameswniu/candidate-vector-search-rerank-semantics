@@ -9,29 +9,29 @@
     "67962bcf0db3e792567f8871",
     "6795579c3eff0c142a7dd268",
     "6794acb73e76d5b587218f3b",
+    "67958bf83eff0c142a7f593a",
     "6795c93a52a365d11683e80e",
-    "6795b26ff9f986ea7fbc7e39",
-    "67962a4a8d90554e6071cc29"
+    "6795a5ada1a09a48feb0e7ee"
   ],
   "eval_result": {
     "config_name": "junior_corporate_lawyer",
     "num_candidates": 10,
-    "average_final_score": 74.33333333333334,
+    "average_final_score": 75.0,
     "average_soft_scores": [
       {
         "criteria_name": "international_law_familiarity",
         "reasoning": null,
-        "average_score": 8.8
+        "average_score": 8.6
       },
       {
         "criteria_name": "ma_transaction_experience",
         "reasoning": null,
-        "average_score": 7.7
+        "average_score": 8.2
       },
       {
         "criteria_name": "contract_negotiation_skills",
         "reasoning": null,
-        "average_score": 8.6
+        "average_score": 8.5
       }
     ],
     "average_hard_scores": [
@@ -360,81 +360,81 @@
         }
       },
       {
-        "candidate_name": "Ekaterina de Saugy",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/ekaterinadesaugy",
+        "candidate_name": "chiara cavallaro",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/chiara-cavallaro-36830a61",
         "soft_scores": [
           {
             "criteria_name": "ma_transaction_experience",
-            "reasoning": "The candidate has corporate restructuring experience, handling legal aspects related to business growth and restructuring but no explicit mention of M&A transaction support, due diligence, or legal documentation for M&A deals.",
-            "score": 5.0
+            "reasoning": "Candidate has experience supporting M&A transactions across Europe, including involvement in due diligence and legal documentation as described in multiple roles such as at LegalLab and Leonardo Hotels.",
+            "score": 8.0
           },
           {
             "criteria_name": "contract_negotiation_skills",
-            "reasoning": "Extensive experience drafting and issuing a wide range of commercial contracts (sales, purchase, NDAs, SPAs, agency, service, licensing, etc.) under various jurisdictions, indicating strong contract drafting and negotiation skills.",
-            "score": 9.0
+            "reasoning": "Candidate demonstrates strong skills in drafting and negotiating commercial contracts across various roles, including negotiating customer contracts and drafting legal opinions.",
+            "score": 8.0
           },
           {
             "criteria_name": "international_law_familiarity",
-            "reasoning": "Has a strong background in international compliance, trade law, international arbitration, and familiarity with laws of multiple countries (English, Ukrainian, Russian, Swiss). Also holds an LLM in International Business Law, demonstrating excellent international law knowledge.",
-            "score": 9.0
+            "reasoning": "Candidate has educational background with an LLM in international corporate finance and law, experience assisting international businesses with cross-border transactions and exposure to English and Italian legislation, indicating good familiarity with international business law.",
+            "score": 7.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "appropriate_experience_level",
-            "reasoning": "The candidate has over two years of experience working as a senior legal counsel and legal adviser at major international companies, which aligns with the required 2-4 years of relevant experience.",
+            "reasoning": "Candidate has approximately 2 years or slightly more supporting corporate law activities in reputed law firms and in legal counsel roles, which aligns with the required 2-4 years experience at leading law firms or major global organizations in Europe.",
             "passes": true
           },
           {
             "criteria_name": "reputed_law_school",
-            "reasoning": "The candidate graduated from Lomonosov Moscow State University (a highly reputed law school in Europe) and earned an LLM from Queen Mary University of London, which is also a well-regarded European law school.",
+            "reasoning": "Candidate graduated from Sapienza Universit\u00e0 di Roma, a reputable European law school, and holds an LLM from University of Reading, a recognized UK institution.",
             "passes": true
           }
         ],
         "final_score": 76.66666666666666,
         "raw_data": {
-          "_id": "67962a4a8d90554e6071cc29",
-          "name": "Ekaterina de Saugy",
-          "linkedinId": "ekaterinadesaugy"
+          "_id": "6795a5ada1a09a48feb0e7ee",
+          "name": "chiara cavallaro",
+          "linkedinId": "chiara-cavallaro-36830a61"
         }
       },
       {
-        "candidate_name": "Veronique Lanthier",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/veronique-lanthier-b87b3351",
+        "candidate_name": "Alessandra Ghezzi",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/alessandra-ghezzi-301558",
         "soft_scores": [
           {
             "criteria_name": "ma_transaction_experience",
-            "reasoning": "The candidate has transactional experience including negotiation and drafting of documentation related to restructuring and contractual terms with hotel owners and corporate initiatives at Marriott, indicating solid exposure to transactional support relevant to M&A context, though not explicitly focused on M&A deals.",
-            "score": 7.0
+            "reasoning": "Candidate has extensive experience advising on mergers and acquisitions, including involvement in extraordinary transactions, private equity deals, and corporate restructuring, indicating strong M&A transaction support skills.",
+            "score": 9.0
           },
           {
             "criteria_name": "contract_negotiation_skills",
-            "reasoning": "Strong experience in negotiation and drafting documentation in a complex corporate environment across multiple jurisdictions is evident from her roles at Marriott and O'Melveny & Myers, demonstrating good above-average contract negotiation skills.",
+            "reasoning": "Candidate has experience drafting legal memoranda, preparing reports on contract law issues, and advising on commercial law and extraordinary transactions, demonstrating solid skills in contract drafting and negotiation.",
             "score": 8.0
           },
           {
             "criteria_name": "international_law_familiarity",
-            "reasoning": "Extensive involvement in regulatory compliance across multiple jurisdictions and international trade matters demonstrates high familiarity with international business law and regulatory requirements globally.",
+            "reasoning": "Candidate has worked with EU merger control regulations, international arbitration, regulatory compliance across Europe, and has an LLM with an emphasis on international business transactions, reflecting strong familiarity with international law.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "appropriate_experience_level",
-            "reasoning": "The candidate has several years of experience as senior counsel at Marriott and prior counsel experience at a major international law firm, exceeding 2-4 years and involving roles at leading firms and global organizations.",
+            "reasoning": "Candidate has several years of post-qualification experience at top-tier international law firms including Linklaters and Cleary Gottlieb, as well as roles advising multinational corporations and at the European Commission, meeting the 2-4 years experience requirement.",
             "passes": true
           },
           {
             "criteria_name": "reputed_law_school",
-            "reasoning": "The candidate graduated from Stanford Law School, which is a highly reputed law school in the USA.",
+            "reasoning": "Candidate holds a Master's degree from Universit\u00e0 Commerciale 'Luigi Bocconi' in Law (a highly reputed European law school) and an LLM from New York University, a top US law school, fulfilling the requirement for graduation from a reputed law school.",
             "passes": true
           }
         ],
-        "final_score": 80.0,
+        "final_score": 86.66666666666667,
         "raw_data": {
-          "_id": "6795b26ff9f986ea7fbc7e39",
-          "name": "Veronique Lanthier",
-          "linkedinId": "veronique-lanthier-b87b3351"
+          "_id": "67958bf83eff0c142a7f593a",
+          "name": "Alessandra Ghezzi",
+          "linkedinId": "alessandra-ghezzi-301558"
         }
       }
     ]
