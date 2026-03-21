@@ -61,18 +61,18 @@ python main.py --no-submit                  # Run without submitting to eval end
 
 ### Run 1: Vector + strict filter + soft-only LLM rerank (46.7 avg)
 
-| Config | Score |
-|---|---|
-| Tax Lawyer | 82.7 |
-| Junior Corporate Lawyer | 82.7 |
-| Mechanical Engineers | 81.7 |
-| Bankers | 73.7 |
-| Radiology | 71.3 |
-| Quantitative Finance | 43.0 |
-| Biology Expert | 32.0 |
-| Anthropology | 0.0 |
-| Doctors (MD) | 0.0 |
-| Mathematics PhD | 0.0 |
+| Config | Score | Hard Pass |
+|---|---|---|
+| Tax Lawyer | 82.7 | 100% |
+| Junior Corporate Lawyer | 82.7 | 95% |
+| Mechanical Engineers | 81.7 | 95% |
+| Bankers | 73.7 | 90% |
+| Radiology | 71.3 | 90% |
+| Quantitative Finance | 43.0 | 70% |
+| Biology Expert | 32.0 | 60% |
+| Anthropology | 0.0 | 50% |
+| Doctors (MD) | 0.0 | 63% |
+| Mathematics PhD | 0.0 | 20% |
 
 ### Why the 0s
 
@@ -94,18 +94,18 @@ Changes made:
 3. **LLM judges hard criteria:** Reranker prompt now includes hard criteria explicitly. Candidates failing any hard criterion get score 0. Candidates passing all hard criteria scored 1-10 on soft fit.
 4. **Structured data in LLM prompt:** Passed degrees, experience, country, and summary to the LLM so it can evaluate criteria like school prestige and recency.
 
-| Config | Score |
-|---|---|
-| Tax Lawyer | 80.0 |
-| Junior Corporate Lawyer | 74.3 |
-| Mechanical Engineers | 92.7 |
-| Bankers | 81.3 |
-| Radiology | 71.0 |
-| Quantitative Finance | 34.0 |
-| Biology Expert | 37.7 |
-| Anthropology | 0.0 |
-| Doctors (MD) | 8.0 |
-| Mathematics PhD | 42.5 |
+| Config | Run 1 | Run 2 | Hard Pass |
+|---|---|---|---|
+| Tax Lawyer | 82.7 | **80.0** | 100% |
+| Junior Corporate Lawyer | 82.7 | **74.3** | 95% |
+| Mechanical Engineers | 81.7 | **92.7** | 100% |
+| Bankers | 73.7 | **81.3** | 95% |
+| Radiology | 71.3 | **71.0** | 90% |
+| Quantitative Finance | 43.0 | **34.0** | 70% |
+| Biology Expert | 32.0 | **37.7** | 65% |
+| Anthropology | 0.0 | **0.0** | 50% |
+| Doctors (MD) | 0.0 | **8.0** | 73% |
+| Mathematics PhD | 0.0 | **42.5** | 60% |
 
 ### Run 3: Turbopuffer attribute filters + post-filter on structured degree strings + LLM rerank (66.6 avg)
 
@@ -114,19 +114,19 @@ Changes made:
 2. **Structured degree string parsing:** For undergrad-location checks (math, biology) and school prestige (doctors), parsed the full `yrs_::school_::degree_::fos_::start_::end_` strings to verify specific degree entries, not just array membership.
 3. **Top-school matching:** Built school name fragment lists for US/UK/CA undergrad institutions and top US medical schools to enforce location and prestige criteria in Python before LLM reranking.
 
-| Config | Run 1 | Run 2 | Run 3 |
-|---|---|---|---|
-| Tax Lawyer | 82.7 | 80.0 | **80.0** |
-| Junior Corporate Lawyer | 82.7 | 74.3 | **75.0** |
-| Mechanical Engineers | 81.7 | 92.7 | **92.0** |
-| Bankers | 73.7 | 81.3 | **81.3** |
-| Radiology | 71.3 | 71.0 | **70.3** |
-| Quantitative Finance | 43.0 | 34.0 | **65.7** |
-| Biology Expert | 32.0 | 37.7 | **71.0** |
-| Anthropology | 0.0 | 0.0 | **20.3** |
-| Doctors (MD) | 0.0 | 8.0 | **36.5** |
-| Mathematics PhD | 0.0 | 42.5 | **74.5** |
-| **Average** | **46.7** | **52.1** | **66.6** |
+| Config | Run 1 | Run 2 | Run 3 | R1 Hard | R2 Hard | R3 Hard |
+|---|---|---|---|---|---|---|
+| Tax Lawyer | 82.7 | 80.0 | **80.0** | 100% | 100% | 100% |
+| Junior Corporate Lawyer | 82.7 | 74.3 | **75.0** | 95% | 95% | 95% |
+| Mechanical Engineers | 81.7 | 92.7 | **92.0** | 95% | 100% | 100% |
+| Bankers | 73.7 | 81.3 | **81.3** | 90% | 95% | 95% |
+| Radiology | 71.3 | 71.0 | **70.3** | 90% | 90% | 90% |
+| Quantitative Finance | 43.0 | 34.0 | **65.7** | 70% | 70% | 90% |
+| Biology Expert | 32.0 | 37.7 | **71.0** | 60% | 65% | 95% |
+| Anthropology | 0.0 | 0.0 | **20.3** | 50% | 50% | 65% |
+| Doctors (MD) | 0.0 | 8.0 | **36.5** | 63% | 73% | 83% |
+| Mathematics PhD | 0.0 | 42.5 | **74.5** | 20% | 60% | 95% |
+| **Average** | **46.7** | **52.1** | **66.6** | **73%** | **80%** | **91%** |
 
 The biggest gains came from pushing hard criteria enforcement earlier in the pipeline. Configs where hard criteria map cleanly to structured fields (degree type, field of study, school name) improved the most. Anthropology remains the hardest because the eval's LLM judge determines PhD recency from the candidate's summary text, and most summaries don't state their enrollment year explicitly.
 
