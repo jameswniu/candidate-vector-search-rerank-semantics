@@ -61,7 +61,7 @@ python main.py --no-submit                  # Run without submitting to eval end
 
 ### Run 1: Vector + strict filter + soft-only LLM rerank (46.7 avg)
 
-| Config | Run 1 | Hard Pass |
+| Config | **Run 1** | Hard Pass |
 |---|---|---|
 | Tax Lawyer | 82.7 | 100% |
 | Junior Corporate Lawyer | 82.7 | 95% |
