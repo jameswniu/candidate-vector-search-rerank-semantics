@@ -22,12 +22,12 @@ You have a vector database of candidate profiles and a role spec with both hard 
 
 ```mermaid
 flowchart TD
-    Q["Role Spec<br/>description + hard/soft criteria"] --> EMB["Voyage-3 Embedding<br/>1024-dim query vector"]
-    EMB --> DB["Turbopuffer ANN<br/>top 200 candidates"]
-    DB --> AF["Turbopuffer Attribute Filter<br/>degree type, start year, field of study"]
-    AF --> PF["Python Post-Filter<br/>school prestige, title match, undergrad location"]
-    PF --> LLM["GPT-4o-mini Reranker<br/>hard criteria: pass/fail<br/>soft criteria: score 1-10"]
-    LLM --> TOP["Top 10 Candidates"]
+    Q["Role Spec"] --> EMB["Voyage-3 Embed"]
+    EMB --> DB["Turbopuffer ANN · top 200"]
+    DB --> AF["Attribute Filter · degree, year, field"]
+    AF --> PF["Python Filter · school, title, location"]
+    PF --> LLM["GPT-4o-mini Rerank · hard + soft"]
+    LLM --> TOP["Top 10"]
 ```
 
 **Stage details:**
@@ -116,16 +116,16 @@ Changes made:
 
 | Config | Run 1 | Run 2 | Run 3 | Hard Criteria Pass Rates |
 |---|---|---|---|---|
-| Mechanical Engineers | 81.7 | 92.7 | **92.0** | Engineering Degree 100%, 3+ Years 100% |
-| Bankers | 73.7 | 81.3 | **81.3** | MBA Degree 90%, Banking Experience 100% |
-| Tax Lawyer | 82.7 | 80.0 | **80.0** | JD Degree 100%, 3+ Years 100% |
-| Junior Corporate Lawyer | 82.7 | 74.3 | **75.0** | Corporate Law Exp 100%, Law School 90% |
-| Mathematics PhD | 0.0 | 42.5 | **74.5** | Undergrad US/UK/CA 90%, PhD Math/Stats 100% |
-| Biology Expert | 32.0 | 37.7 | **71.0** | Undergrad US/UK/CA 100%, PhD Biology 90% |
-| Radiology | 71.3 | 71.0 | **70.3** | MD Degree 90% |
-| Quantitative Finance | 43.0 | 34.0 | **65.7** | M7 MBA 100%, Quant Experience 80% |
-| Doctors (MD) | 0.0 | 8.0 | **36.5** | Top US MD 50%, GP Experience 100%, 2+ Years 100% |
-| Anthropology | 0.0 | 0.0 | **20.3** | PhD Relevant Field 100%, Recent PhD Program 30% |
+| Mechanical Engineers | 81.7 | 92.7 | **92.0** | engineering_degree: 100%<br/>three_plus_years: 100% |
+| Bankers | 73.7 | 81.3 | **81.3** | mba_degree: 90%<br/>banking_experience: 100% |
+| Tax Lawyer | 82.7 | 80.0 | **80.0** | has_jd_degree: 100%<br/>three_plus_years: 100% |
+| Junior Corporate Lawyer | 82.7 | 74.3 | **75.0** | corporate_law_exp: 100%<br/>law_school: 90% |
+| Mathematics PhD | 0.0 | 42.5 | **74.5** | undergrad_us_uk_ca: 90%<br/>phd_math_stats: 100% |
+| Biology Expert | 32.0 | 37.7 | **71.0** | undergrad_us_uk_ca: 100%<br/>phd_biology: 90% |
+| Radiology | 71.3 | 71.0 | **70.3** | md_degree: 90% |
+| Quantitative Finance | 43.0 | 34.0 | **65.7** | m7_mba: 100%<br/>quant_experience: 80% |
+| Doctors (MD) | 0.0 | 8.0 | **36.5** | top_us_md: 50%<br/>gp_experience: 100%<br/>two_plus_years: 100% |
+| Anthropology | 0.0 | 0.0 | **20.3** | phd_relevant_field: 100%<br/>recent_phd_program: 30% |
 | **Average** | **46.7** | **52.1** | **66.6** | |
 
 The biggest gains came from pushing hard criteria enforcement earlier in the pipeline. Configs where hard criteria map cleanly to structured fields (degree type, field of study, school name) improved the most. Anthropology remains the hardest because the eval's LLM judge determines PhD recency from the candidate's summary text, and most summaries don't state their enrollment year explicitly.
