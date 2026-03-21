@@ -63,16 +63,16 @@ python main.py --no-submit                  # Run without submitting to eval end
 
 | Config | **Run 1** | Hard Pass |
 |---|---|---|
-| Tax Lawyer | 82.7 | 100% |
-| Junior Corporate Lawyer | 82.7 | 95% |
-| Mechanical Engineers | 81.7 | 95% |
-| Bankers | 73.7 | 90% |
-| Radiology | 71.3 | 90% |
-| Quantitative Finance | 43.0 | 70% |
-| Biology Expert | 32.0 | 60% |
-| Anthropology | 0.0 | 50% |
-| Doctors (MD) | 0.0 | 63% |
-| Mathematics PhD | 0.0 | 20% |
+| Tax Lawyer | **82.7** | 100% |
+| Junior Corporate Lawyer | **82.7** | 95% |
+| Mechanical Engineers | **81.7** | 95% |
+| Bankers | **73.7** | 90% |
+| Radiology | **71.3** | 90% |
+| Quantitative Finance | **43.0** | 70% |
+| Biology Expert | **32.0** | 60% |
+| Anthropology | **0.0** | 50% |
+| Doctors (MD) | **0.0** | 63% |
+| Mathematics PhD | **0.0** | 20% |
 | **Average** | **46.7** | **73%** |
 
 ### Why the 0s
