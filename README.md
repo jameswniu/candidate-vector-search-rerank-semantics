@@ -22,8 +22,23 @@ You have a vector database of candidate profiles and a role spec with both hard 
 
 ```mermaid
 flowchart LR
-    Q["Role Spec"] --> EMB["Voyage-3"] --> TPUF["TPUF ANN<br/>top 200"] --> FIL["Hard Filter"] --> GPT["GPT-4o-mini<br/>Rerank"] --> TOP["Top 10"]
+    Q["Role Spec<br/>desc + hard/soft"] --> EMB["Voyage-3<br/>1024-dim"]
+    EMB --> TPUF["TPUF ANN<br/>top 200"]
+    TPUF --> AF["Attribute Filter<br/>degree, year, field"]
+    AF --> PF["Python Filter<br/>school, title, location"]
+    PF --> LLM["GPT-4o-mini<br/>hard pass/fail<br/>soft score 1-10"]
+    LLM --> TOP["Top 10"]
 ```
+
+**Stage details:**
+
+| Stage | What | Latency | Candidates |
+|---|---|---|---|
+| Voyage-3 embed | Encode query (desc + criteria) into 1024-dim vector | ~200ms | 1 query |
+| TPUF ANN | Approximate nearest neighbor search over ~200K profiles | ~50ms | 200K to 200 |
+| TPUF attribute filter | Push degree type, field of study, start year filters into DB query (5 configs) | ~0ms (DB-side) | 200 to 50-150 |
+| Python post-filter | Parse structured degree strings for undergrad location, school prestige, title match | ~1ms | 50-150 to 15-80 |
+| LLM rerank | GPT-4o-mini scores each candidate on hard + soft criteria in batches of 5 | ~20-40s | 15-80 to 10 |
 
 ## Quick Start
 
