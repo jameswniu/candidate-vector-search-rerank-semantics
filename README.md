@@ -21,13 +21,13 @@ You have a vector database of candidate profiles and a role spec with both hard 
 ## Architecture
 
 ```mermaid
-flowchart LR
-    Q["Role Spec<br/>desc + hard/soft"] --> EMB["Voyage-3<br/>1024-dim"]
-    EMB --> Turbopuffer["Turbopuffer ANN<br/>top 200"]
-    Turbopuffer --> AF["Attribute Filter<br/>degree, year, field"]
-    AF --> PF["Python Filter<br/>school, title, location"]
-    PF --> LLM["GPT-4o-mini<br/>hard pass/fail<br/>soft score 1-10"]
-    LLM --> TOP["Top 10"]
+flowchart TD
+    Q["Role Spec<br/>description + hard/soft criteria"] --> EMB["Voyage-3 Embedding<br/>1024-dim query vector"]
+    EMB --> DB["Turbopuffer ANN<br/>top 200 candidates"]
+    DB --> AF["Turbopuffer Attribute Filter<br/>degree type, start year, field of study"]
+    AF --> PF["Python Post-Filter<br/>school prestige, title match, undergrad location"]
+    PF --> LLM["GPT-4o-mini Reranker<br/>hard criteria: pass/fail<br/>soft criteria: score 1-10"]
+    LLM --> TOP["Top 10 Candidates"]
 ```
 
 **Stage details:**
@@ -61,7 +61,7 @@ python main.py --no-submit                  # Run without submitting to eval end
 
 ### Run 1: Vector + strict filter + soft-only LLM rerank (46.7 avg)
 
-| Config | Score | Hard Pass Rates |
+| Config | Score | Hard Criteria Pass Rates |
 |---|---|---|
 | Tax Lawyer | 82.7 | 100%, 100% |
 | Junior Corporate Lawyer | 82.7 | 100%, 90% |
@@ -114,7 +114,7 @@ Changes made:
 2. **Structured degree string parsing:** For undergrad-location checks (math, biology) and school prestige (doctors), parsed the full `yrs_::school_::degree_::fos_::start_::end_` strings to verify specific degree entries, not just array membership.
 3. **Top-school matching:** Built school name fragment lists for US/UK/CA undergrad institutions and top US medical schools to enforce location and prestige criteria in Python before LLM reranking.
 
-| Config | Run 1 | Run 2 | Run 3 | Hard Criteria Pass Rates (Run 3) |
+| Config | Run 1 | Run 2 | Run 3 | Hard Criteria Pass Rates |
 |---|---|---|---|---|
 | Mechanical Engineers | 81.7 | 92.7 | **92.0** | engineering_degree: 100%, three_plus_years: 100% |
 | Bankers | 73.7 | 81.3 | **81.3** | mba_degree: 90%, banking_experience: 100% |
