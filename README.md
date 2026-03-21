@@ -164,12 +164,14 @@ The LLM reranker is the bottleneck. Currently ~50-150 candidates are scored in s
 3. **Cache query embeddings.** The Voyage-3 embed call is repeated per run. Cache the 1024-dim vector keyed by query text hash.
 
 **Architectural improvements:**
-4. **Two-tier reranking.** Use Voyage's rerank endpoint (`vo.rerank(query, docs, model="rerank-2.5")`) as a fast intermediate pass to sort 200 candidates down to 20. Only send those 20 to GPT-4o-mini for nuanced hard/soft criteria judgment. The cross-encoder reranker runs in ~100ms for 200 candidates vs. ~30s for LLM scoring.
+
+4. **Two-tier reranking.** Use Voyage's rerank endpoint (`vo.rerank(query, docs, model="rerank-2.5")`) as a fast intermediate pass to sort 200 candidates down to 20. Only send those 20 to GPT-4o-mini for nuanced hard/soft criteria judgment. Cross-encoder reranker: ~100ms for 200 candidates vs. ~30s for LLM scoring.
 5. **Score only what matters.** Instead of sending full summaries (500+ chars), extract only the fields relevant to the config's criteria (degrees for academic roles, titles for professional roles). Reduces input tokens by 60-70%.
 6. **Pointwise scoring.** Score each candidate independently (one LLM call per candidate) instead of listwise comparison. Enables full parallelism and eliminates batch-size constraints.
 
 **At scale:**
-7. **Pre-compute candidate feature vectors.** Extract structured features (degree type, school tier, years of experience) into a scoring matrix. Hard criteria become boolean filters on this matrix, no LLM needed. LLM reranking is reserved for soft criteria only.
+
+7. **Pre-compute candidate feature vectors.** Extract structured features (degree type, school tier, years of experience) into a scoring matrix. Hard criteria become boolean filters on this matrix, no LLM needed. LLM reranking reserved for soft criteria only.
 8. **Distill the reranker.** Fine-tune a small model (e.g., DeBERTa) on the LLM's scoring outputs to replace it for inference. Sub-10ms per candidate.
 
 ## What I Would Do With More Time
