@@ -21,38 +21,8 @@ You have a vector database of candidate profiles and a role spec with both hard 
 ## Architecture
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'lineColor': '#64748b', 'clusterBkg': '#f8fafc', 'clusterBorder': '#e2e8f0'}}}%%
-flowchart TD
-    classDef blue fill:#dbeafe,stroke:#2563eb,color:#1e3a5f,stroke-width:2px
-    classDef orange fill:#ffedd5,stroke:#ea580c,color:#7c2d12,stroke-width:2px
-    classDef green fill:#dcfce7,stroke:#16a34a,color:#14532d,stroke-width:2px
-    classDef purple fill:#f3e8ff,stroke:#9333ea,color:#581c87,stroke-width:2px
-
-    Q["Role Spec<br/>description + hard/soft criteria"]:::blue
-    EMB["Voyage-3 Embedding<br/>1024-dim query vector"]:::blue
-    TPUF["Turbopuffer ANN<br/>top 200 candidates"]:::purple
-    AF["TPUF Attribute Filters<br/>degree type, start year<br/>(5 configs)"]:::purple
-
-    subgraph filter ["Python Hard-Criteria Filter"]
-        HF["Structural Filters<br/>degree type, field, titles"]:::orange
-        FB["Fallback<br/>if < 15 pass, use full set"]:::orange
-    end
-
-    subgraph rerank ["LLM Reranker"]
-        GPT["GPT-4o-mini<br/>batch scoring"]:::green
-        HARD["Hard check: pass/fail"]:::green
-        SOFT["Soft scoring: 1-10"]:::green
-    end
-
-    TOP["Top 10 Candidates"]:::purple
-
-    Q --> EMB --> TPUF --> AF --> HF
-    HF --> FB
-    FB --> GPT
-    GPT --> HARD
-    GPT --> SOFT
-    HARD --> TOP
-    SOFT --> TOP
+flowchart LR
+    Q["Role Spec"] --> EMB["Voyage-3"] --> TPUF["TPUF ANN<br/>top 200"] --> FIL["Hard Filter"] --> GPT["GPT-4o-mini<br/>Rerank"] --> TOP["Top 10"]
 ```
 
 ## Quick Start
@@ -129,18 +99,18 @@ Changes made:
 2. **Structured degree string parsing:** For undergrad-location checks (math, biology) and school prestige (doctors), parsed the full `yrs_::school_::degree_::fos_::start_::end_` strings to verify specific degree entries, not just array membership.
 3. **Top-school matching:** Built school name fragment lists for US/UK/CA undergrad institutions and top US medical schools to enforce location and prestige criteria in Python before LLM reranking.
 
-| Config | Run 1 | Run 2 | Run 3 | Hard Pass Rates (Run 3) |
+| Config | Run 1 | Run 2 | Run 3 | Hard Criteria Pass Rates (Run 3) |
 |---|---|---|---|---|
-| Mechanical Engineers | 81.7 | 92.7 | **92.0** | 100%, 100% |
-| Bankers | 73.7 | 81.3 | **81.3** | 90%, 100% |
-| Tax Lawyer | 82.7 | 80.0 | **80.0** | 100%, 100% |
-| Junior Corporate Lawyer | 82.7 | 74.3 | **75.0** | 100%, 90% |
-| Mathematics PhD | 0.0 | 42.5 | **74.5** | 90%, 100% |
-| Biology Expert | 32.0 | 37.7 | **71.0** | 100%, 90% |
-| Radiology | 71.3 | 71.0 | **70.3** | 90% |
-| Quantitative Finance | 43.0 | 34.0 | **65.7** | 100%, 80% |
-| Doctors (MD) | 0.0 | 8.0 | **36.5** | 50%, 100%, 100% |
-| Anthropology | 0.0 | 0.0 | **20.3** | 100%, 30% |
+| Mechanical Engineers | 81.7 | 92.7 | **92.0** | engineering_degree: 100%, three_plus_years: 100% |
+| Bankers | 73.7 | 81.3 | **81.3** | mba_degree: 90%, banking_experience: 100% |
+| Tax Lawyer | 82.7 | 80.0 | **80.0** | has_jd_degree: 100%, three_plus_years: 100% |
+| Junior Corporate Lawyer | 82.7 | 74.3 | **75.0** | corporate_law_exp: 100%, law_school: 90% |
+| Mathematics PhD | 0.0 | 42.5 | **74.5** | undergrad_us_uk_ca: 90%, phd_math_stats: 100% |
+| Biology Expert | 32.0 | 37.7 | **71.0** | undergrad_us_uk_ca: 100%, phd_biology: 90% |
+| Radiology | 71.3 | 71.0 | **70.3** | md_degree: 90% |
+| Quantitative Finance | 43.0 | 34.0 | **65.7** | m7_mba: 100%, quant_experience: 80% |
+| Doctors (MD) | 0.0 | 8.0 | **36.5** | top_us_md: 50%, gp_experience: 100%, two_plus_years: 100% |
+| Anthropology | 0.0 | 0.0 | **20.3** | phd_relevant_field: 100%, recent_phd_program: 30% |
 | **Average** | **46.7** | **52.1** | **66.6** | |
 
 The biggest gains came from pushing hard criteria enforcement earlier in the pipeline. Configs where hard criteria map cleanly to structured fields (degree type, field of study, school name) improved the most. Anthropology remains the hardest because the eval's LLM judge determines PhD recency from the candidate's summary text, and most summaries don't state their enrollment year explicitly.
