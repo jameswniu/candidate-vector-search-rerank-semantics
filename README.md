@@ -172,14 +172,14 @@ The LLM reranker is the bottleneck. Currently ~50-150 candidates are scored in s
 ## Project Structure
 
 ```
-grader-search/
+candidate-search-pipeline/
 ├── main.py              # Entry point: run all/single configs, submit results
 ├── pipeline.py          # 3-stage orchestration: embed, filter, rerank
 ├── embed.py             # Voyage-3 query embedding
 ├── tpuf_client.py       # Turbopuffer vector search client
 ├── filters.py           # Per-config hard-criteria filters
 ├── rerank.py            # GPT-4o-mini batch reranking
-├── evaluate.py          # grader eval endpoint submission
+├── evaluate.py          # eval endpoint submission
 ├── configs/
 │   └── queries.json     # 10 role configurations
 ├── results/             # Per-config evaluation results
