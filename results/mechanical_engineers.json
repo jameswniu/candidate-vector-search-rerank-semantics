@@ -19,19 +19,19 @@
     "average_final_score": 92.0,
     "average_soft_scores": [
       {
-        "criteria_name": "domain_specialization_mechanical",
-        "reasoning": null,
-        "average_score": 9.2
-      },
-      {
         "criteria_name": "cad_simulation_tools_experience",
         "reasoning": null,
         "average_score": 9.6
       },
       {
+        "criteria_name": "domain_specialization_mechanical",
+        "reasoning": null,
+        "average_score": 9.3
+      },
+      {
         "criteria_name": "product_lifecycle_involvement",
         "reasoning": null,
-        "average_score": 8.8
+        "average_score": 8.7
       }
     ],
     "average_hard_scores": [
@@ -92,29 +92,29 @@
         "soft_scores": [
           {
             "criteria_name": "cad_simulation_tools_experience",
-            "reasoning": "Candidate has over 10 years of experience in mechanical design and CAD including SolidWorks, and extensive FEA experience with ANSYS, COMSOL, and Abaqus, demonstrating excellent expertise with these CAD and simulation tools.",
+            "reasoning": "Candidate has 10+ years experience with SolidWorks (CAD) and 10+ years of FEA experience with Ansys, COMSOL, Abaqus. Certified SolidWorks Associate. Extensive use of simulation tools in multiple roles.",
             "score": 10.0
           },
           {
             "criteria_name": "product_lifecycle_involvement",
-            "reasoning": "Candidate has led simulation and prototyping efforts in MEMS device development, contributed to packaging design, and supported product development processes, showing clear involvement across product lifecycle stages from design to testing.",
+            "reasoning": "Candidate demonstrated involvement in design, simulation, prototyping support, and packaging analysis across roles at AMETEK and Qualtr\u00e9 Inc. as well as research labs, covering various stages of product development.",
             "score": 9.0
           },
           {
             "criteria_name": "domain_specialization_mechanical",
-            "reasoning": "Candidate specializes in thermal system simulations, structural analysis, and electrostatic analysis applied to MEMS and electromechanical components, fulfilling the requirement for domain specialization.",
+            "reasoning": "Strong background in thermal systems, structural analysis, materials science, FEA including thermal and shock stress, electrostatics, and mechanical design, showing strong domain specialization in relevant mechanical engineering fields.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "higher_degree_mechanical",
-            "reasoning": "Candidate holds a Ph.D. in Mechanical and Materials Engineering from Northeastern University, clearly satisfying the higher degree requirement in Mechanical Engineering.",
+            "reasoning": "Candidate holds a Ph.D. in Mechanical and Materials Engineering, a Master's in Mechanical and Aerospace Engineering, and a Bachelor's in Mechanical Engineering, all from accredited universities.",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_mechanical",
-            "reasoning": "Candidate has over 10 years of professional experience as a mechanical engineer in product development, design, and simulation roles, exceeding the 3+ years requirement.",
+            "reasoning": "Candidate has over 10 years of professional experience in mechanical design and product development roles, well exceeding the 3+ years requirement.",
             "passes": true
           }
         ],
@@ -126,120 +126,42 @@
         }
       },
       {
-        "candidate_name": "Saptarshi Mandal",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/saptarshi-mandal-ph-d-93561b4",
-        "soft_scores": [
-          {
-            "criteria_name": "cad_simulation_tools_experience",
-            "reasoning": "Candidate has extensive experience with CAD tools such as SolidWorks and SpaceClaim, and simulation tools including ANSYS and ABAQUS, with over 13 years working in these areas.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "product_lifecycle_involvement",
-            "reasoning": "The candidate has been responsible for projects from design phase through procurement and construction, including prototyping and testing phases, demonstrating clear involvement throughout the product lifecycle.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "domain_specialization_mechanical",
-            "reasoning": "Specialized in thermal and structural design, finite element analysis including nonlinear and thermomechanical simulations, and has led thermal system simulations and mechanical engineering projects in R&D settings.",
-            "score": 10.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "higher_degree_mechanical",
-            "reasoning": "Candidate holds a Doctorate in Mechanical Engineering from Old Dominion University, an accredited university.",
-            "passes": true
-          },
-          {
-            "criteria_name": "three_plus_years_mechanical",
-            "reasoning": "Candidate has over 13 years of professional experience in mechanical design, product development, and systems engineering.",
-            "passes": true
-          }
-        ],
-        "final_score": 96.66666666666667,
-        "raw_data": {
-          "_id": "6794959e3e76d5b58720d29a",
-          "name": "Saptarshi Mandal",
-          "linkedinId": "saptarshi-mandal-ph-d-93561b4"
-        }
-      },
-      {
         "candidate_name": "Hamidreza Ahmadi Moghaddam PhD",
         "candidate_linkedin_url": "https://www.linkedin.com/in/hamidreza-ahmadi-moghaddam-phd-peng-8b1278139",
         "soft_scores": [
           {
             "criteria_name": "cad_simulation_tools_experience",
-            "reasoning": "Candidate has extensive experience with SolidWorks, CATIA, ANSYS, MSC.ADAMS, and other CAD and simulation tools, including custom scripting and automation.",
+            "reasoning": "Candidate has over 22 years of experience using mechanical CAD software such as SolidWorks and CATIA, along with extensive expertise in mechanical simulation tools like ANSYS Workbench, including advanced analyses (linear, nonlinear, thermal, multiphysics, fatigue, etc.).",
             "score": 10.0
           },
           {
             "criteria_name": "product_lifecycle_involvement",
-            "reasoning": "Candidate has been involved in developing new products, prototyping, simulations, preparing design packages, and documentation indicating involvement across the product lifecycle.",
-            "score": 9.0
+            "reasoning": "Candidate has been involved in product development and R&D, including designing new products, leading simulation and prototyping efforts, approving engineering drawings, and supporting detailed design documentation. This shows good involvement from concept through to manufacturing and testing phases.",
+            "score": 8.0
           },
           {
             "criteria_name": "domain_specialization_mechanical",
-            "reasoning": "Candidate specializes in structural-thermal analyses, fluid flow (CFD and FSI), fatigue and fracture mechanics, thermal-electrical simulations, and mechanical system dynamics.",
+            "reasoning": "Candidate has specialized knowledge in structural analysis, thermal system simulations, fluid dynamics (CFD), fatigue and fracture mechanics, as well as dynamic and multiphysics analyses, covering multiple relevant mechanical engineering domains.",
             "score": 10.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "higher_degree_mechanical",
-            "reasoning": "Candidate holds both a Master's and a Doctorate in Mechanical Engineering from accredited universities (Concordia University and University of Alberta).",
+            "reasoning": "Candidate holds a Master's degree and a Doctorate in Mechanical Engineering from accredited universities (Concordia University and University of Alberta).",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_mechanical",
-            "reasoning": "Candidate has over 22 years of professional mechanical engineering experience, well above the 3-year minimum.",
-            "passes": true
-          }
-        ],
-        "final_score": 96.66666666666667,
-        "raw_data": {
-          "_id": "67956e057e0084c5fa753a10",
-          "name": "Hamidreza Ahmadi Moghaddam PhD",
-          "linkedinId": "hamidreza-ahmadi-moghaddam-phd-peng-8b1278139"
-        }
-      },
-      {
-        "candidate_name": "Shengjie Tang",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/shengjie-tang-phd-mba-52519a37",
-        "soft_scores": [
-          {
-            "criteria_name": "cad_simulation_tools_experience",
-            "reasoning": "Extensive experience with CAD tools like SolidWorks and CREO, and mechanical simulation tools such as ANSYS Workbench, Abacus, and COMSOL is clearly demonstrated in the profile.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "product_lifecycle_involvement",
-            "reasoning": "The candidate has significant involvement in multiple stages of the product lifecycle including design, prototyping, manufacturing, and testing across various roles and projects such as automotive powertrain products and reel-to-reel LED products.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "domain_specialization_mechanical",
-            "reasoning": "Strong specialization in thermal systems, heat transfer, structural mechanics and multiphysics modeling, specifically in thin film materials and electromechanical components. Experience leading thermal system simulations also mentioned.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "higher_degree_mechanical",
-            "reasoning": "Candidate holds a Doctorate in Mechanical Engineering from University of Houston, an accredited university.",
-            "passes": true
-          },
-          {
-            "criteria_name": "three_plus_years_mechanical",
-            "reasoning": "Candidate has 10 years of relevant engineering and research experience in mechanical design, product development, and simulation.",
+            "reasoning": "Candidate has over 22 years of professional experience as a mechanical engineer in relevant industries.",
             "passes": true
           }
         ],
         "final_score": 93.33333333333333,
         "raw_data": {
-          "_id": "67954fd8f9f986ea7fb8e182",
-          "name": "Shengjie Tang",
-          "linkedinId": "shengjie-tang-phd-mba-52519a37"
+          "_id": "67956e057e0084c5fa753a10",
+          "name": "Hamidreza Ahmadi Moghaddam PhD",
+          "linkedinId": "hamidreza-ahmadi-moghaddam-phd-peng-8b1278139"
         }
       },
       {
@@ -248,33 +170,33 @@
         "soft_scores": [
           {
             "criteria_name": "cad_simulation_tools_experience",
-            "reasoning": "Candidate has extensive experience with SolidWorks, AutoCAD, ANSYS FLUENT, and ANSYS Structural, as well as prior experience with Matlab, Creo, and other relevant software, demonstrating strong proficiency in CAD and mechanical simulation tools.",
+            "reasoning": "The candidate has extensive experience with CAD tools including SolidWorks, AutoCAD, Creo, and ProEngineer as well as simulation tools such as ANSYS FLUENT, ANSYS Structural, and CFD software. This reflects strong proficiency in both CAD and simulation tools relevant to mechanical engineering.",
             "score": 9.0
           },
           {
             "criteria_name": "product_lifecycle_involvement",
-            "reasoning": "Candidate has demonstrated involvement in multiple stages of the product lifecycle including design, prototyping, testing, interfacing with vendors for manufacturing, and thermal system simulation, indicating comprehensive end-to-end product lifecycle experience.",
-            "score": 8.0
+            "reasoning": "Christopher has demonstrated involvement in multiple stages of product development including design, prototyping, thermal system manufacturing, testing, and interfacing with vendors for production. He has led experimental apparatus design, conducted simulations, and supported prototyping efforts, indicating comprehensive product lifecycle experience.",
+            "score": 9.0
           },
           {
             "criteria_name": "domain_specialization_mechanical",
-            "reasoning": "Candidate specializes in thermal systems, fluid dynamics, structural analysis, and heat transfer with a strong focus on oscillating heat pipes and aero-thermal analysis, showing deep domain expertise in mechanical engineering.",
-            "score": 9.0
+            "reasoning": "His specialization strongly aligns with thermal management, fluid dynamics, structural analysis, and heat transfer, supported by his PhD research and work experience in thermal-fluid systems and aerospace structures. This shows deep domain expertise in relevant mechanical engineering areas.",
+            "score": 10.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "higher_degree_mechanical",
-            "reasoning": "Candidate holds a PhD (Doctorate) in Mechanical Engineering from the University of Missouri, fulfilling the higher degree requirement.",
+            "reasoning": "The candidate holds a PhD in Mechanical Engineering from the University of Missouri, an accredited institution.",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_mechanical",
-            "reasoning": "Candidate has multiple years of professional experience as a Mechanical Engineer at General Atomics Aeronautical Systems as well as senior roles at ThermAvant Technologies and research assistantship, which clearly exceeds three years.",
+            "reasoning": "The candidate has multiple years of professional experience post-PhD including senior and engineering roles at various companies, clearly exceeding three years of experience in mechanical design and product development.",
             "passes": true
           }
         ],
-        "final_score": 86.66666666666667,
+        "final_score": 93.33333333333333,
         "raw_data": {
           "_id": "6794a3ff7e0084c5fa6d77c1",
           "name": "Christopher Smoot",
@@ -326,33 +248,33 @@
         "soft_scores": [
           {
             "criteria_name": "cad_simulation_tools_experience",
-            "reasoning": "Candidate has extensive experience with CAD tools including SolidWorks and Autodesk Inventor, and strong background in mechanical simulation tools such as ANSYS Fluent, CFX, and SolidWorks simulation packages, covering FEA and CFD.",
+            "reasoning": "Candidate has extensive experience with CAD tools including Solidworks and Autodesk Inventor, and uses mechanical simulation tools such as ANSYS Fluent, CFX, and Solidworks Simulation for FEA and CFD analysis.",
             "score": 9.0
           },
           {
             "criteria_name": "product_lifecycle_involvement",
-            "reasoning": "The candidate was involved end-to-end in product design as a Mechanical Design Engineer, including new product development, prototyping, testing, manufacturing support, and engineering documentation. This indicates strong full lifecycle involvement.",
-            "score": 9.0
+            "reasoning": "Candidate participated in end-to-end product design and development at HERD North America including design, prototyping, troubleshooting, and manufacturing support. Also contributed to research, development, and reports in industrial projects.",
+            "score": 8.0
           },
           {
             "criteria_name": "domain_specialization_mechanical",
-            "reasoning": "Specialized in thermofluids, combustion modeling, reactive flow, CFD and FEA simulations, thermal systems, and mechanical design with focus on fluid-solid interaction and thermal systems. This indicates a strong domain specialization in thermal and fluid dynamics aspects.",
+            "reasoning": "Specialized in thermofluids, combustion modeling, CFD, FEA, thermal systems, and fluid dynamics, supported by graduate studies and industrial R&D experience.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "higher_degree_mechanical",
-            "reasoning": "Holds a Doctorate in Mechanical Engineering / Thermofluids from the University of Manitoba, an accredited university.",
+            "reasoning": "Candidate holds a Doctorate in Mechanical Engineering / Thermofluids from University of Manitoba and a Master's in Automotive Engineering from a reputable university.",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_mechanical",
-            "reasoning": "Has multiple years of combined experience including roles in academia and industry: research assistant, graduate student projects, HVAC engineering, application engineer, and mechanical design engineer. Total professional experience clearly exceeds three years.",
+            "reasoning": "Candidate has multiple years of combined experience in mechanical engineering, research, product design, and simulation including years as a graduate student, industrial product designer, and engineering roles.",
             "passes": true
           }
         ],
-        "final_score": 90.0,
+        "final_score": 86.66666666666667,
         "raw_data": {
           "_id": "6795c03473bf14921fb1b62f",
           "name": "Mohammadreza F.",
@@ -435,6 +357,84 @@
           "_id": "67969a7e3e76d5b58732ed66",
           "name": "Hamid Khodaei",
           "linkedinId": "hamidkhodaei"
+        }
+      },
+      {
+        "candidate_name": "Saptarshi Mandal",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/saptarshi-mandal-ph-d-93561b4",
+        "soft_scores": [
+          {
+            "criteria_name": "cad_simulation_tools_experience",
+            "reasoning": "The candidate has extensive experience with CAD tools such as SolidWorks and Design Modeler, and mechanical simulation tools including ANSYS and ABAQUS for thermal, structural, and nonlinear finite element analysis.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "product_lifecycle_involvement",
+            "reasoning": "The candidate has led projects from design through procurement and construction, supported prototyping, and managed project scheduling and budgeting, demonstrating involvement throughout the product lifecycle.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "domain_specialization_mechanical",
+            "reasoning": "The candidate specializes in thermal and structural engineering, including thermal system simulations, nonlinear thermo-mechanical analysis, electronics cooling, and failure analysis in mechanical engineering contexts.",
+            "score": 10.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "higher_degree_mechanical",
+            "reasoning": "The candidate holds a Doctorate in Mechanical Engineering from Old Dominion University, an accredited university.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_mechanical",
+            "reasoning": "The candidate has over 13 years of professional experience in mechanical design, product development, and systems engineering.",
+            "passes": true
+          }
+        ],
+        "final_score": 96.66666666666667,
+        "raw_data": {
+          "_id": "6794959e3e76d5b58720d29a",
+          "name": "Saptarshi Mandal",
+          "linkedinId": "saptarshi-mandal-ph-d-93561b4"
+        }
+      },
+      {
+        "candidate_name": "Shengjie Tang",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/shengjie-tang-phd-mba-52519a37",
+        "soft_scores": [
+          {
+            "criteria_name": "cad_simulation_tools_experience",
+            "reasoning": "Extensive experience with CAD tools including SolidWorks and CREO, as well as mechanical simulation tools like ANSYS Workbench, Abacus, and COMSOL. Also has expertise in CAE, FEA, and CFD.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "product_lifecycle_involvement",
+            "reasoning": "Demonstrated involvement in all stages of product development, including design, prototyping, manufacturing process development, and testing documentation such as DFMEA, DVP&R, and APQP. Experience with medium to high volume manufacturing and supplier sourcing.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "domain_specialization_mechanical",
+            "reasoning": "Strong domain expertise in thermal systems, structural mechanics, heat transfer, and multi-physics modeling. Experience includes thermal system simulations and structural analysis in electromechanical and thin film materials contexts.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "higher_degree_mechanical",
+            "reasoning": "Holds a Doctorate in Mechanical Engineering from the University of Houston, an accredited university.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_mechanical",
+            "reasoning": "Has 10 years of working experience in mechanical and materials engineering, including product development, structural design, and simulation.",
+            "passes": true
+          }
+        ],
+        "final_score": 93.33333333333333,
+        "raw_data": {
+          "_id": "67954fd8f9f986ea7fb8e182",
+          "name": "Shengjie Tang",
+          "linkedinId": "shengjie-tang-phd-mba-52519a37"
         }
       }
     ]
