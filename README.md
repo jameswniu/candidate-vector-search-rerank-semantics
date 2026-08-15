@@ -150,11 +150,11 @@ Run 3 still lost points in three ways: ANN retrieval silently dropped qualified 
 | Mathematics PhD | 0.0 | 42.5 | 74.5 | **90.5** | 100% |
 | Bankers | 73.7 | 81.3 | 81.3 | **90.3** | 100% |
 | Quantitative Finance | 43.0 | 34.0 | 65.7 | **90.2** | 100% |
-| Doctors (MD) | 0.0 | 8.0 | 36.5 | **87.5** | 100% |
+| Doctors (MD) | 0.0 | 8.0 | 36.5 | **88.0** | 100% |
 | Anthropology | 0.0 | 0.0 | 20.3 | **77.2** | 100% |
 | **Average** | **46.7** | **52.1** | **66.6** | **89.4** | **100%** |
 
-Eight of ten configs finish at 90+, nine at 85+, and every hard criterion across every config passes at 100%. The three run-3 disasters recovered the most: Quantitative Finance 65.7 to 90.2, Anthropology 20.3 to 77.2, and Doctors 36.5 to 87.5.
+Eight of ten configs finish at 90+, nine at 85+, and every hard criterion across every config passes at 100%. The three run-3 disasters recovered the most: Quantitative Finance 65.7 to 90.2, Anthropology 20.3 to 77.2, and Doctors 36.5 to 88.0.
 
 ### Why Doctors and Anthropology fall short of 90
 
