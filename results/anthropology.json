@@ -2,36 +2,36 @@
   "config": "Anthropology",
   "config_path": "anthropology.yml",
   "object_ids": [
-    "6794b8c752a365d11679b201",
+    "679594558a14699f1607b1cd",
+    "679570a173bf14921fae0c84",
     "6796088cf9f986ea7fbfa773",
+    "67969b418d90554e6075fd5a",
     "67964fba3eff0c142a86a411",
+    "67964638a1a09a48feb6c843",
+    "67957ea30db3e7925678f66e",
+    "67954899a1a09a48fead4d63",
     "6794ffdb8a14699f16028dce",
-    "6795ff19a1a09a48feb43033",
-    "67969f6f7e0084c5fa8037b1",
-    "679494873eff0c142a77c5e1",
-    "6795506b73bf14921facce80",
-    "679660117e0084c5fa7da145",
-    "6795c7ff8d90554e606e6fc6"
+    "6794b8c752a365d11679b201"
   ],
   "eval_result": {
     "config_name": "anthropology",
     "num_candidates": 10,
-    "average_final_score": 77.16666666666667,
+    "average_final_score": 85.00000000000001,
     "average_soft_scores": [
-      {
-        "criteria_name": "applied_anthropology_experience",
-        "reasoning": null,
-        "average_score": 8.1
-      },
       {
         "criteria_name": "academic_output_quality",
         "reasoning": null,
-        "average_score": 7.3
+        "average_score": 8.0
+      },
+      {
+        "criteria_name": "applied_anthropology_experience",
+        "reasoning": null,
+        "average_score": 8.7
       },
       {
         "criteria_name": "ethnographic_methods_expertise",
         "reasoning": null,
-        "average_score": 7.75
+        "average_score": 8.8
       }
     ],
     "average_hard_scores": [
@@ -48,42 +48,81 @@
     ],
     "individual_results": [
       {
-        "candidate_name": "Hajar Ghorbani",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/hajar-ghorbani-970b2523b",
+        "candidate_name": "Nicole H.",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/nicolehernandezmendez",
         "soft_scores": [
           {
             "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "Candidate has conducted over six years of extensive fieldwork in Iran, indicating strong expertise in ethnographic methods within sociocultural anthropology.",
+            "reasoning": "Nicole is a 4th-year PhD candidate in Sociocultural Anthropology with extensive fieldwork, including oral histories and community archival research focused on Puerto Rican cultural heritage. The candidate has applied qualitative and quantitative research methods and has practical experience in community engagement and archives, demonstrating strong ethnographic expertise.",
             "score": 9.0
           },
           {
             "criteria_name": "academic_output_quality",
-            "reasoning": "Candidate has edited a notable interdisciplinary volume on Iranian death studies, serves on editorial boards, and has delivered keynote speeches, showing strong academic output and engagement.",
+            "reasoning": "Nicole has research fellowships funded by prestigious organizations (NSF, Mellon Foundation, ACLS) and is producing public scholarship through podcasts, digital humanities projects, and archival curation. While no direct mention of published papers was given, conference presentations and significant scholarly projects indicate strong academic output quality.",
             "score": 8.0
           },
           {
             "criteria_name": "applied_anthropology_experience",
-            "reasoning": "Research focuses on the politicization and cultural aspects of death in Iran, with involvement in interdisciplinary teams and real-world cultural projects such as documentaries and artistic exhibitions, demonstrating applied anthropology experience.",
-            "score": 8.0
+            "reasoning": "Nicole has an extensive applied anthropology background, including work on labor migration and cultural identity within the Puerto Rican diaspora, disaster and humanitarian work, epidemiology related to COVID-19, and digital humanities projects connecting scholarship and community. This shows both conceptual depth and practical application across disciplines.",
+            "score": 10.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "phd_in_relevant_field",
-            "reasoning": "Candidate is a PhD candidate in sociocultural anthropology at the University of Alberta, a recognized institution, which meets the requirement.",
+            "reasoning": "The candidate is a PhD candidate in Sociocultural Anthropology at a recognized program (Arizona State University), which is a relevant distinguished program.",
             "passes": true
           },
           {
             "criteria_name": "recent_phd_program",
-            "reasoning": "Exact PhD program start date is not specified, but given in 2024 the candidate received Vanier Scholarship and is currently a candidate, it is likely the program began within last 3 years, so passes.",
+            "reasoning": "The candidate is in their 4th year of the PhD program as of 2026. Assuming a typical start year of around 2022 or 2023, this meets the criterion of starting in the last 3 years.",
             "passes": true
           }
         ],
-        "final_score": 83.33333333333334,
+        "final_score": 90.0,
         "raw_data": {
-          "_id": "6794b8c752a365d11679b201",
-          "name": "Hajar Ghorbani",
-          "linkedinId": "hajar-ghorbani-970b2523b"
+          "_id": "679594558a14699f1607b1cd",
+          "name": "Nicole H.",
+          "linkedinId": "nicolehernandezmendez"
+        }
+      },
+      {
+        "candidate_name": "Jill J. Tan",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/jilljtan",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "The candidate is a PhD candidate in Anthropology at Yale University and has conducted qualitative research on death management in Singapore, working directly with funeral professionals and public education initiatives, demonstrating substantial ethnographic fieldwork and case study research involving cultural and social systems.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "The candidate has multiple forthcoming and published academic works in reputable journals and edited volumes, plus editorial roles in Society for Cultural Anthropology and has received several fellowships and awards for their scholarship.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "The candidate's work applies anthropological theory to real-world contexts such as death literacy in Singapore, public education, arts collaborations, and transnational migration themes. They have engaged in interdisciplinary and practical projects supported by foundations and university centers.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "The candidate is currently a PhD candidate in Anthropology at Yale University, a distinguished program fitting the requirement.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "The candidate's current status as a PhD candidate and receipt of awards in 2022 indicate the PhD program started within the last 3 years.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "679570a173bf14921fae0c84",
+          "name": "Jill J. Tan",
+          "linkedinId": "jilljtan"
         }
       },
       {
@@ -126,6 +165,45 @@
         }
       },
       {
+        "candidate_name": "Michelle Rasc\u00f3n-Canales",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/michelle-rascon-canales",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "Candidate has a PhD in Cultural Anthropology with dissertation research focusing on childhood migration and detained unaccompanied children along the Southwest, indicating substantial ethnographic and qualitative fieldwork experience. Additionally, involvement in Youth Participatory Action Research (YPAR) and various qualitative studies supports strong expertise.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "Candidate references dissertation research and multiple research assistant roles involving grant writing and academic studies but there is no explicit mention of published papers or conference presentations. Academic output quality appears solid but not explicitly documented.",
+            "score": 7.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "Candidate applies anthropological knowledge extensively through interdisciplinary research on immigration, social work practice with undocumented children, and ecological contexts of immigration policy; also engaged in community-based participatory research. This shows strong conceptual depth and practical relevance.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "Candidate completed a PhD in Cultural Anthropology at the University of Arizona, a distinguished program, in 2024.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "Candidate completed the PhD in 2024, which is within the last 3 years from the current year 2026.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "67969b418d90554e6075fd5a",
+          "name": "Michelle Rasc\u00f3n-Canales",
+          "linkedinId": "michelle-rascon-canales"
+        }
+      },
+      {
         "candidate_name": "Manon Lef\u00e8vre",
         "candidate_linkedin_url": "https://www.linkedin.com/in/manon-lefevre2023",
         "soft_scores": [
@@ -162,6 +240,123 @@
           "_id": "67964fba3eff0c142a86a411",
           "name": "Manon Lef\u00e8vre",
           "linkedinId": "manon-lefevre2023"
+        }
+      },
+      {
+        "candidate_name": "Mariana Peixoto Irby",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/mariana-peixoto-irby-8b317396",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "The candidate is a cultural anthropologist with extensive experience in qualitative research methods and ethnography, indicating strong expertise in ethnographic methods.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "Although specific publications or presentations are not listed, the candidate completed a PhD at University of Pennsylvania and holds a postdoctoral fellowship, implying strong academic output.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "The candidate's research involves citizenship, borders, racialization, and nationalism, and has practical experience in migration-related projects and interdisciplinary coursework, indicating good applied anthropology experience.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "The candidate completed a PhD in Cultural Anthropology at the University of Pennsylvania, a distinguished program in anthropology.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "The PhD was completed in Spring 2024, well within the last 3 years (current year 2026).",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "67964638a1a09a48feb6c843",
+          "name": "Mariana Peixoto Irby",
+          "linkedinId": "mariana-peixoto-irby-8b317396"
+        }
+      },
+      {
+        "candidate_name": "Katie Duarte",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/katie-duarte-871646a2",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "Candidate has designed and conducted ethnographic research involving over 80 semi-structured interviews and 150 hours of observations in hair salons, applying ethnographic codes and bilingual interview guides. This reflects substantial fieldwork using ethnographic methods.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "Candidate has presented findings at multiple annual conferences (American Sociological Association, Society for the Study of Social Problems, Sociologists for Women in Society) and received an honorable mention for a student paper award in 2023. No mention of published papers but strong conference presence indicates high academic output quality.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "Candidate applies sociological/anthropological theory on Afro-Latinx identity, Black identity among Latinxs, and cultural identity in real-world contexts such as hair salons in NYC and Santo Domingo, as well as intimate relationships among Dominican-American women, integrating conceptual depth with practical research relevance.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "Candidate is a PhD student in Sociology at Brown University, a top U.S. university, which is a relevant field and distinguished program.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "Candidate\u2019s timeline includes activity and awards up to 2023; given the current year is 2026, the PhD program likely started within the last 3 years and the candidate is still a student.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "67957ea30db3e7925678f66e",
+          "name": "Katie Duarte",
+          "linkedinId": "katie-duarte-871646a2"
+        }
+      },
+      {
+        "candidate_name": "Adaiah Hudgins-Lopez",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/adaiah-hudgins-lopez",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "The candidate is a PhD candidate in Social Anthropology at University of Cambridge with anthropological fieldwork conducted in the Detroit-Windsor transborder area, focusing on undocumented transnational movement and Latino migration history. This shows substantial fieldwork and expertise in ethnographic methods involving cultural and social systems.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "The candidate completed an MPhil with a dissertation based on original research and has experience developing and facilitating academic workshops. However, specific mention of publications or conference presentations is not provided, so the academic output quality is inferred as strong but not fully evidenced.",
+            "score": 7.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "The candidate has demonstrated applied anthropology experience through research in immigration law, advocacy, policy work, legal enforcement, and community building along borders. Their work involves interdisciplinary relevance including law and policy, showing conceptual depth and practical applications.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "The candidate is a PhD candidate in Social Anthropology at University of Cambridge, a distinguished program.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "The candidate is a current PhD candidate starting at least by 2021 (Gates Cambridge Scholar 2021 & 2022), which is within the last 3 years relative to 2026.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "67954899a1a09a48fead4d63",
+          "name": "Adaiah Hudgins-Lopez",
+          "linkedinId": "adaiah-hudgins-lopez"
         }
       },
       {
@@ -204,237 +399,42 @@
         }
       },
       {
-        "candidate_name": "Tinnaphop Sinsomboonthong",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/tinnaphop-sinsomboonthong-67b5165a",
+        "candidate_name": "Hajar Ghorbani",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/hajar-ghorbani-970b2523b",
         "soft_scores": [
           {
             "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate has a strong background in qualitative research methods and social theory with a focus on migration and cultural identity, suggesting experience consistent with ethnographic approaches. However, explicit extensive fieldwork or detailed ethnographic case studies are not specifically detailed in the summary.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "The candidate is an assistant professor with notable academic involvement and has co-authored publications and conducted research in relevant fields. Strong academic output is implied but precise publication details, such as journal articles or conference presentations, are not extensively listed.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "The candidate has significant applied experience working with migrant workers, development organizations, and practical projects on labor migration and cultural identity, integrating anthropological and sociological insights in real-world contexts, demonstrating both conceptual depth and practical relevance.",
+            "reasoning": "Candidate has conducted over six years of extensive fieldwork in Iran, indicating strong expertise in ethnographic methods within sociocultural anthropology.",
             "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "The candidate is currently pursuing a PhD in Sociology at the National University of Singapore, a distinguished program relevant to anthropology and sociology.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "The PhD program started in 2023, which is within the last 3 years as of 2026.",
-            "passes": true
-          }
-        ],
-        "final_score": 76.66666666666666,
-        "raw_data": {
-          "_id": "6795ff19a1a09a48feb43033",
-          "name": "Tinnaphop Sinsomboonthong",
-          "linkedinId": "tinnaphop-sinsomboonthong-67b5165a"
-        }
-      },
-      {
-        "candidate_name": "Eleanor Foster",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/eleanor-foster-419947205",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate is an MPhil graduate in social anthropology and a PhD candidate researching Indigenous Australian collections, engaging in archival, social research, and community interviews, which demonstrates strong ethnographic method skills and fieldwork experience.",
-            "score": 8.0
           },
           {
             "criteria_name": "academic_output_quality",
-            "reasoning": "Although the summary highlights research projects and a strong academic background, there is no explicit mention of published papers or presentations, so the score is somewhat moderate.",
-            "score": 6.0
+            "reasoning": "Candidate has edited a notable interdisciplinary volume on Iranian death studies, serves on editorial boards, and has delivered keynote speeches, showing strong academic output and engagement.",
+            "score": 8.0
           },
           {
             "criteria_name": "applied_anthropology_experience",
-            "reasoning": "The candidate has applied anthropological research in museum contexts, including repatriation projects involving Indigenous communities, indicating meaningful applied anthropology experience linked to cultural heritage and community engagement.",
+            "reasoning": "Research focuses on the politicization and cultural aspects of death in Iran, with involvement in interdisciplinary teams and real-world cultural projects such as documentaries and artistic exhibitions, demonstrating applied anthropology experience.",
             "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "phd_in_relevant_field",
-            "reasoning": "The candidate is pursuing a PhD in social anthropology at the University of Cambridge, which is a distinguished program in the relevant field.",
+            "reasoning": "Candidate is a PhD candidate in sociocultural anthropology at the University of Alberta, a recognized institution, which meets the requirement.",
             "passes": true
           },
           {
             "criteria_name": "recent_phd_program",
-            "reasoning": "There is no explicit start date, but the candidate completed an MPhil in social anthropology at Cambridge in 2023 and is currently a PhD candidate in 2026, suggesting the PhD program started within the last 3 years.",
+            "reasoning": "Exact PhD program start date is not specified, but given in 2024 the candidate received Vanier Scholarship and is currently a candidate, it is likely the program began within last 3 years, so passes.",
             "passes": true
           }
         ],
-        "final_score": 73.33333333333334,
+        "final_score": 83.33333333333334,
         "raw_data": {
-          "_id": "67969f6f7e0084c5fa8037b1",
-          "name": "Eleanor Foster",
-          "linkedinId": "eleanor-foster-419947205"
-        }
-      },
-      {
-        "candidate_name": "J'Mauri Jackson",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jmaurijackson",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate has extensive qualitative research experience, including qualitative coding of interviews, thematic analysis, and archival data analysis, which are key components of ethnographic methods. However, there is no explicit mention of substantial fieldwork or classic ethnographic case studies focused on cultural, social, or economic systems. Thus, demonstrated expertise in ethnographic methods is good but not outstanding.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "The candidate has a strong academic record evident from fellowships like the NSF Graduate Research Fellowship and multiple research roles, including editorial work for a public affairs journal. She has contributed to various scholarly projects and manuscripts, received awards for her thesis, and presented or contributed to recognized academic venues. This shows a strong and above-average academic output.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "Though the candidate's PhD is in Public Policy & Sociology (not anthropology), her research has practical relevance applying sociological theory to real-world issues such as the criminal justice system, healthcare disparities, and racial health inequities. Her projects involve translational research aiming to impact policy and practice, aligning with applied anthropology principles. However, there is little indication of work specifically on labor migration or cultural identity, and her background is more sociological and policy-oriented.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "The candidate is a PhD student in Public Policy and Sociology at University of Michigan, a distinguished program, and sociology is a relevant field closely linked to anthropology.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "The candidate is currently a PhD student and has held fellowships and roles from at least 2023 onward, indicating her program started within the last 3 years.",
-            "passes": true
-          }
-        ],
-        "final_score": 73.33333333333334,
-        "raw_data": {
-          "_id": "679494873eff0c142a77c5e1",
-          "name": "J'Mauri Jackson",
-          "linkedinId": "jmaurijackson"
-        }
-      },
-      {
-        "candidate_name": "Emilia Rose Holmbeck",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/emiliaholmbeck",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate is a PhD candidate in psychocultural/medical anthropology with dissertation research involving qualitative study of collective peer-support running as an intervention in addiction treatment settings. She has conducted qualitative data transcription and other field-related research assistance, indicating solid ethnographic and qualitative research methods experience, though not explicitly centered on labor migration or cultural identity but broadly on culture, cognition, and health.",
-            "score": 7.5
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "The candidate completed a master's thesis and is engaged in PhD research with a strong academic trajectory at UCLA, including teaching fellow responsibilities in various anthropology courses. However, there is no explicit mention of published papers or conference presentations in the summary, so the evidence supports good but not clearly outstanding academic output quality.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "The candidate applies anthropological theories to real-world issues in medical and psychological anthropology, including addiction treatment and trauma/PTSD, showing practical relevance and interdisciplinary application. Migration and labor are not her main focus, but her background in cross-cultural contexts and qualitative research indicates a competent applied anthropology experience.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "The candidate is currently a PhD candidate at UCLA in psychocultural/medical anthropology, which is a distinguished program within anthropology, a relevant field.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "The candidate is presently a PhD candidate with teaching fellow roles dated 2023-2025, indicating she likely started her PhD within the last 3 years or at least remains actively enrolled recently. Exact start date not specified, but current enrollment supports a PASS.",
-            "passes": true
-          }
-        ],
-        "final_score": 71.66666666666667,
-        "raw_data": {
-          "_id": "6795506b73bf14921facce80",
-          "name": "Emilia Rose Holmbeck",
-          "linkedinId": "emiliaholmbeck"
-        }
-      },
-      {
-        "candidate_name": "Frank Meng",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/frank-meng-2023",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate's research focuses on qualitative and mixed methods exploring migration and identity, indicating familiarity with ethnographic approaches though no explicit mention of extensive fieldwork.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "Candidate shows strong academic background and research fellowships but no explicit evidence of published papers or presentations in anthropology or sociology yet.",
-            "score": 6.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "Research centers on queer Asian immigrants and racial/ethnic minorities with interdisciplinary application involving sociology, migration, and technology, indicating strong applied anthropology experience.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "Candidate is a first-year PhD student in Sociology at University of Pennsylvania, a distinguished program related to anthropology.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "Candidate is a first-year PhD student as of the current information (2026), indicating the program was started within the past 3 years.",
-            "passes": true
-          }
-        ],
-        "final_score": 69.99999999999999,
-        "raw_data": {
-          "_id": "679660117e0084c5fa7da145",
-          "name": "Frank Meng",
-          "linkedinId": "frank-meng-2023"
-        }
-      },
-      {
-        "candidate_name": "Adriana Ceron",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/adriana-ceron-0a0715101",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate uses interview-based methods to explore questions related to migration and identity, indicating qualitative fieldwork and case study experience relevant to ethnographic methods.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "No explicit mention of published papers or conference presentations, but the candidate is a funded PhD candidate with a dissertation, implying some level of strong academic output.",
-            "score": 6.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "Research focuses on real-world interdisciplinary issues such as immigration law, migration, and inequality, reflecting practical relevance and conceptual depth.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "Candidate is a PhD candidate in Sociology at Yale University, a distinguished program closely related to anthropology.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "Candidate is a fourth-year PhD student in 2026, suggesting program start around 2022, which is within the last 3 years.",
-            "passes": true
-          }
-        ],
-        "final_score": 69.99999999999999,
-        "raw_data": {
-          "_id": "6795c7ff8d90554e606e6fc6",
-          "name": "Adriana Ceron",
-          "linkedinId": "adriana-ceron-0a0715101"
+          "_id": "6794b8c752a365d11679b201",
+          "name": "Hajar Ghorbani",
+          "linkedinId": "hajar-ghorbani-970b2523b"
         }
       }
     ]

@@ -2,39 +2,34 @@
   "config": "Doctors (MD)",
   "config_path": "doctors_md.yml",
   "object_ids": [
-    "6794c5a93eff0c142a796a64",
+    "679549327e0084c5fa73e46b",
+    "679733a13eff0c142a8e5e68",
+    "679703f0f9f986ea7fc87127",
+    "6796f6a63eff0c142a8c719a",
     "6796ef723eff0c142a8c40db",
     "6796bac27e0084c5fa81758b",
     "6795e04e73bf14921fb2f5e6",
     "67949c9d7e0084c5fa6d2dfc",
     "6796aa810db3e79256840ddd",
-    "67969ba08d90554e60760036",
-    "679687e68d90554e60754908",
-    "67966f623e76d5b587314aca",
-    "67965c00f9f986ea7fc28d0e"
+    "67969ba08d90554e60760036"
   ],
   "eval_result": {
     "config_name": "doctors_md",
     "num_candidates": 10,
-    "average_final_score": 88.00000000000001,
+    "average_final_score": 89.5,
     "average_soft_scores": [
-      {
-        "criteria_name": "telemedicine_comfort",
-        "reasoning": null,
-        "average_score": 9.0
-      },
       {
         "criteria_name": "ehr_systems_familiarity",
         "reasoning": null,
-        "average_score": 8.6
+        "average_score": 8.7
+      },
+      {
+        "criteria_name": "telemedicine_comfort",
+        "reasoning": null,
+        "average_score": 9.2
       }
     ],
     "average_hard_scores": [
-      {
-        "criteria_name": "general_practitioner_experience",
-        "reasoning": null,
-        "pass_rate": 1.0
-      },
       {
         "criteria_name": "two_plus_years_clinical",
         "reasoning": null,
@@ -44,46 +39,168 @@
         "criteria_name": "top_us_md_degree",
         "reasoning": null,
         "pass_rate": 1.0
+      },
+      {
+        "criteria_name": "general_practitioner_experience",
+        "reasoning": null,
+        "pass_rate": 1.0
       }
     ],
     "individual_results": [
       {
-        "candidate_name": "Lisa Czanko",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/lisaczanko",
+        "candidate_name": "Tiffany I. Leung",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/tiffany-i-leung-md-mph-bb993a6a",
         "soft_scores": [
           {
             "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "The candidate has extensive experience with electronic health records (EHRs) and electronic medical records (EMRs), including leading technological transformations of hybrid telemedicine and in-person urgent care centers that involved revamping EHR functionality and outlining clinical workflows. This shows strong familiarity and management of EHR systems in outpatient settings.",
+            "reasoning": "The candidate has extensive experience working in outpatient settings including Stanford ClickWell Care and General Medicine clinics, involvement with electronic health record customization at SIU Medicine, and clinical informatics expertise, indicating strong familiarity with EHR systems and managing patient care.",
             "score": 9.0
           },
           {
             "criteria_name": "telemedicine_comfort",
-            "reasoning": "The candidate has significant experience with telemedicine, including leading integration with telemedicine service partners, managing telemedicine operations across 32 states, providing direct care via telemedicine, and developing clinical strategies and pathways for telemedicine services and digital health apps. This indicates an excellent comfort level with telemedicine consultations, patient triage, and interdisciplinary coordination.",
+            "reasoning": "The candidate leads Stanford ClickWell Care, a telemedicine primary care model, and has specific interests in telemedicine, eHealth, and virtual care delivery, demonstrating outstanding comfort with telemedicine, patient triage, and interdisciplinary telehealth coordination.",
             "score": 10.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "top_us_md_degree",
-            "reasoning": "The candidate holds an MD from Columbia University College of Physicians and Surgeons, which is considered a top U.S. medical school.",
+            "reasoning": "The candidate holds an MD from Northwestern University - The Feinberg School of Medicine, a top U.S. medical school.",
             "passes": true
           },
           {
             "criteria_name": "two_plus_years_clinical",
-            "reasoning": "The candidate has 15 years of clinical experience directly caring for patients in the U.S. and internationally, including roles at Harvard Medical School, Massachusetts General Hospital, and multiple other U.S.-based clinical positions.",
+            "reasoning": "The candidate completed residency at Northwestern Memorial Hospital and has several years as an attending and staff physician in several U.S. clinical settings, including telemedicine clinics and university hospitals, clearly exceeding 2 years of U.S. clinical experience.",
             "passes": true
           },
           {
             "criteria_name": "general_practitioner_experience",
-            "reasoning": "The candidate's experience includes internal medicine and primary care with a focus on chronic care management, preventative care, urgent care, and outpatient services, aligning with general practitioner roles.",
+            "reasoning": "The candidate has worked as a Primary Care Physician and Physician Lead in general medical disciplines providing outpatient primary care including management of multimorbidity and preventive care, qualifying as general practitioner experience.",
             "passes": true
           }
         ],
         "final_score": 95.0,
         "raw_data": {
-          "_id": "6794c5a93eff0c142a796a64",
-          "name": "Lisa Czanko",
-          "linkedinId": "lisaczanko"
+          "_id": "679549327e0084c5fa73e46b",
+          "name": "Tiffany I. Leung",
+          "linkedinId": "tiffany-i-leung-md-mph-bb993a6a"
+        }
+      },
+      {
+        "candidate_name": "Kate Stewart",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/kate-stewart-md-83490685",
+        "soft_scores": [
+          {
+            "criteria_name": "ehr_systems_familiarity",
+            "reasoning": "Candidate has extensive experience in various clinical roles including primary care at multiple healthcare facilities and telemedicine services, developing clinical protocols and workflows which typically involve using EHR systems to manage patient care and optimize operations, indicating strong familiarity.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "telemedicine_comfort",
+            "reasoning": "Candidate co-founded a telemedicine abortion clinic, serving over 20k patients with a high patient satisfaction score, developed clinical protocols, managed clinical teams, and worked closely with engineering and product teams to optimize patient/provider experience, demonstrating excellent comfort and skill in telemedicine consultations and coordination.",
+            "score": 10.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "top_us_md_degree",
+            "reasoning": "Candidate holds an MD from The University Of Texas Southwestern Medical Center At Dallas, which is recognized as a top medical school in the U.S.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_clinical",
+            "reasoning": "Candidate has multiple years of clinical experience including primary care at Rikers Island, FQHC, trauma-informed clinics, and family medicine residency, indicating over two years of clinical practice in the U.S.",
+            "passes": true
+          },
+          {
+            "criteria_name": "general_practitioner_experience",
+            "reasoning": "Candidate has served as a primary care physician and family physician in multiple settings including correctional facility and community health clinics, demonstrating experience as a General Practitioner.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "679733a13eff0c142a8e5e68",
+          "name": "Kate Stewart",
+          "linkedinId": "kate-stewart-md-83490685"
+        }
+      },
+      {
+        "candidate_name": "Amber Featherstone-Uwague",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/amber-featherstone-uwague",
+        "soft_scores": [
+          {
+            "criteria_name": "ehr_systems_familiarity",
+            "reasoning": "The candidate has extensive experience leading primary care centers including choosing EMR vendors and developing workflow patterns at FQHCs, indicating strong familiarity with EHR systems and managing patient volume in outpatient/family medicine settings.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "telemedicine_comfort",
+            "reasoning": "The candidate led digital health transformation including AI-powered chronic condition management products and digital-first healthcare approaches. This role entails comfort with telemedicine consultations and interdisciplinary coordination.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "top_us_md_degree",
+            "reasoning": "The candidate holds an MD from The University of Texas Southwestern Medical Center at Dallas, which is recognized as a top U.S. medical school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_clinical",
+            "reasoning": "The candidate has multiple years of clinical practice as a physician and medical director in various U.S.-based FQHCs and health centers, clearly exceeding two years of clinical practice in the U.S.",
+            "passes": true
+          },
+          {
+            "criteria_name": "general_practitioner_experience",
+            "reasoning": "The candidate has worked as a primary care physician and medical director in family health centers and outpatient settings providing general practice care to adult populations.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "679703f0f9f986ea7fc87127",
+          "name": "Amber Featherstone-Uwague",
+          "linkedinId": "amber-featherstone-uwague"
+        }
+      },
+      {
+        "candidate_name": "Anna Kaminski",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/anna-kaminski-ms-md-1b627274",
+        "soft_scores": [
+          {
+            "criteria_name": "ehr_systems_familiarity",
+            "reasoning": "Candidate has experience creating onboarding processes for EHR, improving clinical workflows, managing multiple clinical sites, and using data-driven decision making indicative of strong EHR and outpatient practice familiarity.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "telemedicine_comfort",
+            "reasoning": "Candidate has implemented telemedicine delivery to remote areas and Alaska, supervised providers in express care clinics, and developed protocols supporting telemedicine, demonstrating excellent comfort and experience.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "top_us_md_degree",
+            "reasoning": "The candidate holds an MD from University of California, San Francisco, which is considered a top U.S. medical school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_clinical",
+            "reasoning": "Candidate has extensive clinical experience including as a Staff Physician and in various leadership clinical roles over many years, clearly exceeding two years of U.S. clinical practice.",
+            "passes": true
+          },
+          {
+            "criteria_name": "general_practitioner_experience",
+            "reasoning": "Candidate's MD is in Family Medicine and has worked in primary care roles including family medicine residency training, community clinics focused on chronic care, and outpatient settings indicating general practitioner experience.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "6796f6a63eff0c142a8c719a",
+          "name": "Anna Kaminski",
+          "linkedinId": "anna-kaminski-ms-md-1b627274"
         }
       },
       {
@@ -318,123 +435,6 @@
           "_id": "67969ba08d90554e60760036",
           "name": "Christiana Jones",
           "linkedinId": "christianajonesmd"
-        }
-      },
-      {
-        "candidate_name": "Shauna Smith",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/shauna-smith-0a951a1b",
-        "soft_scores": [
-          {
-            "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "Candidate has documented experience with multiple EHR systems (Epic and eClinicalWorks), including being an Epic EMR superuser, indicating strong familiarity managing electronic medical records typically in outpatient or family medicine settings.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "telemedicine_comfort",
-            "reasoning": "Candidate has experience in digital (remote) patient care and has worked as a digital healthcare physician, demonstrating significant comfort with telemedicine consultations and patient management.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "top_us_md_degree",
-            "reasoning": "Candidate holds an MD from University of Chicago - The Pritzker School of Medicine, which is considered a top U.S. medical school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "two_plus_years_clinical",
-            "reasoning": "Candidate has over 20 years of clinical experience in primary care in the U.S., clearly exceeding two years of clinical practice.",
-            "passes": true
-          },
-          {
-            "criteria_name": "general_practitioner_experience",
-            "reasoning": "Candidate has extensive experience as a family practice physician and in general primary care, which equates to general practitioner experience.",
-            "passes": true
-          }
-        ],
-        "final_score": 85.00000000000001,
-        "raw_data": {
-          "_id": "679687e68d90554e60754908",
-          "name": "Shauna Smith",
-          "linkedinId": "shauna-smith-0a951a1b"
-        }
-      },
-      {
-        "candidate_name": "Alison Kneisl",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/alison-kneisl-00835844",
-        "soft_scores": [
-          {
-            "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "Candidate has experience leading clinical quality improvements and implementing electronic health record systems during tenure at Muckleshoot Health and Wellness Center, and managing health information teams at Qliance, indicating good familiarity with EHR systems and managing outpatient clinical workflows.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "telemedicine_comfort",
-            "reasoning": "Candidate has extensive telemedicine experience as Physician and Medical Director at Carena/Avizia/American Well, treating patients via multiple virtual platforms and leading clinical innovation in virtual care. Also managed telemedicine programs at Qliance. Demonstrates strong comfort and skill in telemedicine consultations and interdisciplinary coordination.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "top_us_md_degree",
-            "reasoning": "Candidate earned MD from University of California, San Francisco, which is consistently ranked as a top-tier U.S. medical school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "two_plus_years_clinical",
-            "reasoning": "Candidate has been practicing clinically in various roles since at least 2010 through present, totaling well over two years of clinical experience in the U.S.",
-            "passes": true
-          },
-          {
-            "criteria_name": "general_practitioner_experience",
-            "reasoning": "Candidate has multiple positions as Family Physician and Primary Care provider in outpatient and urgent care settings, which correspond to the role of a General Practitioner.",
-            "passes": true
-          }
-        ],
-        "final_score": 85.00000000000001,
-        "raw_data": {
-          "_id": "67966f623e76d5b587314aca",
-          "name": "Alison Kneisl",
-          "linkedinId": "alison-kneisl-00835844"
-        }
-      },
-      {
-        "candidate_name": "David Popiel",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/david-popiel-5463848b",
-        "soft_scores": [
-          {
-            "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "Candidate has extensive experience in outpatient and primary care settings, including leadership roles focusing on clinician enablement and quality improvement, implying familiarity with EHR systems and managing patient volumes.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "telemedicine_comfort",
-            "reasoning": "Candidate is currently CMO at Forward, an organization focused on preventive healthcare augmented by AI and remote/self-service approaches, implying strong involvement and comfort with telemedicine and related patient care coordination.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "top_us_md_degree",
-            "reasoning": "Candidate earned an MD from Columbia University College of Physicians & Surgeons, a top U.S. medical school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "two_plus_years_clinical",
-            "reasoning": "Candidate has multiple years of clinical practice post-residency, including roles at George Washington University and Forward, clearly exceeding two years.",
-            "passes": true
-          },
-          {
-            "criteria_name": "general_practitioner_experience",
-            "reasoning": "Candidate has experience as a general internist and primary care physician providing full scope outpatient care, qualifying as general practitioner experience.",
-            "passes": true
-          }
-        ],
-        "final_score": 85.00000000000001,
-        "raw_data": {
-          "_id": "67965c00f9f986ea7fc28d0e",
-          "name": "David Popiel",
-          "linkedinId": "david-popiel-5463848b"
         }
       }
     ]
