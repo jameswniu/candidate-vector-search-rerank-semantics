@@ -2,6 +2,7 @@
   "config": "Anthropology",
   "config_path": "anthropology.yml",
   "object_ids": [
+    "6794b8c752a365d11679b201",
     "6796088cf9f986ea7fbfa773",
     "67964fba3eff0c142a86a411",
     "6794ffdb8a14699f16028dce",
@@ -10,28 +11,27 @@
     "679494873eff0c142a77c5e1",
     "6795506b73bf14921facce80",
     "679660117e0084c5fa7da145",
-    "6795c7ff8d90554e606e6fc6",
-    "6796ecb20db3e7925686bd46"
+    "6795c7ff8d90554e606e6fc6"
   ],
   "eval_result": {
     "config_name": "anthropology",
     "num_candidates": 10,
-    "average_final_score": 75.5,
+    "average_final_score": 77.16666666666667,
     "average_soft_scores": [
       {
         "criteria_name": "applied_anthropology_experience",
         "reasoning": null,
-        "average_score": 8.0
+        "average_score": 8.1
       },
       {
         "criteria_name": "academic_output_quality",
         "reasoning": null,
-        "average_score": 7.0
+        "average_score": 7.3
       },
       {
         "criteria_name": "ethnographic_methods_expertise",
         "reasoning": null,
-        "average_score": 7.65
+        "average_score": 7.75
       }
     ],
     "average_hard_scores": [
@@ -47,6 +47,45 @@
       }
     ],
     "individual_results": [
+      {
+        "candidate_name": "Hajar Ghorbani",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/hajar-ghorbani-970b2523b",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "Candidate has conducted over six years of extensive fieldwork in Iran, indicating strong expertise in ethnographic methods within sociocultural anthropology.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "Candidate has edited a notable interdisciplinary volume on Iranian death studies, serves on editorial boards, and has delivered keynote speeches, showing strong academic output and engagement.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "Research focuses on the politicization and cultural aspects of death in Iran, with involvement in interdisciplinary teams and real-world cultural projects such as documentaries and artistic exhibitions, demonstrating applied anthropology experience.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "Candidate is a PhD candidate in sociocultural anthropology at the University of Alberta, a recognized institution, which meets the requirement.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "Exact PhD program start date is not specified, but given in 2024 the candidate received Vanier Scholarship and is currently a candidate, it is likely the program began within last 3 years, so passes.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "6794b8c752a365d11679b201",
+          "name": "Hajar Ghorbani",
+          "linkedinId": "hajar-ghorbani-970b2523b"
+        }
+      },
       {
         "candidate_name": "Helal Mohammed Khan",
         "candidate_linkedin_url": "https://www.linkedin.com/in/helalkhan",
@@ -396,45 +435,6 @@
           "_id": "6795c7ff8d90554e606e6fc6",
           "name": "Adriana Ceron",
           "linkedinId": "adriana-ceron-0a0715101"
-        }
-      },
-      {
-        "candidate_name": "Sara Hosseini",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/sara-hosseini-001604214",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate has demonstrated strong ethnographic expertise, mentioning extensive fieldwork and research involving labor, gender, and seasonal workers, which involves substantial ethnographic methodologies.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "No explicit mention of published papers or conference presentations; however, as a PhD candidate with teaching assistant roles and research experience, some academic output is inferred but not clearly described.",
-            "score": 5.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "The candidate has experience applying anthropology to real-world contexts including labor and gender with practical work on education and public research, which shows applied anthropology skills in interdisciplinary and real-world settings.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "The candidate is a PhD student in Anthropology at McGill University, a distinguished program, directly relevant to the field.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "The candidate's teaching assistant roles date from Winter 2024 and Fall 2024, indicating an ongoing PhD program likely started within the last three years.",
-            "passes": true
-          }
-        ],
-        "final_score": 66.66666666666666,
-        "raw_data": {
-          "_id": "6796ecb20db3e7925686bd46",
-          "name": "Sara Hosseini",
-          "linkedinId": "sara-hosseini-001604214"
         }
       }
     ]
