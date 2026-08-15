@@ -8,7 +8,6 @@
 
 <br/>
 
-<img alt="golden repo" src="https://img.shields.io/badge/%E2%98%85-golden_repo-d4a017?style=flat-square&labelColor=0c1013">
 <img alt="python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-dfe3e0?style=flat-square&labelColor=0c1013">
 <img alt="embedding Voyage-3" src="https://img.shields.io/badge/embedding-Voyage--3-8f9491?style=flat-square&labelColor=0c1013">
 <img alt="reranker GPT-4o-mini" src="https://img.shields.io/badge/reranker-GPT--4o--mini-8f9491?style=flat-square&labelColor=0c1013">
