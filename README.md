@@ -226,7 +226,7 @@ The LLM reranker is the bottleneck. Currently ~50-150 candidates are scored in s
 ## Project Structure
 
 ```
-candidate-vector-search/
+candidate-vector-search-rerank-semantics/
 ├── main.py              # Entry point: run all/single configs, submit results
 ├── pipeline.py          # 3-stage orchestration: embed, filter, rerank
 ├── embed.py             # Voyage-3 query embedding
