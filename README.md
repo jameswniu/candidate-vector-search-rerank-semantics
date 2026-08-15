@@ -1,4 +1,4 @@
-# Candidate Search Pipeline
+# Candidate Search: Semantic Vector Retrieval and LLM Reranking
 
 ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)
@@ -6,7 +6,7 @@
 ![GPT-4o-mini](https://img.shields.io/badge/reranker-GPT--4o--mini-green)
 ![Turbopuffer](https://img.shields.io/badge/vector%20DB-Turbopuffer-purple)
 
-Three-stage retrieval pipeline for matching candidates to role specifications: vector retrieval, hard-criteria filtering, and LLM reranking. Given ~200K LinkedIn profiles in a Turbopuffer vector DB (embedded with voyage-3), returns the 10 best-fit candidates for each of 10 role configs (final: 90.3 avg, 8 of 10 configs at 90+, all 10 at 80+, 100% hard-criteria pass). Each config has hard criteria (must-have) and soft criteria (nice-to-have), scored by an evaluation endpoint on hard pass rate and soft relevance (0-10).
+Candidate search and information-retrieval pipeline that matches people to role specifications with semantic vector retrieval, hard/soft relevance filtering, and LLM reranking. Given ~200K LinkedIn profiles in a Turbopuffer vector database (Voyage-3 embeddings), it returns the 10 best-fit candidates for each of 10 role configs (final: 90.3 avg, 8 of 10 configs at 90+, all 10 at 80+, 100% hard-criteria pass). Each config has hard criteria (must-have) and soft criteria (nice-to-have), scored by an evaluation endpoint on hard pass rate and soft relevance (0-10).
 
 ## The Problem
 
