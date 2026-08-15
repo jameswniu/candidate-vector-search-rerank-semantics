@@ -2,22 +2,27 @@
   "config": "Bankers",
   "config_path": "bankers.yml",
   "object_ids": [
-    "6794b5373eff0c142a78fd2b",
-    "6795b5f30db3e792567b1c55",
-    "6795a2b88d90554e606d0aca",
-    "6796d7b052a365d1168d6c08",
+    "67964af2a1a09a48feb6efdd",
     "679506d9a1a09a48feaacd5b",
-    "67952746f9f986ea7fb78042",
-    "67966dbb8a14699f160f160d",
-    "679712323eff0c142a8d4798",
+    "6796d7b052a365d1168d6c08",
     "6795d0988d90554e606ebac8",
-    "6795bd3a8d90554e606e0833"
+    "67952746f9f986ea7fb78042",
+    "6795b5f30db3e792567b1c55",
+    "67966dbb8a14699f160f160d",
+    "6795bd3a8d90554e606e0833",
+    "6795a2b88d90554e606d0aca",
+    "679712323eff0c142a8d4798"
   ],
   "eval_result": {
     "config_name": "bankers",
     "num_candidates": 10,
-    "average_final_score": 81.33333333333334,
+    "average_final_score": 90.33333333333334,
     "average_soft_scores": [
+      {
+        "criteria_name": "healthcare_metrics_knowledge",
+        "reasoning": null,
+        "average_score": 8.1
+      },
       {
         "criteria_name": "healthcare_ma_transactions",
         "reasoning": null,
@@ -27,18 +32,13 @@
         "criteria_name": "healthcare_investment_banking_experience",
         "reasoning": null,
         "average_score": 9.6
-      },
-      {
-        "criteria_name": "healthcare_metrics_knowledge",
-        "reasoning": null,
-        "average_score": 8.3
       }
     ],
     "average_hard_scores": [
       {
         "criteria_name": "mba_us_university",
         "reasoning": null,
-        "pass_rate": 0.9
+        "pass_rate": 1.0
       },
       {
         "criteria_name": "two_plus_years_banking",
@@ -48,159 +48,42 @@
     ],
     "individual_results": [
       {
-        "candidate_name": "Paul Kacik",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/paulkacik",
+        "candidate_name": "Ding Ding",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/dingdingaugeregroup",
         "soft_scores": [
           {
             "criteria_name": "healthcare_investment_banking_experience",
-            "reasoning": "Candidate has over 25 years of experience as a senior healthcare investment banker, including leadership roles and specialization in healthcare sectors such as behavioral health, physician practices, and healthcare revenue cycle management.",
+            "reasoning": "Ding Ding has over 21 years in healthcare investment banking and equity research with leading global banks including roles as head of healthcare IBD at Credit Suisse, Barclays, and Nomura. Her experience spans multiple healthcare sub-verticals including biotech, pharma, and medtech.",
             "score": 10.0
           },
           {
             "criteria_name": "healthcare_ma_transactions",
-            "reasoning": "Extensive track record advising on healthcare M&A, capital raising, recapitalizations, and financial advisory with numerous transactions across various healthcare sub-verticals.",
+            "reasoning": "She has led and advised on landmark healthcare transactions exceeding $70 billion, including large IPOs, pre-IPO financings, SPAC acquisitions, and cross-border healthcare M&A, demonstrating extensive direct involvement in healthcare M&A and financing deals.",
             "score": 10.0
           },
           {
             "criteria_name": "healthcare_metrics_knowledge",
-            "reasoning": "While specific metrics or regulatory frameworks are not explicitly detailed, the candidate's seniority and roles leading healthcare investment banking groups strongly suggest strong familiarity with healthcare-specific metrics and value creation strategies.",
+            "reasoning": "Given her leadership in healthcare investment banking in Asia, involvement in large healthcare transactions, and founding a strategic-CFO-on-demand firm focused on healthcare, she likely has strong familiarity with healthcare-specific metrics, regulatory frameworks, and value creation strategies.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "mba_us_university",
-            "reasoning": "Candidate holds an MBA from Bayes Business School, which is located in the UK, not a U.S. university.",
-            "passes": false
-          },
-          {
-            "criteria_name": "two_plus_years_banking",
-            "reasoning": "Candidate has over 25 years of experience in investment banking and healthcare financial advisory roles.",
-            "passes": true
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "6794b5373eff0c142a78fd2b",
-          "name": "Paul Kacik",
-          "linkedinId": "paulkacik"
-        }
-      },
-      {
-        "candidate_name": "Christian Peng",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/christian-peng-05061316",
-        "soft_scores": [
-          {
-            "criteria_name": "healthcare_investment_banking_experience",
-            "reasoning": "Candidate has 15+ years of specialized healthcare investment banking experience, including leadership roles and work with healthcare services and HCIT industries, indicating excellent expertise in healthcare investment banking.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "healthcare_ma_transactions",
-            "reasoning": "As Head of Healthcare Investment Banking responsible for M&A advisory and other capital markets activities, the candidate likely led and contributed significantly to healthcare M&A and recapitalizations.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "healthcare_metrics_knowledge",
-            "reasoning": "Given the senior roles in healthcare investment banking and advisory on payer-provider integration and capital markets, the candidate demonstrates strong familiarity with healthcare-specific metrics and value creation strategies.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "mba_us_university",
-            "reasoning": "Candidate holds an MBA from Duke University, Fuqua School of Business, which is a well-known U.S. university.",
+            "reasoning": "Candidate holds an MBA in finance from the Wharton School, University of Pennsylvania, a U.S. university.",
             "passes": true
           },
           {
             "criteria_name": "two_plus_years_banking",
-            "reasoning": "Candidate has over 15 years of healthcare investment banking experience, which clearly exceeds the 2+ years minimum requirement.",
-            "passes": true
-          }
-        ],
-        "final_score": 90.0,
-        "raw_data": {
-          "_id": "6795b5f30db3e792567b1c55",
-          "name": "Christian Peng",
-          "linkedinId": "christian-peng-05061316"
-        }
-      },
-      {
-        "candidate_name": "Jon Swope",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jon-swope-4a4a291",
-        "soft_scores": [
-          {
-            "criteria_name": "healthcare_investment_banking_experience",
-            "reasoning": "Candidate has extensive experience in healthcare-focused investment banking, specifically in HealthTech and Digital Health sectors at Barclays, SVB Securities, Bank of America Merrill Lynch, and Greenhill & Co.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "healthcare_ma_transactions",
-            "reasoning": "Experience includes M&A advisory and capital markets transactions for public and private companies in healthcare; has advised on numerous M&A and strategic transactions.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "healthcare_metrics_knowledge",
-            "reasoning": "Experience at top firms advising in healthcare managed care and digital health sectors suggests familiarity with relevant healthcare metrics and value creation strategies.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "mba_us_university",
-            "reasoning": "Candidate holds an MBA in Finance and Strategy from Duke University's Fuqua School of Business, a US university.",
-            "passes": true
-          },
-          {
-            "criteria_name": "two_plus_years_banking",
-            "reasoning": "Candidate has multiple senior roles at leading investment banks spanning several years, clearly exceeding the 2-year threshold.",
-            "passes": true
-          }
-        ],
-        "final_score": 86.66666666666667,
-        "raw_data": {
-          "_id": "6795a2b88d90554e606d0aca",
-          "name": "Jon Swope",
-          "linkedinId": "jon-swope-4a4a291"
-        }
-      },
-      {
-        "candidate_name": "Burk Lindsey",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/burk-lindsey-7231556",
-        "soft_scores": [
-          {
-            "criteria_name": "healthcare_investment_banking_experience",
-            "reasoning": "The candidate has a 23-year career focused extensively on healthcare investment banking, leading at Raymond James with specialization in various healthcare sub-verticals including behavioral, post-acute, pharmacy, multi-site health, and specialty pharmacy.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "healthcare_ma_transactions",
-            "reasoning": "The candidate has advised on over 150 transactions totaling approximately $10 billion in value, involving healthcare M&A and financings across multiple healthcare sectors.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "healthcare_metrics_knowledge",
-            "reasoning": "The candidate demonstrates familiarity with healthcare-specific sub-verticals and their unique needs, indicating a strong understanding of healthcare metrics and regulatory frameworks relevant to value creation strategies.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "mba_us_university",
-            "reasoning": "The candidate holds an MBA from Emory University - Goizueta Business School, which is a U.S. university.",
-            "passes": true
-          },
-          {
-            "criteria_name": "two_plus_years_banking",
-            "reasoning": "The candidate has over two decades of experience in investment banking and related advisory roles, clearly exceeding the two-year minimum requirement.",
+            "reasoning": "Candidate has over 21 years of experience in healthcare investment banking and equity research.",
             "passes": true
           }
         ],
         "final_score": 96.66666666666667,
         "raw_data": {
-          "_id": "6796d7b052a365d1168d6c08",
-          "name": "Burk Lindsey",
-          "linkedinId": "burk-lindsey-7231556"
+          "_id": "67964af2a1a09a48feb6efdd",
+          "name": "Ding Ding",
+          "linkedinId": "dingdingaugeregroup"
         }
       },
       {
@@ -209,29 +92,29 @@
         "soft_scores": [
           {
             "criteria_name": "healthcare_investment_banking_experience",
-            "reasoning": "The candidate has over 25 years of healthcare investment banking experience working with emerging growth and middle market companies in healthcare services and healthcare IT sectors, including multiple sub-verticals like telehealth, behavioral health, and outsourced clinical services.",
+            "reasoning": "Candidate has over 25 years of specialized experience in healthcare investment banking, working at leading firms and handling various sub-verticals including healthcare services and information technology sectors.",
             "score": 10.0
           },
           {
             "criteria_name": "healthcare_ma_transactions",
-            "reasoning": "The candidate has executed over 75 transactions including strategic advisory assignments, public/private equity financings, and fairness opinions in healthcare, indicating extensive experience in healthcare M&A and related transactions.",
+            "reasoning": "Candidate has executed over 75 transactions including strategic advisory assignments and equity financings, indicating strong involvement in healthcare M&A and related transactions.",
             "score": 10.0
           },
           {
             "criteria_name": "healthcare_metrics_knowledge",
-            "reasoning": "Experience in healthcare investment banking spanning areas such as revenue cycle, alternate site care providers, and population health management suggests strong familiarity with healthcare-specific metrics and value creation strategies.",
+            "reasoning": "Extensive experience across healthcare sectors implies familiarity with healthcare-specific metrics, regulatory frameworks and value creation strategies, as indicated by sectors served and advisory roles.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "mba_us_university",
-            "reasoning": "The candidate earned an MBA from Owen Graduate School of Management at Vanderbilt University, a recognized U.S. university.",
+            "reasoning": "Candidate holds an MBA from Vanderbilt University, a U.S. based university.",
             "passes": true
           },
           {
             "criteria_name": "two_plus_years_banking",
-            "reasoning": "The candidate has over 25 years of cumulative experience in healthcare investment banking and related finance roles, clearly exceeding the 2-year minimum requirement.",
+            "reasoning": "Candidate has over 25 years of investment banking experience in healthcare, well exceeding two years.",
             "passes": true
           }
         ],
@@ -243,120 +126,42 @@
         }
       },
       {
-        "candidate_name": "Jim Alfaro",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jim-alfaro-741671",
+        "candidate_name": "Burk Lindsey",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/burk-lindsey-7231556",
         "soft_scores": [
           {
             "criteria_name": "healthcare_investment_banking_experience",
-            "reasoning": "Candidate has over 20 years of specialized experience in healthcare investment banking, covering biotech, pharma, and other healthcare sub-verticals with strong C-level relationships and broad geographic exposure.",
+            "reasoning": "The candidate has 23 years of specialized experience in healthcare investment banking, including leadership in healthcare services and provider groups, behavioral health, and multi-site provider sectors. This clearly demonstrates highly specialized expertise.",
             "score": 10.0
           },
           {
             "criteria_name": "healthcare_ma_transactions",
-            "reasoning": "Extensive experience in mergers and acquisitions and capital raising transactions focused on healthcare companies, with leadership roles in advisory and execution.",
+            "reasoning": "The candidate has advised on over 150 healthcare M&A transactions worth approximately $10 billion, clearly showing extensive transaction leadership and contribution.",
             "score": 10.0
           },
           {
             "criteria_name": "healthcare_metrics_knowledge",
-            "reasoning": "Strong understanding indicated by long tenure in healthcare investment banking and involvement in diverse transaction types, likely familiar with healthcare-specific metrics and regulatory frameworks.",
+            "reasoning": "The candidate's experience spans provider groups, behavioral health, specialty pharmacy, post-acute care, and other healthcare verticals, implying good knowledge of healthcare-specific metrics and value creation strategies.",
             "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "mba_us_university",
-            "reasoning": "Holds an MBA from University of California-Berkeley, a U.S. university.",
+            "reasoning": "Candidate holds an MBA from Emory University, a US university.",
             "passes": true
           },
           {
             "criteria_name": "two_plus_years_banking",
-            "reasoning": "Over 20 years of professional investment banking experience, clearly exceeding two years.",
+            "reasoning": "Candidate has over 23 years of investment banking experience including leadership roles at Raymond James and previous relevant positions.",
             "passes": true
           }
         ],
         "final_score": 93.33333333333333,
         "raw_data": {
-          "_id": "67952746f9f986ea7fb78042",
-          "name": "Jim Alfaro",
-          "linkedinId": "jim-alfaro-741671"
-        }
-      },
-      {
-        "candidate_name": "Russell Bryan",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/russell-bryan",
-        "soft_scores": [
-          {
-            "criteria_name": "healthcare_investment_banking_experience",
-            "reasoning": "The candidate has extensive experience in healthcare-focused investment banking across multiple roles at reputable firms, with a strong focus on healthcare services and adjacent sectors, reflecting specialized knowledge in this area.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "healthcare_ma_transactions",
-            "reasoning": "The candidate has led and contributed to numerous healthcare M&A transactions, as evidenced by leadership roles in multiple firms with a focus on healthcare services, provider sectors, and other healthcare-related industries.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "healthcare_metrics_knowledge",
-            "reasoning": "Given the candidate\u2019s senior roles in healthcare investment banking and advisory, including work on transaction teams and corporate finance advice, it is reasonable to infer a strong familiarity with healthcare-specific metrics, regulatory frameworks, and value creation strategies relevant to the sector.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "mba_us_university",
-            "reasoning": "The candidate holds an MBA from the University of Virginia Darden School of Business, which is a U.S. university.",
-            "passes": true
-          },
-          {
-            "criteria_name": "two_plus_years_banking",
-            "reasoning": "The candidate\u2019s multiple roles spanning Associate to Managing Director levels in investment banking and M&A advisory demonstrate well over two years of relevant experience.",
-            "passes": true
-          }
-        ],
-        "final_score": 86.66666666666667,
-        "raw_data": {
-          "_id": "67966dbb8a14699f160f160d",
-          "name": "Russell Bryan",
-          "linkedinId": "russell-bryan"
-        }
-      },
-      {
-        "candidate_name": "Frank G.",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/frankgallinaro",
-        "soft_scores": [
-          {
-            "criteria_name": "healthcare_investment_banking_experience",
-            "reasoning": "Frank has significant experience in healthcare-focused investment banking roles at RBC Capital Markets and H.C. Wainwright & Co., with roles such as Director and Vice President specifically in healthcare investment banking and equity capital markets. Additionally, his advanced degree focus on biotechnology adds depth in life sciences finance.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "healthcare_ma_transactions",
-            "reasoning": "His senior roles in healthcare investment banking imply involvement in M&A and capital markets transactions, though no explicit transaction details are provided. Given typical responsibilities for these roles, it is reasonable to assign a strong score.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "healthcare_metrics_knowledge",
-            "reasoning": "Frank's education includes a Master's in Biotechnology Enterprise from Johns Hopkins, and his professional experience is heavily healthcare focused, indicating a solid understanding of healthcare-specific metrics and regulatory environments.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "mba_us_university",
-            "reasoning": "Frank holds an MBA from Villanova University, which is a U.S. university.",
-            "passes": true
-          },
-          {
-            "criteria_name": "two_plus_years_banking",
-            "reasoning": "Frank has held multiple investment banking positions, including senior roles at RBC Capital Markets and H.C. Wainwright & Co., indicating well over two years of relevant experience.",
-            "passes": true
-          }
-        ],
-        "final_score": 83.33333333333334,
-        "raw_data": {
-          "_id": "679712323eff0c142a8d4798",
-          "name": "Frank G.",
-          "linkedinId": "frankgallinaro"
+          "_id": "6796d7b052a365d1168d6c08",
+          "name": "Burk Lindsey",
+          "linkedinId": "burk-lindsey-7231556"
         }
       },
       {
@@ -399,6 +204,123 @@
         }
       },
       {
+        "candidate_name": "Jim Alfaro",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/jim-alfaro-741671",
+        "soft_scores": [
+          {
+            "criteria_name": "healthcare_investment_banking_experience",
+            "reasoning": "The candidate has over 20 years of experience in healthcare investment banking focusing on healthcare, pharmaceuticals, and life sciences across various sub-verticals like biotech and healthcare IT.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "healthcare_ma_transactions",
+            "reasoning": "Extensive experience leading and executing mergers and acquisitions and capital raising transactions in healthcare, including advising private and public companies, reflecting substantial involvement in healthcare M&A and related transactions.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "healthcare_metrics_knowledge",
+            "reasoning": "The candidate's senior roles and advisory experience in healthcare investment banking indicate strong familiarity with healthcare-specific metrics and value creation strategies, supported by relationships with industry executives and frequent speaking engagements.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "mba_us_university",
+            "reasoning": "Holds an MBA from University of California-Berkeley, which is a U.S. university.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_banking",
+            "reasoning": "Has over 20 years of investment banking experience, clearly exceeding the minimum requirement of two years.",
+            "passes": true
+          }
+        ],
+        "final_score": 93.33333333333333,
+        "raw_data": {
+          "_id": "67952746f9f986ea7fb78042",
+          "name": "Jim Alfaro",
+          "linkedinId": "jim-alfaro-741671"
+        }
+      },
+      {
+        "candidate_name": "Christian Peng",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/christian-peng-05061316",
+        "soft_scores": [
+          {
+            "criteria_name": "healthcare_investment_banking_experience",
+            "reasoning": "Candidate has 15+ years of healthcare investment banking experience, including leadership of healthcare industry coverage groups, indicating deep specialized experience.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "healthcare_ma_transactions",
+            "reasoning": "The candidate is responsible for M&A advisory in healthcare services and HCIT industries and has led or contributed significantly given the leadership role; strong evidence of transaction experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "healthcare_metrics_knowledge",
+            "reasoning": "Given the senior role managing healthcare investment banking and experience with healthcare organizations and financial sponsors, the candidate likely has strong familiarity with healthcare-specific metrics and value creation strategies.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "mba_us_university",
+            "reasoning": "Candidate holds an MBA from Duke University, Fuqua School of Business, which is a U.S. university.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_banking",
+            "reasoning": "Candidate has over 15 years of healthcare investment banking experience, which clearly exceeds two years of prior work in investment banking or related fields.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "6795b5f30db3e792567b1c55",
+          "name": "Christian Peng",
+          "linkedinId": "christian-peng-05061316"
+        }
+      },
+      {
+        "candidate_name": "Russell Bryan",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/russell-bryan",
+        "soft_scores": [
+          {
+            "criteria_name": "healthcare_investment_banking_experience",
+            "reasoning": "The candidate has extensive experience in healthcare-focused investment banking, including multiple roles focused on healthcare services and tech-enabled healthcare sectors, covering provider groups and healthcare technology companies.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "healthcare_ma_transactions",
+            "reasoning": "The candidate has a demonstrated history of leading M&A and financing deals in healthcare services, with over 200 transactions closed at Bailey & Company and significant roles at Bank of America and Brookwood Associates advising on healthcare M&A.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "healthcare_metrics_knowledge",
+            "reasoning": "The candidate's experience spans diverse healthcare sub-verticals and includes advisory roles on regulatory and operational aspects consistent with knowledge of healthcare-specific metrics, value creation strategies, and payer-provider integration within multiple healthcare sectors.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "mba_us_university",
+            "reasoning": "Candidate holds an MBA from University of Virginia Darden School of Business, a U.S. university.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_banking",
+            "reasoning": "Candidate's extensive investment banking experience including multiple senior roles clearly exceeds 2 years in M&A advisory and corporate finance.",
+            "passes": true
+          }
+        ],
+        "final_score": 86.66666666666667,
+        "raw_data": {
+          "_id": "67966dbb8a14699f160f160d",
+          "name": "Russell Bryan",
+          "linkedinId": "russell-bryan"
+        }
+      },
+      {
         "candidate_name": "Vikram Gupta",
         "candidate_linkedin_url": "https://www.linkedin.com/in/vikram-gupta-5a9597",
         "soft_scores": [
@@ -435,6 +357,84 @@
           "_id": "6795bd3a8d90554e606e0833",
           "name": "Vikram Gupta",
           "linkedinId": "vikram-gupta-5a9597"
+        }
+      },
+      {
+        "candidate_name": "Jon Swope",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/jon-swope-4a4a291",
+        "soft_scores": [
+          {
+            "criteria_name": "healthcare_investment_banking_experience",
+            "reasoning": "Candidate has extensive specialized experience in healthcare-focused investment banking, including HealthTech, Digital Health, and Managed Care sectors at multiple leading firms.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "healthcare_ma_transactions",
+            "reasoning": "Candidate has led and contributed to numerous M&A advisory and capital markets transactions in healthcare sectors, including M&A and strategic advisory assignments.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "healthcare_metrics_knowledge",
+            "reasoning": "Given roles at specialized healthcare investment banks and leadership in Digital Health, along with strategic advisory experience, candidate likely has strong familiarity with healthcare metrics and value creation strategies.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "mba_us_university",
+            "reasoning": "Candidate holds an MBA from Duke University (Fuqua School of Business), a US university.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_banking",
+            "reasoning": "Candidate has multiple years of prior investment banking experience at Bank of America Merrill Lynch, Greenhill & Co., and Barclays, clearly exceeding two years.",
+            "passes": true
+          }
+        ],
+        "final_score": 86.66666666666667,
+        "raw_data": {
+          "_id": "6795a2b88d90554e606d0aca",
+          "name": "Jon Swope",
+          "linkedinId": "jon-swope-4a4a291"
+        }
+      },
+      {
+        "candidate_name": "Frank G.",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/frankgallinaro",
+        "soft_scores": [
+          {
+            "criteria_name": "healthcare_investment_banking_experience",
+            "reasoning": "Candidate has extensive experience in healthcare investment banking roles at RBC Capital Markets and H.C. Wainwright & Co., with a demonstrated focus on life sciences. Also complements experience with a Biotechnology Master's degree, showing deep sector knowledge.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "healthcare_ma_transactions",
+            "reasoning": "While specific deal details are not provided, candidate held senior roles in healthcare investment banking including VP and Director, which typically involve leading or contributing to M&A and recapitalization transactions. This supports a strong likelihood of relevant transaction experience.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "healthcare_metrics_knowledge",
+            "reasoning": "Candidate holds an advanced degree in Biotechnology enterprise from Johns Hopkins and has professional experience focused on healthcare and life sciences finance, implying familiarity with healthcare metrics, regulatory frameworks, and value creation. However, explicit mention of payer-provider integration or RCM optimization is absent.",
+            "score": 7.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "mba_us_university",
+            "reasoning": "Candidate holds an MBA from Villanova University, a U.S.-based institution.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_banking",
+            "reasoning": "Candidate held multiple healthcare investment banking and corporate finance roles, including senior positions at RBC Capital Markets and H.C. Wainwright & Co., demonstrating well over two years of relevant experience.",
+            "passes": true
+          }
+        ],
+        "final_score": 80.00000000000001,
+        "raw_data": {
+          "_id": "679712323eff0c142a8d4798",
+          "name": "Frank G.",
+          "linkedinId": "frankgallinaro"
         }
       }
     ]

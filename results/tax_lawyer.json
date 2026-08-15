@@ -2,88 +2,166 @@
   "config": "Tax Lawyer",
   "config_path": "tax_lawyer.yml",
   "object_ids": [
-    "6794958c8d90554e60630dd8",
+    "6795f8290db3e792567d9625",
+    "6795a304f9f986ea7fbbef4d",
+    "679526b33eff0c142a7c4b94",
     "6796f6fb0db3e79256871add",
-    "6795b46d3eff0c142a80d1b6",
-    "6794b70d3eff0c142a790818",
-    "6795c19a73bf14921fb1c618",
-    "6794c81652a365d1167a5840",
-    "67968ddf8a14699f1610466c",
     "6796a5788d90554e6076607d",
-    "6795e6200db3e792567cee94",
-    "6794ee0b8a14699f160200e3"
+    "67969ea13eff0c142a89787e",
+    "679674353eff0c142a87d7f9",
+    "67964b5b0db3e79256809d71",
+    "679618be52a365d116867877",
+    "6794958c8d90554e60630dd8"
   ],
   "eval_result": {
     "config_name": "tax_lawyer",
     "num_candidates": 10,
-    "average_final_score": 80.0,
+    "average_final_score": 91.83333333333334,
     "average_soft_scores": [
-      {
-        "criteria_name": "irs_audit_experience",
-        "reasoning": null,
-        "average_score": 7.4
-      },
       {
         "criteria_name": "legal_writing_expertise",
         "reasoning": null,
-        "average_score": 7.9
+        "average_score": 9.2
+      },
+      {
+        "criteria_name": "irs_audit_experience",
+        "reasoning": null,
+        "average_score": 9.4
       },
       {
         "criteria_name": "corporate_transaction_experience",
         "reasoning": null,
-        "average_score": 8.7
+        "average_score": 8.95
       }
     ],
     "average_hard_scores": [
       {
-        "criteria_name": "has_jd_degree",
+        "criteria_name": "three_plus_years_experience",
         "reasoning": null,
         "pass_rate": 1.0
       },
       {
-        "criteria_name": "three_plus_years_experience",
+        "criteria_name": "has_jd_degree",
         "reasoning": null,
         "pass_rate": 1.0
       }
     ],
     "individual_results": [
       {
-        "candidate_name": "Tasha Tehan",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/tasha-tehan-a965b222",
+        "candidate_name": "John M McWilliams",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/johnmmcwilliamscpaesq",
         "soft_scores": [
           {
             "criteria_name": "corporate_transaction_experience",
-            "reasoning": "The candidate has extensive experience reviewing large corporate returns, dealing with compliance for publicly traded companies, and tax planning for domestic and foreign entities, indicating strong experience advising on corporate transaction tax implications.",
-            "score": 9.0
+            "reasoning": "Candidate has extensive experience advising clients on tax implications of M&A, corporate reorganizations, and other transactions as reflected in roles at EY, McWS Law Inc., and KPMG. This includes due diligence, structuring, and planning for corporate transactions, which is central to this criterion.",
+            "score": 10.0
           },
           {
             "criteria_name": "irs_audit_experience",
-            "reasoning": "Has served extensively as an Internal Revenue Agent and Supervisory Internal Revenue Agent with the IRS, handling audits, managing teams, and representing the IRS in tax court, demonstrating excellent experience with IRS audits and disputes.",
+            "reasoning": "Candidate represents clients before various taxing authorities including the IRS in audits, controversy, litigation, appeals, and collections as founder of McWS Law Inc. and prior litigation roles, showing excellent IRS audit and dispute experience.",
             "score": 10.0
           },
           {
             "criteria_name": "legal_writing_expertise",
-            "reasoning": "Authored legal opinions, memos, and objections to motions in IRS and Tax Court proceedings and provided expert advice and guidance, evidencing outstanding legal writing skills related to federal tax compliance.",
+            "reasoning": "Candidate drafts tax opinions, memoranda, litigation filings, and legal research documents related to federal and state tax compliance as detailed at multiple positions, including EY and McWS Law. Also noted is extensive experience authoring legal opinions.",
             "score": 10.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "has_jd_degree",
-            "reasoning": "The candidate holds a JD degree from University of Connecticut School of Law, an accredited U.S. law school.",
+            "reasoning": "Candidate holds a JD from Southwestern University School of Law, a U.S. accredited law school.",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_experience",
-            "reasoning": "Candidate has over 25 years of professional experience including legal practice and IRS representation, well exceeding 3 years of law practice.",
+            "reasoning": "Candidate has been practicing law since at least 2014, which is well over three years of legal experience.",
+            "passes": true
+          }
+        ],
+        "final_score": 100.0,
+        "raw_data": {
+          "_id": "6795f8290db3e792567d9625",
+          "name": "John M McWilliams",
+          "linkedinId": "johnmmcwilliamscpaesq"
+        }
+      },
+      {
+        "candidate_name": "Rob Laudeman",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/roblaudeman",
+        "soft_scores": [
+          {
+            "criteria_name": "corporate_transaction_experience",
+            "reasoning": "Candidate has extensive experience advising on tax planning opportunities related to acquisitions/divestitures, restructurings, financing, and cash deployment and repatriation across multiple multinational corporations.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "irs_audit_experience",
+            "reasoning": "Candidate has experience managing international audit issues at Monsanto and McDonald's, and previously worked as an attorney advisor at the IRS Office of Chief Counsel handling legal analysis and litigation support, indicating strong IRS audit and dispute experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "legal_writing_expertise",
+            "reasoning": "Candidate drafted private letter rulings, TAMs, FSAs, CCAs, regulations, revenue procedures, notices, and briefs for Tax Court and Federal Court litigation at the IRS Office of Chief Counsel, demonstrating excellent legal writing on tax compliance.",
+            "score": 10.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_jd_degree",
+            "reasoning": "Candidate holds a JD from Indiana University Maurer School of Law, a U.S. accredited law school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_experience",
+            "reasoning": "Candidate has practiced tax law for 23 years, exceeding the 3-year minimum requirement.",
             "passes": true
           }
         ],
         "final_score": 96.66666666666667,
         "raw_data": {
-          "_id": "6794958c8d90554e60630dd8",
-          "name": "Tasha Tehan",
-          "linkedinId": "tasha-tehan-a965b222"
+          "_id": "6795a304f9f986ea7fbbef4d",
+          "name": "Rob Laudeman",
+          "linkedinId": "roblaudeman"
+        }
+      },
+      {
+        "candidate_name": "Ricardo J Rivera Lopez",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/rickyriverataxllm",
+        "soft_scores": [
+          {
+            "criteria_name": "corporate_transaction_experience",
+            "reasoning": "Candidate has extensive experience advising clients on tax implications of corporate transactions and structures including S-corps, LLCs, JVs, SPVs, M&A, reorganizations, and corporate governance matters across multiple roles, including counsel positions and own practice.",
+            "score": 9.5
+          },
+          {
+            "criteria_name": "irs_audit_experience",
+            "reasoning": "Candidate has represented taxpayers before the IRS, US Tax Court, and state agencies on tax matters, including controversy and audit issues. Specific mention of IRS audit representation and negotiation of voluntary disclosure agreements confirms strong IRS audit experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "legal_writing_expertise",
+            "reasoning": "Candidate has drafted legal memoranda, legal opinions, operating agreements, contracts, private placement memorandums, subscription agreements and participated in legal research. Experience preparing memoranda supporting tax reserves and financial disclosures also supports strong legal writing expertise in tax compliance.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_jd_degree",
+            "reasoning": "Candidate holds a JD from the University Of Puerto Rico School Of Law, an accredited U.S. law school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_experience",
+            "reasoning": "Candidate has extensive professional experience spanning multiple positions for over three years, including roles as Counsel, Director & Tax Counsel, Law Clerk, CPA, and Principal of own law office, clearly exceeding 3 years of legal practice.",
+            "passes": true
+          }
+        ],
+        "final_score": 91.66666666666666,
+        "raw_data": {
+          "_id": "679526b33eff0c142a7c4b94",
+          "name": "Ricardo J Rivera Lopez",
+          "linkedinId": "rickyriverataxllm"
         }
       },
       {
@@ -126,229 +204,34 @@
         }
       },
       {
-        "candidate_name": "Leah Rackley",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/leah-rackley-5070b19",
-        "soft_scores": [
-          {
-            "criteria_name": "corporate_transaction_experience",
-            "reasoning": "The candidate has extensive experience advising on corporate tax matters, including reviewing private letter rulings on corporate transactions, drafting potential regulations related to corporate tax code sections, and providing advice on complex corporate tax structures.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "irs_audit_experience",
-            "reasoning": "The candidate\u2019s experience includes providing field support and taxpayer advice, assisting in representation in tax disputes at a low-income taxpayer clinic, and technical advice to IRS personnel and Chief Counsel Field attorneys. Although specific audits are not detailed, involvement in IRS regulatory inquiries and dispute representation is evident.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "legal_writing_expertise",
-            "reasoning": "The candidate has authored memoranda, drafted regulations, reviewed and signed private letter rulings, and provided legal opinions on various complex federal tax issues, demonstrating strong legal writing skills related to tax compliance.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_jd_degree",
-            "reasoning": "The candidate holds a JD from North Carolina Central University School of Law, an accredited U.S. law school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "three_plus_years_experience",
-            "reasoning": "The candidate has extensive legal work experience including roles at the IRS, Bank of America, and Fannie Mae over multiple years which, combined with volunteer work and advanced education, exceed three years of legal practice.",
-            "passes": true
-          }
-        ],
-        "final_score": 83.33333333333334,
-        "raw_data": {
-          "_id": "6795b46d3eff0c142a80d1b6",
-          "name": "Leah Rackley",
-          "linkedinId": "leah-rackley-5070b19"
-        }
-      },
-      {
-        "candidate_name": "Peter Ulrich",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/peter-ulrich-5b599011a",
-        "soft_scores": [
-          {
-            "criteria_name": "corporate_transaction_experience",
-            "reasoning": "The candidate has substantial experience advising clients on tax implications relating to corporate transactions such as taxable acquisitions, tax-free reorganizations, formation of business entities, and structuring international transactions with tax considerations.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "irs_audit_experience",
-            "reasoning": "There is no explicit mention of experience handling IRS audits, disputes, or regulatory inquiries in the candidate's summary or experience provided.",
-            "score": 2.0
-          },
-          {
-            "criteria_name": "legal_writing_expertise",
-            "reasoning": "While the candidate discusses involvement with complex tax code matters and advising clients, there is no explicit reference to drafting legal opinions or filings, though some inference can be made. However, since the direct mention is missing, a moderate score is assigned.",
-            "score": 5.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_jd_degree",
-            "reasoning": "The candidate holds a Doctor of Law (J.D.) degree from Rutgers Law School, an accredited U.S. law school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "three_plus_years_experience",
-            "reasoning": "The candidate is a seasoned attorney heading the Tax Group and lists years of substantial experience in tax law practice, clearly exceeding three years.",
-            "passes": true
-          }
-        ],
-        "final_score": 53.333333333333336,
-        "raw_data": {
-          "_id": "6794b70d3eff0c142a790818",
-          "name": "Peter Ulrich",
-          "linkedinId": "peter-ulrich-5b599011a"
-        }
-      },
-      {
-        "candidate_name": "Betsy Fasciana",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/betsy-fasciana-17a7ab10",
-        "soft_scores": [
-          {
-            "criteria_name": "corporate_transaction_experience",
-            "reasoning": "The candidate has experience in transactional work within federal and foreign frameworks to ensure compliance with tax laws, indicating involvement in corporate tax structuring and transactions.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "irs_audit_experience",
-            "reasoning": "The candidate has extensive experience managing external income tax audits and federal controversy matters including IRS practice and procedure, demonstrating strong IRS audit experience.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "legal_writing_expertise",
-            "reasoning": "The candidate has authored legal opinions and handled federal controversy matters, suggesting solid legal writing expertise related to tax compliance.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_jd_degree",
-            "reasoning": "Candidate has a JD from Loyola University New Orleans College Of Law, an accredited U.S. law school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "three_plus_years_experience",
-            "reasoning": "Candidate has over 20 years of legal practice experience as a senior tax attorney.",
-            "passes": true
-          }
-        ],
-        "final_score": 83.33333333333334,
-        "raw_data": {
-          "_id": "6795c19a73bf14921fb1c618",
-          "name": "Betsy Fasciana",
-          "linkedinId": "betsy-fasciana-17a7ab10"
-        }
-      },
-      {
-        "candidate_name": "David Melone",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/melone",
-        "soft_scores": [
-          {
-            "criteria_name": "corporate_transaction_experience",
-            "reasoning": "Candidate has expertise in tax planning related to acquisitions and dispositions of business interests, buy/sell transaction planning, and taxation of various corporate entities, indicating strong experience advising clients on corporate tax implications of transactions.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "irs_audit_experience",
-            "reasoning": "Candidate references federal and state tax audit representation and tax audit defense as a specialty, demonstrating solid experience handling IRS audits and disputes.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "legal_writing_expertise",
-            "reasoning": "While the candidate has authored legal opinions on tax matters implied by expertise and responsibilities, there is no explicit mention of drafting legal opinions or formal filings related to federal and state tax compliance in the summary.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_jd_degree",
-            "reasoning": "Candidate holds a JD degree from the University of Illinois Chicago School of Law, which is an accredited U.S. law school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "three_plus_years_experience",
-            "reasoning": "Candidate has over 25 years of progressive management experience in tax-related roles including at major public accounting firms, which implies more than 3 years practicing law.",
-            "passes": true
-          }
-        ],
-        "final_score": 83.33333333333334,
-        "raw_data": {
-          "_id": "6794c81652a365d1167a5840",
-          "name": "David Melone",
-          "linkedinId": "melone"
-        }
-      },
-      {
-        "candidate_name": "Troy (US - McLean) Watkinson",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/troy-us-mclean-watkinson-83337117",
-        "soft_scores": [
-          {
-            "criteria_name": "corporate_transaction_experience",
-            "reasoning": "Candidate has extensive experience advising clients on tax structuring and corporate tax matters at Deloitte Tax LLP and Skadden Arps, indicating strong corporate transaction experience.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "irs_audit_experience",
-            "reasoning": "Candidate's work includes tax controversy and co-sourcing opportunities, which typically involve handling IRS audits or disputes, supported by mention of tax controversy work at Skadden Arps and Miller & Chevalier.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "legal_writing_expertise",
-            "reasoning": "While explicit mention of drafting legal opinions is limited, the candidate's summary includes advisory services and legal opinions on tax structuring, suggesting solid legal writing expertise in federal tax matters.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_jd_degree",
-            "reasoning": "Candidate holds a JD from Georgetown University Law Center, an accredited U.S. law school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "three_plus_years_experience",
-            "reasoning": "Candidate has multiple roles at reputable law firms and Deloitte spanning many years, clearly exceeding three years of legal practice experience.",
-            "passes": true
-          }
-        ],
-        "final_score": 80.00000000000001,
-        "raw_data": {
-          "_id": "67968ddf8a14699f1610466c",
-          "name": "Troy (US - McLean) Watkinson",
-          "linkedinId": "troy-us-mclean-watkinson-83337117"
-        }
-      },
-      {
         "candidate_name": "Joseph P. Wilson",
         "candidate_linkedin_url": "https://www.linkedin.com/in/joseph-p-wilson-j-d-ll-m-tax-18033421",
         "soft_scores": [
           {
             "criteria_name": "corporate_transaction_experience",
-            "reasoning": "Candidate has advised on tax aspects of business transactions and how they should be reported on tax returns at Wilson Tax Law Group. Also, experience includes transactional work at Deloitte & Touche involving mergers and acquisitions, which implies good experience advising clients on tax implications of corporate or financial transactions.",
+            "reasoning": "Candidate has experience advising on tax aspects of business transactions as Managing Shareholder at Wilson Tax Law Group, including how transactions should be reported on tax returns. Also has transactional tax experience from Deloitte & Touche involving mergers and acquisitions and other complex corporate tax matters.",
             "score": 8.0
           },
           {
             "criteria_name": "irs_audit_experience",
-            "reasoning": "Extensive experience handling IRS audits and disputes as a former IRS Litigation Attorney, supervising IRS Exam Division, representing clients in tax audits, appeals, and collections, and involvement in criminal tax investigations. This reflects a very strong background in IRS audit experience.",
+            "reasoning": "Extensive experience representing clients in federal/state tax audits, appeals, and IRS trials. Former IRS litigation attorney with direct involvement in IRS civil and criminal tax investigations, supervising IRS Exam Division, and handling audits and appeals.",
             "score": 10.0
           },
           {
             "criteria_name": "legal_writing_expertise",
-            "reasoning": "Has authored legal opinions on federal and state tax issues, proposed, drafted, and reviewed regulations, prepared and argued complex tax cases, and rendered legal advice to government departments. This shows excellent experience drafting legal opinions and filings related to tax compliance.",
+            "reasoning": "Has authored legal opinions, drafted regulations, and prepared rulings on complex tax law issues. Experience includes reviewing legislation, drafting position papers, and providing technical counsel on tax law interpretations.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "has_jd_degree",
-            "reasoning": "Candidate holds a JD degree from University of Arizona, an accredited U.S. law school.",
+            "reasoning": "Holds a Doctor of Law (JD) degree from University of Arizona, James E. Rogers College of Law, an accredited U.S. law school.",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_experience",
-            "reasoning": "Candidate has extensive legal practice experience including positions at IRS, Deloitte, Franchise Tax Board, United States Attorney's office, and as Managing Shareholder of a law firm, spanning over many years.",
+            "reasoning": "Has substantial legal experience spanning many years, including work as IRS attorney, Assistant U.S. Attorney, and Managing Shareholder. Clearly exceeds 3 years of legal practice.",
             "passes": true
           }
         ],
@@ -360,81 +243,198 @@
         }
       },
       {
-        "candidate_name": "John Goodell",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jjgoodell",
+        "candidate_name": "Natasha Tehan",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/natasha-tehan-a965b222",
         "soft_scores": [
           {
             "criteria_name": "corporate_transaction_experience",
-            "reasoning": "The candidate's background includes working as an International Tax Manager and Manager in International Tax Services with experience advising on tax implications and international tax planning, indicating relevant experience dealing with corporate tax transactions.",
+            "reasoning": "The candidate has extensive experience with audits of complex enterprises including partnerships, trusts, subchapter S corporations, and multinational entities. She has worked on compliance initiatives and coordinated with various stakeholders on corporate tax structure and compliance issues at the IRS and in private sector roles. This indicates strong experience advising on tax implications of corporate or financial transactions.",
             "score": 8.0
           },
           {
             "criteria_name": "irs_audit_experience",
-            "reasoning": "The candidate has experience representing clients in IRS audits specifically through their role in the IRS Office of Chief Counsel and involvement with Large Business & International Division matters, indicating direct handling of IRS audits and disputes.",
-            "score": 9.0
+            "reasoning": "The candidate currently works as a Supervisory Internal Revenue Agent with the IRS Global High Wealth Division handling complex tax audits, leading teams, and engaging in appeals. She has represented the IRS in tax court and participated in audits of high income individuals and entities, indicating extensive and specialized experience in handling IRS audits.",
+            "score": 10.0
           },
           {
             "criteria_name": "legal_writing_expertise",
-            "reasoning": "The candidate has authored legal opinions, drafted memoranda and various legal documents for the IRS Office of Chief Counsel, demonstrating strong legal writing skills related to federal tax matters.",
+            "reasoning": "The candidate has authored legal memoranda on complex tax questions, represented the IRS in Tax Court proceedings, drafted objections to court motions, and provided expert advice within the IRS. These activities demonstrate strong legal writing skills related to federal tax compliance.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "has_jd_degree",
-            "reasoning": "Candidate holds a JD from Temple University - James E. Beasley School Of Law, an accredited U.S. law school.",
+            "reasoning": "Candidate holds a Doctor of Law - JD from University of Connecticut School of Law.",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_experience",
-            "reasoning": "Candidate has multiple roles spanning several years including positions at EY, IRS Office of Chief Counsel, and Johnson Controls, clearly representing more than three years of legal practice experience.",
+            "reasoning": "Candidate has 25+ years of experience in tax-related roles including practicing law during internships and legal roles, indicating well beyond 3 years of legal practice experience.",
             "passes": true
           }
         ],
-        "final_score": 86.66666666666667,
+        "final_score": 90.0,
         "raw_data": {
-          "_id": "6795e6200db3e792567cee94",
-          "name": "John Goodell",
-          "linkedinId": "jjgoodell"
+          "_id": "67969ea13eff0c142a89787e",
+          "name": "Natasha Tehan",
+          "linkedinId": "natasha-tehan-a965b222"
         }
       },
       {
-        "candidate_name": "Scott Frodyma",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/scott-frodyma-63bb598",
+        "candidate_name": "Christopher Klug",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/christopher-klug-tax-attorney",
         "soft_scores": [
           {
             "criteria_name": "corporate_transaction_experience",
-            "reasoning": "The candidate has extensive experience advising clients on federal income tax issues related to mergers and acquisitions, issuances of equity, financing transactions, and a wide range of transactional tax matters. This aligns strongly with corporate transaction tax experience.",
+            "reasoning": "The candidate has extensive experience advising on corporate and business planning, including corporate/business planning, mergers and acquisitions, cross-border transactions, tax free reorganizations, and entity restructurings. This shows strong expertise in corporate transaction tax implications.",
             "score": 9.0
           },
           {
             "criteria_name": "irs_audit_experience",
-            "reasoning": "No explicit mention of handling IRS audits, disputes, or regulatory inquiries found in the summary or experience provided.",
-            "score": 1.0
+            "reasoning": "The candidate has represented clients in IRS audits and agency appeals, prepared formal protests to appeals, and handled tax controversies, indicating excellent experience with IRS audits and regulatory disputes.",
+            "score": 9.0
           },
           {
             "criteria_name": "legal_writing_expertise",
-            "reasoning": "The candidate's practice involves drafting and negotiating tax portions of deal and financing documents, but there is no specific mention of authoring legal opinions or filings related to federal and state tax compliance.",
-            "score": 6.0
+            "reasoning": "The candidate has drafted legal opinions, private letter ruling requests, federal tax court petitions, appellate briefs, and co-authored published articles on tax compliance and planning, demonstrating outstanding legal writing expertise in federal tax matters.",
+            "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "has_jd_degree",
-            "reasoning": "Candidate holds a Doctor of Law (JD) degree from The George Washington University Law School which is an accredited U.S. law school.",
+            "reasoning": "Candidate holds a JD degree from Michigan State University College of Law, an accredited U.S. law school.",
             "passes": true
           },
           {
             "criteria_name": "three_plus_years_experience",
-            "reasoning": "The candidate has over 20 years of legal practice experience, exceeding the 3-year minimum requirement.",
+            "reasoning": "The candidate has many years of legal experience, including roles as partner, founder, managing partner, and attorney, well beyond three years.",
             "passes": true
           }
         ],
-        "final_score": 53.333333333333336,
+        "final_score": 90.0,
         "raw_data": {
-          "_id": "6794ee0b8a14699f160200e3",
-          "name": "Scott Frodyma",
-          "linkedinId": "scott-frodyma-63bb598"
+          "_id": "679674353eff0c142a87d7f9",
+          "name": "Christopher Klug",
+          "linkedinId": "christopher-klug-tax-attorney"
+        }
+      },
+      {
+        "candidate_name": "Matthew Turtoro",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/matthew-turtoro-637a702b",
+        "soft_scores": [
+          {
+            "criteria_name": "corporate_transaction_experience",
+            "reasoning": "The candidate has extensive experience advising on tax implications of corporate and financial transactions, including work at ING, BNY Mellon, and E*TRADE involving merger tax effects, withholding tax procedures, and international transaction reviews.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "irs_audit_experience",
+            "reasoning": "The candidate has handled IRS and state audits, abated over $5 million in penalties, conducted forensic accounting audits with the IRS, and worked directly with IRS counsel, demonstrating outstanding IRS audit experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "legal_writing_expertise",
+            "reasoning": "The candidate authored numerous legal memorandums, departmental policies, legal opinions, and contributed to tax practitioner handbooks and appellate briefs, showing excellent legal writing skills related to tax compliance.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_jd_degree",
+            "reasoning": "The candidate holds a JD from The College of William and Mary - Marshall Wythe Law School, an accredited U.S. law school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_experience",
+            "reasoning": "The candidate has multiple years of legal experience in various roles including associate, counsel, and manager positions across several organizations with responsibilities reflective of over three years practicing law.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "67964b5b0db3e79256809d71",
+          "name": "Matthew Turtoro",
+          "linkedinId": "matthew-turtoro-637a702b"
+        }
+      },
+      {
+        "candidate_name": "Greg Neilsen",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/gregneilsen",
+        "soft_scores": [
+          {
+            "criteria_name": "corporate_transaction_experience",
+            "reasoning": "The candidate has experience drafting and advising on multi-million dollar asset purchase agreements, commercial real estate sales, and business transaction structuring, demonstrating substantial corporate transaction experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "irs_audit_experience",
+            "reasoning": "The candidate represented clients during IRS audits, responded to Information Document Requests, and negotiated and settled tax controversies with IRS Appeals and Chief Counsel, indicating strong IRS audit experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "legal_writing_expertise",
+            "reasoning": "The candidate has drafted memoranda of law and fact related to Reportable Transaction Disclosures and other federal tax code matters, as well as legal opinions and various agreements, indicating excellent legal writing expertise.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_jd_degree",
+            "reasoning": "The candidate holds a JD from Charleston School of Law, an accredited U.S. law school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_experience",
+            "reasoning": "The candidate has served as a tax associate and chief tax officer with multiple roles implying over three years of legal and tax practice experience.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "679618be52a365d116867877",
+          "name": "Greg Neilsen",
+          "linkedinId": "gregneilsen"
+        }
+      },
+      {
+        "candidate_name": "Tasha Tehan",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/tasha-tehan-a965b222",
+        "soft_scores": [
+          {
+            "criteria_name": "corporate_transaction_experience",
+            "reasoning": "Candidate has significant experience with complex corporate tax matters including audits of high wealth individuals with complex enterprises involving partnerships, trusts, and corporations. Experience as a tax professional at Chiquita involved tax planning for domestic and foreign entities and corporate tax compliance.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "irs_audit_experience",
+            "reasoning": "Extensive experience at the IRS as a Supervisory Internal Revenue Agent for Global High Wealth division, handling audits of high net worth individuals and leading teams during examinations. Also coordinated audits and addressed compliance around corporate tax shelter and emerging issues.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "legal_writing_expertise",
+            "reasoning": "Has drafted legal memoranda and represented IRS in Tax Court proceedings. Created research memos on complex tax questions and objections to motions in federal court, indicating strong experience in legal writing and opinion drafting related to tax matters.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_jd_degree",
+            "reasoning": "Candidate has a Doctor of Law (JD) degree from University of Connecticut School of Law, an accredited U.S. law school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "three_plus_years_experience",
+            "reasoning": "Candidate has over 25 years of experience in various tax-related roles, including over three years practicing law in roles requiring legal knowledge and representation in Tax Court.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "6794958c8d90554e60630dd8",
+          "name": "Tasha Tehan",
+          "linkedinId": "tasha-tehan-a965b222"
         }
       }
     ]

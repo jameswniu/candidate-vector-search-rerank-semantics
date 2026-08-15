@@ -2,439 +2,439 @@
   "config": "Biology Expert",
   "config_path": "biology_expert.yml",
   "object_ids": [
-    "67968c7e3e76d5b58732638d",
-    "6796d23c8a14699f1612c0da",
-    "6796457f0db3e79256806d2b",
-    "6795a5580db3e792567a8116",
-    "679670198d90554e6074682d",
-    "67964bb73eff0c142a867d35",
-    "6796633c0db3e7925681af71",
-    "67954aa473bf14921fac95fa",
-    "679711b53e76d5b587370bc8",
-    "6795863b8d90554e606bfe5d"
+    "6795cace3eff0c142a819966",
+    "6795a0a00db3e792567a56ab",
+    "6794be6373bf14921fa74db6",
+    "6796de95f9f986ea7fc7248f",
+    "67964c068d90554e60730d5b",
+    "67958f893eff0c142a7f79a4",
+    "67954e3d73bf14921facbc24",
+    "6796d2c08a14699f1612c70a",
+    "6796cb9273bf14921fbb4dbc",
+    "6796ba2e3eff0c142a8a501c"
   ],
   "eval_result": {
     "config_name": "biology_expert",
     "num_candidates": 10,
-    "average_final_score": 71.00000000000001,
+    "average_final_score": 90.5,
     "average_soft_scores": [
       {
         "criteria_name": "molecular_biology_research",
         "reasoning": null,
-        "average_score": 8.6
+        "average_score": 9.35
       },
       {
         "criteria_name": "experimental_design_skills",
         "reasoning": null,
-        "average_score": 8.3
+        "average_score": 9.0
       },
       {
         "criteria_name": "teaching_mentoring_experience",
         "reasoning": null,
-        "average_score": 6.9
+        "average_score": 8.8
       }
     ],
     "average_hard_scores": [
       {
-        "criteria_name": "undergraduate_location",
+        "criteria_name": "phd_from_top_us_university",
         "reasoning": null,
         "pass_rate": 1.0
       },
       {
-        "criteria_name": "phd_from_top_us_university",
+        "criteria_name": "undergraduate_location",
         "reasoning": null,
-        "pass_rate": 0.9
+        "pass_rate": 1.0
       }
     ],
     "individual_results": [
       {
-        "candidate_name": "Jessica Witchley",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jessica-witchley-a13b58132",
+        "candidate_name": "Iris V. H.",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/iris-v-h-1bb27722",
         "soft_scores": [
           {
             "criteria_name": "molecular_biology_research",
-            "reasoning": "The candidate has 8 years of post-baccalaureate experience in molecular biology and genetics, has worked as a postdoctoral researcher at UC Berkeley and UCSF, and has published during PhD studies, indicating strong research experience with publications.",
-            "score": 9.0
+            "reasoning": "The candidate has extensive research experience in molecular and cell biology, structural biology, biophysics, and biochemistry, including postdoctoral research at UCSF and Johns Hopkins. They have contributed to peer-reviewed publications including an eLife paper and a collaboration on a Cell paper.",
+            "score": 10.0
           },
           {
             "criteria_name": "experimental_design_skills",
-            "reasoning": "The candidate has extensive experience studying gene expression dynamics in vivo and in vitro using various tools, including cytometry, indicating familiarity with experimental design and lab techniques. However, specific mention of CRISPR, PCR, or sequencing is not provided, so a slightly conservative score is given.",
-            "score": 8.0
+            "reasoning": "The candidate has designed and performed various advanced biochemical and molecular biology experiments including x-ray crystallography, fluorescence anisotropy, radioactive ATPase assays, and replication fork unwinding assays. They also have experience with protein expression, purification, and characterization techniques. While CRISPR or sequencing are not explicitly mentioned, their breadth of experimental design and lab skills is very strong.",
+            "score": 9.0
           },
           {
             "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "The candidate has strong communication skills developed by teaching biology to first-year PhD students and elementary children, and experience leading collaborative projects during PhD, demonstrating good mentoring and teaching experience.",
-            "score": 8.0
+            "reasoning": "The candidate has rich teaching and mentoring experience including teaching multiple upper division molecular biology and biochemistry courses at UC Berkeley, directing discussion sections and review sessions, and mentoring undergraduate and graduate students. They have also taught science at various schools and tutored a wide range of science subjects.",
+            "score": 10.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location",
-            "reasoning": "The candidate completed undergraduate studies at MIT, which is located in the U.S.",
+            "reasoning": "Completed undergraduate studies at University of Oregon, which is in the U.S.",
             "passes": true
           },
           {
             "criteria_name": "phd_from_top_us_university",
-            "reasoning": "The candidate earned a PhD from UCSF, which is considered a top U.S. university in the biological sciences.",
+            "reasoning": "PhD obtained from University of California, Berkeley in Molecular and Cell Biology, which is considered a top U.S. university.",
             "passes": true
           }
         ],
-        "final_score": 83.33333333333334,
+        "final_score": 96.66666666666667,
         "raw_data": {
-          "_id": "67968c7e3e76d5b58732638d",
-          "name": "Jessica Witchley",
-          "linkedinId": "jessica-witchley-a13b58132"
+          "_id": "6795cace3eff0c142a819966",
+          "name": "Iris V. H.",
+          "linkedinId": "iris-v-h-1bb27722"
         }
       },
       {
-        "candidate_name": "Blair Gainous",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/blair-gainous",
+        "candidate_name": "Nareg Djabrayan",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/nareg-djabrayan-7620bb191",
         "soft_scores": [
           {
             "criteria_name": "molecular_biology_research",
-            "reasoning": "The candidate has extensive research experience in molecular biology and gene regulation, including PhD and postdoctoral research, as well as senior scientist roles involving relevant technologies. The summary implies peer-reviewed publications though none are explicitly listed, but the advanced roles and research experience suggest a strong research background.",
-            "score": 9.0
+            "reasoning": "The candidate has extensive research experience in molecular and cell biology, including pioneering postdoctoral studies, multiple high-profile publications, and leading a multidisciplinary team developing pipelines for analyzing gene expression and cell cycle dynamics.",
+            "score": 10.0
           },
           {
             "criteria_name": "experimental_design_skills",
-            "reasoning": "The candidate demonstrates expertise with a wide range of modern molecular biology and genetics techniques such as molecular cloning, CRISPR-Cas9 genome editing, next-generation sequencing (RNA-seq, ATAC-seq, ChIP-seq), and associated data analysis approaches. This indicates excellent experimental design skills.",
+            "reasoning": "The candidate has demonstrated strong skills in experimental design and data analysis, developing new image-based quantitative methods and pipelines, managing complex lab operations, and using advanced molecular techniques like RNAi. Experience with microscopy and image analysis indicates familiarity with lab techniques relevant to molecular biology.",
             "score": 9.0
           },
           {
             "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "While there is no explicit mention of teaching undergraduate courses or formal mentoring roles, the candidate\u2019s PhD and postdoctoral roles likely involved some mentoring or collaborative research, but no direct evidence is provided.",
-            "score": 4.0
+            "reasoning": "The candidate has significant experience teaching undergraduate biology courses, mentoring students in guided research, and serving on thesis committees. Leadership and training of team members in technical workflows further confirm strong mentoring skills.",
+            "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location",
-            "reasoning": "The candidate completed their undergraduate degree in Biology at Georgia State University, which is in the U.S.",
+            "reasoning": "The candidate completed their undergraduate degree at University of California, Davis, which is located in the U.S., meeting the requirement.",
             "passes": true
           },
           {
             "criteria_name": "phd_from_top_us_university",
-            "reasoning": "The candidate earned a PhD in Molecular & Cell Biology from University of California, Berkeley, which is considered a top U.S. university.",
+            "reasoning": "The candidate holds a PhD in Molecular, Cellular and Developmental Biology from University of California, Santa Barbara. UCSB is considered a top-tier research university in the U.S. especially in biological sciences, indicating the PhD meets this criterion.",
             "passes": true
           }
         ],
-        "final_score": 73.33333333333334,
+        "final_score": 93.33333333333333,
         "raw_data": {
-          "_id": "6796d23c8a14699f1612c0da",
-          "name": "Blair Gainous",
-          "linkedinId": "blair-gainous"
+          "_id": "6795a0a00db3e792567a56ab",
+          "name": "Nareg Djabrayan",
+          "linkedinId": "nareg-djabrayan-7620bb191"
         }
       },
       {
-        "candidate_name": "Kevin Jin",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/kevin-jin-7a879ab1",
+        "candidate_name": "Beverly Emerson",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/beverly-emerson-b7282510",
         "soft_scores": [
           {
             "criteria_name": "molecular_biology_research",
-            "reasoning": "The candidate has over 20 years of experience in genomics and cell biology, with a PhD from Stanford University in Molecular Biology, and has co-authored several peer-reviewed publications, including research in genomic and molecular biology topics.",
+            "reasoning": "The candidate has over 30 years of research experience in molecular biology and gene regulation, epigenetics, chromosome biology, and cancer, with numerous peer-reviewed publications and competitive funding, indicating outstanding research credentials in molecular biology.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "experimental_design_skills",
+            "reasoning": "Given the extensive and funded research program spanning molecular biology and gene regulation, and collaboration with interdisciplinary teams, it is highly likely the candidate possesses strong skills in experimental design, data analysis, and molecular biology lab techniques, though specific mention of CRISPR, PCR, or sequencing is absent. Nevertheless, her long-term NIH-funded research implies proficiency.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "teaching_mentoring_experience",
+            "reasoning": "The candidate is a Distinguished Professor with over 30 years directing a research lab, has chaired national and international scientific conferences, and served in academic leadership roles, demonstrating substantial experience mentoring students, teaching, and collaborating in interdisciplinary research.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location",
+            "reasoning": "Candidate completed undergraduate studies at University of California San Diego, which is in the U.S., meeting the location requirement.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_from_top_us_university",
+            "reasoning": "PhD was obtained from Washington University in St. Louis, which is widely regarded as a top U.S. university in biology, fulfilling the PhD requirement.",
+            "passes": true
+          }
+        ],
+        "final_score": 93.33333333333333,
+        "raw_data": {
+          "_id": "6794be6373bf14921fa74db6",
+          "name": "Beverly Emerson",
+          "linkedinId": "beverly-emerson-b7282510"
+        }
+      },
+      {
+        "candidate_name": "Andrew Ravanelli",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/andrewravanelli",
+        "soft_scores": [
+          {
+            "criteria_name": "molecular_biology_research",
+            "reasoning": "Candidate has extensive research experience in molecular biology, genetics, and cell biology including peer-reviewed publications indexed in PubMed. Research includes gene editing technologies such as CRISPR-Cas9, and developmental biology studies with significant contributions to understanding neural development.",
+            "score": 9.5
+          },
+          {
+            "criteria_name": "experimental_design_skills",
+            "reasoning": "Candidate demonstrates strong expertise in experimental design and lab techniques including CRISPR, ENU mutagenesis, transgenesis, confocal imaging, and next-generation sequencing. Has led assay development and gene editing projects.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "teaching_mentoring_experience",
+            "reasoning": "Candidate has experience teaching undergraduate biology courses with emphasis on active learning and mentorship, as well as leading alumni mentoring initiatives. This reflects solid teaching and mentoring experience.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location",
+            "reasoning": "Candidate completed undergraduate studies at Southern Illinois University Edwardsville in the United States.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_from_top_us_university",
+            "reasoning": "Candidate earned a PhD in Cell Biology from Duke University, which is considered a top U.S. university.",
+            "passes": true
+          }
+        ],
+        "final_score": 91.66666666666666,
+        "raw_data": {
+          "_id": "6796de95f9f986ea7fc7248f",
+          "name": "Andrew Ravanelli",
+          "linkedinId": "andrewravanelli"
+        }
+      },
+      {
+        "candidate_name": "Wes Jenkins",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/wes-jenkins-phd",
+        "soft_scores": [
+          {
+            "criteria_name": "molecular_biology_research",
+            "reasoning": "Candidate has a PhD in Molecular and Cellular Biology from University of Washington, with research focusing on gene editing, CRISPR, transcription factors, and single-cell transcriptomics. Experience includes original lab work presented at conferences, indicating active research engagement.",
             "score": 9.0
           },
           {
             "criteria_name": "experimental_design_skills",
-            "reasoning": "The candidate has led research teams focusing on genomic structural variations and collaborated on bioinformatics tools, implying strong skills in experimental design and data analysis relevant to molecular biology techniques.",
+            "reasoning": "Demonstrated extensive familiarity with CRISPR techniques, plasmid design, cell culture, gene editing experiments, and data analysis using R and Python. This reflects strong experimental design and technical skills.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "teaching_mentoring_experience",
+            "reasoning": "Has taught a variety of biology courses from high school to upper division university levels, developed hybrid courses, led supplemental instruction, and mentored students in research settings. Active involvement in teaching and mentorship is evident and substantial.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location",
+            "reasoning": "Completed undergraduate degree at Humboldt State University, located in California, USA, satisfying the location requirement for undergraduate studies in the U.S.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_from_top_us_university",
+            "reasoning": "PhD obtained from University of Washington, which is considered a top U.S. university, meeting the criterion.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "67964c068d90554e60730d5b",
+          "name": "Wes Jenkins",
+          "linkedinId": "wes-jenkins-phd"
+        }
+      },
+      {
+        "candidate_name": "Jamilla Akhund-Zade",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/jamilla-akhund-zade",
+        "soft_scores": [
+          {
+            "criteria_name": "molecular_biology_research",
+            "reasoning": "The candidate holds a Ph.D. in Molecular and Cellular Biology from Harvard University with research focused on genetics, behavioral genetics, and evolutionary biology. They have published 3 peer-reviewed papers and performed genome-wide association studies, next-generation sequencing, and transcript quantification, indicating strong molecular biology research experience.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "experimental_design_skills",
+            "reasoning": "The candidate has extensive experience in experimental design, data analysis, and lab techniques including bioinformatics analyses (Samtools, GATK, Picard), ddPCR for quantifying neuronal transcripts, custom Bayesian inference models, and developing an automated thermal preference assay. They also have experience with next-generation sequencing and genome-wide association studies.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "teaching_mentoring_experience",
+            "reasoning": "The candidate has served as a Harvard University Teaching Fellow for three terms, teaching undergraduate and graduate courses in genetics and evolutionary biology with distinction. Additionally, they have experience mentoring through leadership roles in national non-profit journal publication, managing and training editorial teams, and group leader roles at Cornell.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location",
+            "reasoning": "The candidate completed their undergraduate degree at Cornell University, which is located in the U.S.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_from_top_us_university",
+            "reasoning": "The candidate earned a Ph.D. in Molecular and Cellular Biology from Harvard University, which is recognized as a top U.S. university.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "67958f893eff0c142a7f79a4",
+          "name": "Jamilla Akhund-Zade",
+          "linkedinId": "jamilla-akhund-zade"
+        }
+      },
+      {
+        "candidate_name": "Allen Sanderlin",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/sanderlinallen",
+        "soft_scores": [
+          {
+            "criteria_name": "molecular_biology_research",
+            "reasoning": "The candidate has nine years of research experience including molecular biology, with several peer-reviewed publications as first or co-author in reputable journals such as Nature Communications and Journal of Bacteriology.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "experimental_design_skills",
+            "reasoning": "Experienced in designing and optimizing experiments using a wide array of molecular biology techniques including proteomic screens, RNA sequencing, microscopy, and molecular assays. Familiar with generation of cell lines and microbial strains, indicating strong experimental design skills.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "teaching_mentoring_experience",
+            "reasoning": "Extensive mentoring and teaching experience including mentoring graduate students, research technicians, postdocs, undergraduate students, and serving as a Graduate Teaching Assistant for multiple biology courses with responsibility for instruction and grading.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location",
+            "reasoning": "Completed undergraduate degree at Kenyon College, which is located in the United States.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_from_top_us_university",
+            "reasoning": "PhD obtained from Massachusetts Institute of Technology, which is consistently ranked as a top U.S. university.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "67954e3d73bf14921facbc24",
+          "name": "Allen Sanderlin",
+          "linkedinId": "sanderlinallen"
+        }
+      },
+      {
+        "candidate_name": "Britney 'Brit' Moss",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/britney-brit-moss-ab878a13",
+        "soft_scores": [
+          {
+            "criteria_name": "molecular_biology_research",
+            "reasoning": "The candidate has extensive research experience in molecular biology, cell biology, and biochemistry, including postdoctoral research focused on protein degradation dynamics and synthetic biology. They also have a PhD in Molecular Cell Biology and research that includes transcriptional and post-translational regulation, molecular biosensors, and synthetic biology. This suggests publication in peer-reviewed journals is likely.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "experimental_design_skills",
+            "reasoning": "The bio mentions experience with structural biology, biochemistry, synthetic biology, and applications in hormone-induced protein degradation systems. The candidate also has expertise in bioluminescence imaging, molecular biosensors, and plant biology, indicating strong familiarity with experimental design and advanced lab techniques. Although no explicit mention of CRISPR, PCR, or sequencing, the advanced molecular biology work implies proficiency with similar core techniques.",
             "score": 8.0
           },
           {
             "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "Kevin Jin has experience as an Assistant Professor at University of Washington teaching undergraduate and graduate molecular biology courses and mentoring over 25 graduate students and postdocs.",
+            "reasoning": "The candidate is an Associate Professor at Whitman College teaching courses in Biochemistry, Molecular Biology, and Cell Biology. They are involved in STEM outreach and have mentoring experience, which satisfies this criterion well.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location",
-            "reasoning": "The candidate completed a Bachelor's degree at the University of California, Berkeley, which is in the U.S.",
+            "reasoning": "Undergraduate degree was completed at Montana State University-Bozeman in Biochemistry, located in the United States.",
             "passes": true
           },
           {
             "criteria_name": "phd_from_top_us_university",
-            "reasoning": "The candidate earned a PhD from Stanford University, which is a top U.S. university.",
+            "reasoning": "The candidate's PhD is from Washington University School of Medicine in St. Louis, which is recognized as a top U.S. university for biology and biomedical sciences.",
             "passes": true
           }
         ],
         "final_score": 86.66666666666667,
         "raw_data": {
-          "_id": "6796457f0db3e79256806d2b",
-          "name": "Kevin Jin",
-          "linkedinId": "kevin-jin-7a879ab1"
+          "_id": "6796d2c08a14699f1612c70a",
+          "name": "Britney 'Brit' Moss",
+          "linkedinId": "britney-brit-moss-ab878a13"
         }
       },
       {
-        "candidate_name": "Charlie Anderson",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/charlie-anderson-6846498",
+        "candidate_name": "Amy DeMicco",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/amy-demicco-79196278",
         "soft_scores": [
           {
             "criteria_name": "molecular_biology_research",
-            "reasoning": "Candidate has extensive research experience in molecular biology, cell biology, and genetics with a focus on plant biology and cell wall dynamics. The candidate has held faculty positions and postdoctoral research with relevant molecular biology topics. Although specific publications are not listed, academic roles strongly imply peer-reviewed work.",
+            "reasoning": "The candidate has a PhD in Cell and Molecular Biology from the University of Pennsylvania and has conducted independent thesis research related to cell cycle regulation and immune responses with publications including primary authorship from undergraduate research.",
             "score": 9.0
           },
           {
             "criteria_name": "experimental_design_skills",
-            "reasoning": "Candidate has experience with experimental approaches related to molecular and cell biology, including lab techniques to study plant cell walls and genetic models. Although specific techniques like CRISPR, PCR, or sequencing are not explicitly mentioned, experience with advanced molecular biology likely involves these skills.",
-            "score": 8.0
+            "reasoning": "The candidate has extensive experience in experimental design including gene and protein expression analysis, RNA-sequencing, and managing preclinical biology experiments; familiarity with advanced lab techniques is evident.",
+            "score": 9.0
           },
           {
             "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "Candidate is a Professor of Biology and Associate Department Head, indicating substantial experience in teaching and mentoring students and faculty. This includes undergraduate teaching and interdisciplinary collaboration.",
-            "score": 9.0
+            "reasoning": "The candidate served as a Graduate Teaching Assistant for a first-year PhD course on gene expression, including grading and leading literature discussions, and has experience managing and mentoring lab scientists.",
+            "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location",
-            "reasoning": "Candidate completed undergraduate degree at University of North Carolina at Chapel Hill, which is in the U.S.",
+            "reasoning": "Candidate completed undergraduate studies at Rutgers University, which is based in the U.S.",
             "passes": true
           },
           {
             "criteria_name": "phd_from_top_us_university",
-            "reasoning": "Candidate received a PhD from Stanford University, which is considered a top U.S. university.",
+            "reasoning": "PhD awarded by University of Pennsylvania, which is consistently ranked as a top U.S. university.",
             "passes": true
           }
         ],
         "final_score": 86.66666666666667,
         "raw_data": {
-          "_id": "6795a5580db3e792567a8116",
-          "name": "Charlie Anderson",
-          "linkedinId": "charlie-anderson-6846498"
+          "_id": "6796cb9273bf14921fbb4dbc",
+          "name": "Amy DeMicco",
+          "linkedinId": "amy-demicco-79196278"
         }
       },
       {
-        "candidate_name": "Matthew Prior",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/matthew-prior-20036b92",
+        "candidate_name": "Amelia Weber Hall",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/ameliahall",
         "soft_scores": [
           {
             "criteria_name": "molecular_biology_research",
-            "reasoning": "Candidate has postdoctoral research experience in molecular biology-related topics, including gene expression, stress responses in plants, and uses molecular approaches; however, no explicit mention of publications but research work implies reasonable experience.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "experimental_design_skills",
-            "reasoning": "Candidate explicitly mentions proficiency in complex molecular biology techniques including CRISPR/Cas9, RNAseq, and experimentation both in greenhouse and field, indicating strong experimental design and lab technique skills.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "Candidate has experience as Biology Faculty at Clinton College, training next generations of scientists in both classroom and lab bench, showing clear teaching and mentoring experience.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location",
-            "reasoning": "Completed Bachelor's degree at UCLA, which is in the U.S., thus meeting the criterion.",
-            "passes": true
-          },
-          {
-            "criteria_name": "phd_from_top_us_university",
-            "reasoning": "PhD obtained from Stanford University in Biology, a top U.S. university, fulfilling this requirement.",
-            "passes": true
-          }
-        ],
-        "final_score": 83.33333333333334,
-        "raw_data": {
-          "_id": "679670198d90554e6074682d",
-          "name": "Matthew Prior",
-          "linkedinId": "matthew-prior-20036b92"
-        }
-      },
-      {
-        "candidate_name": "Patricia Vignaux",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/patriciavignaux",
-        "soft_scores": [
-          {
-            "criteria_name": "molecular_biology_research",
-            "reasoning": "Candidate has extensive experience in molecular biology and genetics, including work at University of North Carolina and Collaborations Pharmaceuticals as Staff Scientist. While no direct mention of publications, the role and background imply active research engagement in molecular biology.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "experimental_design_skills",
-            "reasoning": "Candidate has skills in molecular and cellular biology including wet labs and laboratory skills. No specific mention of CRISPR, PCR, or sequencing, but experience in mammalian cell culture and molecular biology suggests familiarity with common lab techniques and experimental design relevant to the field.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "Candidate has experience with classroom instruction and one-on-one mentoring, indicating relevant teaching and mentoring capabilities.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location",
-            "reasoning": "Completed undergraduate studies at The University Of Texas At Arlington, located in the United States, fulfilling the requirement for undergraduate studies in the U.S., U.K., or Canada.",
-            "passes": true
-          },
-          {
-            "criteria_name": "phd_from_top_us_university",
-            "reasoning": "PhD obtained from University Of North Carolina At Chapel Hill, which is widely recognized as a top U.S. university in biological sciences.",
-            "passes": true
-          }
-        ],
-        "final_score": 73.33333333333334,
-        "raw_data": {
-          "_id": "67954aa473bf14921fac95fa",
-          "name": "Patricia Vignaux",
-          "linkedinId": "patriciavignaux"
-        }
-      },
-      {
-        "candidate_name": "Nathan D. Palmer Ph.D.",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/dr-nathan-palmer",
-        "soft_scores": [
-          {
-            "criteria_name": "molecular_biology_research",
-            "reasoning": "The candidate has a Ph.D. in Molecular Biology with research focused on gene therapies involving CRISPR, evolutionary genetics research, and computational biology roles. This demonstrates strong research experience in molecular biology and genetics. However, specifics about publications in peer-reviewed journals are not explicitly mentioned.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "experimental_design_skills",
-            "reasoning": "Experience includes engineering CRISPR-Cas gene therapies, gene therapy AAV vector engineering, and high-throughput screening, indicating familiarity with lab techniques and experimental design including CRISPR and in vitro/in vivo methods.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "There is no explicit mention of mentoring, teaching, or collaboration on interdisciplinary research in the provided information.",
-            "score": 2.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location",
-            "reasoning": "The candidate completed undergraduate studies at Arizona State University, which is located in the U.S.",
-            "passes": true
-          },
-          {
-            "criteria_name": "phd_from_top_us_university",
-            "reasoning": "The Ph.D. is from University of California, San Diego, which is ranked among the top U.S. universities.",
-            "passes": true
-          }
-        ],
-        "final_score": 63.33333333333334,
-        "raw_data": {
-          "_id": "679711b53e76d5b587370bc8",
-          "name": "Nathan D. Palmer Ph.D.",
-          "linkedinId": "dr-nathan-palmer"
-        }
-      },
-      {
-        "candidate_name": "Beril Tutuncuoglu",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/beril-tutuncuoglu-3a002788",
-        "soft_scores": [
-          {
-            "criteria_name": "molecular_biology_research",
-            "reasoning": "The candidate has over 10 years of experience in molecular biology, gene editing, and related techniques, working in both yeast and mammalian systems. They have conducted research as a postdoctoral scholar and research assistant, with involvement in projects such as CRISPR-Cas9 screening and ribosome assembly studies. While specific publications are not listed, the detailed research roles strongly indicate active research engagement.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "experimental_design_skills",
-            "reasoning": "Experience includes designing vector constructs, developing CRISPR-Cas9 based screening platforms, conducting computational analysis workflows, and validation studies of automated biological assays. This breadth shows strong skills in experimental design and use of techniques like CRISPR and data analysis.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "The candidate managed international collaborations and trained undergraduate students in the laboratory, helping them become productive in research projects. This indicates mentoring experience, though no formal teaching at course level is mentioned.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location",
-            "reasoning": "The candidate completed their bachelor's degree at Penn State University, which is located in the U.S.",
-            "passes": true
-          },
-          {
-            "criteria_name": "phd_from_top_us_university",
-            "reasoning": "The PhD was awarded by Carnegie Mellon University in Molecular Biology. Carnegie Mellon is recognized as a top U.S. university.",
-            "passes": true
-          }
-        ],
-        "final_score": 80.00000000000001,
-        "raw_data": {
-          "_id": "6795863b8d90554e606bfe5d",
-          "name": "Beril Tutuncuoglu",
-          "linkedinId": "beril-tutuncuoglu-3a002788"
-        }
-      },
-      {
-        "candidate_name": "Jason Wong",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jsnwong3",
-        "soft_scores": [
-          {
-            "criteria_name": "molecular_biology_research",
-            "reasoning": "The candidate has a PhD in Molecular Genetics and over 10 years of research experience in molecular biology and genetics, specifically in cancer biology and gene expression. Multiple experiments, data collection, manuscript writing, and novel model creation indicate strong research skills and likely publications.",
+            "reasoning": "The candidate has 17 years of experience in molecular biology/genomics, with research focusing on molecular biology, epigenetics, chromatin regulation, and transcriptomics. She has worked extensively with next generation sequencing and other molecular biology techniques, indicating strong research experience likely supported by publications.",
             "score": 9.0
           },
           {
             "criteria_name": "experimental_design_skills",
-            "reasoning": "The candidate has strong experience in designing experiments, including molecular biology techniques such as gene knockdown (shRNA), flow cytometry, and creating mouse models. However, no explicit mention of CRISPR or sequencing techniques, but skills in molecular biology assays are clear.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "The candidate has experience training over 25 staff and students in molecular biology techniques and lab protocols, providing guidance department-wide, indicating solid mentoring and teaching experience.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location",
-            "reasoning": "The candidate completed their bachelor's degree at the University of Michigan, which is in the U.S.",
-            "passes": true
-          },
-          {
-            "criteria_name": "phd_from_top_us_university",
-            "reasoning": "The PhD was awarded by University at Albany, SUNY, which while a reputable institution, is generally not ranked among the top-tier US universities for biology. Therefore, this criterion is not clearly met.",
-            "passes": false
-          }
-        ],
-        "final_score": 0.0,
-        "raw_data": {
-          "_id": "67964bb73eff0c142a867d35",
-          "name": "Jason Wong",
-          "linkedinId": "jsnwong3"
-        }
-      },
-      {
-        "candidate_name": "Jay Goodman",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jay-goodman-945b6139",
-        "soft_scores": [
-          {
-            "criteria_name": "molecular_biology_research",
-            "reasoning": "The candidate has extensive research experience in molecular and cell biology, including a PhD focused on these areas, work on yeast genetics, protein biochemistry, and cell biology with proven research activities in labs. The presence of publications is implied by the PhD candidacy and postdoctoral work.",
+            "reasoning": "The candidate demonstrates familiarity with multiple molecular biology lab techniques, including ChIP-seq, 4C-seq, plasmid design, mutagenesis, and NGS technologies. She also has bioinformatics and computational skills in R, Python, Linux/Unix and experience with Google Cloud. This indicates strong experimental design and data analysis skills.",
             "score": 9.0
           },
           {
-            "criteria_name": "experimental_design_skills",
-            "reasoning": "The candidate shows familiarity with various lab techniques including protein biochemistry, biophysics, immunoprecipitation, and engineering synthetic monobodies. CRISPR was not explicitly mentioned, but experimental design and data analysis skills seem strong given advanced research roles.",
-            "score": 8.0
-          },
-          {
             "criteria_name": "teaching_mentoring_experience",
-            "reasoning": "The candidate has experience in undergraduate teaching and collaboration on interdisciplinary research, indicating some level of mentoring and teaching experience.",
-            "score": 7.0
+            "reasoning": "The candidate has approximately 9 years of experience teaching bioinformatics to those without computational biology experience, indicating significant teaching and mentoring expertise.",
+            "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location",
-            "reasoning": "The candidate completed undergraduate studies at University of Illinois Urbana-Champaign, which is in the U.S.",
+            "reasoning": "The candidate completed her undergraduate studies at University of Rochester, which is in the U.S.",
             "passes": true
           },
           {
             "criteria_name": "phd_from_top_us_university",
-            "reasoning": "The candidate earned a Doctorate from University of California, Berkeley, a top U.S. university.",
+            "reasoning": "The candidate earned a Doctorate from University of Texas at Austin, which is considered a top U.S. research university, especially in biological sciences.",
             "passes": true
           }
         ],
-        "final_score": 80.00000000000001,
+        "final_score": 86.66666666666667,
         "raw_data": {
-          "_id": "6796633c0db3e7925681af71",
-          "name": "Jay Goodman",
-          "linkedinId": "jay-goodman-945b6139"
+          "_id": "6796ba2e3eff0c142a8a501c",
+          "name": "Amelia Weber Hall",
+          "linkedinId": "ameliahall"
         }
       }
     ]
