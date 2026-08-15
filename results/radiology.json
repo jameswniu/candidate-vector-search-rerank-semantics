@@ -2,16 +2,16 @@
   "config": "Radiology",
   "config_path": "radiology.yml",
   "object_ids": [
+    "6796e9197e0084c5fa833a50",
+    "6796793573bf14921fb85cd5",
+    "679637ec7e0084c5fa7c4858",
+    "6795ccf373bf14921fb23881",
+    "6795541d73bf14921facf7d6",
     "6796c899f9f986ea7fc6548d",
     "67968f003e76d5b587327ee3",
     "6795dc6a8a14699f160a3aef",
-    "6795541d73bf14921facf7d6",
-    "679637ec7e0084c5fa7c4858",
-    "6796793573bf14921fb85cd5",
-    "6794bf5252a365d1167a035c",
-    "6796e9197e0084c5fa833a50",
-    "6795ccf373bf14921fb23881",
-    "679505b20db3e79256748305"
+    "679505b20db3e79256748305",
+    "6794bf5252a365d1167a035c"
   ],
   "eval_result": {
     "config_name": "radiology",
@@ -42,6 +42,210 @@
       }
     ],
     "individual_results": [
+      {
+        "candidate_name": "Joseph Patrick Russo",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/joseph-patrick-russo-b4445119",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "The candidate is a board certified diagnostic radiologist, indicating he holds equivalent credentials.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "With over 25 years of experience in radiology, specializing in breast imaging and interpreting various imaging modalities, the candidate exceeds the 3+ years requirement.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Extensive expertise in radiology reporting, diagnostic protocols, and involvement with AI-assisted breast imaging projects as consultant for AI companies shows outstanding radiology expertise.",
+            "score": 10.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate holds an MD from Loyola University Chicago Stritch School Of Medicine, which is a U.S. medical school.",
+            "passes": true
+          }
+        ],
+        "final_score": 100.0,
+        "raw_data": {
+          "_id": "6796e9197e0084c5fa833a50",
+          "name": "Joseph Patrick Russo",
+          "linkedinId": "joseph-patrick-russo-b4445119"
+        }
+      },
+      {
+        "candidate_name": "Paul DiDomenico",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/paul-didomenico-b4a3a647",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "Candidate is board-certified by the American Board of Radiology, demonstrating recognized formal certification in radiology.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Candidate has over a decade of experience reading various modalities including CT, MRI, ultrasound, mammography, and more since 2007, exceeding the 3+ year requirement.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Candidate has expertise in radiology reporting, diagnostic protocols, has served as a clinical instructor, and conducted research projects involving elastography and improving diagnostic yield, indicating strong expertise including in advanced diagnostic workflows.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate holds an MD degree from Stanford University School Of Medicine (U.S.), fulfilling the requirement of an MD degree from a U.S. or India medical school.",
+            "passes": true
+          }
+        ],
+        "final_score": 96.66666666666667,
+        "raw_data": {
+          "_id": "6796793573bf14921fb85cd5",
+          "name": "Paul DiDomenico",
+          "linkedinId": "paul-didomenico-b4a3a647"
+        }
+      },
+      {
+        "candidate_name": "Geoffrey Rubin",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/geoffrubin",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "The candidate has a medical degree (MD) and completed a Diagnostic Radiology residency at Stanford University School of Medicine, which strongly implies board certification given the academic and professional stature but explicit mention of certification (ABR, FRCR) is not present.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "The candidate has over 20 years of experience interpreting CT and MRI scans, among other modalities, with pioneering roles in cardiovascular CT and MRI imaging, indicating highly advanced expertise.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "The candidate has a strong background in radiology reporting, diagnostic workflows, pioneering CT angiography and 3D imaging, overseeing diagnostic protocols, and involvement in AI-assisted image analysis projects.",
+            "score": 10.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "The candidate holds an MD degree from University of California San Diego, a U.S. medical school, satisfying the requirement.",
+            "passes": true
+          }
+        ],
+        "final_score": 93.33333333333333,
+        "raw_data": {
+          "_id": "679637ec7e0084c5fa7c4858",
+          "name": "Geoffrey Rubin",
+          "linkedinId": "geoffrubin"
+        }
+      },
+      {
+        "candidate_name": "Peter Chirico",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/peter-chirico-60089738",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "The candidate is board certified by the American Board of Radiology since June 1990, demonstrating recognized certification in radiology.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "The candidate has extensive experience since at least 1990 in diagnostic radiology, including expertise in multiple imaging modalities (CT, MRI, ultrasound, PET/CT, digital mammography, etc.). Over 30 years of experience.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "The candidate holds leadership roles in radiology departments, is Professor and Chairman of Diagnostic Radiology, is involved with diagnostic imaging education, and has experience with multimodality imaging including newer techniques like breast tomosynthesis. However, no explicit mention of AI-assisted image analysis experience.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "The candidate holds an MD degree from UMDNJ-Robert Wood Johnson Medical School (U.S.).",
+            "passes": true
+          }
+        ],
+        "final_score": 93.33333333333333,
+        "raw_data": {
+          "_id": "6795ccf373bf14921fb23881",
+          "name": "Peter Chirico",
+          "linkedinId": "peter-chirico-60089738"
+        }
+      },
+      {
+        "candidate_name": "Tanvir Rizvi",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/tanvir-rizvi-a0a36b7",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "The candidate is American Board of Radiology Certified (ABR) since 2015 and subspecialty certified in Neuroradiology in 2018, indicating a high level of recognized board certification.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "The candidate has extensive experience reading CT, MRI, ultrasound, nuclear medicine studies, and other imaging modalities, with many years of clinical and academic roles across several institutions and countries.",
+            "score": 10.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "The candidate demonstrates advanced expertise in radiology reporting, diagnostic protocols, differential diagnosis, and has experience with procedures and diagnostic workflows. While explicit AI application experience is not stated, the comprehensive expertise in diagnostic workflows and image interpretation is evident.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "The candidate has an MD degree from University of Virginia, a U.S. medical school, meeting the requirement for an MD degree from the U.S. or India.",
+            "passes": true
+          }
+        ],
+        "final_score": 93.33333333333333,
+        "raw_data": {
+          "_id": "6795541d73bf14921facf7d6",
+          "name": "Tanvir Rizvi",
+          "linkedinId": "tanvir-rizvi-a0a36b7"
+        }
+      },
+      {
+        "candidate_name": "Kushal Parikh",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/kushalparikh1",
+        "soft_scores": [
+          {
+            "criteria_name": "board_certification",
+            "reasoning": "Candidate is described as board-certified radiologist, indicating credentialing such as ABR or equivalent.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "diagnostic_imaging_expertise",
+            "reasoning": "Candidate has multiple years of experience in various radiology roles involving diagnostic imaging including CT and MRI.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "radiology_expertise",
+            "reasoning": "Candidate has expertise in radiology reporting, diagnostic workflows, and has worked on AI in medical imaging projects as indicated by advisory and leadership roles.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "has_md_degree",
+            "reasoning": "Candidate has an MD from University of Illinois at Chicago, which is a U.S. medical school.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "6796c899f9f986ea7fc6548d",
+          "name": "Kushal Parikh",
+          "linkedinId": "kushalparikh1"
+        }
+      },
       {
         "candidate_name": "Dr Swarnalakshmi Sampath",
         "candidate_linkedin_url": "https://www.linkedin.com/in/dr-swarnalakshmi-sampath-b6a4431a9",
@@ -111,40 +315,6 @@
         }
       },
       {
-        "candidate_name": "Debora Coursey-Prah",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/drdcpconsulting",
-        "soft_scores": [
-          {
-            "criteria_name": "board_certification",
-            "reasoning": "The candidate states she is a board certified radiologist since 1987, indicating appropriate certification.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "diagnostic_imaging_expertise",
-            "reasoning": "Extensive experience with mammography, breast ultrasound, breast MRI, CT, nuclear medicine, and other modalities for many years.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "radiology_expertise",
-            "reasoning": "Expertise in breast imaging and diagnostic protocols is well documented. However, no mention of AI applications in medical imaging or radiology reporting software.",
-            "score": 7.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_md_degree",
-            "reasoning": "The candidate has an MD degree from University of Southern California (U.S.), which meets the requirement.",
-            "passes": true
-          }
-        ],
-        "final_score": 86.66666666666666,
-        "raw_data": {
-          "_id": "6794bf5252a365d1167a035c",
-          "name": "Debora Coursey-Prah",
-          "linkedinId": "drdcpconsulting"
-        }
-      },
-      {
         "candidate_name": "Louis Teresi",
         "candidate_linkedin_url": "https://www.linkedin.com/in/louis-teresi-md-868b6531",
         "soft_scores": [
@@ -179,207 +349,37 @@
         }
       },
       {
-        "candidate_name": "Tanvir Rizvi",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/tanvir-rizvi-a0a36b7",
+        "candidate_name": "Debora Coursey-Prah",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/drdcpconsulting",
         "soft_scores": [
           {
             "criteria_name": "board_certification",
-            "reasoning": "The candidate is American Board of Radiology Certified (ABR) since 2015 and subspecialty certified in Neuroradiology in 2018, indicating a high level of recognized board certification.",
+            "reasoning": "The candidate states she is a board certified radiologist since 1987, indicating appropriate certification.",
             "score": 10.0
           },
           {
             "criteria_name": "diagnostic_imaging_expertise",
-            "reasoning": "The candidate has extensive experience reading CT, MRI, ultrasound, nuclear medicine studies, and other imaging modalities, with many years of clinical and academic roles across several institutions and countries.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "radiology_expertise",
-            "reasoning": "The candidate demonstrates advanced expertise in radiology reporting, diagnostic protocols, differential diagnosis, and has experience with procedures and diagnostic workflows. While explicit AI application experience is not stated, the comprehensive expertise in diagnostic workflows and image interpretation is evident.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_md_degree",
-            "reasoning": "The candidate has an MD degree from University of Virginia, a U.S. medical school, meeting the requirement for an MD degree from the U.S. or India.",
-            "passes": true
-          }
-        ],
-        "final_score": 93.33333333333333,
-        "raw_data": {
-          "_id": "6795541d73bf14921facf7d6",
-          "name": "Tanvir Rizvi",
-          "linkedinId": "tanvir-rizvi-a0a36b7"
-        }
-      },
-      {
-        "candidate_name": "Peter Chirico",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/peter-chirico-60089738",
-        "soft_scores": [
-          {
-            "criteria_name": "board_certification",
-            "reasoning": "The candidate is board certified by the American Board of Radiology since June 1990, demonstrating recognized certification in radiology.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "diagnostic_imaging_expertise",
-            "reasoning": "The candidate has extensive experience since at least 1990 in diagnostic radiology, including expertise in multiple imaging modalities (CT, MRI, ultrasound, PET/CT, digital mammography, etc.). Over 30 years of experience.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "radiology_expertise",
-            "reasoning": "The candidate holds leadership roles in radiology departments, is Professor and Chairman of Diagnostic Radiology, is involved with diagnostic imaging education, and has experience with multimodality imaging including newer techniques like breast tomosynthesis. However, no explicit mention of AI-assisted image analysis experience.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_md_degree",
-            "reasoning": "The candidate holds an MD degree from UMDNJ-Robert Wood Johnson Medical School (U.S.).",
-            "passes": true
-          }
-        ],
-        "final_score": 93.33333333333333,
-        "raw_data": {
-          "_id": "6795ccf373bf14921fb23881",
-          "name": "Peter Chirico",
-          "linkedinId": "peter-chirico-60089738"
-        }
-      },
-      {
-        "candidate_name": "Geoffrey Rubin",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/geoffrubin",
-        "soft_scores": [
-          {
-            "criteria_name": "board_certification",
-            "reasoning": "The candidate has a medical degree (MD) and completed a Diagnostic Radiology residency at Stanford University School of Medicine, which strongly implies board certification given the academic and professional stature but explicit mention of certification (ABR, FRCR) is not present.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "diagnostic_imaging_expertise",
-            "reasoning": "The candidate has over 20 years of experience interpreting CT and MRI scans, among other modalities, with pioneering roles in cardiovascular CT and MRI imaging, indicating highly advanced expertise.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "radiology_expertise",
-            "reasoning": "The candidate has a strong background in radiology reporting, diagnostic workflows, pioneering CT angiography and 3D imaging, overseeing diagnostic protocols, and involvement in AI-assisted image analysis projects.",
-            "score": 10.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_md_degree",
-            "reasoning": "The candidate holds an MD degree from University of California San Diego, a U.S. medical school, satisfying the requirement.",
-            "passes": true
-          }
-        ],
-        "final_score": 93.33333333333333,
-        "raw_data": {
-          "_id": "679637ec7e0084c5fa7c4858",
-          "name": "Geoffrey Rubin",
-          "linkedinId": "geoffrubin"
-        }
-      },
-      {
-        "candidate_name": "Paul DiDomenico",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/paul-didomenico-b4a3a647",
-        "soft_scores": [
-          {
-            "criteria_name": "board_certification",
-            "reasoning": "Candidate is board-certified by the American Board of Radiology, demonstrating recognized formal certification in radiology.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "diagnostic_imaging_expertise",
-            "reasoning": "Candidate has over a decade of experience reading various modalities including CT, MRI, ultrasound, mammography, and more since 2007, exceeding the 3+ year requirement.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "radiology_expertise",
-            "reasoning": "Candidate has expertise in radiology reporting, diagnostic protocols, has served as a clinical instructor, and conducted research projects involving elastography and improving diagnostic yield, indicating strong expertise including in advanced diagnostic workflows.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_md_degree",
-            "reasoning": "Candidate holds an MD degree from Stanford University School Of Medicine (U.S.), fulfilling the requirement of an MD degree from a U.S. or India medical school.",
-            "passes": true
-          }
-        ],
-        "final_score": 96.66666666666667,
-        "raw_data": {
-          "_id": "6796793573bf14921fb85cd5",
-          "name": "Paul DiDomenico",
-          "linkedinId": "paul-didomenico-b4a3a647"
-        }
-      },
-      {
-        "candidate_name": "Kushal Parikh",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/kushalparikh1",
-        "soft_scores": [
-          {
-            "criteria_name": "board_certification",
-            "reasoning": "Candidate is described as board-certified radiologist, indicating credentialing such as ABR or equivalent.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "diagnostic_imaging_expertise",
-            "reasoning": "Candidate has multiple years of experience in various radiology roles involving diagnostic imaging including CT and MRI.",
+            "reasoning": "Extensive experience with mammography, breast ultrasound, breast MRI, CT, nuclear medicine, and other modalities for many years.",
             "score": 9.0
           },
           {
             "criteria_name": "radiology_expertise",
-            "reasoning": "Candidate has expertise in radiology reporting, diagnostic workflows, and has worked on AI in medical imaging projects as indicated by advisory and leadership roles.",
-            "score": 9.0
+            "reasoning": "Expertise in breast imaging and diagnostic protocols is well documented. However, no mention of AI applications in medical imaging or radiology reporting software.",
+            "score": 7.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "has_md_degree",
-            "reasoning": "Candidate has an MD from University of Illinois at Chicago, which is a U.S. medical school.",
+            "reasoning": "The candidate has an MD degree from University of Southern California (U.S.), which meets the requirement.",
             "passes": true
           }
         ],
-        "final_score": 90.0,
+        "final_score": 86.66666666666666,
         "raw_data": {
-          "_id": "6796c899f9f986ea7fc6548d",
-          "name": "Kushal Parikh",
-          "linkedinId": "kushalparikh1"
-        }
-      },
-      {
-        "candidate_name": "Joseph Patrick Russo",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/joseph-patrick-russo-b4445119",
-        "soft_scores": [
-          {
-            "criteria_name": "board_certification",
-            "reasoning": "The candidate is a board certified diagnostic radiologist, indicating he holds equivalent credentials.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "diagnostic_imaging_expertise",
-            "reasoning": "With over 25 years of experience in radiology, specializing in breast imaging and interpreting various imaging modalities, the candidate exceeds the 3+ years requirement.",
-            "score": 10.0
-          },
-          {
-            "criteria_name": "radiology_expertise",
-            "reasoning": "Extensive expertise in radiology reporting, diagnostic protocols, and involvement with AI-assisted breast imaging projects as consultant for AI companies shows outstanding radiology expertise.",
-            "score": 10.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "has_md_degree",
-            "reasoning": "Candidate holds an MD from Loyola University Chicago Stritch School Of Medicine, which is a U.S. medical school.",
-            "passes": true
-          }
-        ],
-        "final_score": 100.0,
-        "raw_data": {
-          "_id": "6796e9197e0084c5fa833a50",
-          "name": "Joseph Patrick Russo",
-          "linkedinId": "joseph-patrick-russo-b4445119"
+          "_id": "6794bf5252a365d1167a035c",
+          "name": "Debora Coursey-Prah",
+          "linkedinId": "drdcpconsulting"
         }
       }
     ]

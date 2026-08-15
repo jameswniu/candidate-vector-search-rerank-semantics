@@ -2,36 +2,36 @@
   "config": "Anthropology",
   "config_path": "anthropology.yml",
   "object_ids": [
+    "6796088cf9f986ea7fbfa773",
+    "67964fba3eff0c142a86a411",
+    "6794ffdb8a14699f16028dce",
     "6795ff19a1a09a48feb43033",
     "67969f6f7e0084c5fa8037b1",
     "679494873eff0c142a77c5e1",
+    "6795506b73bf14921facce80",
     "679660117e0084c5fa7da145",
     "6795c7ff8d90554e606e6fc6",
-    "6796ecb20db3e7925686bd46",
-    "679619480db3e792567ed76b",
-    "679605e9a1a09a48feb46627",
-    "6796c57d3eff0c142a8ad808",
-    "67953bf88d90554e6069438a"
+    "6796ecb20db3e7925686bd46"
   ],
   "eval_result": {
     "config_name": "anthropology",
     "num_candidates": 10,
-    "average_final_score": 68.66666666666666,
+    "average_final_score": 75.5,
     "average_soft_scores": [
       {
         "criteria_name": "applied_anthropology_experience",
         "reasoning": null,
-        "average_score": 7.55
+        "average_score": 8.0
       },
       {
         "criteria_name": "academic_output_quality",
         "reasoning": null,
-        "average_score": 6.05
+        "average_score": 7.0
       },
       {
         "criteria_name": "ethnographic_methods_expertise",
         "reasoning": null,
-        "average_score": 7.0
+        "average_score": 7.65
       }
     ],
     "average_hard_scores": [
@@ -47,6 +47,123 @@
       }
     ],
     "individual_results": [
+      {
+        "candidate_name": "Helal Mohammed Khan",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/helalkhan",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "Candidate conducted ethnographies of Rohingya refugee micro-communities in multiple U.S. cities and abroad, showing substantial fieldwork and expertise in ethnographic methods applied to cultural and social systems.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "Candidate has published on various related topics including security and threat perceptions, religio-political currents, and environmental activism, and has presented at multiple conferences; also held fellowships indicating active academic engagement.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "Candidate's work on migration, refugee communities, peace and justice demonstrates application of anthropological theory in real-world contexts including interdisciplinary approaches involving political and social concerns.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "Candidate is a PhD candidate and recently completed a doctorate from University of Notre Dame in Peace Studies and Anthropology, a distinguished program.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "PhD candidacy listed as between 2018-23 and graduation likely completed recently (not more than 3 years ago), indicating the program started within the last 3 years.",
+            "passes": true
+          }
+        ],
+        "final_score": 86.66666666666667,
+        "raw_data": {
+          "_id": "6796088cf9f986ea7fbfa773",
+          "name": "Helal Mohammed Khan",
+          "linkedinId": "helalkhan"
+        }
+      },
+      {
+        "candidate_name": "Manon Lef\u00e8vre",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/manon-lefevre2023",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "Candidate has a strong background in qualitative research design, implementation, and extensive independent research experience including ethnographic and cultural studies related to biomedical practices, which demonstrate expertise in ethnographic methods and cultural systems.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "Candidate has published academic work, presented research findings at international conferences, and secured federal funding, indicating strong academic output quality in anthropological topics.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "Research focus on biomedical cultural politics and involvement in interdisciplinary contexts like reproductive health, environmental studies, and university teaching suggest applied anthropology experience with practical relevance.",
+            "score": 8.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "Candidate holds a PhD in cultural anthropology and environmental studies from Yale University, a top U.S. institution, thus meeting the requirement.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "Candidate completed PhD in 2024, which is within the last 3 years from current year 2026, satisfying this criterion.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "67964fba3eff0c142a86a411",
+          "name": "Manon Lef\u00e8vre",
+          "linkedinId": "manon-lefevre2023"
+        }
+      },
+      {
+        "candidate_name": "Dr. Jaylexia Clark",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/dr-jaylexia-clark-92abb294",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "The candidate has conducted fieldwork and case studies, including research on female digital entrepreneurs and platform workers in Ghana, applying ethnographic concepts to understand gendered racial capitalism in the platform economy. This demonstrates substantial expertise in ethnographic methods applied to social and economic systems.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "The candidate has a PhD dissertation focused on relevant topics, received prestigious awards (Fulbright, Russell Sage Dissertation Grant), and has presentations as a 2023 Labor Research Action Network Emerging Scholar. Though explicit publications are not listed, the various recognitions and scholarly activities indicate strong academic output.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "The candidate applies sociological theory to real-world issues like labor, racial and gender inequality, platform economy, and digital entrepreneurship, demonstrating conceptual depth and practical relevance in interdisciplinary contexts involving migration and labor.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "The candidate holds a PhD from the University of Notre Dame in Sociology, which is a relevant field to anthropology and labor studies.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "The candidate recently graduated with a PhD (defense and degree awarded around 2023), which is within the last 3 years from the current year 2026.",
+            "passes": true
+          }
+        ],
+        "final_score": 83.33333333333334,
+        "raw_data": {
+          "_id": "6794ffdb8a14699f16028dce",
+          "name": "Dr. Jaylexia Clark",
+          "linkedinId": "dr-jaylexia-clark-92abb294"
+        }
+      },
       {
         "candidate_name": "Tinnaphop Sinsomboonthong",
         "candidate_linkedin_url": "https://www.linkedin.com/in/tinnaphop-sinsomboonthong-67b5165a",
@@ -165,6 +282,45 @@
         }
       },
       {
+        "candidate_name": "Emilia Rose Holmbeck",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/emiliaholmbeck",
+        "soft_scores": [
+          {
+            "criteria_name": "ethnographic_methods_expertise",
+            "reasoning": "The candidate is a PhD candidate in psychocultural/medical anthropology with dissertation research involving qualitative study of collective peer-support running as an intervention in addiction treatment settings. She has conducted qualitative data transcription and other field-related research assistance, indicating solid ethnographic and qualitative research methods experience, though not explicitly centered on labor migration or cultural identity but broadly on culture, cognition, and health.",
+            "score": 7.5
+          },
+          {
+            "criteria_name": "academic_output_quality",
+            "reasoning": "The candidate completed a master's thesis and is engaged in PhD research with a strong academic trajectory at UCLA, including teaching fellow responsibilities in various anthropology courses. However, there is no explicit mention of published papers or conference presentations in the summary, so the evidence supports good but not clearly outstanding academic output quality.",
+            "score": 7.0
+          },
+          {
+            "criteria_name": "applied_anthropology_experience",
+            "reasoning": "The candidate applies anthropological theories to real-world issues in medical and psychological anthropology, including addiction treatment and trauma/PTSD, showing practical relevance and interdisciplinary application. Migration and labor are not her main focus, but her background in cross-cultural contexts and qualitative research indicates a competent applied anthropology experience.",
+            "score": 7.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "phd_in_relevant_field",
+            "reasoning": "The candidate is currently a PhD candidate at UCLA in psychocultural/medical anthropology, which is a distinguished program within anthropology, a relevant field.",
+            "passes": true
+          },
+          {
+            "criteria_name": "recent_phd_program",
+            "reasoning": "The candidate is presently a PhD candidate with teaching fellow roles dated 2023-2025, indicating she likely started her PhD within the last 3 years or at least remains actively enrolled recently. Exact start date not specified, but current enrollment supports a PASS.",
+            "passes": true
+          }
+        ],
+        "final_score": 71.66666666666667,
+        "raw_data": {
+          "_id": "6795506b73bf14921facce80",
+          "name": "Emilia Rose Holmbeck",
+          "linkedinId": "emiliaholmbeck"
+        }
+      },
+      {
         "candidate_name": "Frank Meng",
         "candidate_linkedin_url": "https://www.linkedin.com/in/frank-meng-2023",
         "soft_scores": [
@@ -279,162 +435,6 @@
           "_id": "6796ecb20db3e7925686bd46",
           "name": "Sara Hosseini",
           "linkedinId": "sara-hosseini-001604214"
-        }
-      },
-      {
-        "candidate_name": "Mohammad Javaid",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/mohammad-javaid-922b29129",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate is a PhD student in Anthropology with experience involving research projects in South Asia and Switzerland related to cultural and social systems, indicating engagement with ethnographic methods, although no explicit mention of fieldwork or detailed ethnographic case studies is given.",
-            "score": 7.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "Candidate has produced a master's thesis and worked on multiple research projects, but there is no direct mention of published papers or conference presentations on anthropological topics.",
-            "score": 5.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "Experience as Migration Policy Analyst working on migration laws and labor migration policy briefs, combining anthropological perspective with real-world migration policy and economic contexts, showing practical application of anthropology.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "The candidate is a PhD student in Anthropology at a distinguished program (Emory University), which meets the requirement.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "The summary does not specify the PhD start date, but the candidate is actively a teaching assistant for 2024 courses which suggests the program started within the last three years. Given the absence of contrary information, it is reasonable to assume the program is recent.",
-            "passes": true
-          }
-        ],
-        "final_score": 66.66666666666666,
-        "raw_data": {
-          "_id": "679619480db3e792567ed76b",
-          "name": "Mohammad Javaid",
-          "linkedinId": "mohammad-javaid-922b29129"
-        }
-      },
-      {
-        "candidate_name": "Nicole Sarette",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/nicole-sarette",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate has extensive research experience including qualitative research methods training and field research, with work involving interview transcription, coding, and analysis. However, the fieldwork or case studies are more sociological and survey-based rather than explicitly ethnographic methods typical to anthropology. Therefore, demonstrated expertise is moderate but not outstanding for ethnography specifically.",
-            "score": 6.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "Nicole has a strong record of academic output including a published article, multiple conference presentations, and research projects during her undergraduate and graduate studies. Her scholarly work spans sociological topics related to race, socioeconomic status, and student debt, which aligns with anthropological/sociological domains. This reflects good academic productivity.",
-            "score": 7.5
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "The candidate's experience involves applied sociology, particularly with underserved populations, student success, and marginalized identities. Though her work does not explicitly highlight anthropology or labor migration, her interdisciplinary applied work with minority groups, social capital, and economic outcomes demonstrates conceptual depth and practical relevance, but with a sociological focus rather than anthropology.",
-            "score": 6.5
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "Candidate is a Ph.D. student in Sociology at the Graduate Center, City University of New York, which is a distinguished program in a relevant field socially related to anthropology.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "Educational history shows the Ph.D. is 'in progress', but start year is not explicitly stated. However, her latest listed degrees are from 2022 (BA) with MA in between, indicating the Ph.D. likely began recently within the last 3 years, consistent with typical academic progression.",
-            "passes": true
-          }
-        ],
-        "final_score": 66.66666666666666,
-        "raw_data": {
-          "_id": "679605e9a1a09a48feb46627",
-          "name": "Nicole Sarette",
-          "linkedinId": "nicole-sarette"
-        }
-      },
-      {
-        "candidate_name": "G\u00fclten Gizem Fesli",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/gizemfesli",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "Candidate has training in labor market research, data collection and analysis, and research design with sociological focus, but there is no explicit mention of ethnographic methods or extensive fieldwork typical to anthropology.",
-            "score": 5.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "Candidate is a PhD candidate with various fellowships and grants, and involvement with academic institutions (UC San Diego, University of Bayreuth), but specific academic outputs such as published papers or conference presentations were not listed.",
-            "score": 6.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "Candidate's research project on transnational care workers compares Germany and the USA around labor and migration, indicating applied sociology with interdisciplinary relevance, connecting migration and labor issues.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "Candidate is pursuing a Doctorate in Sociology from the University of Bayreuth, a distinguished program, which aligns with relevant fields.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "The candidate has a grant for data collection in San Diego dated January 2023, indicating PhD program started recently, within the last 3 years.",
-            "passes": true
-          }
-        ],
-        "final_score": 63.33333333333334,
-        "raw_data": {
-          "_id": "6796c57d3eff0c142a8ad808",
-          "name": "G\u00fclten Gizem Fesli",
-          "linkedinId": "gizemfesli"
-        }
-      },
-      {
-        "candidate_name": "Jacqueline Watt",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/jacqueline-watt-88537b6b",
-        "soft_scores": [
-          {
-            "criteria_name": "ethnographic_methods_expertise",
-            "reasoning": "The candidate is a PhD student in cultural/social anthropology from Massey University who has conducted ethnographic research on New Zealand counterculture, glocalization, and marginalized cultural groups. She has hands-on experience with qualitative research and extensive involvement in anthropology courses, indicating solid ethnographic methods expertise.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "academic_output_quality",
-            "reasoning": "While the candidate is actively engaged in tutoring and course coordination, there is no explicit mention of published papers, working papers, or conference presentations. Passing confirmation process in March 2024 shows academic progress but no clear evidence of strong academic output.",
-            "score": 4.0
-          },
-          {
-            "criteria_name": "applied_anthropology_experience",
-            "reasoning": "Her research focuses on cultural identity and counterculture, and she actively applies anthropological theory in advocacy, student leadership, and addressing COVID-19 impacts on education. However, her focus is less on labor migration or economic systems directly, which limits the applied anthropology score for the specified query.",
-            "score": 6.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "phd_in_relevant_field",
-            "reasoning": "Candidate is a Doctoral Student in Cultural Anthropology at Massey University, New Zealand. Massey University is a reputable institution, and anthropology is a relevant field.",
-            "passes": true
-          },
-          {
-            "criteria_name": "recent_phd_program",
-            "reasoning": "Candidate passed the confirmation process in March 2024, indicating the PhD program was likely started within the last 3 years (i.e., since 2023 or later). This aligns with the requirement for recent PhD enrollment.",
-            "passes": true
-          }
-        ],
-        "final_score": 60.00000000000001,
-        "raw_data": {
-          "_id": "67953bf88d90554e6069438a",
-          "name": "Jacqueline Watt",
-          "linkedinId": "jacqueline-watt-88537b6b"
         }
       }
     ]

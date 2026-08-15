@@ -2,31 +2,31 @@
   "config": "Mathematics PhD",
   "config_path": "mathematics_phd.yml",
   "object_ids": [
-    "67953d338a14699f16049d9a",
-    "67970105a1a09a48febd9091",
-    "6795f7690db3e792567d8f95",
-    "6796d98df9f986ea7fc6f55e",
-    "6794b3038a14699f16ffe071",
     "6796738e7e0084c5fa7e51d8",
-    "679683208d90554e60752085",
-    "6794c18c73bf14921fa76dad",
+    "67962f0452a365d1168726dc",
+    "67970105a1a09a48febd9091",
+    "6796ea63f9f986ea7fc78e81",
+    "6796d98df9f986ea7fc6f55e",
+    "6796bc5d0db3e7925684d2f1",
+    "67969f3f7e0084c5fa803569",
     "679686e73e76d5b58732309f",
-    "67948faa3e76d5b587209887"
+    "679683208d90554e60752085",
+    "6795f7690db3e792567d8f95"
   ],
   "eval_result": {
     "config_name": "mathematics_phd",
     "num_candidates": 10,
-    "average_final_score": 89.75,
+    "average_final_score": 90.5,
     "average_soft_scores": [
       {
         "criteria_name": "mathematical_modeling_proficiency",
         "reasoning": null,
-        "average_score": 8.9
+        "average_score": 9.0
       },
       {
         "criteria_name": "research_expertise_math",
         "reasoning": null,
-        "average_score": 9.05
+        "average_score": 9.1
       }
     ],
     "average_hard_scores": [
@@ -43,37 +43,71 @@
     ],
     "individual_results": [
       {
-        "candidate_name": "Harry Crane",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/harry-crane-4735144",
+        "candidate_name": "Erica Ashe",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/erica-ashe",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate is a Professor of Statistics with research and publications in Bayesian nonparametrics, network analysis, probability theory, and stochastic processes indicating strong peer-reviewed research expertise.",
-            "score": 9.0
+            "reasoning": "The candidate has a PhD in Statistics, a strong record of peer-reviewed publications (30+), and extensive experience in both theoretical and applied research related to statistical inference and modeling in climate science, indicating excellent research expertise in applied mathematics/statistics.",
+            "score": 9.5
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Experience teaching and researching in probability, statistics, machine learning, and Bayesian methods shows high proficiency in mathematical modeling and algorithmic problem-solving.",
+            "reasoning": "The candidate has developed and implemented complex statistical models, including Gaussian process regression, Bayesian hierarchical models, and predictive analytical models using MATLAB and Python, demonstrating high proficiency in mathematical modeling and algorithmic problem-solving.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate completed undergraduate studies in Mathematics at the University of Pennsylvania, which is a U.S. university.",
+            "reasoning": "The candidate completed undergraduate studies at University of Kansas in the U.S., meeting the requirement.",
             "passes": true
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate holds a doctorate in Statistics from the University of Chicago, a top U.S. university.",
+            "reasoning": "The candidate holds a PhD in Statistics from Rutgers University, a leading U.S. university.",
             "passes": true
           }
         ],
-        "final_score": 90.0,
+        "final_score": 92.5,
         "raw_data": {
-          "_id": "67953d338a14699f16049d9a",
-          "name": "Harry Crane",
-          "linkedinId": "harry-crane-4735144"
+          "_id": "6796738e7e0084c5fa7e51d8",
+          "name": "Erica Ashe",
+          "linkedinId": "erica-ashe"
+        }
+      },
+      {
+        "candidate_name": "George Tucker",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/george-tucker-3ba6086",
+        "soft_scores": [
+          {
+            "criteria_name": "research_expertise_math",
+            "reasoning": "The candidate holds a PhD in Mathematics from MIT and has published in top journals (Genetics, Nature Genetics, AJHG, Cell, Science Signaling) reflecting strong applied statistical and probabilistic research expertise. Extensive research experience at Google Brain and other prestigious institutions further supports a high level of competence in mathematical/statistical research.",
+            "score": 9.5
+          },
+          {
+            "criteria_name": "mathematical_modeling_proficiency",
+            "reasoning": "The candidate has designed complex statistical models used in protein-protein interaction inference and risk prediction, employed Gaussian processes, variational methods, and reinforcement learning algorithms. Their work includes algorithm development and proof-based reasoning demonstrated through publications and presentations in top-tier conferences and journals.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location_math",
+            "reasoning": "Candidate completed undergraduate studies at Harvey Mudd College in Mathematics, which is located in the U.S.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_math_statistics",
+            "reasoning": "Candidate holds a PhD in Mathematics from the Massachusetts Institute of Technology, a top U.S. university.",
+            "passes": true
+          }
+        ],
+        "final_score": 92.5,
+        "raw_data": {
+          "_id": "67962f0452a365d1168726dc",
+          "name": "George Tucker",
+          "linkedinId": "george-tucker-3ba6086"
         }
       },
       {
@@ -111,6 +145,40 @@
         }
       },
       {
+        "candidate_name": "Konstantin Golobokov",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/konstantin-golobokov",
+        "soft_scores": [
+          {
+            "criteria_name": "research_expertise_math",
+            "reasoning": "The candidate has significant research experience in applied mathematics, especially in applied and computational mathematics, focusing on efficient methods for deep learning. They have multiple peer-reviewed publications and a patent application related to their research, demonstrating strong research expertise.",
+            "score": 9.0
+          },
+          {
+            "criteria_name": "mathematical_modeling_proficiency",
+            "reasoning": "The candidate shows strong proficiency in mathematical modeling and algorithmic problem-solving as evidenced by their applied research work on parameter-efficient training methods, semantic parsing for code generation, and large scale deep learning models, plus a perfect GPA in Applied & Computational Mathematics.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "undergraduate_location_math",
+            "reasoning": "Candidate completed their undergraduate degree at the University of Michigan, which is a university in the United States.",
+            "passes": true
+          },
+          {
+            "criteria_name": "phd_math_statistics",
+            "reasoning": "Candidate is a forthcoming PhD candidate in Applied Mathematics at the University of Washington, which is a leading U.S. university. Applied Mathematics is a relevant field encompassing mathematical techniques that can include statistical inference and stochastic processes.",
+            "passes": true
+          }
+        ],
+        "final_score": 90.0,
+        "raw_data": {
+          "_id": "6796ea63f9f986ea7fc78e81",
+          "name": "Konstantin Golobokov",
+          "linkedinId": "konstantin-golobokov"
+        }
+      },
+      {
         "candidate_name": "Mickey Salins",
         "candidate_linkedin_url": "https://www.linkedin.com/in/mickey-salins-1b134988",
         "soft_scores": [
@@ -145,173 +213,105 @@
         }
       },
       {
-        "candidate_name": "Gail Letzter",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/gail-letzter-profile",
+        "candidate_name": "Lee Worden",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/lee-worden-64a4457",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has extensive research expertise in pure mathematics, with more than 20 publications in representation theory of Lie algebras and quantum groups, in addition to applied mathematical research at NSA involving algebraic and combinatorial tools, cryptography, and data analysis.",
+            "reasoning": "The candidate has a PhD in Applied and Computational Mathematics from Princeton University and has conducted extensive research in mathematical modeling of population dynamics, disease transmission, and stochastic processes, with publications available on Google Scholar. This indicates strong expertise in applied mathematics and related statistical inference.",
             "score": 9.0
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "The candidate has demonstrated strong proficiency in proof-based reasoning and mathematical modeling through their academic and applied work. They developed mathematical frameworks to solve applied problems, created algorithmic tools, and contributed to cryptographic vulnerability analyses, indicating high algorithmic problem-solving skills.",
+            "reasoning": "The candidate demonstrates proficiency in mathematical modeling, using both deterministic and stochastic dynamical systems theory, game theory, and agent-based modeling across multiple research projects. The experience also includes development of mathematical software tools, showing capability in algorithmic problem-solving.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate completed their undergraduate degree at Harvard University, which is a top U.S. institution.",
+            "reasoning": "The candidate completed their undergraduate degree in Mathematics at San Francisco State University, which is in the United States.",
             "passes": true
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate holds a PhD in Mathematics from the University of Chicago, a leading U.S. university.",
+            "reasoning": "The candidate earned a PhD in Applied and Computational Mathematics from Princeton University, which is a top U.S. university known for strong mathematics programs.",
             "passes": true
           }
         ],
         "final_score": 90.0,
         "raw_data": {
-          "_id": "6794c18c73bf14921fa76dad",
-          "name": "Gail Letzter",
-          "linkedinId": "gail-letzter-profile"
+          "_id": "6796bc5d0db3e7925684d2f1",
+          "name": "Lee Worden",
+          "linkedinId": "lee-worden-64a4457"
         }
       },
       {
-        "candidate_name": "Kiho Park",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/kiho-park-phd-9b8b37a3",
+        "candidate_name": "Bailey Fosdick",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/bailey-fosdick-795094210",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has authored 7 original research papers with 5 published and 2 under revision, including publications in top-tier journals such as Communications in Mathematical Physics and Advances in Mathematics, demonstrating strong peer-reviewed research expertise.",
+            "reasoning": "Candidate holds a PhD in Statistics with over ten years of research experience and more than 45 published projects receiving over 3200 citations, demonstrating strong research expertise in applied mathematics/statistics.",
             "score": 9.0
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "Experience includes theoretical work on subadditive thermodynamic formalism and applied work implementing Expectation Maximization algorithms in asset returns modeling, showing strong proficiency in mathematical modeling and algorithmic problem-solving.",
-            "score": 8.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate completed their undergraduate studies at University of California, Berkeley, which is in the U.S.",
-            "passes": true
-          },
-          {
-            "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate earned a Doctorate in Mathematics from University of Chicago, which is a top U.S. university.",
-            "passes": true
-          }
-        ],
-        "final_score": 85.00000000000001,
-        "raw_data": {
-          "_id": "67948faa3e76d5b587209887",
-          "name": "Kiho Park",
-          "linkedinId": "kiho-park-phd-9b8b37a3"
-        }
-      },
-      {
-        "candidate_name": "Marlin F.",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/marlin-figgins",
-        "soft_scores": [
-          {
-            "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has a PhD in applied mathematics and extensive experience in mathematical and statistical research, including peer-reviewed articles and software library development in epidemiology and evolutionary biology. Therefore, the research expertise is excellent.",
-            "score": 9.0
-          },
-          {
-            "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "The candidate demonstrates strong proficiency in mathematical modeling, developing stochastic models, algorithmic problem solving, and proof-based research in dynamical systems and agent-based models, indicating outstanding skills.",
+            "reasoning": "Candidate is expert at developing and utilizing advanced statistical models and simulations, and has taught advanced probability and statistics courses including Bayesian analysis and multivariate analysis, showing strong proficiency in mathematical modeling and proof-based reasoning.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate completed their undergraduate degree in Mathematics at the University of Chicago, which is a U.S. university.",
+            "reasoning": "The candidate completed undergraduate studies in Mathematics at Colorado State University, which is located in the U.S.",
             "passes": true
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate earned a Doctorate in Applied Mathematics from the University of Washington, a leading U.S. university, satisfying the PhD criterion.",
+            "reasoning": "The candidate has a PhD in Statistics from University of Washington, a top U.S. university recognized for its strong statistics program.",
             "passes": true
           }
         ],
         "final_score": 90.0,
         "raw_data": {
-          "_id": "6794b3038a14699f16ffe071",
-          "name": "Marlin F.",
-          "linkedinId": "marlin-figgins"
+          "_id": "67969f3f7e0084c5fa803569",
+          "name": "Bailey Fosdick",
+          "linkedinId": "bailey-fosdick-795094210"
         }
       },
       {
-        "candidate_name": "Amanda Koepke",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/amandakoepke",
+        "candidate_name": "Riley Murray",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/riley-murray-b326714a",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has substantial research expertise in statistics with publications and recognized contributions, including award-winning work and peer-reviewed manuscripts. The experience spans theoretical and applied statistical work, showing strong research credentials.",
+            "reasoning": "The candidate holds a PhD in Computing and Mathematical Sciences from Caltech and has published work in algorithmic and numerical linear algebra as well as mathematical optimization. This represents strong research expertise in applied mathematical areas related to statistics and probability, demonstrating excellent scholarly output.",
             "score": 9.0
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "The candidate has demonstrated proficiency in mathematical modeling, including development of predictive Bayesian models, complex statistical algorithms like particle marginal Metropolis-Hastings, and mathematical software implementation, indicating strong modeling and algorithmic problem-solving skills.",
+            "reasoning": "The candidate has expertise in convex optimization, randomized numerical linear algebra, and has developed constant-factor approximation algorithms for scheduling problems, indicating high proficiency in mathematical modeling and algorithmic problem-solving.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate completed undergraduate studies at Texas Tech University, located in the United States.",
+            "reasoning": "The candidate completed their undergraduate degree in Industrial Engineering and Operations Research at the University of California, Berkeley, which is in the U.S., satisfying the requirement.",
             "passes": true
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate holds a PhD in Statistics from the University of Washington, which is a leading U.S. university.",
+            "reasoning": "The candidate earned a PhD in Computing and Mathematical Sciences from Caltech, a top U.S. university. However, the degree is not explicitly in Mathematics or Statistics but rather in a computational/mathematical sciences interdisciplinary field. Given the specialization and research areas related to mathematical optimization and numerical linear algebra, this is very close. Nonetheless, since the criterion is strict about PhD in Mathematics or Statistics, this is borderline but can be considered a PASS due to the strong mathematical nature of their doctoral research and the prestige and ranking of Caltech.",
             "passes": true
           }
         ],
         "final_score": 90.0,
         "raw_data": {
-          "_id": "6795f7690db3e792567d8f95",
-          "name": "Amanda Koepke",
-          "linkedinId": "amandakoepke"
-        }
-      },
-      {
-        "candidate_name": "Erica Ashe",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/erica-ashe",
-        "soft_scores": [
-          {
-            "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate has a PhD in Statistics, a strong record of peer-reviewed publications (30+), and extensive experience in both theoretical and applied research related to statistical inference and modeling in climate science, indicating excellent research expertise in applied mathematics/statistics.",
-            "score": 9.5
-          },
-          {
-            "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "The candidate has developed and implemented complex statistical models, including Gaussian process regression, Bayesian hierarchical models, and predictive analytical models using MATLAB and Python, demonstrating high proficiency in mathematical modeling and algorithmic problem-solving.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate completed undergraduate studies at University of Kansas in the U.S., meeting the requirement.",
-            "passes": true
-          },
-          {
-            "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate holds a PhD in Statistics from Rutgers University, a leading U.S. university.",
-            "passes": true
-          }
-        ],
-        "final_score": 92.5,
-        "raw_data": {
-          "_id": "6796738e7e0084c5fa7e51d8",
-          "name": "Erica Ashe",
-          "linkedinId": "erica-ashe"
+          "_id": "679686e73e76d5b58732309f",
+          "name": "Riley Murray",
+          "linkedinId": "riley-murray-b326714a"
         }
       },
       {
@@ -349,37 +349,37 @@
         }
       },
       {
-        "candidate_name": "Riley Murray",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/riley-murray-b326714a",
+        "candidate_name": "Amanda Koepke",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/amandakoepke",
         "soft_scores": [
           {
             "criteria_name": "research_expertise_math",
-            "reasoning": "The candidate holds a PhD in Computing and Mathematical Sciences from Caltech and has published work in algorithmic and numerical linear algebra as well as mathematical optimization. This represents strong research expertise in applied mathematical areas related to statistics and probability, demonstrating excellent scholarly output.",
+            "reasoning": "The candidate has substantial research expertise in statistics with publications and recognized contributions, including award-winning work and peer-reviewed manuscripts. The experience spans theoretical and applied statistical work, showing strong research credentials.",
             "score": 9.0
           },
           {
             "criteria_name": "mathematical_modeling_proficiency",
-            "reasoning": "The candidate has expertise in convex optimization, randomized numerical linear algebra, and has developed constant-factor approximation algorithms for scheduling problems, indicating high proficiency in mathematical modeling and algorithmic problem-solving.",
+            "reasoning": "The candidate has demonstrated proficiency in mathematical modeling, including development of predictive Bayesian models, complex statistical algorithms like particle marginal Metropolis-Hastings, and mathematical software implementation, indicating strong modeling and algorithmic problem-solving skills.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "undergraduate_location_math",
-            "reasoning": "The candidate completed their undergraduate degree in Industrial Engineering and Operations Research at the University of California, Berkeley, which is in the U.S., satisfying the requirement.",
+            "reasoning": "The candidate completed undergraduate studies at Texas Tech University, located in the United States.",
             "passes": true
           },
           {
             "criteria_name": "phd_math_statistics",
-            "reasoning": "The candidate earned a PhD in Computing and Mathematical Sciences from Caltech, a top U.S. university. However, the degree is not explicitly in Mathematics or Statistics but rather in a computational/mathematical sciences interdisciplinary field. Given the specialization and research areas related to mathematical optimization and numerical linear algebra, this is very close. Nonetheless, since the criterion is strict about PhD in Mathematics or Statistics, this is borderline but can be considered a PASS due to the strong mathematical nature of their doctoral research and the prestige and ranking of Caltech.",
+            "reasoning": "The candidate holds a PhD in Statistics from the University of Washington, which is a leading U.S. university.",
             "passes": true
           }
         ],
         "final_score": 90.0,
         "raw_data": {
-          "_id": "679686e73e76d5b58732309f",
-          "name": "Riley Murray",
-          "linkedinId": "riley-murray-b326714a"
+          "_id": "6795f7690db3e792567d8f95",
+          "name": "Amanda Koepke",
+          "linkedinId": "amandakoepke"
         }
       }
     ]

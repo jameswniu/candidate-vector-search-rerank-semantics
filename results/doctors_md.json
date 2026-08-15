@@ -3,20 +3,20 @@
   "config_path": "doctors_md.yml",
   "object_ids": [
     "6794c5a93eff0c142a796a64",
-    "6795e04e73bf14921fb2f5e6",
+    "6796ef723eff0c142a8c40db",
     "6796bac27e0084c5fa81758b",
-    "6794b3ed0db3e7925671b289",
-    "6795fe083e76d5b5872d537e",
-    "67958d8a7e0084c5fa765d72",
-    "67954f7df9f986ea7fb8de20",
-    "67966f623e76d5b587314aca",
+    "6795e04e73bf14921fb2f5e6",
+    "6796aa810db3e79256840ddd",
+    "67969ba08d90554e60760036",
     "679687e68d90554e60754908",
-    "6796aa810db3e79256840ddd"
+    "67966f623e76d5b587314aca",
+    "67965c00f9f986ea7fc28d0e",
+    "67964afc7e0084c5fa7cd9d5"
   ],
   "eval_result": {
     "config_name": "doctors_md",
     "num_candidates": 10,
-    "average_final_score": 87.00000000000001,
+    "average_final_score": 87.50000000000001,
     "average_soft_scores": [
       {
         "criteria_name": "telemedicine_comfort",
@@ -26,7 +26,7 @@
       {
         "criteria_name": "ehr_systems_familiarity",
         "reasoning": null,
-        "average_score": 8.4
+        "average_score": 8.5
       }
     ],
     "average_hard_scores": [
@@ -87,42 +87,42 @@
         }
       },
       {
-        "candidate_name": "M. Carmen Hernandez-Zhang",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/m-carmen-hernandez-zhang-341b1ba8",
+        "candidate_name": "Yan Chow",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/yanchow",
         "soft_scores": [
           {
             "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "Candidate explicitly states experience updating charts and information into EPIC and other EMRs, demonstrating familiarity with EHR systems in outpatient primary care settings. Additionally, their speed typing and tech-savviness support strong EHR management skills.",
+            "reasoning": "The candidate has extensive experience with various healthcare IT systems, including the primary operational system CIPS used by over 58,000 providers, as well as clinical decision support systems and enterprise email systems. This experience points to a strong familiarity with EHR systems and managing healthcare operations in outpatient or family medicine settings.",
             "score": 9.0
           },
           {
             "criteria_name": "telemedicine_comfort",
-            "reasoning": "Candidate has 4 years of experience in telemedicine, enjoys communicating via Telemedicine, and is comfortable interacting with patients in multiple formats including telemedicine. They also mention interdisciplinary coordination skills implied by leadership roles.",
+            "reasoning": "The candidate was medical director for digital medicine at a biotechnology firm and led clinical trials incorporating virtual visits, wearable sensors, and digital health technologies, which implies strong comfort with telemedicine consultations and related interdisciplinary coordination.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "top_us_md_degree",
-            "reasoning": "Candidate earned an MD from Stanford University School of Medicine, which is widely recognized as a top U.S. medical school.",
+            "reasoning": "The candidate holds an MD from the University of California, San Diego School of Medicine, which is recognized as a top U.S. medical school.",
             "passes": true
           },
           {
             "criteria_name": "two_plus_years_clinical",
-            "reasoning": "Candidate has over 11 years of outpatient primary care experience and 4 years of telemedicine, satisfying the requirement for 2+ years clinical practice.",
+            "reasoning": "The candidate has over two decades of primary care clinical practice experience.",
             "passes": true
           },
           {
             "criteria_name": "general_practitioner_experience",
-            "reasoning": "Candidate's experience is described as Internal Medicine Physician with outpatient primary care focus; in the U.S., primary care physicians typically serve the role of general practitioners. Additionally, board membership at a primary care group supports this role.",
+            "reasoning": "The candidate has practiced primary care and was a senior physician partner in a busy general pediatric practice, demonstrating experience consistent with general practitioner responsibilities.",
             "passes": true
           }
         ],
         "final_score": 90.0,
         "raw_data": {
-          "_id": "6795e04e73bf14921fb2f5e6",
-          "name": "M. Carmen Hernandez-Zhang",
-          "linkedinId": "m-carmen-hernandez-zhang-341b1ba8"
+          "_id": "6796ef723eff0c142a8c40db",
+          "name": "Yan Chow",
+          "linkedinId": "yanchow"
         }
       },
       {
@@ -165,198 +165,120 @@
         }
       },
       {
-        "candidate_name": "Aria Arrizabalaga",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/aria-arrizabalaga-a3a75312",
+        "candidate_name": "M. Carmen Hernandez-Zhang",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/m-carmen-hernandez-zhang-341b1ba8",
         "soft_scores": [
           {
             "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "Candidate has experience at Washington State University Health and Wellness Services and Community Health Network, indicating familiarity with EHR systems and managing patient care in outpatient/family medicine settings.",
-            "score": 8.0
+            "reasoning": "Candidate explicitly states experience updating charts and information into EPIC and other EMRs, demonstrating familiarity with EHR systems in outpatient primary care settings. Additionally, their speed typing and tech-savviness support strong EHR management skills.",
+            "score": 9.0
           },
           {
             "criteria_name": "telemedicine_comfort",
-            "reasoning": "Candidate has used telemedicine primary care since 2020 and is seeking a telemedicine position, indicating strong comfort and experience with telemedicine consultations and coordination.",
+            "reasoning": "Candidate has 4 years of experience in telemedicine, enjoys communicating via Telemedicine, and is comfortable interacting with patients in multiple formats including telemedicine. They also mention interdisciplinary coordination skills implied by leadership roles.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "top_us_md_degree",
-            "reasoning": "Candidate obtained MD from Harvard Medical School, which is a top U.S. medical school.",
+            "reasoning": "Candidate earned an MD from Stanford University School of Medicine, which is widely recognized as a top U.S. medical school.",
             "passes": true
           },
           {
             "criteria_name": "two_plus_years_clinical",
-            "reasoning": "Experience includes roles at Community Health Network and Washington State University since at least 2020 with clinical duties described, indicating more than two years of U.S. clinical practice.",
+            "reasoning": "Candidate has over 11 years of outpatient primary care experience and 4 years of telemedicine, satisfying the requirement for 2+ years clinical practice.",
             "passes": true
           },
           {
             "criteria_name": "general_practitioner_experience",
-            "reasoning": "Candidate is a Family Practice Physician working in outpatient primary care and chronic disease management, consistent with general practitioner experience.",
+            "reasoning": "Candidate's experience is described as Internal Medicine Physician with outpatient primary care focus; in the U.S., primary care physicians typically serve the role of general practitioners. Additionally, board membership at a primary care group supports this role.",
             "passes": true
           }
         ],
-        "final_score": 85.00000000000001,
+        "final_score": 90.0,
         "raw_data": {
-          "_id": "6794b3ed0db3e7925671b289",
-          "name": "Aria Arrizabalaga",
-          "linkedinId": "aria-arrizabalaga-a3a75312"
+          "_id": "6795e04e73bf14921fb2f5e6",
+          "name": "M. Carmen Hernandez-Zhang",
+          "linkedinId": "m-carmen-hernandez-zhang-341b1ba8"
         }
       },
       {
-        "candidate_name": "Suzanne Sims",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/suzanne-sims-29a87712",
+        "candidate_name": "Aaron Babb",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/draaronsd",
         "soft_scores": [
           {
             "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "Candidate has substantial experience leading medical groups at large health centers, including roles that likely involved EMR implementation and quality assurance, indicating familiarity with EHR systems and managing patient care in outpatient settings.",
+            "reasoning": "The candidate has extensive experience as a general adult medicine physician with involvement in multiple clinical roles including urgent care and primary care clinics, indicating familiarity with EHR systems and managing varied patient volumes in outpatient settings.",
             "score": 8.0
           },
           {
             "criteria_name": "telemedicine_comfort",
-            "reasoning": "Candidate explicitly mentions considerable experience with telehealth visits inter- and intrastate in primary care and subspecialty visits, demonstrating strong comfort and expertise in telemedicine consultations and patient triage.",
+            "reasoning": "The candidate is the Director of Telemedicine and leads the Digital Medicine program, demonstrating strong comfort and leadership in telemedicine consultations and coordination.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "top_us_md_degree",
-            "reasoning": "The candidate holds an MD degree from Harvard Medical School, which is a top U.S. medical school.",
+            "reasoning": "The candidate holds an MD from Georgetown University School of Medicine, which is considered a top U.S. medical school.",
             "passes": true
           },
           {
             "criteria_name": "two_plus_years_clinical",
-            "reasoning": "Multiple clinical roles over several years including residency at Stanford University Medical Center and positions at major healthcare institutions indicate well over two years of clinical practice experience in the U.S.",
+            "reasoning": "The candidate has over 15 years of healthcare experience including clinical practice as a physician in various settings such as primary care clinics, urgent care, and hospital inpatient units.",
             "passes": true
           },
           {
             "criteria_name": "general_practitioner_experience",
-            "reasoning": "The candidate has experience as a general internist and primary care provider including concierge internal medicine and leading primary care practices, which aligns with general practitioner experience.",
+            "reasoning": "The candidate currently practices as a staff physician in adult general medicine and in primary care clinics, fulfilling the role of a general practitioner.",
             "passes": true
           }
         ],
         "final_score": 85.00000000000001,
         "raw_data": {
-          "_id": "6795fe083e76d5b5872d537e",
-          "name": "Suzanne Sims",
-          "linkedinId": "suzanne-sims-29a87712"
+          "_id": "6796aa810db3e79256840ddd",
+          "name": "Aaron Babb",
+          "linkedinId": "draaronsd"
         }
       },
       {
-        "candidate_name": "Traci French",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/traci-french-3aa818b4",
+        "candidate_name": "Christiana Jones",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/christianajonesmd",
         "soft_scores": [
           {
             "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "The candidate has extensive experience in family medicine and urgent care settings across multiple organizations including virtual care platforms, indicating familiarity with EHR systems and managing high patient volumes.",
+            "reasoning": "Candidate has nearly two decades of clinical experience including roles as Primary Care Physician and Urgent Care Physician, implying substantial experience with EHR systems and managing patient volumes in outpatient and family medicine settings.",
             "score": 8.0
           },
           {
             "criteria_name": "telemedicine_comfort",
-            "reasoning": "Multiple roles as telemedicine physician and national physician lead for virtual care services show strong comfort with telemedicine consultations, patient triage, and interdisciplinary coordination.",
+            "reasoning": "Candidate has direct experience as a Telehealth Physician at TimelyMD and Doctor On Demand, indicating strong comfort with telemedicine consultations and related coordination.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "top_us_md_degree",
-            "reasoning": "MD degree from Vanderbilt University School of Medicine, which is a highly ranked and recognized top U.S. medical school.",
+            "reasoning": "Candidate holds an MD from Harvard Medical School, which is widely recognized as a top U.S. medical school.",
             "passes": true
           },
           {
             "criteria_name": "two_plus_years_clinical",
-            "reasoning": "Candidate has multiple clinical roles over a long timeframe including family physician positions in various settings, clearly exceeding two years of U.S. clinical experience.",
+            "reasoning": "Candidate has nearly 20 years of hands-on clinical experience in the U.S.",
             "passes": true
           },
           {
             "criteria_name": "general_practitioner_experience",
-            "reasoning": "Extensive experience as family physician and general practitioner in multiple health systems and virtual care contexts confirm experience as a GP.",
+            "reasoning": "Candidate worked as a Primary Care Physician and family physician, roles consistent with general practitioner experience.",
             "passes": true
           }
         ],
         "final_score": 85.00000000000001,
         "raw_data": {
-          "_id": "67958d8a7e0084c5fa765d72",
-          "name": "Traci French",
-          "linkedinId": "traci-french-3aa818b4"
-        }
-      },
-      {
-        "candidate_name": "David Weissman",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/davideweissman",
-        "soft_scores": [
-          {
-            "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "The candidate has over 20 years' experience as a primary care physician working in outpatient settings and managing a concierge medical practice with same-day appointments and telehealth services, indicating familiarity with EHR systems and managing high patient volumes typically required in such practices.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "telemedicine_comfort",
-            "reasoning": "The candidate actively practices telehealth with Amwell Medical Group, providing video call consultations across nine states and coordinating care via telemedicine, demonstrating strong comfort with telemedicine consultations and interdisciplinary coordination.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "top_us_md_degree",
-            "reasoning": "The candidate holds an MD from University of Michigan Medical School, which is widely regarded as a top U.S. medical school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "two_plus_years_clinical",
-            "reasoning": "The candidate has over 20 years of clinical practice experience in Internal Medicine and primary care in the U.S., clearly exceeding the 2-year minimum requirement.",
-            "passes": true
-          },
-          {
-            "criteria_name": "general_practitioner_experience",
-            "reasoning": "Although the candidate's specialty is Internal Medicine, the practice described aligns with roles of a general practitioner providing primary care to adults in outpatient settings, including managing chronic care and wellness screenings; thus, meeting the general practitioner experience criterion.",
-            "passes": true
-          }
-        ],
-        "final_score": 85.00000000000001,
-        "raw_data": {
-          "_id": "67954f7df9f986ea7fb8de20",
-          "name": "David Weissman",
-          "linkedinId": "davideweissman"
-        }
-      },
-      {
-        "candidate_name": "Alison Kneisl",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/alison-kneisl-00835844",
-        "soft_scores": [
-          {
-            "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "Candidate has experience leading clinical quality improvements and implementing electronic health record systems during tenure at Muckleshoot Health and Wellness Center, and managing health information teams at Qliance, indicating good familiarity with EHR systems and managing outpatient clinical workflows.",
-            "score": 8.0
-          },
-          {
-            "criteria_name": "telemedicine_comfort",
-            "reasoning": "Candidate has extensive telemedicine experience as Physician and Medical Director at Carena/Avizia/American Well, treating patients via multiple virtual platforms and leading clinical innovation in virtual care. Also managed telemedicine programs at Qliance. Demonstrates strong comfort and skill in telemedicine consultations and interdisciplinary coordination.",
-            "score": 9.0
-          }
-        ],
-        "hard_scores": [
-          {
-            "criteria_name": "top_us_md_degree",
-            "reasoning": "Candidate earned MD from University of California, San Francisco, which is consistently ranked as a top-tier U.S. medical school.",
-            "passes": true
-          },
-          {
-            "criteria_name": "two_plus_years_clinical",
-            "reasoning": "Candidate has been practicing clinically in various roles since at least 2010 through present, totaling well over two years of clinical experience in the U.S.",
-            "passes": true
-          },
-          {
-            "criteria_name": "general_practitioner_experience",
-            "reasoning": "Candidate has multiple positions as Family Physician and Primary Care provider in outpatient and urgent care settings, which correspond to the role of a General Practitioner.",
-            "passes": true
-          }
-        ],
-        "final_score": 85.00000000000001,
-        "raw_data": {
-          "_id": "67966f623e76d5b587314aca",
-          "name": "Alison Kneisl",
-          "linkedinId": "alison-kneisl-00835844"
+          "_id": "67969ba08d90554e60760036",
+          "name": "Christiana Jones",
+          "linkedinId": "christianajonesmd"
         }
       },
       {
@@ -399,42 +321,120 @@
         }
       },
       {
-        "candidate_name": "Aaron Babb",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/draaronsd",
+        "candidate_name": "Alison Kneisl",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/alison-kneisl-00835844",
         "soft_scores": [
           {
             "criteria_name": "ehr_systems_familiarity",
-            "reasoning": "The candidate has extensive experience as a general adult medicine physician with involvement in multiple clinical roles including urgent care and primary care clinics, indicating familiarity with EHR systems and managing varied patient volumes in outpatient settings.",
+            "reasoning": "Candidate has experience leading clinical quality improvements and implementing electronic health record systems during tenure at Muckleshoot Health and Wellness Center, and managing health information teams at Qliance, indicating good familiarity with EHR systems and managing outpatient clinical workflows.",
             "score": 8.0
           },
           {
             "criteria_name": "telemedicine_comfort",
-            "reasoning": "The candidate is the Director of Telemedicine and leads the Digital Medicine program, demonstrating strong comfort and leadership in telemedicine consultations and coordination.",
+            "reasoning": "Candidate has extensive telemedicine experience as Physician and Medical Director at Carena/Avizia/American Well, treating patients via multiple virtual platforms and leading clinical innovation in virtual care. Also managed telemedicine programs at Qliance. Demonstrates strong comfort and skill in telemedicine consultations and interdisciplinary coordination.",
             "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "top_us_md_degree",
-            "reasoning": "The candidate holds an MD from Georgetown University School of Medicine, which is considered a top U.S. medical school.",
+            "reasoning": "Candidate earned MD from University of California, San Francisco, which is consistently ranked as a top-tier U.S. medical school.",
             "passes": true
           },
           {
             "criteria_name": "two_plus_years_clinical",
-            "reasoning": "The candidate has over 15 years of healthcare experience including clinical practice as a physician in various settings such as primary care clinics, urgent care, and hospital inpatient units.",
+            "reasoning": "Candidate has been practicing clinically in various roles since at least 2010 through present, totaling well over two years of clinical experience in the U.S.",
             "passes": true
           },
           {
             "criteria_name": "general_practitioner_experience",
-            "reasoning": "The candidate currently practices as a staff physician in adult general medicine and in primary care clinics, fulfilling the role of a general practitioner.",
+            "reasoning": "Candidate has multiple positions as Family Physician and Primary Care provider in outpatient and urgent care settings, which correspond to the role of a General Practitioner.",
             "passes": true
           }
         ],
         "final_score": 85.00000000000001,
         "raw_data": {
-          "_id": "6796aa810db3e79256840ddd",
-          "name": "Aaron Babb",
-          "linkedinId": "draaronsd"
+          "_id": "67966f623e76d5b587314aca",
+          "name": "Alison Kneisl",
+          "linkedinId": "alison-kneisl-00835844"
+        }
+      },
+      {
+        "candidate_name": "David Popiel",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/david-popiel-5463848b",
+        "soft_scores": [
+          {
+            "criteria_name": "ehr_systems_familiarity",
+            "reasoning": "Candidate has extensive experience in outpatient and primary care settings, including leadership roles focusing on clinician enablement and quality improvement, implying familiarity with EHR systems and managing patient volumes.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "telemedicine_comfort",
+            "reasoning": "Candidate is currently CMO at Forward, an organization focused on preventive healthcare augmented by AI and remote/self-service approaches, implying strong involvement and comfort with telemedicine and related patient care coordination.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "top_us_md_degree",
+            "reasoning": "Candidate earned an MD from Columbia University College of Physicians & Surgeons, a top U.S. medical school.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_clinical",
+            "reasoning": "Candidate has multiple years of clinical practice post-residency, including roles at George Washington University and Forward, clearly exceeding two years.",
+            "passes": true
+          },
+          {
+            "criteria_name": "general_practitioner_experience",
+            "reasoning": "Candidate has experience as a general internist and primary care physician providing full scope outpatient care, qualifying as general practitioner experience.",
+            "passes": true
+          }
+        ],
+        "final_score": 85.00000000000001,
+        "raw_data": {
+          "_id": "67965c00f9f986ea7fc28d0e",
+          "name": "David Popiel",
+          "linkedinId": "david-popiel-5463848b"
+        }
+      },
+      {
+        "candidate_name": "Garrett Chinn",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/garrettchinn",
+        "soft_scores": [
+          {
+            "criteria_name": "ehr_systems_familiarity",
+            "reasoning": "Candidate has extensive experience in outpatient and primary care settings including roles at Apple Wellness Center and The Permanente Medical Group, indicating familiarity with EHR systems and managing patient volumes in general medicine settings.",
+            "score": 8.0
+          },
+          {
+            "criteria_name": "telemedicine_comfort",
+            "reasoning": "Candidate is co-investigator in telemedicine and point-of-care virtual radiology clinical research at multiple institutions and leads telemedicine initiatives, showing high comfort and expertise with telemedicine consultations and interdisciplinary coordination.",
+            "score": 9.0
+          }
+        ],
+        "hard_scores": [
+          {
+            "criteria_name": "top_us_md_degree",
+            "reasoning": "MD degree from Georgetown University, which is recognized as a reputable U.S. medical school though not typically ranked among the very top (e.g., Ivy League or top 10). Reasonable to consider pass as it is a strong U.S. MD program.",
+            "passes": true
+          },
+          {
+            "criteria_name": "two_plus_years_clinical",
+            "reasoning": "Candidate has multiple years of documented experience in clinical practice roles since residency and currently working at AC Wellness and previously at Kaiser Permanente and Mass General Hospital, clearly exceeding two years in clinical practice.",
+            "passes": true
+          },
+          {
+            "criteria_name": "general_practitioner_experience",
+            "reasoning": "While titled as Internal Medicine Physician, candidate\u2019s roles include general medicine physician, primary care physician, and practicing general medicine, effectively functioning as a General Practitioner in outpatient settings, fulfilling general practitioner experience.",
+            "passes": true
+          }
+        ],
+        "final_score": 85.00000000000001,
+        "raw_data": {
+          "_id": "67964afc7e0084c5fa7cd9d5",
+          "name": "Garrett Chinn",
+          "linkedinId": "garrettchinn"
         }
       }
     ]

@@ -4,14 +4,14 @@
   "object_ids": [
     "679646e88a14699f160dc134",
     "6795579c3eff0c142a7dd268",
-    "6795ac4cf9f986ea7fbc3ab5",
-    "67962bcf0db3e792567f8871",
-    "6794a5ee8a14699f16ff6de6",
-    "6794982652a365d116784ed4",
-    "679656383eff0c142a86deab",
     "6796b76d7e0084c5fa81562b",
+    "67962bcf0db3e792567f8871",
     "6795dc9b52a365d116847d43",
-    "67958ebcf9f986ea7fbb3619"
+    "6795ac4cf9f986ea7fbc3ab5",
+    "67958ebcf9f986ea7fbb3619",
+    "6794a5ee8a14699f16ff6de6",
+    "679656383eff0c142a86deab",
+    "6794982652a365d116784ed4"
   ],
   "eval_result": {
     "config_name": "junior_corporate_lawyer",
@@ -126,42 +126,42 @@
         }
       },
       {
-        "candidate_name": "Mariachiara Farina",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/mariachiara-farina-a0bba311",
+        "candidate_name": "Minglei Wu",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/mingleiwu",
         "soft_scores": [
           {
             "criteria_name": "ma_transaction_experience",
-            "reasoning": "The candidate has extensive experience supporting M&A transactions, including due diligence, drafting share purchase agreements, shareholders agreements, and coordinating multi-jurisdictional extraordinary corporate transactions, indicating strong experience in M&A support.",
+            "reasoning": "The candidate has substantial experience supporting M&A transactions, including due diligence and preparation of sale and purchase agreements (SPAs). She has worked on various corporate transactions and coordinated M&A due diligence at McDonald Hopkins and other law firms.",
             "score": 9.0
           },
           {
             "criteria_name": "contract_negotiation_skills",
-            "reasoning": "The candidate frequently drafts and negotiates various agreements including NDAs, SPAs, shareholder agreements, engagement letters, and loan agreements, demonstrating excellent contract negotiation skills.",
+            "reasoning": "Minglei has extensive experience drafting and negotiating legal contracts and commercial agreements, including joint venture agreements, shareholder agreements, master partnership agreements, licensing and merchandising agreements, and more, across multiple jurisdictions.",
             "score": 9.0
           },
           {
             "criteria_name": "international_law_familiarity",
-            "reasoning": "The candidate advises on cross-border transactions and multi-jurisdictional business deals, monitors legal and regulatory developments at national and EU levels, and consults on regulatory compliance such as BHCA, DPA, CFIUS, indicating strong familiarity with international business law and regulatory requirements.",
-            "score": 9.0
+            "reasoning": "The candidate demonstrates strong familiarity with international business law and regulatory compliance across jurisdictions (China, U.S., Europe, UK), advising on foreign direct investment, international trade, cross-border transactions, and bankruptcy procedures under Chapter 15.",
+            "score": 10.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "appropriate_experience_level",
-            "reasoning": "Candidate has experience as Senior Lawyer at Intesa Sanpaolo, a major global banking institution, with legal expertise in corporate law, M&A, and cross-border transactions, indicating experience at a major global organization; however, specific years of experience in corporate law at a leading top-tier international law firm is not explicitly stated. Given her advanced role and diverse experience since apprenticeship, it is reasonable to infer at least 2-4 years of relevant experience.",
+            "reasoning": "The candidate has nearly 10 years of legal experience including roles at well-known international law firms and as in-house counsel; however, her primary focus has been on business restructuring, insolvency, and cross-border transactions rather than exclusively on corporate law in top-tier law firms. The experience is more senior and broad than the 2-4 years targeted, but it is relevant and at leading firms or major organizations.",
             "passes": true
           },
           {
             "criteria_name": "reputed_law_school",
-            "reasoning": "Candidate graduated with a Master's degree in Law from Scuola Superiore 'Sant' Anna' di Studi Universitari e di Perfezionamento and also holds a Bachelor's in Law from Universit\u00e0 Degli Studi Di Pisa, both reputable European institutions.",
+            "reasoning": "The candidate earned her JD from Northwestern University Pritzker School of Law, which is a highly reputed law school in the USA.",
             "passes": true
           }
         ],
-        "final_score": 90.0,
+        "final_score": 93.33333333333333,
         "raw_data": {
-          "_id": "6795ac4cf9f986ea7fbc3ab5",
-          "name": "Mariachiara Farina",
-          "linkedinId": "mariachiara-farina-a0bba311"
+          "_id": "6796b76d7e0084c5fa81562b",
+          "name": "Minglei Wu",
+          "linkedinId": "mingleiwu"
         }
       },
       {
@@ -204,81 +204,81 @@
         }
       },
       {
-        "candidate_name": "Laura Silverstein Colban",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/laura-silverstein-colban-7ba0614",
+        "candidate_name": "\ud83d\udeeb  Stephan Grynwajc   \ud83d\udeec",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/stephangrynwajc",
         "soft_scores": [
           {
             "criteria_name": "ma_transaction_experience",
-            "reasoning": "The candidate has extensive experience with mergers and acquisitions, including assisting in founding companies, negotiating acquisitions and sales, and assisting corporations in connection with mergers and acquisitions. She participated in over 100 strategic alliances including M&A deals.",
-            "score": 9.0
+            "reasoning": "Candidate has relevant experience supporting M&A activities, including managing corporate subsidiary databases and assisting with legal support on M&A related activity during his tenure at Schlumberger and Intel. He has also been involved in corporate integration and merger documentation at Intel and Altiris. This indicates strong M&A transaction experience.",
+            "score": 8.0
           },
           {
             "criteria_name": "contract_negotiation_skills",
-            "reasoning": "The candidate has demonstrated strong skills in negotiating various contracts including strategic partnerships, licensing, marketing, distribution agreements, construction contracts, and joint ventures. She supervised outside legal counsel and drafted numerous documents.",
+            "reasoning": "The candidate extensively drafted and negotiated a wide variety of contracts and commercial agreements during roles at Schlumberger, Intel, Symantec, Altiris, and his own firm. This includes sales, licensing, service, IP, software, and technology agreements. He also trained clients on contract negotiation.",
             "score": 9.0
           },
           {
             "criteria_name": "international_law_familiarity",
-            "reasoning": "The candidate worked and lived for over 10 years in multiple countries in Europe and Asia, has experience with cross-border transactions involving multiple countries, and advised on various international corporate, financial, and regulatory matters. She also worked at top-tier international firms.",
-            "score": 9.0
+            "reasoning": "Candidate has significant international legal experience across multiple jurisdictions including EU, UK, US, and Canada. He advised companies on cross-border transactions, privacy laws, regulations, and has a multi-jurisdictional corporate and regulatory compliance background spanning multiple continents.",
+            "score": 10.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "appropriate_experience_level",
-            "reasoning": "The candidate has several years of experience as a corporate lawyer, including time at top-tier law firms such as White & Case and European firms, with roles involving corporate law and M&A support. However, the overall timeline suggests well beyond 4 years of experience, so experience level is clearly met or exceeded.",
+            "reasoning": "Candidate has over 15 years of broad legal experience including senior roles at major corporations and leadership of his own international legal firm, clearly exceeding the minimum 2-4 years requirement in corporate law at top-tier firms and major global organizations.",
             "passes": true
           },
           {
             "criteria_name": "reputed_law_school",
-            "reasoning": "She is a graduate of New York University School of Law, which is a reputed and leading law school in the USA.",
+            "reasoning": "Candidate holds an LL.M. from New York University School of Law, a highly reputed law school in the USA, fulfilling the requirement.",
             "passes": true
           }
         ],
         "final_score": 90.0,
         "raw_data": {
-          "_id": "6794a5ee8a14699f16ff6de6",
-          "name": "Laura Silverstein Colban",
-          "linkedinId": "laura-silverstein-colban-7ba0614"
+          "_id": "6795dc9b52a365d116847d43",
+          "name": "\ud83d\udeeb  Stephan Grynwajc   \ud83d\udeec",
+          "linkedinId": "stephangrynwajc"
         }
       },
       {
-        "candidate_name": "Joyce E. Koh",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/joycekohllc",
+        "candidate_name": "Mariachiara Farina",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/mariachiara-farina-a0bba311",
         "soft_scores": [
           {
             "criteria_name": "ma_transaction_experience",
-            "reasoning": "Candidate has extensive experience in mergers and acquisitions, deal structuring, drafting and negotiating transactions of various complexity and size. Experience as associate in Morgan Lewis & Bockius LLP with acquisition finance and M&A related work confirms relevant expertise.",
+            "reasoning": "The candidate has extensive experience supporting M&A transactions, including due diligence, drafting share purchase agreements, shareholders agreements, and coordinating multi-jurisdictional extraordinary corporate transactions, indicating strong experience in M&A support.",
             "score": 9.0
           },
           {
             "criteria_name": "contract_negotiation_skills",
-            "reasoning": "Demonstrated broad drafting and negotiation skills across various complex finance and corporate contracts including credit agreements, loan agreements, securitization documentation, and contract amendments indicating strong negotiation capabilities.",
+            "reasoning": "The candidate frequently drafts and negotiates various agreements including NDAs, SPAs, shareholder agreements, engagement letters, and loan agreements, demonstrating excellent contract negotiation skills.",
             "score": 9.0
           },
           {
             "criteria_name": "international_law_familiarity",
-            "reasoning": "Experience mentions cross-border transactions, foreign derivatives activities, and navigating complex legal/business issues including compliance at multinational companies, suggesting good familiarity with international business law and regulatory compliance across jurisdictions.",
-            "score": 8.0
+            "reasoning": "The candidate advises on cross-border transactions and multi-jurisdictional business deals, monitors legal and regulatory developments at national and EU levels, and consults on regulatory compliance such as BHCA, DPA, CFIUS, indicating strong familiarity with international business law and regulatory requirements.",
+            "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "appropriate_experience_level",
-            "reasoning": "Candidate has held associate roles at large law firms including Morgan Lewis & Bockius LLP, and senior counsel positions in major organizations with significant corporate and finance legal experience, clearly exceeding 2-4 years requirement.",
+            "reasoning": "Candidate has experience as Senior Lawyer at Intesa Sanpaolo, a major global banking institution, with legal expertise in corporate law, M&A, and cross-border transactions, indicating experience at a major global organization; however, specific years of experience in corporate law at a leading top-tier international law firm is not explicitly stated. Given her advanced role and diverse experience since apprenticeship, it is reasonable to infer at least 2-4 years of relevant experience.",
             "passes": true
           },
           {
             "criteria_name": "reputed_law_school",
-            "reasoning": "Candidate graduated from Temple University - James E. Beasley School Of Law, a well-known and established law school in the USA.",
+            "reasoning": "Candidate graduated with a Master's degree in Law from Scuola Superiore 'Sant' Anna' di Studi Universitari e di Perfezionamento and also holds a Bachelor's in Law from Universit\u00e0 Degli Studi Di Pisa, both reputable European institutions.",
             "passes": true
           }
         ],
-        "final_score": 86.66666666666667,
+        "final_score": 90.0,
         "raw_data": {
-          "_id": "6794982652a365d116784ed4",
-          "name": "Joyce E. Koh",
-          "linkedinId": "joycekohllc"
+          "_id": "6795ac4cf9f986ea7fbc3ab5",
+          "name": "Mariachiara Farina",
+          "linkedinId": "mariachiara-farina-a0bba311"
         }
       },
       {
@@ -321,42 +321,42 @@
         }
       },
       {
-        "candidate_name": "\ud83d\udeeb  Stephan Grynwajc   \ud83d\udeec",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/stephangrynwajc",
+        "candidate_name": "Laura Silverstein Colban",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/laura-silverstein-colban-7ba0614",
         "soft_scores": [
           {
             "criteria_name": "ma_transaction_experience",
-            "reasoning": "Candidate has relevant experience supporting M&A activities, including managing corporate subsidiary databases and assisting with legal support on M&A related activity during his tenure at Schlumberger and Intel. He has also been involved in corporate integration and merger documentation at Intel and Altiris. This indicates strong M&A transaction experience.",
-            "score": 8.0
+            "reasoning": "The candidate has extensive experience with mergers and acquisitions, including assisting in founding companies, negotiating acquisitions and sales, and assisting corporations in connection with mergers and acquisitions. She participated in over 100 strategic alliances including M&A deals.",
+            "score": 9.0
           },
           {
             "criteria_name": "contract_negotiation_skills",
-            "reasoning": "The candidate extensively drafted and negotiated a wide variety of contracts and commercial agreements during roles at Schlumberger, Intel, Symantec, Altiris, and his own firm. This includes sales, licensing, service, IP, software, and technology agreements. He also trained clients on contract negotiation.",
+            "reasoning": "The candidate has demonstrated strong skills in negotiating various contracts including strategic partnerships, licensing, marketing, distribution agreements, construction contracts, and joint ventures. She supervised outside legal counsel and drafted numerous documents.",
             "score": 9.0
           },
           {
             "criteria_name": "international_law_familiarity",
-            "reasoning": "Candidate has significant international legal experience across multiple jurisdictions including EU, UK, US, and Canada. He advised companies on cross-border transactions, privacy laws, regulations, and has a multi-jurisdictional corporate and regulatory compliance background spanning multiple continents.",
-            "score": 10.0
+            "reasoning": "The candidate worked and lived for over 10 years in multiple countries in Europe and Asia, has experience with cross-border transactions involving multiple countries, and advised on various international corporate, financial, and regulatory matters. She also worked at top-tier international firms.",
+            "score": 9.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "appropriate_experience_level",
-            "reasoning": "Candidate has over 15 years of broad legal experience including senior roles at major corporations and leadership of his own international legal firm, clearly exceeding the minimum 2-4 years requirement in corporate law at top-tier firms and major global organizations.",
+            "reasoning": "The candidate has several years of experience as a corporate lawyer, including time at top-tier law firms such as White & Case and European firms, with roles involving corporate law and M&A support. However, the overall timeline suggests well beyond 4 years of experience, so experience level is clearly met or exceeded.",
             "passes": true
           },
           {
             "criteria_name": "reputed_law_school",
-            "reasoning": "Candidate holds an LL.M. from New York University School of Law, a highly reputed law school in the USA, fulfilling the requirement.",
+            "reasoning": "She is a graduate of New York University School of Law, which is a reputed and leading law school in the USA.",
             "passes": true
           }
         ],
         "final_score": 90.0,
         "raw_data": {
-          "_id": "6795dc9b52a365d116847d43",
-          "name": "\ud83d\udeeb  Stephan Grynwajc   \ud83d\udeec",
-          "linkedinId": "stephangrynwajc"
+          "_id": "6794a5ee8a14699f16ff6de6",
+          "name": "Laura Silverstein Colban",
+          "linkedinId": "laura-silverstein-colban-7ba0614"
         }
       },
       {
@@ -399,42 +399,42 @@
         }
       },
       {
-        "candidate_name": "Minglei Wu",
-        "candidate_linkedin_url": "https://www.linkedin.com/in/mingleiwu",
+        "candidate_name": "Joyce E. Koh",
+        "candidate_linkedin_url": "https://www.linkedin.com/in/joycekohllc",
         "soft_scores": [
           {
             "criteria_name": "ma_transaction_experience",
-            "reasoning": "The candidate has substantial experience supporting M&A transactions, including due diligence and preparation of sale and purchase agreements (SPAs). She has worked on various corporate transactions and coordinated M&A due diligence at McDonald Hopkins and other law firms.",
+            "reasoning": "Candidate has extensive experience in mergers and acquisitions, deal structuring, drafting and negotiating transactions of various complexity and size. Experience as associate in Morgan Lewis & Bockius LLP with acquisition finance and M&A related work confirms relevant expertise.",
             "score": 9.0
           },
           {
             "criteria_name": "contract_negotiation_skills",
-            "reasoning": "Minglei has extensive experience drafting and negotiating legal contracts and commercial agreements, including joint venture agreements, shareholder agreements, master partnership agreements, licensing and merchandising agreements, and more, across multiple jurisdictions.",
+            "reasoning": "Demonstrated broad drafting and negotiation skills across various complex finance and corporate contracts including credit agreements, loan agreements, securitization documentation, and contract amendments indicating strong negotiation capabilities.",
             "score": 9.0
           },
           {
             "criteria_name": "international_law_familiarity",
-            "reasoning": "The candidate demonstrates strong familiarity with international business law and regulatory compliance across jurisdictions (China, U.S., Europe, UK), advising on foreign direct investment, international trade, cross-border transactions, and bankruptcy procedures under Chapter 15.",
-            "score": 10.0
+            "reasoning": "Experience mentions cross-border transactions, foreign derivatives activities, and navigating complex legal/business issues including compliance at multinational companies, suggesting good familiarity with international business law and regulatory compliance across jurisdictions.",
+            "score": 8.0
           }
         ],
         "hard_scores": [
           {
             "criteria_name": "appropriate_experience_level",
-            "reasoning": "The candidate has nearly 10 years of legal experience including roles at well-known international law firms and as in-house counsel; however, her primary focus has been on business restructuring, insolvency, and cross-border transactions rather than exclusively on corporate law in top-tier law firms. The experience is more senior and broad than the 2-4 years targeted, but it is relevant and at leading firms or major organizations.",
+            "reasoning": "Candidate has held associate roles at large law firms including Morgan Lewis & Bockius LLP, and senior counsel positions in major organizations with significant corporate and finance legal experience, clearly exceeding 2-4 years requirement.",
             "passes": true
           },
           {
             "criteria_name": "reputed_law_school",
-            "reasoning": "The candidate earned her JD from Northwestern University Pritzker School of Law, which is a highly reputed law school in the USA.",
+            "reasoning": "Candidate graduated from Temple University - James E. Beasley School Of Law, a well-known and established law school in the USA.",
             "passes": true
           }
         ],
-        "final_score": 93.33333333333333,
+        "final_score": 86.66666666666667,
         "raw_data": {
-          "_id": "6796b76d7e0084c5fa81562b",
-          "name": "Minglei Wu",
-          "linkedinId": "mingleiwu"
+          "_id": "6794982652a365d116784ed4",
+          "name": "Joyce E. Koh",
+          "linkedinId": "joycekohllc"
         }
       }
     ]

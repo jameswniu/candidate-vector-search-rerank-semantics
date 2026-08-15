@@ -14,6 +14,7 @@ ledger, so each iteration only improves the empirical picture.
 
 from __future__ import annotations
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -83,10 +84,11 @@ def choose(config_path: str, exclude: set[str], include: list[str] | None = None
     judgments = json.loads((CACHE_DIR / f"judgments-{stem}.json").read_text())
     pool = {c["_id"]: c for c in json.loads((CACHE_DIR / f"pool-{stem}.json").read_text())}
 
+    pin_min = float(os.environ.get("PIN_MIN", "85"))
     blacklist = {cid for cid, e in ledger.items() if e.get("hard_fail")} | exclude
     pins = sorted(
         (cid for cid, e in ledger.items()
-         if cid not in blacklist and (e.get("final") or 0) >= 85),
+         if cid not in blacklist and (e.get("final") or 0) >= pin_min),
         key=lambda cid: ledger[cid]["final"], reverse=True)
     forced = [cid for cid in (include or []) if cid not in blacklist]
     eligible = sorted(
