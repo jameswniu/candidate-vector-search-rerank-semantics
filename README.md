@@ -1,7 +1,7 @@
 # Candidate Search Pipeline
 
 ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)
-![License: MIT](https://img.shields.io/badge/license-MIT-green)
+![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)
 ![Voyage-3](https://img.shields.io/badge/embedding-Voyage--3-orange)
 ![GPT-4o-mini](https://img.shields.io/badge/reranker-GPT--4o--mini-green)
 ![Turbopuffer](https://img.shields.io/badge/vector%20DB-Turbopuffer-purple)
@@ -226,17 +226,17 @@ The LLM reranker is the bottleneck. Currently ~50-150 candidates are scored in s
 ## Project Structure
 
 ```
-grader-search/
-├── main.py              # Entry point: run all/single configs, submit results (runs 1-3 pipeline)
-├── pipeline.py          # 3-stage orchestration: embed, filter, rerank (runs 1-3)
+candidate-search-vector-rerank-semantics/
+├── main.py              # Entry point: run all/single configs, submit results
+├── pipeline.py          # 3-stage orchestration: embed, filter, rerank
 ├── embed.py             # Voyage-3 query embedding
 ├── tpuf_client.py       # Turbopuffer vector search client
-├── filters.py           # Per-config hard-criteria filters (runs 1-3)
-├── rerank.py            # GPT-4o-mini batch reranking (runs 1-3)
-├── pool.py              # Run 4: exhaustive structured scans + per-config candidate pools
-├── judge.py             # Run 4: judge-matched scoring rubric with per-config calibration
-├── selection.py         # Run 4: slate selection, submission, ledger reconciliation
-├── evaluate.py          # grader eval endpoint submission
+├── filters.py           # Per-config hard-criteria filters
+├── rerank.py            # GPT-4o-mini batch reranking
+├── pool.py              # Exhaustive structured scans + per-config candidate pools
+├── judge.py             # Judge-matched scoring rubric with per-config calibration
+├── selection.py         # Slate selection, submission, ledger reconciliation
+├── evaluate.py          # eval endpoint submission
 ├── configs/
 │   └── queries.json     # 10 role configurations
 ├── results/             # Per-config evaluation results (latest recorded run)
@@ -245,4 +245,4 @@ grader-search/
 
 ## License
 
-MIT
+Apache-2.0
