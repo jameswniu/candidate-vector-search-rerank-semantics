@@ -1,12 +1,34 @@
-# Candidate Search: Semantic Vector Retrieval and LLM Reranking
+<p align="center">
+  <img src="assets/hero.svg" alt="Semantic candidate search over 194K profiles: recall made exact by exhaustive scans, ranking made honest by a blind rubric-scored judge; recorded evals average 90.3 with every hard criterion passing" width="100%">
+</p>
 
-![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)
-![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)
-![Voyage-3](https://img.shields.io/badge/embedding-Voyage--3-orange)
-![GPT-4o-mini](https://img.shields.io/badge/reranker-GPT--4o--mini-green)
-![Turbopuffer](https://img.shields.io/badge/vector%20DB-Turbopuffer-purple)
+<div align="center">
 
-Candidate search and information-retrieval pipeline that matches people to role specifications with semantic vector retrieval, hard/soft relevance filtering, and LLM reranking. Given ~200K LinkedIn profiles in a Turbopuffer vector database (Voyage-3 embeddings), it returns the 10 best-fit candidates for each of 10 role configs (final: 90.3 avg, 8 of 10 configs at 90+, all 10 at 80+, 100% hard-criteria pass). Each config has hard criteria (must-have) and soft criteria (nice-to-have), scored by an evaluation endpoint on hard pass rate and soft relevance (0-10).
+<b><font size="6">Semantic Candidate Vector Search</font></b>
+
+<br/>
+
+<img alt="golden repo" src="https://img.shields.io/badge/%E2%98%85-golden_repo-d4a017?style=flat-square&labelColor=0c1013">
+<img alt="python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-dfe3e0?style=flat-square&labelColor=0c1013">
+<img alt="embedding Voyage-3" src="https://img.shields.io/badge/embedding-Voyage--3-8f9491?style=flat-square&labelColor=0c1013">
+<img alt="reranker GPT-4o-mini" src="https://img.shields.io/badge/reranker-GPT--4o--mini-8f9491?style=flat-square&labelColor=0c1013">
+<img alt="vector DB Turbopuffer" src="https://img.shields.io/badge/vector_DB-Turbopuffer-8f9491?style=flat-square&labelColor=0c1013">
+<img alt="recorded evals 90.3 avg over 10 configs" src="https://img.shields.io/badge/recorded_evals-90.3_avg_10_configs-8f9491?style=flat-square&labelColor=0c1013">
+<img alt="license Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-8f9491?style=flat-square&labelColor=0c1013">
+
+<br/><br/>
+
+<strong>Ten hiring searches over ~194K profiles, scored by a live judge.</strong><br/>
+Vector similarity finds the plausible; exhaustive structured scans make the<br/>
+qualified population exact; a blind rubric-scored judge verifies who actually fits.
+
+<br/>
+
+<code>retrieve -> filter -> rerank -> verify</code>
+
+</div>
+
+---
 
 ## The Problem
 
@@ -20,6 +42,13 @@ You have a vector database of candidate profiles and a role spec with both hard 
 
 ## Architecture
 
+<p align="center">
+  <img src="assets/pipeline.svg" alt="Pipeline: exhaustive Turbopuffer scans and Voyage-3 vectors generate candidates, hard-criteria filters make the qualified population exact, GPT-4o-mini reranks on hard and soft criteria, and a blind rubric-scored judge verifies every candidate before the slate is recorded against the live endpoint" width="100%">
+</p>
+
+<details>
+<summary>Graph source, for agents and tooling</summary>
+
 ```mermaid
 flowchart TD
     Q["Role Spec"] --> EMB["Voyage-3 Embed"]
@@ -29,6 +58,8 @@ flowchart TD
     PF --> LLM["GPT-4o-mini Rerank · hard + soft"]
     LLM --> TOP["Top 10"]
 ```
+
+</details>
 
 **Stage details:**
 
@@ -177,6 +208,10 @@ Run 4 left two configs short, Doctors at 88.0 and Anthropology at 77.2, and a cl
 | Doctors (MD) | 36.5 | 88.0 | **89.5** | 100% |
 | Anthropology | 20.3 | 77.2 | **85.0** | 100% |
 | **Average** | **66.6** | **89.4** | **90.3** | **100%** |
+
+<p align="center">
+  <img src="docs/figures/config_scores.svg" alt="Recorded eval scores for all ten role configs, derived from results/: eight of ten at 90 or above, all ten at 80 or above, every hard criterion passing at 100 percent" width="100%">
+</p>
 
 Overall clears 90 with every config at 80 or above, eight at 90 or above, and every hard criterion passing at 100%. The two configs that moved, Doctors and Anthropology, moved because their candidates pass a faithful, documented, blind-applied standard, not because the judge was read leniently. Where the calibrated standard and a raw live score disagree, the standard wins; that is why the pool's top raw-scorer in Anthropology, whose own profile states a completed 2022 PhD, is not in the submitted slate.
 

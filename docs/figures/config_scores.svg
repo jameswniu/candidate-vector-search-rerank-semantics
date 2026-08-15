@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" role="img" aria-label="Recorded eval scores for all ten role configs: eight of ten at 90 or above, all ten at 80 or above, every hard criterion passing at 100 percent" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
+<defs>
+  <linearGradient id="bgs" x1="0" y1="0" x2="0.75" y2="1">
+    <stop offset="0" stop-color="#12161c"/><stop offset="0.55" stop-color="#0c1013"/><stop offset="1" stop-color="#080a0d"/>
+  </linearGradient>
+  <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.7" fill="#161d26"/></pattern>
+  <linearGradient id="nds" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#19212b"/><stop offset="1" stop-color="#111820"/>
+  </linearGradient>
+  <linearGradient id="rls" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8a63d2" stop-opacity="0.95"/><stop offset="1" stop-color="#8a63d2" stop-opacity="0"/>
+  </linearGradient>
+  <marker id="ars" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5a6673"/></marker>
+  <marker id="args" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#199e70"/></marker>
+  <marker id="aros" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d95926"/></marker>
+  <marker id="arbs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#3987e5"/></marker>
+  <marker id="arvs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8a63d2"/></marker>
+</defs>
+<rect x="0" y="0" width="900" height="620" fill="url(#bgs)"/>
+<rect x="0" y="0" width="900" height="620" fill="url(#dots)"/>
+<text x="36" y="42" fill="#8a63d2" font-size="15" font-weight="700" letter-spacing="3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">RECORDED EVALS</text>
+<text x="36" y="78" fill="#f3f6f9" font-size="25" font-weight="700">Ten configs, one live-scored slate each</text>
+<rect x="36" y="92" width="130" height="2.5" fill="url(#rls)"/>
+<line x1="765" y1="122" x2="765" y2="536" stroke="#5c6773" stroke-width="1.2" stroke-dasharray="4 5"/>
+<text x="764.8" y="114" fill="#5c6773" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">90</text>
+<text x="258" y="154" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Radiology</text>
+<rect x="268" y="136" width="509.7" height="26" fill="#199e70" rx="3" fill-opacity="0.9"/>
+<text x="787.6800000000001" y="154" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">92.3</text>
+<text x="258" y="194" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Mechanical Engineers</text>
+<rect x="268" y="176" width="507.8" height="26" fill="#199e70" rx="3" fill-opacity="0.9"/>
+<text x="785.8399999999999" y="194" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">92.0</text>
+<text x="258" y="234" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Tax Lawyer</text>
+<rect x="268" y="216" width="506.9" height="26" fill="#199e70" rx="3" fill-opacity="0.9"/>
+<text x="784.9200000000001" y="234" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">91.8</text>
+<text x="258" y="274" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Junior Corporate Lawyer</text>
+<rect x="268" y="256" width="504.2" height="26" fill="#199e70" rx="3" fill-opacity="0.9"/>
+<text x="782.1600000000001" y="274" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">91.3</text>
+<text x="258" y="314" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Biology Expert</text>
+<rect x="268" y="296" width="499.6" height="26" fill="#199e70" rx="3" fill-opacity="0.9"/>
+<text x="777.56" y="314" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">90.5</text>
+<text x="258" y="354" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Mathematics PhD</text>
+<rect x="268" y="336" width="499.6" height="26" fill="#199e70" rx="3" fill-opacity="0.9"/>
+<text x="777.56" y="354" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">90.5</text>
+<text x="258" y="394" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Bankers</text>
+<rect x="268" y="376" width="498.6" height="26" fill="#199e70" rx="3" fill-opacity="0.9"/>
+<text x="776.6400000000001" y="394" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">90.3</text>
+<text x="258" y="434" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Quantitative Finance</text>
+<rect x="268" y="416" width="497.7" height="26" fill="#199e70" rx="3" fill-opacity="0.9"/>
+<text x="775.7199999999999" y="434" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">90.2</text>
+<text x="258" y="474" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Doctors (MD)</text>
+<rect x="268" y="456" width="494.0" height="26" fill="#3987e5" rx="3" fill-opacity="0.9"/>
+<text x="772.04" y="474" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">89.5</text>
+<text x="258" y="514" fill="#9aa5b1" font-size="14" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Anthropology</text>
+<rect x="268" y="496" width="469.2" height="26" fill="#3987e5" rx="3" fill-opacity="0.9"/>
+<text x="747.2" y="514" fill="#f3f6f9" font-size="14" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">85.0</text>
+<text x="268" y="126" fill="#7d8896" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">final slate score per config, scored by the provided evaluation endpoint</text>
+<text x="36" y="566" fill="#7d8896" font-size="15" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">Each bar is one config's final ten-candidate slate, submitted live and recorded under results/. Eight of ten</text>
+<text x="36" y="588" fill="#7d8896" font-size="15" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">clear 90, all ten clear 80, and every hard criterion passes at 100% on every config.</text>
+</svg>
