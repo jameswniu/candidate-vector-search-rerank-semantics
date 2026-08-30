@@ -89,6 +89,12 @@ python main.py --no-submit                  # Run without submitting to eval end
 
 ## Results
 
+<p align="center">
+  <img src="docs/figures/run_progression.svg" alt="Average eval score across the five recorded runs, from 46.7 with strict filters and a soft-only reranker to 90.3 with exhaustive scans and a blind re-judge" width="100%">
+</p>
+
+Five runs, each named after the thing it fixed. The tables below carry the per-config receipts.
+
 ### Run 1: Vector + strict filter + soft-only LLM rerank (46.7 avg)
 
 | Config | **Run 1** | Hard Pass |
@@ -220,42 +226,17 @@ Overall clears 90 with every config at 80 or above, eight at 90 or above, and ev
 - **Recent PhD program** is read as a current or recently-completed doctoral researcher in anthropology, sociology, or economics: current enrollment (candidate, ABD, Nth-year, dissertating) or a PhD completed in 2023 or later passes; a PhD completed in 2022 or earlier with no current enrollment fails, as do adjacent fields (area studies, education, psychology) and non-doctoral profiles.
 - Both standards were frozen and then applied by a blind re-judge that never saw live scores. Under that re-judge the Doctors standard admitted sixteen of twenty top live-scorers, and the Anthropology standard rejected the single highest raw-scorer, the direction a faithful screen should err.
 
-## Key Decisions
+## The choices that held
 
-- **voyage-3 for query embedding.** Matches the corpus embedding model, ensuring vector space alignment.
-- **Vector retrieval before filtering.** Narrowing 200K to 200 via ANN is milliseconds. Filtering 200 in memory is instant. Reversing the order risks either too-broad or too-narrow filter results.
-- **GPT-4o-mini over GPT-4o.** 10x cheaper, sufficient accuracy for 0-10 relevance scoring.
-- **Relaxed filters + strict LLM.** Better to let borderline candidates through to the LLM than to filter them out with brittle string matching.
-- **Fallback to full set.** If filters return fewer than 15 candidates, skip filtering and let the LLM sort everything.
-- **Batched LLM reranking.** Candidates scored in batches of 5 to stay within context limits while providing enough comparison context for relative scoring.
+Voyage-3 embeds the query because it embedded the corpus; matching models is what makes the vector space comparable at all. Retrieval runs before filtering since narrowing 200K to 200 by ANN costs milliseconds and filtering 200 rows in memory is instant, while the reverse order makes every filter a recall gamble. GPT-4o-mini does the scoring at a tenth of GPT-4o's price, which is plenty of model for a 0 to 10 relevance read.
 
-## Reducing Reranker Latency
+The filter philosophy is deliberately lopsided: filters stay relaxed and the LLM stays strict, because a borderline candidate who reaches the reranker can still be judged, while one deleted by a brittle string match is gone. If fewer than 15 candidates survive filtering, the pipeline skips the filters entirely and lets the LLM sort the whole retrieval. Candidates are scored in batches of five, small enough for context limits, large enough that scores are relative rather than absolute.
 
-The LLM reranker is the bottleneck. Currently ~50-150 candidates are scored in sequential batches of 5 via GPT-4o-mini API calls. For 10 configs, this means 100-300 serial API calls with 500ms-2s latency each.
+## The bottleneck and the unbuilt
 
-**Immediate wins:**
-1. **Async API calls.** Use `openai.AsyncClient` with `asyncio.gather()` to fire all batches concurrently. Reduces wall-clock time from O(n) to O(1) relative to batch count. Largest single improvement.
-2. **Larger batch size.** Increase from 5 to 15-20 candidates per call. Cuts total API calls by 3-4x with minimal accuracy loss since GPT-4o-mini handles longer contexts well.
-3. **Cache query embeddings.** The Voyage-3 embed call is repeated per run. Cache the 1024-dim vector keyed by query text hash.
+The reranker is where the time goes: 50 to 150 candidates scored in sequential batches of five means 100 to 300 serial API calls per full run, each 500ms to 2s. The unglamorous fixes come first: fire the batches concurrently with an async client, widen batches to 15 or 20, and cache the query embedding instead of re-encoding it per run. Together those take the wall-clock from minutes to seconds without touching accuracy.
 
-**Architectural improvements:**
-
-4. **Two-tier reranking.** Use Voyage's rerank endpoint (`vo.rerank(query, docs, model="rerank-2.5")`) as a fast intermediate pass to sort 200 candidates down to 20. Only send those 20 to GPT-4o-mini for nuanced hard/soft criteria judgment. Cross-encoder reranker: ~100ms for 200 candidates vs. ~30s for LLM scoring.
-5. **Score only what matters.** Instead of sending full summaries (500+ chars), extract only the fields relevant to the config's criteria (degrees for academic roles, titles for professional roles). Reduces input tokens by 60-70%.
-6. **Pointwise scoring.** Score each candidate independently (one LLM call per candidate) instead of listwise comparison. Enables full parallelism and eliminates batch-size constraints.
-
-**At scale:**
-
-7. **Pre-compute candidate feature vectors.** Extract structured features (degree type, school tier, years of experience) into a scoring matrix. Hard criteria become boolean filters on this matrix, no LLM needed. LLM reranking reserved for soft criteria only.
-8. **Distill the reranker.** Fine-tune a small model (e.g., DeBERTa) on the LLM's scoring outputs to replace it for inference. Sub-10ms per candidate.
-
-## What I Would Do With More Time
-
-1. **Reciprocal Rank Fusion:** Combine vector ANN and BM25 results before filtering for better recall on exact keywords.
-2. **Voyage cross-encoder reranking:** Faster intermediate rerank between filters and LLM scoring.
-3. **Query expansion:** LLM-generated variant phrasings for multi-vector retrieval.
-4. **Increase top_k to 500:** Wider net for configs where the target population is small.
-5. **Generic filter-free pipeline:** Drop per-config filters and rely on enriched query embedding + LLM reranking for unseen role types.
+Past that sit the structural moves this repo describes but does not ship. A cross-encoder pass (Voyage rerank-2.5 sorts 200 candidates in about 100ms) would cut the LLM's workload to twenty finalists; sending only criteria-relevant fields instead of full summaries would drop input tokens by more than half; pointwise scoring would unlock full parallelism. At real scale the hard criteria stop needing an LLM at all, becoming boolean filters over pre-extracted features, and the soft-criteria scorer gets distilled into a small fine-tuned model. On the recall side, rank fusion with BM25, LLM query expansion, and a wider top_k for thin populations are the known nets not yet cast; a filter-free generic pipeline for unseen role types is the furthest one out.
 
 ## Project Structure
 

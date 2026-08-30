@@ -145,13 +145,65 @@ def scores(a):
     return s + "</svg>\n"
 
 
+
+# The first four averages are historical measurements: each is recorded in its run's README
+# table and in the commit that landed that run. Only the final average is re-derived live.
+RUN_HISTORY = [
+    ("Run 1", 46.7, "strict filters, soft-only rerank"),
+    ("Run 2", 52.1, "hard criteria handed to the LLM"),
+    ("Run 3", 66.6, "filters pushed into the database"),
+    ("Run 4", 89.4, "exhaustive scans, judge-matched scoring"),
+]
+
+
+def progression(a):
+    H = 400
+    final = a["overall"]
+    runs = RUN_HISTORY + [("Run 5", final, "wider search, blind re-verification")]
+    s = head(H, "p2", ("Average eval score across the five recorded runs, from 46.7 with strict filters and a "
+                       f"soft-only reranker to {final:.1f} with exhaustive scans and a blind re-judge"))
+    s += title_block("p2", "FIVE RUNS", "How the average earned each step")
+    x0, x1, y_lo, y_hi = 80, 856, 300, 128
+    lo, hi = 40.0, 95.0
+    ys = lambda v: y_lo - (v - lo) / (hi - lo) * (y_lo - y_hi)
+    step = (x1 - x0) / len(runs)
+    s += f'<line x1="{x0-8}" y1="{ys(90):.0f}" x2="{x1}" y2="{ys(90):.0f}" stroke="{FAINT}" stroke-width="1.2" stroke-dasharray="4 5"/>\n'
+    s += txt(x0 - 16, ys(90) + 5, "90", 13, FAINT, anchor="end")
+    prev = None
+    for i, (name, avg, note) in enumerate(runs):
+        bx0, bx1 = x0 + i * step + 14, x0 + (i + 1) * step - 14
+        y = ys(avg)
+        col = AQUA if avg >= 90 else (VIOLET if i >= 3 else BLUE)
+        if prev is not None:
+            s += f'<path d="M {bx0 - 28:.0f} {prev:.0f} H {bx0:.0f} V {y:.0f}" fill="none" stroke="{STROKE}" stroke-width="2"/>\n'
+        s += f'<line x1="{bx0:.0f}" y1="{y:.0f}" x2="{bx1:.0f}" y2="{y:.0f}" stroke="{col}" stroke-width="5"/>\n'
+        s += txt((bx0 + bx1) / 2, y - 14, f"{avg:.1f}", 17, INK, weight="700")
+        s += txt((bx0 + bx1) / 2, 330, name, 15, INK2, weight="700")
+        for j, chunk in enumerate(_wrap(note, 18)):
+            s += txt((bx0 + bx1) / 2, 352 + j * 18, chunk, 13, MUTE)
+        prev = y
+    return s + "</svg>\n"
+
+
+def _wrap(text, width):
+    words, lines, cur = text.split(), [], ""
+    for w in words:
+        if cur and len(cur) + 1 + len(w) > width:
+            lines.append(cur); cur = w
+        else:
+            cur = f"{cur} {w}".strip()
+    if cur:
+        lines.append(cur)
+    return lines
+
 if __name__ == "__main__":
     a = audit()
     os.makedirs(os.path.join(ROOT, "assets"), exist_ok=True)
     os.makedirs(os.path.join(ROOT, "docs", "figures"), exist_ok=True)
     for path, svg in [("assets/hero.svg", hero(a)),
                       ("assets/pipeline.svg", pipeline()),
-                      ("docs/figures/config_scores.svg", scores(a))]:
+                      ("docs/figures/config_scores.svg", scores(a)),
+                      ("docs/figures/run_progression.svg", progression(a))]:
         p = os.path.join(ROOT, path)
         open(p, "w").write(svg)
         print(f"  {path}  {os.path.getsize(p):,} bytes")

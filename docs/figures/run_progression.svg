@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-label="Average eval score across the five recorded runs, from 46.7 with strict filters and a soft-only reranker to 90.3 with exhaustive scans and a blind re-judge" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
+<defs>
+  <linearGradient id="bgp2" x1="0" y1="0" x2="0.75" y2="1">
+    <stop offset="0" stop-color="#12161c"/><stop offset="0.55" stop-color="#0c1013"/><stop offset="1" stop-color="#080a0d"/>
+  </linearGradient>
+  <pattern id="dotp2" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.7" fill="#161d26"/></pattern>
+  <linearGradient id="ndp2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#19212b"/><stop offset="1" stop-color="#111820"/>
+  </linearGradient>
+  <linearGradient id="rlp2" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8a63d2" stop-opacity="0.95"/><stop offset="1" stop-color="#8a63d2" stop-opacity="0"/>
+  </linearGradient>
+  <marker id="arp2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5a6673"/></marker>
+  <marker id="argp2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#199e70"/></marker>
+  <marker id="arop2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d95926"/></marker>
+  <marker id="arbp2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#3987e5"/></marker>
+  <marker id="arvp2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8a63d2"/></marker>
+</defs>
+<rect x="0" y="0" width="900" height="400" fill="url(#bgp2)"/>
+<rect x="0" y="0" width="900" height="400" fill="url(#dotp2)"/>
+<text x="36" y="42" fill="#8a63d2" font-size="15" font-weight="700" letter-spacing="3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">FIVE RUNS</text>
+<text x="36" y="78" fill="#f3f6f9" font-size="25" font-weight="700">How the average earned each step</text>
+<rect x="36" y="92" width="130" height="2.5" fill="url(#rlp2)"/>
+<line x1="72" y1="144" x2="856" y2="144" stroke="#5c6773" stroke-width="1.2" stroke-dasharray="4 5"/>
+<text x="64" y="148.63636363636365" fill="#5c6773" font-size="13" text-anchor="end" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">90</text>
+<line x1="94" y1="279" x2="221" y2="279" stroke="#3987e5" stroke-width="5"/>
+<text x="157.6" y="265.04727272727274" fill="#f3f6f9" font-size="17" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">46.7</text>
+<text x="157.6" y="330" fill="#c8d2dc" font-size="15" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Run 1</text>
+<text x="157.6" y="352" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">strict filters,</text>
+<text x="157.6" y="370" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">soft-only rerank</text>
+<path d="M 221 279 H 249 V 262" fill="none" stroke="#3a4552" stroke-width="2"/>
+<line x1="249" y1="262" x2="376" y2="262" stroke="#3987e5" stroke-width="5"/>
+<text x="312.79999999999995" y="248.15999999999997" fill="#f3f6f9" font-size="17" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">52.1</text>
+<text x="312.79999999999995" y="330" fill="#c8d2dc" font-size="15" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Run 2</text>
+<text x="312.79999999999995" y="352" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">hard criteria</text>
+<text x="312.79999999999995" y="370" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">handed to the LLM</text>
+<path d="M 376 262 H 404 V 217" fill="none" stroke="#3a4552" stroke-width="2"/>
+<line x1="404" y1="217" x2="532" y2="217" stroke="#3987e5" stroke-width="5"/>
+<text x="467.99999999999994" y="202.81454545454545" fill="#f3f6f9" font-size="17" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">66.6</text>
+<text x="467.99999999999994" y="330" fill="#c8d2dc" font-size="15" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Run 3</text>
+<text x="467.99999999999994" y="352" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">filters pushed</text>
+<text x="467.99999999999994" y="370" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">into the database</text>
+<path d="M 532 217 H 560 V 146" fill="none" stroke="#3a4552" stroke-width="2"/>
+<line x1="560" y1="146" x2="687" y2="146" stroke="#8a63d2" stroke-width="5"/>
+<text x="623.1999999999999" y="131.51272727272726" fill="#f3f6f9" font-size="17" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">89.4</text>
+<text x="623.1999999999999" y="330" fill="#c8d2dc" font-size="15" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Run 4</text>
+<text x="623.1999999999999" y="352" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">exhaustive scans,</text>
+<text x="623.1999999999999" y="370" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">judge-matched</text>
+<text x="623.1999999999999" y="388" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">scoring</text>
+<path d="M 687 146 H 715 V 143" fill="none" stroke="#3a4552" stroke-width="2"/>
+<line x1="715" y1="143" x2="842" y2="143" stroke="#199e70" stroke-width="5"/>
+<text x="778.4" y="128.5418181818182" fill="#f3f6f9" font-size="17" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">90.3</text>
+<text x="778.4" y="330" fill="#c8d2dc" font-size="15" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Run 5</text>
+<text x="778.4" y="352" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">wider search,</text>
+<text x="778.4" y="370" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">blind</text>
+<text x="778.4" y="388" fill="#7d8896" font-size="13" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">re-verification</text>
+</svg>
