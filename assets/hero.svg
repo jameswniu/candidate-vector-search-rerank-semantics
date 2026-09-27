@@ -26,24 +26,27 @@
 <text x="40" y="200" fill="#9aa5b1" font-size="16">Candidate search over ~194K profiles: Voyage-3 vectors,</text>
 <text x="40" y="224" fill="#9aa5b1" font-size="16">hard/soft relevance filters, GPT-4o-mini reranking, and a</text>
 <text x="40" y="248" fill="#9aa5b1" font-size="16">blind rubric-scored judge before any slate is recorded.</text>
-<rect x="40" y="278" width="104" height="28" fill="url(#ndh)" stroke="#3a4552" stroke-width="1.2" rx="3"/>
-<text x="92.0" y="297" fill="#9aa5b1" font-size="15" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">retrieve</text>
-<rect x="156" y="278" width="84" height="28" fill="url(#ndh)" stroke="#3a4552" stroke-width="1.2" rx="3"/>
-<text x="198.0" y="297" fill="#9aa5b1" font-size="15" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">filter</text>
-<rect x="252" y="278" width="96" height="28" fill="url(#ndh)" stroke="#3a4552" stroke-width="1.2" rx="3"/>
-<text x="300.0" y="297" fill="#9aa5b1" font-size="15" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">rerank</text>
-<rect x="360" y="278" width="100" height="28" fill="#141d27" stroke="#8f9aa6" stroke-width="1.8" rx="3"/>
-<text x="410.0" y="297" fill="#f3f6f9" font-size="15" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">verify</text>
+<rect x="40" y="268" width="104" height="38" fill="url(#ndh)" stroke="#3a4552" stroke-width="1.2" rx="3"/>
+<text x="92.0" y="292" fill="#9aa5b1" font-size="15" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">retrieve</text>
+<rect x="156" y="268" width="84" height="38" fill="url(#ndh)" stroke="#3a4552" stroke-width="1.2" rx="3"/>
+<text x="198.0" y="292" fill="#9aa5b1" font-size="15" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">filter</text>
+<rect x="252" y="268" width="96" height="38" fill="url(#ndh)" stroke="#3a4552" stroke-width="1.2" rx="3"/>
+<text x="300.0" y="292" fill="#9aa5b1" font-size="15" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">rerank</text>
+<rect x="360" y="268" width="100" height="38" fill="#141d27" stroke="#8f9aa6" stroke-width="1.8" rx="3"/>
+<text x="410.0" y="292" fill="#f3f6f9" font-size="15" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">verify</text>
 <rect x="500" y="52" width="364" height="254" fill="#0a0e12" stroke="#212b36" stroke-width="1.2" rx="4"/>
 <text x="518" y="80" fill="#7d8896" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">CHECKED AGAINST THE RECORDED EVALS</text>
 <text x="518" y="116" fill="#ab8ce6" font-size="18" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">90.3</text>
-<text x="628" y="116" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">average final score, 10 configs</text>
-<text x="518" y="154" fill="#199e70" font-size="18" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">10 / 10</text>
-<text x="628" y="154" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">configs at 100% hard-criteria pass</text>
-<text x="518" y="192" fill="#199e70" font-size="18" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">10 / 10</text>
-<text x="628" y="192" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">configs at 80 or above</text>
-<text x="518" y="230" fill="#199e70" font-size="18" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">8 / 10</text>
-<text x="628" y="230" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">configs at 90 or above</text>
-<text x="518" y="268" fill="#199e70" font-size="18" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">0</text>
-<text x="628" y="268" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">hard failures in 100 recorded seats</text>
+<text x="628" y="116" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">average final score,</text>
+<text x="628" y="131" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">10 configs</text>
+<text x="518" y="156" fill="#199e70" font-size="18" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">10 / 10</text>
+<text x="628" y="156" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">configs at 100%</text>
+<text x="628" y="171" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">hard-criteria pass</text>
+<text x="518" y="196" fill="#199e70" font-size="18" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">10 / 10</text>
+<text x="628" y="196" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">configs at 80 or above</text>
+<text x="518" y="236" fill="#199e70" font-size="18" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">8 / 10</text>
+<text x="628" y="236" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">configs at 90 or above</text>
+<text x="518" y="276" fill="#199e70" font-size="18" text-anchor="start" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">0</text>
+<text x="628" y="276" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">hard failures in</text>
+<text x="628" y="291" fill="#9aa5b1" font-size="13" text-anchor="start" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">100 recorded seats</text>
 </svg>

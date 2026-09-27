@@ -13,6 +13,40 @@ from svgkit import *  # noqa
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Fit guard. Per-char advances in em are deliberately generous (mono 0.62, sans 0.56, sans bold
+# 0.60), and so are ascent and descent, so SF, Menlo, Courier New, Helvetica and Arial all land
+# inside the modelled box. A text that would not clear its frame by `pad` stops the build loudly.
+ADV = {"mono": 0.62, "sans": 0.56, "sans_bold": 0.60}
+ASC, DESC = 0.96, 0.30
+
+
+def _fit(frame, x, y, s, size, anchor="middle", mono=True, bold=False, ls=0.0, pad=16):
+    """Raise unless text s at (x, y) clears frame (x, y, w, h) by pad on every side."""
+    fx, fy, fw, fh = frame
+    w = len(s) * (ADV["mono" if mono else ("sans_bold" if bold else "sans")] * size + ls)
+    left = {"start": x, "middle": x - w / 2, "end": x - w}[anchor]
+    slack = min(left - fx, fx + fw - (left + w), y - ASC * size - fy, fy + fh - (y + DESC * size)) - pad
+    if slack < 0:
+        raise SystemExit(f"FIT FAIL: {s!r} ({size}px) overflows its frame {frame} by {-slack:.1f} (pad {pad})")
+
+
+def _ftxt(frame, x, y, s, size=15, fill=INK3, anchor="middle", mono=True, weight="400", pad=16):
+    """txt(), emitted only after the fit guard passes."""
+    _fit(frame, x, y, s, size, anchor, mono, weight == "700", pad=pad)
+    return txt(x, y, s, size, fill, anchor, mono, weight)
+
+
+def _widen(svg_head, w):
+    """svgkit's head() at canvas width w, with the dot grid spaced 36 so it keeps its on-screen density."""
+    swaps = [(f'viewBox="0 0 {W} ', f'viewBox="0 0 {w} ', 1), (f'width="{W}"', f'width="{w}"', 3),
+             ('width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.7"',
+              'width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="0.95"', 1)]
+    for old, new, n in swaps:
+        if svg_head.count(old) != n:
+            raise SystemExit(f"svgkit.head() changed shape, cannot widen it: {old!r}")
+        svg_head = svg_head.replace(old, new)
+    return svg_head
+
 
 def audit():
     """Re-derive the headline numbers from the recorded evals rather than asserting them."""
@@ -53,72 +87,100 @@ def hero(a):
 <text x="40" y="248" fill="{INK3}" font-size="16">blind rubric-scored judge before any slate is recorded.</text>
 '''
     chips = [("retrieve", 40, 104), ("filter", 156, 84), ("rerank", 252, 96), ("verify", 360, 100)]
-    for label, x, w in chips:
+    for label, x, w in chips:  # 38 tall so each label clears its chip by 8; bottoms stay level with the panel's
         last = label == "verify"
-        s += f'<rect x="{x}" y="278" width="{w}" height="28" fill="{"#141d27" if last else f"url(#ndh)"}" stroke="{"#8f9aa6" if last else STROKE}" stroke-width="{1.8 if last else 1.2}" rx="3"/>\n'
-        s += txt(x + w / 2, 297, label, 15, INK if last else INK3, weight="700" if last else "400")
+        s += f'<rect x="{x}" y="268" width="{w}" height="38" fill="{"#141d27" if last else f"url(#ndh)"}" stroke="{"#8f9aa6" if last else STROKE}" stroke-width="{1.8 if last else 1.2}" rx="3"/>\n'
+        s += _ftxt((x, 268, w, 38), x + w / 2, 292, label, 15, INK if last else INK3, weight="700" if last else "400", pad=8)
 
+    panel = (500, 52, 364, 254)
     s += f'<rect x="500" y="52" width="364" height="254" fill="#0a0e12" stroke="#212b36" stroke-width="1.2" rx="4"/>\n'
-    s += txt(518, 80, "CHECKED AGAINST THE RECORDED EVALS", 13, MUTE, anchor="start")
-    rows = [(f"{a['overall']:.1f}", "average final score, 10 configs", THEME_T),
-            (f"{a['n_hard']} / {a['n']}", "configs at 100% hard-criteria pass", AQUA),
-            (f"{a['n80']} / {a['n']}", "configs at 80 or above", AQUA),
-            (f"{a['n90']} / {a['n']}", "configs at 90 or above", AQUA),
-            (f"{a['hard_fail_seats']}", f"hard failures in {a['seats']} recorded seats", AQUA)]
+    s += _ftxt(panel, 518, 80, "CHECKED AGAINST THE RECORDED EVALS", 13, MUTE, anchor="start", pad=8)
+    # A label too long to sit beside its number breaks at a word boundary onto a second line.
+    rows = [(f"{a['overall']:.1f}", ["average final score,", "10 configs"], THEME_T),
+            (f"{a['n_hard']} / {a['n']}", ["configs at 100%", "hard-criteria pass"], AQUA),
+            (f"{a['n80']} / {a['n']}", ["configs at 80 or above"], AQUA),
+            (f"{a['n90']} / {a['n']}", ["configs at 90 or above"], AQUA),
+            (f"{a['hard_fail_seats']}", ["hard failures in", f"{a['seats']} recorded seats"], AQUA)]
     for i, (num, label, col) in enumerate(rows):
-        y = 116 + i * 38
-        s += txt(518, y, num, 18, col, anchor="start", weight="700")
-        s += txt(628, y, label, 13, INK3, anchor="start")
+        y = 116 + i * 40
+        s += _ftxt(panel, 518, y, num, 18, col, anchor="start", weight="700", pad=8)
+        for j, part in enumerate(label):
+            s += _ftxt(panel, 628, y + j * 15, part, 13, INK3, anchor="start", pad=8)
     return s + "</svg>\n"
 
 
 def pipeline():
-    H = 580
-    s = head(H, "p", ("Pipeline: exhaustive Turbopuffer scans and Voyage-3 vectors generate candidates, hard-criteria filters "
-                      "make the qualified population exact, GPT-4o-mini reranks on hard and soft criteria, and a blind "
-                      "rubric-scored judge verifies every candidate before the slate is recorded against the live endpoint"))
-    s += title_block("p", "PIPELINE", "From 194K profiles to ten verified candidates per role")
+    # 1200 wide so the smallest type (23) stays 12px at 75% zoom in GitHub's 837px column; the four
+    # stages sit in a 2x2 grid read like text (scan, filter / rerank, verify). Every label is fit-checked.
+    PW, H = 1200, 1398
+    s = _widen(head(H, "p", ("Pipeline: exhaustive Turbopuffer scans and Voyage-3 vectors generate candidates, hard-criteria filters "
+                             "make the qualified population exact, GPT-4o-mini reranks on hard and soft criteria, and a blind "
+                             "rubric-scored judge verifies every candidate before the slate is recorded against the live endpoint")), PW)
+    def node(frame, stroke, fill="url(#ndp)", sw=2.1, dash=""):
+        x, y, w, h = frame
+        extra = f' stroke-dasharray="{dash}"' if dash else ""
+        return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"{extra} rx="6"/>\n'
+
+    def arrow(d, col="#5a6673", m="arp"):
+        return f'<path d="{d}" fill="none" stroke="{col}" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#{m})"/>\n'
+
+    hdr, lbl = (24, 16, PW - 48, 192), (24, 194, 560, 66)  # logical frames: header band, input label band
+    _fit(hdr, 48, 64, "PIPELINE", 23, "start", ls=5)
+    s += f'<text x="48" y="64" fill="{THEME}" font-size="23" font-weight="700" letter-spacing="5" font-family="{MONO}">PIPELINE</text>\n'
+    for i, line in enumerate(["From 194K profiles", "to ten verified candidates per role"]):
+        s += _ftxt(hdr, 48, 120 + i * 50, line, 40, INK, anchor="start", mono=False, weight="700")
+    s += '<rect x="48" y="190" width="180" height="3.5" fill="url(#rlp)"/>\n'
+    s += _ftxt(lbl, 48, 236, "~194K profiles in", 23, MUTE, anchor="start")
+
     stages = [
-        (41, "scan + embed", ["Voyage-3 query vectors,", "exhaustive id-ordered scans"], VIOLET, VIOLET_T),
-        (253, "filter", ["degree, field, school, dates,", "hard gates made exact"], BLUE, BLUE_T),
-        (465, "rerank", ["GPT-4o-mini, hard + soft,", "text-only, judge-matched"], ORANGE, ORANGE_T),
-        (677, "verify", ["blind rubric-scored judge,", "standards frozen first"], AQUA, AQUA_T),
+        (48, 260, "scan + embed", ["Voyage-3 query vectors,", "exhaustive id-ordered scans"], VIOLET, VIOLET_T),
+        (648, 260, "filter", ["degree, field, school, dates,", "hard gates made exact"], BLUE, BLUE_T),
+        (48, 486, "rerank", ["GPT-4o-mini, hard + soft,", "text-only, judge-matched"], ORANGE, ORANGE_T),
+        (648, 486, "verify", ["blind rubric-scored judge,", "standards frozen first"], AQUA, AQUA_T),
     ]
-    for i, (x, t, subs, stroke, tc) in enumerate(stages):
-        cx = x + 91
-        s += box(x, 128, 182, 96, "p", stroke=stroke, sw=1.6)
-        s += txt(cx, 158, t, 17, tc, weight="700")
+    for x, y, t, subs, stroke, tc in stages:
+        frame = (x, y, 504, 150)
+        s += node(frame, stroke)
+        s += _ftxt(frame, x + 252, y + 50, t, 30, tc, weight="700")
         for j, sub in enumerate(subs):
-            s += txt(cx, 186 + j * 22, sub, 13, MUTE)
-        if i < 3:
-            s += f'<line x1="{x+182}" y1="176" x2="{x+206}" y2="176" stroke="#5a6673" stroke-width="1.8" marker-end="url(#arp)"/>\n'
-    s += txt(41, 118, "~194K profiles in", 15, FAINT, anchor="start")
+            s += _ftxt(frame, x + 252, y + 92 + j * 34, sub, 23, MUTE)
+    s += arrow("M 560 335 H 642") + arrow("M 560 561 H 642")  # scan -> filter, rerank -> verify
+    s += arrow("M 900 414 V 448 H 300 V 480")  # filter -> rerank: down, back left, down
 
-    s += f'<line x1="768" y1="224" x2="768" y2="268" stroke="{AQUA}" stroke-width="1.8" marker-end="url(#argp)"/>\n'
-    s += box(636, 270, 228, 74, "p", stroke="#8f9aa6", sw=1.6, fill="#141d27")
-    s += txt(750, 300, "record", 17, INK, weight="700")
-    s += txt(750, 326, "live eval, slate archived", 14, MUTE)
+    panel = (48, 686, 668, 300)
+    s += node(panel, "#4a5663", fill="#0a0e12", sw=1.7, dash="8 7")
+    s += _ftxt(panel, 76, 736, "the three guarantees the pipeline enforces", 23, INK2, anchor="start", weight="700")
+    for i, inv in enumerate([["hard-gate recall is exact: the full", "qualifying population is scanned"],
+                             ["the local judge reads only the text", "the eval judge can see"],
+                             ["every recorded number is a real", "submission, never an estimate"]]):
+        s += f'<rect x="76" y="{769 + i * 72}" width="8" height="8" rx="1.5" fill="{VIOLET}"/>\n'
+        for j, part in enumerate(inv):
+            s += _ftxt(panel, 98, 782 + i * 72 + j * 32, part, 23, MUTE, anchor="start")
 
-    s += f'<rect x="36" y="268" width="560" height="106" fill="#0a0e12" stroke="#4a5663" stroke-width="1.3" stroke-dasharray="6 5" rx="4"/>\n'
-    s += txt(58, 296, "the three guarantees the pipeline enforces", 15, INK2, anchor="start", weight="700")
-    for i, inv in enumerate(["hard-gate recall is exact: the full qualifying population is scanned",
-                             "the local judge reads only the text the eval judge can see",
-                             "every recorded number is a real submission, never an estimate"]):
-        s += txt(58, 320 + i * 20, inv, 14, MUTE, anchor="start")
+    rec = (752, 774, 400, 124)  # centred on the verify -> record -> run table spine at x=952
+    s += node(rec, "#8f9aa6", fill="#141d27")
+    s += _ftxt(rec, 952, 826, "record", 30, INK, weight="700")
+    s += _ftxt(rec, 952, 868, "live eval, slate archived", 23, MUTE)
+    s += arrow("M 952 640 V 768", AQUA, "argp")
 
-    s += f'<line x1="316" y1="374" x2="316" y2="398" stroke="#5a6673" stroke-width="1.6" marker-end="url(#arp)"/>\n'
-    s += f'<line x1="750" y1="344" x2="750" y2="398" stroke="#5a6673" stroke-width="1.6" marker-end="url(#arp)"/>\n'
-    outs = [(36, 250, "results/*.json", "one recorded eval per config"),
-            (330, 264, "submission ledger", "hard-fails blacklisted for good"),
-            (700, 164, "run table", "66.6 to 90.3")]
-    for x, w, t, sub in outs:
-        s += box(x, 400, w, 72, "p", stroke=ORANGE, sw=1.6, fill="#1c130e")
-        s += txt(x + w / 2, 428, t, 16, ORANGE_T, weight="700")
-        s += txt(x + w / 2, 452, sub, 13, MUTE)
+    outs = [(48, 280, "results/*.json", ["one recorded eval", "per config"]),
+            (364, 352, "submission ledger", ["hard-fails blacklisted", "for good"]),
+            (752, 400, "run table", ["66.6 to 90.3"])]
+    for x, w, t, subs in outs:
+        frame, cx = (x, 1036, w, 140), x + w // 2
+        s += node(frame, ORANGE, fill="#1c130e")
+        s += _ftxt(frame, cx, 1082, t, 26, ORANGE_T, weight="700")
+        for j, sub in enumerate(subs):
+            s += _ftxt(frame, cx, 1120 + j * 32, sub, 23, MUTE)
+        s += arrow(f"M {cx} {902 if x == rec[0] else 990} V 1030")  # record -> run table; guarantees -> the others
 
-    s += caption(["Vector similarity finds the plausible; exhaustive structured scans make the qualified population exact; the LLM",
-                  "stages decide who actually fits. The interesting engineering is the verification layer, a blind judge calibrated",
-                  "per rubric that decides whether a profile genuinely satisfies the role before its slate is ever recorded."], 512)
+    cap = (24, 1194, PW - 48, 198)
+    for i, line in enumerate(["Vector similarity finds the plausible; exhaustive structured scans make",
+                              "the qualified population exact; the LLM stages decide who actually",
+                              "fits. The interesting engineering is the verification layer, a blind",
+                              "judge calibrated per rubric that decides whether a profile genuinely",
+                              "satisfies the role before its slate is ever recorded."]):
+        s += _ftxt(cap, 48, 1236 + i * 33, line, 23, MUTE, anchor="start", mono=False)
     return s + "</svg>\n"
 
 
