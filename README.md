@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="Semantic candidate search over 194K profiles: recall made exact by exhaustive scans, ranking made honest by a blind rubric-scored judge; recorded evals average 90.3 with every hard criterion passing" width="100%">
+  <img src="assets/hero.svg" alt="Semantic candidate search over about 194K profiles. Recorded evaluations average 90.3 across 10 configs. All 10 configs have a 100% pass rate on every hard criterion; all 10 score 80 or above, and 8 score 90 or above. There are 0 hard failures in 100 recorded seats." width="100%">
 </p>
 
 <div align="center">
@@ -42,7 +42,7 @@ You have a vector database of candidate profiles and a role spec with both hard 
 ## Architecture
 
 <p align="center">
-  <img src="assets/pipeline.svg" alt="Pipeline: exhaustive Turbopuffer scans and Voyage-3 vectors generate candidates, hard-criteria filters make the qualified population exact, GPT-4o-mini reranks on hard and soft criteria, and a blind rubric-scored judge verifies every candidate before the slate is recorded against the live endpoint" width="100%">
+  <img src="assets/pipeline.svg" alt="Candidate search pipeline over about 194K profiles: Voyage-3 query vectors and exhaustive ID-ordered Turbopuffer scans; filters for degree, field, school and dates; GPT-4o-mini reranking on hard and soft criteria using the text available to the evaluation judge; blind rubric verification under standards fixed before review; and live evaluation and archiving of ten candidates per role. Outputs are results/*.json, a submission ledger that permanently excludes hard failures, and a run table showing average scores from 66.6 to 90.3." width="100%">
 </p>
 
 <details>
