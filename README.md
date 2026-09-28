@@ -112,7 +112,7 @@ Structured filters can enforce "has JD" or "field contains biology" but cannot e
 
 The grader uses an LLM judge for hard criteria, and Run 2's recorded slates show what my filters still missed.
 
-- Anthropology scored 0.0, with 100% on "has PhD" and 0% on "PhD started within the last 3 years". My filter had no recency check, and vector retrieval found anthropology PhDs, none of them recent enough.
+- Anthropology scored 0.0, with 100% on "has PhD" and 0% on "PhD started within the last 3 years". My filter had no recency check, and all ten people it submitted had a PhD, but none the grader counted as recent.
 - Doctors scored 8.0, with 10% on "MD from a top U.S. medical school". The `deg_degrees` field says "MD" and carries no signal for school prestige.
 - Mathematics PhD scored 42.5, with 50% on "undergrad from the U.S., U.K. or Canada". That criterion is about undergraduate location, and my filter checked only degree type and field.
 
@@ -138,11 +138,11 @@ Run 3 (`170b1a9`) kept the vector top 200 and moved hard-criteria checks earlier
 | Mathematics PhD | 42.5 | **74.5** | 95% |
 | **Average** | **52.1** | **66.7** | **91%** |
 
-The biggest gains came from enforcing hard criteria earlier. Configs whose hard criteria map cleanly to structured fields (degree type, field of study, school name) improved the most. Anthropology stayed the hardest, at 20.3. My read is that the grader's judge looks for PhD recency in the summary text, and most summaries don't state an enrollment year.
+The five configs that got the new database filters gained 20 to 33 points each, and the other five moved by less than one point. Anthropology stayed the hardest, at 20.3, even with a start-year filter in its database query. My read is that the grader's judge looks for PhD recency in the summary text, and most summaries don't state an enrollment year.
 
 ### Run 4, exhaustive scans, an LLM judge and a submission ledger (87.7 avg)
 
-Run 3 still lost points in three ways. ANN retrieval dropped qualified candidates that a top-200 vector neighborhood missed. My reranker read structured fields that I assume the grader's judge never sees, so we disagreed about who passes. And each submission threw away what earlier submissions had shown. Run 4 (code in `40b6df5`, results in `652bc29`) rebuilt the pipeline around those three problems.
+Run 3 still lost points, and I saw three likely causes, though no recorded run tests any one of them alone. Retrieval kept only the 200 profiles nearest by vector similarity, so anyone qualified outside that set never reached the reranker. My reranker read structured fields that I assume the grader's judge never sees, so the two could disagree about who passes. And each submission threw away what earlier submissions had shown. Run 4 (code in `40b6df5`, results in `652bc29`) rebuilt the pipeline around those three problems.
 
 1. Exhaustive structured scans replaced ANN for candidate generation. Paginated, id-ordered scans with Turbopuffer attribute filters return every row that matches the filter, and the degree lists, school lists, keyword checks and caps after the scan limit recall against the hard criteria. Soft-fit order comes from keyword counts and then the judge's predicted score. Scan sizes and timings are not recorded.
 2. The local judge uses the grader's formula, 0 on any hard failure and otherwise the soft mean times ten. It reads only `rerankSummary`, ignores the structured fields, and carries per-config calibration notes learned from earlier verdicts, such as which schools pass as "top", that M7 is literal, and that a residency without a listed MD fails. A general prompt rule fails undated experience on duration criteria, and GPT-4o-mini runs over every pooled candidate.
