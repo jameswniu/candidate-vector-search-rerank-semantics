@@ -35,14 +35,18 @@ You have a vector database of candidate profiles and a role spec with both hard 
 
 ## What This Does
 
-1. **Vector retrieval**: Embed a rich query (description + hard + soft criteria) with Voyage-3, retrieve top 200 from Turbopuffer via ANN search. For 5 configs, Turbopuffer attribute filters (degree type, start year) narrow results at query time
-2. **Hard-criteria filtering**: Python-level regex filters on degree type, field of study, and experience titles. Intentionally relaxed to preserve recall, with a fallback to the full candidate set if fewer than 15 pass
-3. **LLM reranking**: GPT-4o-mini scores each candidate on hard + soft criteria. Hard failures get score 0. Remaining candidates scored 1-10 on soft criteria fit
+1. `pool.py` retrieves each config's hard-gate population with an exhaustive scan instead of a vector top 200. The config's Turbopuffer attribute filter (degree type, field of study, or country) defines the population, and the scan pages through every matching row in id order.
+2. `pool.py` then filters that population. Five configs first drop rows whose parsed degree entries miss a school requirement (an elite-school MD for Doctors; a U.S., U.K. or Canadian bachelor's for Mathematics and Biology; an M7 MBA for Quantitative Finance; a U.S. MBA for Bankers), before full records are fetched. Every config keeps the candidates who pass a per-role check on degree entries, summary text, or both, ranks them by keyword counts in the summary, and keeps the top 250 to 550, depending on the role.
+3. `judge.py` scores every pooled candidate on its own, reading only the profile text the eval judge reads, with per-config calibration notes drawn from earlier verdicts. It never sees a live score. Each hard criterion passes or fails, each soft criterion gets 0 to 10, and the predicted score is 0 on any hard failure, otherwise the soft mean times ten. The model is GPT-4o-mini unless `JUDGE_MODEL` names another.
+4. A stricter verification pass re-judges every screening pass and near-miss before anything is submitted.
+5. `selection.py` picks the ten to submit. Anyone the live judge has hard-failed is excluded for good, anyone who already scored 85 or above live is pinned first, IDs named with `--include` come next, and judged candidates who pass every hard criterion fill the remaining seats in order of predicted score. It submits the ten to the eval endpoint, writes `results/<config>.json`, archives the response, and folds each candidate's outcome back into the per-config ledger.
+
+`main.py` still runs the original pipeline as it stood at Run 3, with a Voyage-3 query embedding, a Turbopuffer ANN top 200, Python filters, and GPT-4o-mini reranking in batches of five.
 
 ## Architecture
 
 <p align="center">
-  <img src="assets/pipeline.svg" alt="Candidate search pipeline over about 194K profiles: Voyage-3 query vectors and exhaustive ID-ordered Turbopuffer scans; filters for degree, field, school and dates; GPT-4o-mini reranking on hard and soft criteria using the text available to the evaluation judge; blind rubric verification under standards fixed before review; and live evaluation and archiving of ten candidates per role. Outputs are results/*.json, a submission ledger that permanently excludes hard failures, and a run table showing average scores from 66.6 to 90.3." width="100%">
+  <img src="assets/pipeline.svg" alt="Candidate search pipeline over about 194K profiles: exhaustive ID-ordered Turbopuffer scans; filters for degree, field, school and dates; GPT-4o-mini reranking on hard and soft criteria using the text available to the evaluation judge; blind rubric verification under standards fixed before review; and live evaluation and archiving of ten candidates per role. Outputs are results/*.json, a submission ledger that permanently excludes hard failures, and a run table showing average scores from 66.6 to 90.3." width="100%">
 </p>
 
 <details>
@@ -50,25 +54,24 @@ You have a vector database of candidate profiles and a role spec with both hard 
 
 ```mermaid
 flowchart TD
-    Q["Role Spec"] --> EMB["Voyage-3 Embed"]
-    EMB --> DB["Turbopuffer ANN · top 200"]
-    DB --> AF["Attribute Filter · degree, year, field"]
-    AF --> PF["Python Filter · school, title, location"]
-    PF --> LLM["GPT-4o-mini Rerank · hard + soft"]
-    LLM --> TOP["Top 10"]
+    Q["Role Spec"] --> RET["Retrieve · exhaustive Turbopuffer scan, attribute filters, id order"]
+    RET --> FIL["Filter · degree and summary-text prescreens, top 250 to 550"]
+    FIL --> RR["Rerank · judge.py, profile text only, hard pass or fail, soft 0 to 10"]
+    RR --> VER["Verify · stricter re-judge of screening passes and near-misses"]
+    VER --> REC["Record · selection.py submits 10, writes results/*.json, updates the ledger"]
 ```
 
 </details>
 
 **Stage details:**
 
-| Stage | What | Latency | Candidates |
-|---|---|---|---|
-| Voyage-3 embed | Encode query (desc + criteria) into 1024-dim vector | ~200ms | 1 query |
-| Turbopuffer ANN | Approximate nearest neighbor search over ~200K profiles | ~50ms | 200K to 200 |
-| Turbopuffer attribute filter | Push degree type, field of study, start year filters into DB query (5 configs) | ~0ms (DB-side) | 200 to 50-150 |
-| Python post-filter | Parse structured degree strings for undergrad location, school prestige, title match | ~1ms | 50-150 to 15-80 |
-| LLM rerank | GPT-4o-mini scores each candidate on hard + soft criteria in batches of 5 | ~20-40s | 15-80 to 10 |
+| Stage | What | Candidates |
+|---|---|---|
+| Retrieve | `pool.py` pages through every row matching the config's Turbopuffer attribute filter, in id order | ~194K to the full hard-gate population |
+| Filter | `pool.py` checks parsed degree entries (5 configs), then degree entries, summary text, or both per role, and ranks by keyword counts | Top 250 to 550 per config |
+| Rerank | `judge.py` scores each pooled candidate on profile text alone, hard criteria pass or fail, soft criteria 0 to 10 | Every pooled candidate |
+| Verify | A stricter verification pass re-judges every screening pass and near-miss before anything is submitted | Screening passes and near-misses |
+| Record | `selection.py` drops live hard-fails, pins live scores of 85 or above, fills by predicted score, submits, and updates the ledger | 10 per config |
 
 ## Quick Start
 

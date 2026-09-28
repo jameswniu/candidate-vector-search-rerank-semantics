@@ -252,7 +252,7 @@ def hero(a):
 def pipeline(a):
     """Five stages in reading order, then the three places a run is recorded."""
     ten, table = _count(SLATE_SIZE), f"{_run('Run 3'):.1f} to {a['overall']:.1f}"
-    alt = (f"Candidate search pipeline over about {CORPUS} profiles: Voyage-3 query vectors and exhaustive ID-ordered "
+    alt = (f"Candidate search pipeline over about {CORPUS} profiles: exhaustive ID-ordered "
            "Turbopuffer scans; filters for degree, field, school and dates; GPT-4o-mini reranking on hard and soft "
            "criteria using the text available to the evaluation judge; blind rubric verification under standards fixed "
            f"before review; and live evaluation and archiving of {ten} candidates per role. Outputs are results/*.json, "
@@ -260,8 +260,8 @@ def pipeline(a):
     f = Fig("p", 960, alt)
     f.text(40, 80, "Candidate search pipeline", 36, bold=True)
     f.text(40, 120, f"From ~{CORPUS} profiles in Turbopuffer to {ten} verified candidates per role.", 24, TEXT2)
-    stages = [("Retrieve", "Voyage-3 query vectors, plus exhaustive id-ordered scans",
-               "that cover the full population matching the hard filters."),
+    stages = [("Retrieve", "Structured scans, in id order, of every profile",
+               "that matches the role's attribute filters."),
               ("Filter", "Degree, field, school and date requirements.",
                "Exact recall against the structured hard criteria."),
               ("Rerank", "GPT-4o-mini scores hard and soft criteria using",
