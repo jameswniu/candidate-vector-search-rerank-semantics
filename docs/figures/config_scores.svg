@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Recorded eval scores for all ten role configs: eight of ten at 90 or above, all ten at 80 or above, every hard criterion passing at 100 percent" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" style="font-variant-numeric: tabular-nums">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 808" width="1200" height="808" role="img" aria-label="Recorded eval scores of the final submitted slates, after grader-guided resubmission, for all ten role configs, from results/. Eight of ten score 90 or above, all ten score 80 or above, and every hard criterion passes at 100 percent." font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" style="font-variant-numeric: tabular-nums">
 <defs><marker id="ahs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8795a3"/></marker></defs>
-<rect width="1200" height="800" fill="#101418"/>
-<text x="40" y="80" fill="#f2f4f6" font-size="36" font-weight="700">Final evaluation score by role</text>
+<rect width="1200" height="808" fill="#101418"/>
+<text x="40" y="80" fill="#f2f4f6" font-size="36" font-weight="700">Final submitted slates by role</text>
 <text x="40" y="136" fill="#b6c0ca" font-size="23">Role</text>
 <text x="424" y="136" fill="#b6c0ca" font-size="23">Final evaluation score (0 to 100)</text>
 <text x="1018" y="136" fill="#b6c0ca" font-size="23" text-anchor="middle">90</text>
@@ -48,6 +48,7 @@
 <text x="1035.1" y="519" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">90.2</text>
 <text x="1030.7" y="567" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">89.5</text>
 <text x="1001" y="615" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">85.0</text>
-<text x="40" y="716" fill="#b6c0ca" font-size="23">Ten candidates per config. Recorded live evaluations: <tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan>.</text>
+<text x="40" y="716" fill="#b6c0ca" font-size="23">Final slates after grader-guided resubmission, ten candidates per config.</text>
 <text x="40" y="746" fill="#b6c0ca" font-size="23">8/10 at 90 or above, 10/10 at 80 or above, and every hard criterion passes at 100%.</text>
+<text x="40" y="776" fill="#b6c0ca" font-size="23">Recorded live evaluations in <tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan>.</text>
 </svg>

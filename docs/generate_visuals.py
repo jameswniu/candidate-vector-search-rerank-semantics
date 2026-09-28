@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
-"""Emit the four README figures as SVG, with every score derived from results/*.json.
+"""Emit the four README figures as SVG, with every number from results/*.json, git history or the code.
 
 No plotting library. Each figure is 1200 units wide and no text is under 23 units, so the
-smallest type stays about 12px at 75% browser zoom in GitHub's 837px column.
+smallest type stays about 12px at 75% browser zoom in GitHub's 837px column. Scores in
+results/*.json are audited on every build, history_check() recomputes the earlier run averages
+from git, and code_check() reads the two code values the pipeline figure states back from the
+source. Any disagreement stops the build.
 """
 import glob
 import html
 import json
 import os
+import re
+import subprocess
 import sys
+from decimal import ROUND_HALF_DOWN, ROUND_HALF_EVEN, Decimal
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from svgkit import MONO, SANS  # noqa: E402
@@ -22,12 +28,37 @@ ACCENT, DATA2 = "#8bb8e8", "#8795a3"
 
 VW = 1200  # viewBox width of every figure
 MIN_SIZE = 23  # smallest font size allowed, per 1200 units of width
-CORPUS = "194K"  # profiles in the index, as stated in the README; not part of results/
 # Counts the figure copy states as fact. audit() stops the build if results/ disagrees with any of them.
 N_CONFIGS = 10  # role configs, one results/*.json file each
 SLATE_SIZE = 10  # candidates in each recorded slate
 N_SEATS = N_CONFIGS * SLATE_SIZE  # recorded seats across all configs
 HARD_RATE_TOL = 0.005  # stored pass rates may be rounded to two places; one flipped seat moves a rate by 1 / SLATE_SIZE
+
+# Earlier recorded averages, each the exact mean of results/*.json average_final_score at its commit.
+# history_check() recomputes every one with `git show` and stops the build if one disagrees.
+# Run 1 predates the first commit and has no results file, so it is not drawn.
+HISTORY = [  # (x-axis label, commit, exact mean, note lines, grader-guided)
+    ("Run 2", "6142125", 1043 / 20, ["Vector top 200", "LLM checks", "hard criteria"], False),  # 52.15
+    ("Run 3", "6480b44", 200 / 3, ["Vector top 200", "plus database", "filters"], False),  # 66.67
+    ("Run 4", "ea8faa6", 3507 / 40, ["Exhaustive", "scans and an", "LLM judge"], False),  # 87.675, the code's own run
+    ("Resubmitted", "6628beb", 1073 / 12, ["Grader-guided", "resubmission"], True),  # 89.42
+]
+COMMITTED = HISTORY[2]  # the Run 4 code's own recorded run, the number the page leads with
+RUN_5_NOTE = ["Grader-guided,", "standards not", "in the code"]  # Run 5 is the live results/*.json
+
+# Code values the pipeline figure states. code_check() reads both back from the source.
+CAP_RANGE = (250, 550)  # smallest and largest pool cap in pool.py POOL_BUILDERS, unchanged since 2fd156c
+PIN_MIN = 85  # selection.py pins live scores at or above this; hard-coded in 2fd156c, the PIN_MIN default since b33bd0b
+
+
+def tenth(x):
+    """x to one decimal as text, nearest with exact halves rounded down, after clearing float noise.
+
+    The README states this rule. results/ averages exactly 1807/20 = 90.35 and Run 2 exactly
+    1043/20 = 52.15, and both print rounded down, as 90.3 and 52.1.
+    """
+    clean = Decimal(repr(x)).quantize(Decimal("0.000001"), rounding=ROUND_HALF_EVEN)
+    return str(clean.quantize(Decimal("0.1"), rounding=ROUND_HALF_DOWN))
 
 # Fit guard. Per-char advances in em are deliberately generous (mono 0.62, sans 0.56, sans bold
 # 0.60), and so are ascent and descent, so SF, Menlo, Courier New, Helvetica and Arial all land
@@ -203,77 +234,120 @@ def _count(n):
     return _WORDS[n] if 0 <= n < len(_WORDS) else str(n)
 
 
-# The first four averages are historical measurements: each is recorded in its run's README
-# table and in the commit that landed that run. Only the final average is re-derived live.
-RUN_HISTORY = [
-    ("Run 1", 46.7, ["Strict filters", "and soft-only", "reranking"]),
-    ("Run 2", 52.1, ["LLM checks", "hard criteria"]),
-    ("Run 3", 66.6, ["Database", "filters"]),
-    ("Run 4", 89.4, ["Exhaustive", "scans, scoring", "matched to", "eval judge"]),
-]
-RUN_5_NOTE = ["Wider search,", "rechecked by", "a blind judge"]
+def _git(*args):
+    return subprocess.run(["git", "-C", ROOT, *args], capture_output=True, text=True, check=True).stdout
 
 
-def _run(name):
-    """The recorded average of one historical run."""
-    return next(avg for n, avg, _ in RUN_HISTORY if n == name)
+def history_check():
+    """Recompute each HISTORY average from git, and stop if one disagrees.
+
+    Without git, or in a shallow clone or source archive that lacks a commit, the check is skipped
+    with a warning, since the constants still carry their commits. A mismatch always stops the build.
+    """
+    bad, skipped = [], []
+    for label, sha, mean, _, _ in HISTORY:
+        try:
+            names = [n for n in _git("ls-tree", "--name-only", sha, "results/").split() if n.endswith(".json")]
+            blobs = [_git("show", f"{sha}:{n}") for n in names]
+        except (OSError, subprocess.CalledProcessError) as e:
+            skipped.append(f"{label} ({sha}, {type(e).__name__})")
+            continue
+        try:
+            scores = [json.loads(b)["eval_result"]["average_final_score"] for b in blobs]
+        except (KeyError, TypeError, ValueError) as e:
+            bad.append(f"{label} ({sha}): results/ at this commit lacks average_final_score ({type(e).__name__})")
+            continue
+        got = sum(scores) / len(scores) if scores else float("nan")
+        if len(scores) != N_CONFIGS or not abs(got - mean) < 1e-9:
+            bad.append(f"{label} ({sha}): git has {len(scores)} configs averaging {got:.4f}, HISTORY says {mean:.4f}")
+    if skipped:
+        print("  HISTORY SKIP: this checkout cannot read " + ", ".join(skipped)
+              + ". Those averages are drawn from the HISTORY constants unverified; build from a full clone to check them.")
+    if bad:
+        raise SystemExit("HISTORY FAIL: an earlier average in the figures no longer matches git.\n  - " + "\n  - ".join(bad))
+
+
+def code_check():
+    """Stop if pool.py's pool caps or selection.py's pin threshold differ from what the pipeline figure states."""
+    pool = open(os.path.join(ROOT, "pool.py"), encoding="utf-8").read()
+    sel = open(os.path.join(ROOT, "selection.py"), encoding="utf-8").read()
+    caps = [int(c) for c in re.findall(r'"\w+\.yml": \(pool_\w+, (\d+)\)', pool)]
+    pin = re.search(r'os\.environ\.get\("PIN_MIN", "(\d+)"\)', sel)
+    problems = []
+    if len(caps) != N_CONFIGS or (min(caps), max(caps)) != CAP_RANGE:
+        problems.append(f"pool.py pool caps are {caps}, the figure states {CAP_RANGE[0]} to {CAP_RANGE[1]}")
+    if not pin or int(pin.group(1)) != PIN_MIN:
+        problems.append(f"selection.py pins at {pin.group(1) if pin else 'an unreadable default'}, the figure states {PIN_MIN}")
+    if problems:
+        raise SystemExit("CODE FAIL: the pipeline figure no longer matches the code.\n  - " + "\n  - ".join(problems))
 
 
 def hero(a):
-    """Title, one-sentence subtitle, and one strip of five stats checked against results/."""
-    ten, overall = _count(SLATE_SIZE), f"{a['overall']:.1f}"
-    alt = (f"Semantic candidate search over about {CORPUS} profiles. Recorded evaluations average {overall} "
-           f"across {N_CONFIGS} configs. All {a['n_hard']} configs have a 100% pass rate on every hard criterion; "
-           f"all {a['n80']} score 80 or above, and {a['n90']} score 90 or above. "
-           f"There are {a['hard_fail_seats']} hard failures in {N_SEATS} recorded seats.")
-    f = Fig("h", 488, alt)
-    f.text(40, 84, "Semantic candidate search", 44, bold=True)
-    f.text(40, 128, f"Searches ~{CORPUS} profiles to produce {ten} candidates per role, checked against", 24, TEXT2)
-    f.text(40, 160, "hard requirements and soft preferences.", 24, TEXT2)
-    f.text(40, 216, [("Recorded evaluations · ", False), ("results/*.json", True)], 23, TEXT2)
-    top, h, cw = 232, 216, 224
-    f.rect(40, top, 5 * cw, h)
-    stats = [(overall, ["Average final", "score across", f"{N_CONFIGS} configs"], ACCENT),
-             (f"{a['n_hard']} / {N_CONFIGS}", ["Configs", "passing every", "hard criterion"], TEXT),
-             (f"{a['n80']} / {N_CONFIGS}", ["Configs at", "80 or above"], TEXT),
-             (f"{a['n90']} / {N_CONFIGS}", ["Configs at", "90 or above"], TEXT),
-             (f"{a['hard_fail_seats']}", ["Hard failures", f"in {N_SEATS}", "recorded seats"], TEXT)]
-    for i, (value, label, col) in enumerate(stats):
+    """Title, subtitle, the two averages with the committed pipeline's first, then four facts about the final slates."""
+    ten, own, final = _count(SLATE_SIZE), tenth(COMMITTED[2]), tenth(a["overall"])
+    alt = (f"Candidate search over a Turbopuffer database of profiles. The pipeline as committed averaged {own} "
+           f"across {N_CONFIGS} configs ({COMMITTED[0]}). Grader-guided resubmission raised the average to {final} "
+           f"(Run 5). In the final submitted slates, all {a['n_hard']} configs pass every hard criterion, all "
+           f"{a['n80']} score 80 or above, {a['n90']} score 90 or above, and there are {a['hard_fail_seats']} hard "
+           f"failures in {N_SEATS} recorded seats.")
+    f = Fig("h", 672, alt)
+    f.text(40, 84, "Candidate search", 44, bold=True)
+    f.text(40, 128, f"Scans a Turbopuffer database of profiles to pick {ten} candidates per role,", 24, TEXT2)
+    f.text(40, 160, "checked against hard requirements and soft preferences.", 24, TEXT2)
+    top, h, cw = 196, 176, 560  # the two averages, the committed pipeline's first and larger
+    f.rect(40, top, 2 * cw, h)
+    f.line(40 + cw, top + 24, 40 + cw, top + h - 24)
+    heads = [(own, 56, ACCENT, ["Pipeline as committed,", f"{COMMITTED[0]} average over {N_CONFIGS} configs"]),
+             (final, 44, TEXT, ["After grader-guided resubmission,", f"Run 5 average over {N_CONFIGS} configs"])]
+    for i, (value, size, col, label) in enumerate(heads):
         cx = 40 + i * cw
-        col_frame = (cx, top, cw, h)
-        if i:
-            f.line(cx, top + 24, cx, top + h - 24)
-        f.text(cx + 24, top + 55, value, 40, col, bold=True, frame=col_frame)
+        f.text(cx + 24, top + 76, value, size, col, bold=True, frame=(cx, top, cw, h))
         for j, part in enumerate(label):
-            f.text(cx + 24, top + 98 + 30 * j, part, 23, TEXT2, frame=col_frame)
+            f.text(cx + 24, top + 118 + 30 * j, part, 23, TEXT2, frame=(cx, top, cw, h))
+    top2, h2, cw2 = 436, 196, 280  # four facts that describe the final submitted slates only
+    f.text(40, top2 - 16, [("Final submitted slates · ", False), ("results/*.json", True)], 23, TEXT2)
+    f.rect(40, top2, 4 * cw2, h2)
+    stats = [(f"{a['n_hard']} / {N_CONFIGS}", ["Configs", "passing every", "hard criterion"]),
+             (f"{a['n80']} / {N_CONFIGS}", ["Configs at", "80 or above"]),
+             (f"{a['n90']} / {N_CONFIGS}", ["Configs at", "90 or above"]),
+             (f"{a['hard_fail_seats']}", ["Hard failures", f"in {N_SEATS}", "recorded seats"])]
+    for i, (value, label) in enumerate(stats):
+        cx = 40 + i * cw2
+        if i:
+            f.line(cx, top2 + 24, cx, top2 + h2 - 24)
+        f.text(cx + 24, top2 + 55, value, 40, bold=True, frame=(cx, top2, cw2, h2))
+        for j, part in enumerate(label):
+            f.text(cx + 24, top2 + 98 + 30 * j, part, 23, TEXT2, frame=(cx, top2, cw2, h2))
     return f.svg()
 
 
 def pipeline(a):
     """Five stages in reading order, then the three places a run is recorded."""
-    ten, table = _count(SLATE_SIZE), f"{_run('Run 3'):.1f} to {a['overall']:.1f}"
-    alt = (f"Candidate search pipeline over about {CORPUS} profiles: exhaustive ID-ordered "
-           "Turbopuffer scans; filters for degree, field, school and dates; GPT-4o-mini reranking on hard and soft "
-           "criteria using the text available to the evaluation judge; blind rubric verification under standards fixed "
-           f"before review; and live evaluation and archiving of {ten} candidates per role. Outputs are results/*.json, "
-           f"a submission ledger that permanently excludes hard failures, and a run table showing average scores from {table}.")
+    ten, table, (lo, hi) = _count(SLATE_SIZE), f"{tenth(HISTORY[0][2])} to {tenth(a['overall'])}", CAP_RANGE
+    alt = (f"Candidate search pipeline over a Turbopuffer database, in five stages. Scan pages in id order through "
+           "every profile that matches the role's attribute filter. Prescreen checks degree, school, field and dates, "
+           f"ranks by keywords and keeps {lo} to {hi} candidates per role. Judge has GPT-4o-mini score hard and soft "
+           "criteria from the profile text alone, without live scores. Select seats candidates the live grader already "
+           f"scored {PIN_MIN} or above first, then judged hard passes. Submit sends {ten} candidates per role to the "
+           f"live grader. Outputs are results/*.json, a submission ledger that drops hard failures and pins {PIN_MIN}+ "
+           f"scorers, and a run table with averages from {table}.")
     f = Fig("p", 960, alt)
     f.text(40, 80, "Candidate search pipeline", 36, bold=True)
-    f.text(40, 120, f"From ~{CORPUS} profiles in Turbopuffer to {ten} verified candidates per role.", 24, TEXT2)
-    stages = [("Retrieve", "Structured scans, in id order, of every profile",
-               "that matches the role's attribute filters."),
-              ("Filter", "Degree, field, school and date requirements.",
-               "Exact recall against the structured hard criteria."),
-              ("Rerank", "GPT-4o-mini scores hard and soft criteria using",
-               "only the profile text available to the evaluation judge."),
-              ("Verify", "Blind rubric-scored judge, with standards fixed before review.",
-               "The judge does not see prior live scores."),
-              ("Record", f"Submit {ten} candidates per role to the live endpoint.",
-               "Archive the slate and the returned evaluation scores.")]
+    f.text(40, 120, f"From a Turbopuffer database to {ten} submitted candidates per role.", 24, TEXT2)
+    stages = [("Scan", "Pages in id order through every profile that",
+               "matches the role's attribute filter (pool.py)."),
+              ("Prescreen", "Degree, school, field and date checks, then keyword",
+               f"ranking, capped at {lo} to {hi} per role (pool.py)."),
+              ("Judge", "GPT-4o-mini scores hard and soft criteria from the profile",
+               "text alone, one candidate per call, without live scores."),
+              ("Select", "Seats go first to candidates the live grader already",
+               f"scored {PIN_MIN}+, then to judged hard passes (selection.py)."),
+              ("Submit", f"Sends {ten} candidates per role to the live grader,",
+               "then records the scores and archives the response.")]
     for i, (name, line1, line2) in enumerate(stages):
         top = 152 + i * 120
         f.rect(40, top, 1120, 96)
-        f.text(64, top + 57, name, 26, ACCENT if name == "Verify" else TEXT, bold=True, frame=(40, top, 284, 96))
+        f.text(64, top + 57, name, 26, ACCENT if name == "Select" else TEXT, bold=True, frame=(40, top, 284, 96))
         f.text(324, top + 39, line1, 23, TEXT2, frame=(308, top, 852, 96))
         f.text(324, top + 69, line2, 23, TEXT2, frame=(308, top, 852, 96))
         if i < len(stages) - 1:
@@ -284,7 +358,7 @@ def pipeline(a):
     f.line(600, rec_bottom, 600, 752, DATA2, 2)
     f.line(centers[0], 752, centers[-1], 752, DATA2, 2)
     outs = [([("results/*.json", True)], ["One recorded evaluation", "per config"]),
-            ("Submission ledger", ["Hard failures are", "permanently excluded."]),
+            ("Submission ledger", ["Drops hard failures,", f"pins {PIN_MIN}+ scorers"]),
             ("Run table", ["Average score", table])]
     for k, (heading, desc) in enumerate(outs):
         bx = 40 + k * (ow + gut)
@@ -298,11 +372,15 @@ def pipeline(a):
 
 
 def progression(a):
-    """The five recorded averages as points on a 0 to 100 scale, with the 90 line for reference."""
-    final, n_hist = a["overall"], len(RUN_HISTORY)
-    runs = RUN_HISTORY + [(f"Run {n_hist + 1}", final, RUN_5_NOTE)]
-    f = Fig("r", 684, (f"Average eval score across the {_count(len(runs))} recorded runs, from {_run('Run 1'):.1f} with "
-                       f"strict filters and a soft-only reranker to {final:.1f} with exhaustive scans and a blind re-judge"))
+    """Recorded averages by run on a 0 to 100 scale. Hollow points on a dashed line are grader-guided resubmissions."""
+    runs = HISTORY + [("Run 5", "HEAD", a["overall"], RUN_5_NOTE, True)]
+    vals = [tenth(mean) for _, _, mean, _, _ in runs]
+    lead = runs.index(COMMITTED)
+    alt = (f"Average final score by run. Runs 2 and 3 retrieved a vector top 200 and averaged {vals[0]} and {vals[1]}. "
+           f"Run 4, the pipeline as committed with exhaustive scans and an LLM judge, averaged {vals[lead]}. "
+           f"Grader-guided resubmission then reached {vals[3]}, and Run 5 reached {vals[4]}. "
+           "Run 1 has no results file and is not drawn.")
+    f = Fig("r", 704, alt)
     y0, y1 = 384, 168  # plot bottom (score 0) and top (score 100)
     ys = lambda v: y0 - v / 100 * (y0 - y1)  # noqa: E731
     f.text(40, 80, "Average final score by run", 36, bold=True)
@@ -310,21 +388,25 @@ def progression(a):
     for t in (0, 50, 100):
         f.line(96, ys(t), 1160, ys(t))
         f.text(80, ys(t) + 8, str(t), 23, TEXT2, anchor="end")
-    f.line(96, ys(90), 1160, ys(90), DATA2, 1.5, "6 6")
-    f.text(1160, ys(90) + 30, "90", 23, TEXT2, anchor="end")
-    pts = [(152 + 224 * i, ys(avg)) for i, (_, avg, _) in enumerate(runs)]
-    f.parts.append('<polyline points="' + " ".join(f"{x:g},{y:.1f}" for x, y in pts)
-                   + f'" fill="none" stroke="{DATA2}" stroke-width="2.5"/>')
-    for i, ((name, avg, note), (x, y)) in enumerate(zip(runs, pts)):
-        col = ACCENT if i == len(runs) - 1 else DATA2
-        f.parts.append(f'<circle cx="{x:g}" cy="{y:.1f}" r="7" fill="{col}"/>')
-        f.text(x, y - 20, f"{avg:.1f}", 26, TEXT if col == DATA2 else ACCENT, "middle", bold=True, halo=True)
+    # No 90 reference line here: the grader-guided points sit within a unit of it and its dashes would hide theirs.
+    pts = [(152 + 224 * i, ys(mean)) for i, (_, _, mean, _, _) in enumerate(runs)]
+    first_guided = next(i for i, r in enumerate(runs) if r[4])
+    for seg, dash in ((pts[:first_guided], ""), (pts[first_guided - 1:], ' stroke-dasharray="8 7"')):
+        f.parts.append('<polyline points="' + " ".join(f"{x:g},{y:.1f}" for x, y in seg)
+                       + f'" fill="none" stroke="{DATA2}" stroke-width="2.5"{dash}/>')
+    for i, ((name, _, _, note, guided), (x, y)) in enumerate(zip(runs, pts)):
+        if guided:  # hollow: a grader-guided resubmission, not the committed pipeline
+            f.parts.append(f'<circle cx="{x:g}" cy="{y:.1f}" r="7" fill="{CANVAS}" stroke="{DATA2}" stroke-width="3"/>')
+        else:
+            f.parts.append(f'<circle cx="{x:g}" cy="{y:.1f}" r="7" fill="{ACCENT if i == lead else DATA2}"/>')
+        f.text(x, y - 20, vals[i], 26, ACCENT if i == lead else TEXT, "middle", bold=True, halo=True)
         frame = (x - 112, 0, 224, f.h)
         f.text(x, 428, name, 24, anchor="middle", frame=frame)
         for j, part in enumerate(note):
             f.text(x, 460 + 30 * j, part, 23, TEXT2, "middle", frame=frame)
     f.text(600, 594, "Recorded run", 23, TEXT2, "middle")
-    f.text(40, 636, [(f"Runs 1 to {n_hist} from recorded run tables, Run {n_hist + 1} from ", False),
+    f.text(40, 636, "Hollow points are grader-guided resubmissions. Run 1 has no results file.", 23, TEXT2)
+    f.text(40, 668, [("Runs 2 to 4 and the resubmission come from git history, Run 5 from ", False),
                      ("results/*.json", True), (".", False)], 23, TEXT2)
     return f.svg()
 
@@ -334,12 +416,13 @@ def scores(a):
     rows, n = a["rows"], N_CONFIGS
     if a["n_hard"] != n or a["n80"] != n:
         raise SystemExit("the copy says every config passes its hard criteria and clears 80; results/ disagrees")
-    f = Fig("s", 800, (f"Recorded eval scores for all {_count(n)} role configs: {_count(a['n90'])} of {_count(n)} at 90 "
-                       f"or above, all {_count(n)} at 80 or above, every hard criterion passing at 100 percent"))
+    f = Fig("s", 808, (f"Recorded eval scores of the final submitted slates, after grader-guided resubmission, for all "
+                       f"{_count(n)} role configs, from results/. {_count(a['n90']).capitalize()} of {_count(n)} score 90 "
+                       f"or above, all {_count(n)} score 80 or above, and every hard criterion passes at 100 percent."))
     x0, x1, top, pitch, bar = 424, 1084, 160, 48, 28
     xs = lambda v: x0 + v / 100 * (x1 - x0)  # noqa: E731
     bottom = top + pitch * (n - 1) + bar
-    f.text(40, 80, "Final evaluation score by role", 36, bold=True)
+    f.text(40, 80, "Final submitted slates by role", 36, bold=True)
     f.text(40, 136, "Role", 23, TEXT2)
     f.text(x0, 136, "Final evaluation score (0 to 100)", 23, TEXT2)
     f.text(xs(90), 136, "90", 23, TEXT2, "middle")
@@ -352,16 +435,19 @@ def scores(a):
         f.rect(x0, y, xs(r["avg"]) - x0, bar, ACCENT if r["avg"] >= 90 else DATA2, "none", 0)
     f.line(xs(90), 148, xs(90), bottom + 12, DATA2, 1.5, "6 6")
     for i, r in enumerate(rows):
-        f.text(xs(r["avg"]) + 16, top + i * pitch + 23, f"{r['avg']:.1f}", 26, bold=True, halo=True)
-    f.text(40, bottom + 96, [(f"{_count(SLATE_SIZE).capitalize()} candidates per config. Recorded live evaluations: ", False),
-                             ("results/*.json", True), (".", False)], 23, TEXT2)
+        f.text(xs(r["avg"]) + 16, top + i * pitch + 23, tenth(r["avg"]), 26, bold=True, halo=True)
+    f.text(40, bottom + 96, f"Final slates after grader-guided resubmission, {_count(SLATE_SIZE)} candidates per config.",
+           23, TEXT2)
     f.text(40, bottom + 126, f"{a['n90']}/{n} at 90 or above, {a['n80']}/{n} at 80 or above, "
                              "and every hard criterion passes at 100%.", 23, TEXT2)
+    f.text(40, bottom + 156, [("Recorded live evaluations in ", False), ("results/*.json", True), (".", False)], 23, TEXT2)
     return f.svg()
 
 
 if __name__ == "__main__":
     a = audit()
+    history_check()
+    code_check()
     os.makedirs(os.path.join(ROOT, "assets"), exist_ok=True)
     os.makedirs(os.path.join(ROOT, "docs", "figures"), exist_ok=True)
     for path, svg in [("assets/hero.svg", hero(a)),

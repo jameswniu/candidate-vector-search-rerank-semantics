@@ -1,31 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 488" width="1200" height="488" role="img" aria-label="Semantic candidate search over about 194K profiles. Recorded evaluations average 90.3 across 10 configs. All 10 configs have a 100% pass rate on every hard criterion; all 10 score 80 or above, and 8 score 90 or above. There are 0 hard failures in 100 recorded seats." font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" style="font-variant-numeric: tabular-nums">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 672" width="1200" height="672" role="img" aria-label="Candidate search over a Turbopuffer database of profiles. The pipeline as committed averaged 87.7 across 10 configs (Run 4). Grader-guided resubmission raised the average to 90.3 (Run 5). In the final submitted slates, all 10 configs pass every hard criterion, all 10 score 80 or above, 8 score 90 or above, and there are 0 hard failures in 100 recorded seats." font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" style="font-variant-numeric: tabular-nums">
 <defs><marker id="ahh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8795a3"/></marker></defs>
-<rect width="1200" height="488" fill="#101418"/>
-<text x="40" y="84" fill="#f2f4f6" font-size="44" font-weight="700">Semantic candidate search</text>
-<text x="40" y="128" fill="#b6c0ca" font-size="24">Searches ~194K profiles to produce ten candidates per role, checked against</text>
-<text x="40" y="160" fill="#b6c0ca" font-size="24">hard requirements and soft preferences.</text>
-<text x="40" y="216" fill="#b6c0ca" font-size="23">Recorded evaluations · <tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan></text>
-<rect x="40" y="232" width="1120" height="216" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="64" y="287" fill="#8bb8e8" font-size="40" font-weight="700">90.3</text>
-<text x="64" y="330" fill="#b6c0ca" font-size="23">Average final</text>
-<text x="64" y="360" fill="#b6c0ca" font-size="23">score across</text>
-<text x="64" y="390" fill="#b6c0ca" font-size="23">10 configs</text>
-<line x1="264" y1="256" x2="264" y2="424" stroke="#46515c" stroke-width="1.5"/>
-<text x="288" y="287" fill="#f2f4f6" font-size="40" font-weight="700">10 / 10</text>
-<text x="288" y="330" fill="#b6c0ca" font-size="23">Configs</text>
-<text x="288" y="360" fill="#b6c0ca" font-size="23">passing every</text>
-<text x="288" y="390" fill="#b6c0ca" font-size="23">hard criterion</text>
-<line x1="488" y1="256" x2="488" y2="424" stroke="#46515c" stroke-width="1.5"/>
-<text x="512" y="287" fill="#f2f4f6" font-size="40" font-weight="700">10 / 10</text>
-<text x="512" y="330" fill="#b6c0ca" font-size="23">Configs at</text>
-<text x="512" y="360" fill="#b6c0ca" font-size="23">80 or above</text>
-<line x1="712" y1="256" x2="712" y2="424" stroke="#46515c" stroke-width="1.5"/>
-<text x="736" y="287" fill="#f2f4f6" font-size="40" font-weight="700">8 / 10</text>
-<text x="736" y="330" fill="#b6c0ca" font-size="23">Configs at</text>
-<text x="736" y="360" fill="#b6c0ca" font-size="23">90 or above</text>
-<line x1="936" y1="256" x2="936" y2="424" stroke="#46515c" stroke-width="1.5"/>
-<text x="960" y="287" fill="#f2f4f6" font-size="40" font-weight="700">0</text>
-<text x="960" y="330" fill="#b6c0ca" font-size="23">Hard failures</text>
-<text x="960" y="360" fill="#b6c0ca" font-size="23">in 100</text>
-<text x="960" y="390" fill="#b6c0ca" font-size="23">recorded seats</text>
+<rect width="1200" height="672" fill="#101418"/>
+<text x="40" y="84" fill="#f2f4f6" font-size="44" font-weight="700">Candidate search</text>
+<text x="40" y="128" fill="#b6c0ca" font-size="24">Scans a Turbopuffer database of profiles to pick ten candidates per role,</text>
+<text x="40" y="160" fill="#b6c0ca" font-size="24">checked against hard requirements and soft preferences.</text>
+<rect x="40" y="196" width="1120" height="176" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
+<line x1="600" y1="220" x2="600" y2="348" stroke="#46515c" stroke-width="1.5"/>
+<text x="64" y="272" fill="#8bb8e8" font-size="56" font-weight="700">87.7</text>
+<text x="64" y="314" fill="#b6c0ca" font-size="23">Pipeline as committed,</text>
+<text x="64" y="344" fill="#b6c0ca" font-size="23">Run 4 average over 10 configs</text>
+<text x="624" y="272" fill="#f2f4f6" font-size="44" font-weight="700">90.3</text>
+<text x="624" y="314" fill="#b6c0ca" font-size="23">After grader-guided resubmission,</text>
+<text x="624" y="344" fill="#b6c0ca" font-size="23">Run 5 average over 10 configs</text>
+<text x="40" y="420" fill="#b6c0ca" font-size="23">Final submitted slates · <tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan></text>
+<rect x="40" y="436" width="1120" height="196" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
+<text x="64" y="491" fill="#f2f4f6" font-size="40" font-weight="700">10 / 10</text>
+<text x="64" y="534" fill="#b6c0ca" font-size="23">Configs</text>
+<text x="64" y="564" fill="#b6c0ca" font-size="23">passing every</text>
+<text x="64" y="594" fill="#b6c0ca" font-size="23">hard criterion</text>
+<line x1="320" y1="460" x2="320" y2="608" stroke="#46515c" stroke-width="1.5"/>
+<text x="344" y="491" fill="#f2f4f6" font-size="40" font-weight="700">10 / 10</text>
+<text x="344" y="534" fill="#b6c0ca" font-size="23">Configs at</text>
+<text x="344" y="564" fill="#b6c0ca" font-size="23">80 or above</text>
+<line x1="600" y1="460" x2="600" y2="608" stroke="#46515c" stroke-width="1.5"/>
+<text x="624" y="491" fill="#f2f4f6" font-size="40" font-weight="700">8 / 10</text>
+<text x="624" y="534" fill="#b6c0ca" font-size="23">Configs at</text>
+<text x="624" y="564" fill="#b6c0ca" font-size="23">90 or above</text>
+<line x1="880" y1="460" x2="880" y2="608" stroke="#46515c" stroke-width="1.5"/>
+<text x="904" y="491" fill="#f2f4f6" font-size="40" font-weight="700">0</text>
+<text x="904" y="534" fill="#b6c0ca" font-size="23">Hard failures</text>
+<text x="904" y="564" fill="#b6c0ca" font-size="23">in 100</text>
+<text x="904" y="594" fill="#b6c0ca" font-size="23">recorded seats</text>
 </svg>
