@@ -73,7 +73,7 @@ flowchart TD
 
 ## Quick Start
 
-You need Python 3.9+, API keys for OpenAI and Turbopuffer, a Voyage AI key for `main.py`, and the evaluation endpoint's URL and the email it authorizes.
+You need Python 3.9+, API keys for OpenAI and Turbopuffer, a Voyage AI key for `main.py` only, and the evaluation endpoint's URL and the email it authorizes. `evaluate.py` reads `EVAL_URL` and `EVAL_AUTH_EMAIL` only when it submits, so a dry run needs neither.
 
 ```bash
 python -m venv venv && source venv/bin/activate
@@ -81,28 +81,26 @@ pip install -r requirements.txt
 
 export OPENAI_API_KEY="sk-..."
 export TPUF_API_KEY="tpuf_..."
-export VOYAGE_API_KEY="pa-..."                          # main.py only
-export EVAL_URL="<evaluation endpoint URL>"             # read by evaluate.py only when submitting
+export VOYAGE_API_KEY="pa-..."   # main.py only
+export EVAL_URL="<evaluation endpoint URL>"
 export EVAL_AUTH_EMAIL="<email the endpoint authorizes>"
 ```
 
-The Run 4 pipeline runs one config at a time, in this order.
+The Run 4 pipeline runs one config at a time, in this order. `pool.py` scans, prescreens and caches the pool, and with no argument it builds all ten. `judge.py` judges every pooled candidate. `selection.py --dry` prints the ten it would submit and submits nothing, and without `--dry` it submits them and overwrites `results/doctors_md.json`. `selection.py` also seeds its ledger from the committed `results/<config>.json`, so on a fresh clone it pins that file's 85+ scorers. `pool.py` and `judge.py` reuse whatever is already in `cache/`.
 
 ```bash
-python pool.py doctors_md.yml              # scan, prescreen and cache the pool (no argument runs all 10)
-python judge.py doctors_md.yml             # judge every pooled candidate
-python selection.py doctors_md.yml --dry   # print the ten it would submit, and submit nothing
-python selection.py doctors_md.yml         # submit, then overwrite results/doctors_md.json
+python pool.py doctors_md.yml             # scan, prescreen, cache
+python judge.py doctors_md.yml            # judge the pool
+python selection.py doctors_md.yml --dry  # show the ten, submit none
+python selection.py doctors_md.yml        # submit, overwrite results
 ```
 
-`selection.py` seeds its ledger from the committed `results/<config>.json`, so on a fresh clone it pins that file's 85+ scorers, and a real submission overwrites the file. `pool.py` and `judge.py` reuse whatever is already in `cache/`.
-
-`python main.py` runs the Run 3 vector pipeline, which produced none of the recorded Run 4 and Run 5 results. Without `--no-submit` it submits all ten configs and overwrites every `results/*.json`, and with `--config` it always submits, even when `--no-submit` is given.
+`python main.py` runs the Run 3 vector pipeline, which produced none of the recorded Run 4 and Run 5 results. With `--no-submit` it runs all ten configs and submits nothing. Without it, it submits all ten and overwrites every `results/*.json`. With `--config` it runs one config and always submits and overwrites that config's results file, even when `--no-submit` is given.
 
 ```bash
-python main.py --no-submit                 # Run 3 pipeline, all 10 configs, nothing submitted
-python main.py                             # Run 3 pipeline, submits and overwrites results/*.json
-python main.py --config tax_lawyer.yml     # one config, always submits and overwrites its results file
+python main.py --no-submit              # all 10, nothing submitted
+python main.py                          # submits, overwrites results
+python main.py --config tax_lawyer.yml  # always submits
 ```
 
 ## Results
