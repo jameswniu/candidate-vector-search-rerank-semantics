@@ -1,54 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 808" width="1200" height="808" role="img" aria-label="Recorded eval scores of the final submitted slates, after grader-guided resubmission, for all ten role configs, from results/. Eight of ten score 90 or above, all ten score 80 or above, and every hard criterion passes at 100 percent." font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" style="font-variant-numeric: tabular-nums">
-<defs><marker id="ahs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8795a3"/></marker></defs>
-<rect width="1200" height="808" fill="#101418"/>
-<text x="40" y="80" fill="#f2f4f6" font-size="36" font-weight="700">Final submitted slates by role</text>
-<text x="40" y="136" fill="#b6c0ca" font-size="23">Role</text>
-<text x="424" y="136" fill="#b6c0ca" font-size="23">Final evaluation score (0 to 100)</text>
-<text x="1018" y="136" fill="#b6c0ca" font-size="23" text-anchor="middle">90</text>
-<line x1="424" y1="150" x2="424" y2="632" stroke="#46515c" stroke-width="1.5"/>
-<text x="424" y="664" fill="#b6c0ca" font-size="23" text-anchor="middle">0</text>
-<line x1="556" y1="150" x2="556" y2="632" stroke="#46515c" stroke-width="1.5"/>
-<text x="556" y="664" fill="#b6c0ca" font-size="23" text-anchor="middle">20</text>
-<line x1="688" y1="150" x2="688" y2="632" stroke="#46515c" stroke-width="1.5"/>
-<text x="688" y="664" fill="#b6c0ca" font-size="23" text-anchor="middle">40</text>
-<line x1="820" y1="150" x2="820" y2="632" stroke="#46515c" stroke-width="1.5"/>
-<text x="820" y="664" fill="#b6c0ca" font-size="23" text-anchor="middle">60</text>
-<line x1="952" y1="150" x2="952" y2="632" stroke="#46515c" stroke-width="1.5"/>
-<text x="952" y="664" fill="#b6c0ca" font-size="23" text-anchor="middle">80</text>
-<line x1="1084" y1="150" x2="1084" y2="632" stroke="#46515c" stroke-width="1.5"/>
-<text x="1084" y="664" fill="#b6c0ca" font-size="23" text-anchor="middle">100</text>
-<text x="40" y="182" fill="#f2f4f6" font-size="24">Radiology</text>
-<rect x="424" y="160" width="609.4" height="28" fill="#8bb8e8" stroke="none" stroke-width="0"/>
-<text x="40" y="230" fill="#f2f4f6" font-size="24">Mechanical Engineers</text>
-<rect x="424" y="208" width="607.2" height="28" fill="#8bb8e8" stroke="none" stroke-width="0"/>
-<text x="40" y="278" fill="#f2f4f6" font-size="24">Tax Lawyer</text>
-<rect x="424" y="256" width="606.1" height="28" fill="#8bb8e8" stroke="none" stroke-width="0"/>
-<text x="40" y="326" fill="#f2f4f6" font-size="24">Junior Corporate Lawyer</text>
-<rect x="424" y="304" width="602.8" height="28" fill="#8bb8e8" stroke="none" stroke-width="0"/>
-<text x="40" y="374" fill="#f2f4f6" font-size="24">Biology Expert</text>
-<rect x="424" y="352" width="597.3" height="28" fill="#8bb8e8" stroke="none" stroke-width="0"/>
-<text x="40" y="422" fill="#f2f4f6" font-size="24">Mathematics PhD</text>
-<rect x="424" y="400" width="597.3" height="28" fill="#8bb8e8" stroke="none" stroke-width="0"/>
-<text x="40" y="470" fill="#f2f4f6" font-size="24">Bankers</text>
-<rect x="424" y="448" width="596.2" height="28" fill="#8bb8e8" stroke="none" stroke-width="0"/>
-<text x="40" y="518" fill="#f2f4f6" font-size="24">Quantitative Finance</text>
-<rect x="424" y="496" width="595.1" height="28" fill="#8bb8e8" stroke="none" stroke-width="0"/>
-<text x="40" y="566" fill="#f2f4f6" font-size="24">Doctors (MD)</text>
-<rect x="424" y="544" width="590.7" height="28" fill="#8795a3" stroke="none" stroke-width="0"/>
-<text x="40" y="614" fill="#f2f4f6" font-size="24">Anthropology</text>
-<rect x="424" y="592" width="561" height="28" fill="#8795a3" stroke="none" stroke-width="0"/>
-<line x1="1018" y1="148" x2="1018" y2="632" stroke="#8795a3" stroke-width="1.5" stroke-dasharray="6 6"/>
-<text x="1049.4" y="183" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">92.3</text>
-<text x="1047.2" y="231" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">92.0</text>
-<text x="1046.1" y="279" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">91.8</text>
-<text x="1042.8" y="327" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">91.3</text>
-<text x="1037.3" y="375" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">90.5</text>
-<text x="1037.3" y="423" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">90.5</text>
-<text x="1036.2" y="471" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">90.3</text>
-<text x="1035.1" y="519" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">90.2</text>
-<text x="1030.7" y="567" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">89.5</text>
-<text x="1001" y="615" fill="#f2f4f6" font-size="26" font-weight="700" stroke="#101418" stroke-width="8" stroke-linejoin="round" paint-order="stroke">85.0</text>
-<text x="40" y="716" fill="#b6c0ca" font-size="23">Final slates after grader-guided resubmission, ten candidates per config.</text>
-<text x="40" y="746" fill="#b6c0ca" font-size="23">8/10 at 90 or above, 10/10 at 80 or above, and every hard criterion passes at 100%.</text>
-<text x="40" y="776" fill="#b6c0ca" font-size="23">Recorded live evaluations in <tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan>.</text>
+<defs>
+<linearGradient id="bgs" x1="0" y1="0" x2="0.75" y2="1"><stop offset="0" stop-color="#12161c"/><stop offset="0.55" stop-color="#0c1013"/><stop offset="1" stop-color="#080a0d"/></linearGradient>
+<pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="0.95" fill="#161d26"/></pattern>
+<linearGradient id="nds" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19212b"/><stop offset="1" stop-color="#111820"/></linearGradient>
+<marker id="ahs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5a6673"/></marker>
+<marker id="ahgs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#199e70"/></marker>
+</defs>
+<rect width="1200" height="808" fill="url(#bgs)"/>
+<rect width="1200" height="808" fill="url(#dots)"/>
+<text x="40" y="80" fill="#f3f6f9" font-size="36" font-weight="700">Final submitted slates by role</text>
+<text x="40" y="136" fill="#7d8896" font-size="23">Role</text>
+<text x="424" y="136" fill="#7d8896" font-size="23">Final evaluation score (0 to 100)</text>
+<text x="1018" y="136" fill="#5c6773" font-size="23" text-anchor="middle">90</text>
+<line x1="424" y1="150" x2="424" y2="632" stroke="#1e2731" stroke-width="1.5"/>
+<text x="424" y="664" fill="#5c6773" font-size="23" text-anchor="middle">0</text>
+<line x1="556" y1="150" x2="556" y2="632" stroke="#1e2731" stroke-width="1.5"/>
+<text x="556" y="664" fill="#5c6773" font-size="23" text-anchor="middle">20</text>
+<line x1="688" y1="150" x2="688" y2="632" stroke="#1e2731" stroke-width="1.5"/>
+<text x="688" y="664" fill="#5c6773" font-size="23" text-anchor="middle">40</text>
+<line x1="820" y1="150" x2="820" y2="632" stroke="#1e2731" stroke-width="1.5"/>
+<text x="820" y="664" fill="#5c6773" font-size="23" text-anchor="middle">60</text>
+<line x1="952" y1="150" x2="952" y2="632" stroke="#1e2731" stroke-width="1.5"/>
+<text x="952" y="664" fill="#5c6773" font-size="23" text-anchor="middle">80</text>
+<line x1="1084" y1="150" x2="1084" y2="632" stroke="#1e2731" stroke-width="1.5"/>
+<text x="1084" y="664" fill="#5c6773" font-size="23" text-anchor="middle">100</text>
+<text x="40" y="182" fill="#9aa5b1" font-size="24">Radiology</text>
+<rect x="424" y="160" width="609.4" height="28" fill="#199e70" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<text x="40" y="230" fill="#9aa5b1" font-size="24">Mechanical Engineers</text>
+<rect x="424" y="208" width="607.2" height="28" fill="#199e70" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<text x="40" y="278" fill="#9aa5b1" font-size="24">Tax Lawyer</text>
+<rect x="424" y="256" width="606.1" height="28" fill="#199e70" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<text x="40" y="326" fill="#9aa5b1" font-size="24">Junior Corporate Lawyer</text>
+<rect x="424" y="304" width="602.8" height="28" fill="#199e70" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<text x="40" y="374" fill="#9aa5b1" font-size="24">Biology Expert</text>
+<rect x="424" y="352" width="597.3" height="28" fill="#199e70" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<text x="40" y="422" fill="#9aa5b1" font-size="24">Mathematics PhD</text>
+<rect x="424" y="400" width="597.3" height="28" fill="#199e70" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<text x="40" y="470" fill="#9aa5b1" font-size="24">Bankers</text>
+<rect x="424" y="448" width="596.2" height="28" fill="#199e70" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<text x="40" y="518" fill="#9aa5b1" font-size="24">Quantitative Finance</text>
+<rect x="424" y="496" width="595.1" height="28" fill="#199e70" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<text x="40" y="566" fill="#9aa5b1" font-size="24">Doctors (MD)</text>
+<rect x="424" y="544" width="590.7" height="28" fill="#3987e5" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<text x="40" y="614" fill="#9aa5b1" font-size="24">Anthropology</text>
+<rect x="424" y="592" width="561" height="28" fill="#3987e5" fill-opacity="0.9" stroke="none" stroke-width="0"/>
+<line x1="1018" y1="148" x2="1018" y2="632" stroke="#5c6773" stroke-width="1.5" stroke-dasharray="6 6"/>
+<text x="1049.4" y="183" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">92.3</text>
+<text x="1047.2" y="231" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">92.0</text>
+<text x="1046.1" y="279" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">91.8</text>
+<text x="1042.8" y="327" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">91.3</text>
+<text x="1037.3" y="375" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">90.5</text>
+<text x="1037.3" y="423" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">90.5</text>
+<text x="1036.2" y="471" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">90.3</text>
+<text x="1035.1" y="519" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">90.2</text>
+<text x="1030.7" y="567" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">89.5</text>
+<text x="1001" y="615" fill="#f3f6f9" font-size="26" font-weight="700" stroke="#0c1013" stroke-width="8" stroke-linejoin="round" paint-order="stroke">85.0</text>
+<text x="40" y="716" fill="#7d8896" font-size="23">Final slates after grader-guided resubmission, ten candidates per config.</text>
+<text x="40" y="746" fill="#7d8896" font-size="23">8/10 at 90 or above, 10/10 at 80 or above, and every hard criterion passes at 100%.</text>
+<text x="40" y="776" fill="#7d8896" font-size="23">Recorded live evaluations in <tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan>.</text>
 </svg>

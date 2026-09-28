@@ -9,10 +9,10 @@
 <br/>
 
 <img alt="python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-dfe3e0?style=flat-square&labelColor=0c1013">
-<img alt="LLM judge GPT-4o-mini" src="https://img.shields.io/static/v1?label=LLM%20judge&message=GPT-4o-mini&color=59636e&style=flat-square&labelColor=0c1013">
-<img alt="vector DB Turbopuffer" src="https://img.shields.io/badge/vector_DB-Turbopuffer-59636e?style=flat-square&labelColor=0c1013">
-<img alt="recorded evals 87.7 as committed, 90.3 grader-guided" src="https://img.shields.io/static/v1?label=recorded%20evals&message=87.7%20as%20committed%2C%2090.3%20grader-guided&color=59636e&style=flat-square&labelColor=0c1013">
-<img alt="license Apache-2.0" src="https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=59636e&style=flat-square&labelColor=0c1013">
+<img alt="LLM judge GPT-4o-mini" src="https://img.shields.io/static/v1?label=LLM%20judge&message=GPT-4o-mini&color=8f9491&style=flat-square&labelColor=0c1013">
+<img alt="vector DB Turbopuffer" src="https://img.shields.io/badge/vector_DB-Turbopuffer-8f9491?style=flat-square&labelColor=0c1013">
+<img alt="recorded evals 87.7 as committed, 90.3 grader-guided" src="https://img.shields.io/static/v1?label=recorded%20evals&message=87.7%20as%20committed%2C%2090.3%20grader-guided&color=8f9491&style=flat-square&labelColor=0c1013">
+<img alt="license Apache-2.0" src="https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=8f9491&style=flat-square&labelColor=0c1013">
 
 <br/><br/>
 

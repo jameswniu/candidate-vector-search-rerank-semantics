@@ -1,35 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 704" width="1200" height="704" role="img" aria-label="Candidate search over a Turbopuffer database of profiles. The pipeline as committed averaged 87.7 ± 5.0 across 10 configs (Run 4). Grader-guided resubmission raised the average to 90.3 ± 1.5 (Run 5). Each ± is a 95% t-interval for the mean of these ten roles, with no claim about unseen roles. In the final submitted slates, all 10 configs pass every hard criterion, all 10 score 80 or above, 8 score 90 or above, and there are 0 hard failures in 100 recorded seats." font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" style="font-variant-numeric: tabular-nums">
-<defs><marker id="ahh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8795a3"/></marker></defs>
-<rect width="1200" height="704" fill="#101418"/>
-<text x="40" y="84" fill="#f2f4f6" font-size="44" font-weight="700">Candidate search</text>
-<text x="40" y="128" fill="#b6c0ca" font-size="24">Scans a Turbopuffer database of profiles to pick ten candidates per role,</text>
-<text x="40" y="160" fill="#b6c0ca" font-size="24">checked against hard requirements and soft preferences.</text>
-<rect x="40" y="196" width="1120" height="176" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<line x1="600" y1="220" x2="600" y2="348" stroke="#46515c" stroke-width="1.5"/>
-<text x="64" y="272" fill="#8bb8e8" font-size="56" font-weight="700">87.7 ± 5.0</text>
-<text x="64" y="314" fill="#b6c0ca" font-size="23">Pipeline as committed,</text>
-<text x="64" y="344" fill="#b6c0ca" font-size="23">Run 4 average over 10 configs</text>
-<text x="624" y="272" fill="#f2f4f6" font-size="44" font-weight="700">90.3 ± 1.5</text>
-<text x="624" y="314" fill="#b6c0ca" font-size="23">After grader-guided resubmission,</text>
-<text x="624" y="344" fill="#b6c0ca" font-size="23">Run 5 average over 10 configs</text>
-<text x="40" y="404" fill="#b6c0ca" font-size="23">± is a 95% t-interval for the mean of these ten roles, with no claim about unseen roles.</text>
-<text x="40" y="452" fill="#b6c0ca" font-size="23">Final submitted slates · <tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan></text>
-<rect x="40" y="468" width="1120" height="196" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="64" y="523" fill="#f2f4f6" font-size="40" font-weight="700">10 / 10</text>
-<text x="64" y="566" fill="#b6c0ca" font-size="23">Configs</text>
-<text x="64" y="596" fill="#b6c0ca" font-size="23">passing every</text>
-<text x="64" y="626" fill="#b6c0ca" font-size="23">hard criterion</text>
-<line x1="320" y1="492" x2="320" y2="640" stroke="#46515c" stroke-width="1.5"/>
-<text x="344" y="523" fill="#f2f4f6" font-size="40" font-weight="700">10 / 10</text>
-<text x="344" y="566" fill="#b6c0ca" font-size="23">Configs at</text>
-<text x="344" y="596" fill="#b6c0ca" font-size="23">80 or above</text>
-<line x1="600" y1="492" x2="600" y2="640" stroke="#46515c" stroke-width="1.5"/>
-<text x="624" y="523" fill="#f2f4f6" font-size="40" font-weight="700">8 / 10</text>
-<text x="624" y="566" fill="#b6c0ca" font-size="23">Configs at</text>
-<text x="624" y="596" fill="#b6c0ca" font-size="23">90 or above</text>
-<line x1="880" y1="492" x2="880" y2="640" stroke="#46515c" stroke-width="1.5"/>
-<text x="904" y="523" fill="#f2f4f6" font-size="40" font-weight="700">0</text>
-<text x="904" y="566" fill="#b6c0ca" font-size="23">Hard failures</text>
-<text x="904" y="596" fill="#b6c0ca" font-size="23">in 100</text>
-<text x="904" y="626" fill="#b6c0ca" font-size="23">recorded seats</text>
+<defs>
+<linearGradient id="bgh" x1="0" y1="0" x2="0.75" y2="1"><stop offset="0" stop-color="#12161c"/><stop offset="0.55" stop-color="#0c1013"/><stop offset="1" stop-color="#080a0d"/></linearGradient>
+<pattern id="doth" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="0.95" fill="#161d26"/></pattern>
+<linearGradient id="ndh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19212b"/><stop offset="1" stop-color="#111820"/></linearGradient>
+<marker id="ahh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5a6673"/></marker>
+<marker id="ahgh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#199e70"/></marker>
+</defs>
+<rect width="1200" height="704" fill="url(#bgh)"/>
+<rect width="1200" height="704" fill="url(#doth)"/>
+<text x="40" y="84" fill="#f3f6f9" font-size="44" font-weight="700">Candidate search</text>
+<text x="40" y="128" fill="#9aa5b1" font-size="24">Scans a Turbopuffer database of profiles to pick ten candidates per role,</text>
+<text x="40" y="160" fill="#9aa5b1" font-size="24">checked against hard requirements and soft preferences.</text>
+<rect x="40" y="196" width="1120" height="176" fill="#0a0e12" stroke="#212b36" stroke-width="1.5"/>
+<line x1="600" y1="220" x2="600" y2="348" stroke="#212b36" stroke-width="1.5"/>
+<text x="64" y="272" fill="#ab8ce6" font-size="56" font-weight="700">87.7 ± 5.0</text>
+<text x="64" y="314" fill="#9aa5b1" font-size="23">Pipeline as committed,</text>
+<text x="64" y="344" fill="#9aa5b1" font-size="23">Run 4 average over 10 configs</text>
+<text x="624" y="272" fill="#f3f6f9" font-size="44" font-weight="700">90.3 ± 1.5</text>
+<text x="624" y="314" fill="#9aa5b1" font-size="23">After grader-guided resubmission,</text>
+<text x="624" y="344" fill="#9aa5b1" font-size="23">Run 5 average over 10 configs</text>
+<text x="40" y="404" fill="#7d8896" font-size="23">± is a 95% t-interval for the mean of these ten roles, with no claim about unseen roles.</text>
+<text x="40" y="452" fill="#7d8896" font-size="23">Final submitted slates · <tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan></text>
+<rect x="40" y="468" width="1120" height="196" fill="#0a0e12" stroke="#212b36" stroke-width="1.5"/>
+<text x="64" y="523" fill="#199e70" font-size="40" font-weight="700">10 / 10</text>
+<text x="64" y="566" fill="#9aa5b1" font-size="23">Configs</text>
+<text x="64" y="596" fill="#9aa5b1" font-size="23">passing every</text>
+<text x="64" y="626" fill="#9aa5b1" font-size="23">hard criterion</text>
+<line x1="320" y1="492" x2="320" y2="640" stroke="#212b36" stroke-width="1.5"/>
+<text x="344" y="523" fill="#199e70" font-size="40" font-weight="700">10 / 10</text>
+<text x="344" y="566" fill="#9aa5b1" font-size="23">Configs at</text>
+<text x="344" y="596" fill="#9aa5b1" font-size="23">80 or above</text>
+<line x1="600" y1="492" x2="600" y2="640" stroke="#212b36" stroke-width="1.5"/>
+<text x="624" y="523" fill="#199e70" font-size="40" font-weight="700">8 / 10</text>
+<text x="624" y="566" fill="#9aa5b1" font-size="23">Configs at</text>
+<text x="624" y="596" fill="#9aa5b1" font-size="23">90 or above</text>
+<line x1="880" y1="492" x2="880" y2="640" stroke="#212b36" stroke-width="1.5"/>
+<text x="904" y="523" fill="#199e70" font-size="40" font-weight="700">0</text>
+<text x="904" y="566" fill="#9aa5b1" font-size="23">Hard failures</text>
+<text x="904" y="596" fill="#9aa5b1" font-size="23">in 100</text>
+<text x="904" y="626" fill="#9aa5b1" font-size="23">recorded seats</text>
 </svg>

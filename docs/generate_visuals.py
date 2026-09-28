@@ -19,14 +19,11 @@ import sys
 from decimal import ROUND_HALF_DOWN, ROUND_HALF_EVEN, Decimal
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from svgkit import MONO, SANS  # noqa: E402
+from svgkit import (AQUA, AQUA_T, ARROW, BG1, BLUE, BLUE_T, FAINT, GRID, INK, INK2, INK3, MONO, MUTE,  # noqa: E402
+                    ORANGE, ORANGE_T, OUTPUT, PANEL, PANEL_EDGE, RECORD, RECORD_EDGE, SANS, STROKE, VIOLET,
+                    VIOLET_T, backdrop)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Flat palette. Contrast on the canvas: TEXT 16.8:1, TEXT2 10.0:1, ACCENT 8.9:1, DATA2 6.0:1.
-CANVAS, PANEL, BORDER = "#101418", "#181e24", "#46515c"
-TEXT, TEXT2 = "#f2f4f6", "#b6c0ca"
-ACCENT, DATA2 = "#8bb8e8", "#8795a3"
 
 VW = 1200  # viewBox width of every figure
 MIN_SIZE = 23  # smallest font size allowed, per 1200 units of width
@@ -98,12 +95,12 @@ def _fit(frame, x, y, w, size, anchor, pad, label):
 
 
 class Fig:
-    """One figure on a flat canvas. Every text passes the size floor and the fit guard before it is emitted."""
+    """One figure on the gradient canvas. Every text passes the size floor and the fit guard before it is emitted."""
 
     def __init__(self, uid, h, alt):
         self.uid, self.h, self.alt, self.parts = uid, h, alt, []
 
-    def text(self, x, y, runs, size, fill=TEXT, anchor="start", bold=False, frame=None, pad=16, halo=False):
+    def text(self, x, y, runs, size, fill=INK, anchor="start", bold=False, frame=None, pad=16, halo=False):
         """One line of text. runs is a string, or a list of (text, is_code) pieces; code is set in mono."""
         runs = [(runs, False)] if isinstance(runs, str) else runs
         label = "".join(s for s, _ in runs)
@@ -116,27 +113,27 @@ class Fig:
         attrs = f'x="{x:g}" y="{y:g}" fill="{fill}" font-size="{size}"'
         attrs += "" if anchor == "start" else f' text-anchor="{anchor}"'
         attrs += ' font-weight="700"' if bold else ""
-        if halo:  # a canvas-coloured outline keeps gridlines from running through the label
-            attrs += f' stroke="{CANVAS}" stroke-width="8" stroke-linejoin="round" paint-order="stroke"'
+        if halo:  # an outline in the canvas colour (BG1) keeps gridlines from running through the label
+            attrs += f' stroke="{BG1}" stroke-width="8" stroke-linejoin="round" paint-order="stroke"'
         self.parts.append(f"<text {attrs}>{body}</text>")
 
-    def rect(self, x, y, w, h, fill=PANEL, stroke=BORDER, sw=1.5):
-        self.parts.append(f'<rect x="{x:g}" y="{y:g}" width="{w:g}" height="{h:g}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>')
+    def rect(self, x, y, w, h, fill=PANEL, stroke=PANEL_EDGE, sw=1.5, opacity=None):
+        op = "" if opacity is None else f' fill-opacity="{opacity:g}"'
+        self.parts.append(f'<rect x="{x:g}" y="{y:g}" width="{w:g}" height="{h:g}" fill="{fill}"{op} stroke="{stroke}" '
+                          f'stroke-width="{sw}"/>')
 
-    def line(self, x1, y1, x2, y2, stroke=BORDER, sw=1.5, dash=""):
+    def line(self, x1, y1, x2, y2, stroke=GRID, sw=1.5, dash=""):
         d = f' stroke-dasharray="{dash}"' if dash else ""
         self.parts.append(f'<line x1="{x1:g}" y1="{y1:g}" x2="{x2:g}" y2="{y2:g}" stroke="{stroke}" stroke-width="{sw}"{d}/>')
 
-    def arrow(self, d):
-        self.parts.append(f'<path d="{d}" fill="none" stroke="{DATA2}" stroke-width="2" marker-end="url(#ah{self.uid})"/>')
+    def arrow(self, d, col=ARROW):
+        head = {ARROW: "ah", AQUA: "ahg"}[col]  # svgkit.backdrop() defines an arrowhead in these two colours only
+        self.parts.append(f'<path d="{d}" fill="none" stroke="{col}" stroke-width="2" marker-end="url(#{head}{self.uid})"/>')
 
     def svg(self):
         head = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {VW} {self.h}" width="{VW}" height="{self.h}" '
                 f'role="img" aria-label="{html.escape(self.alt)}" font-family="{SANS}" '
-                'style="font-variant-numeric: tabular-nums">\n'
-                f'<defs><marker id="ah{self.uid}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" '
-                f'orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="{DATA2}"/></marker></defs>\n'
-                f'<rect width="{VW}" height="{self.h}" fill="{CANVAS}"/>\n')
+                'style="font-variant-numeric: tabular-nums">\n' + backdrop(self.uid, VW, self.h))
         return head + "\n".join(self.parts) + "\n</svg>\n"
 
 
@@ -320,22 +317,22 @@ def hero(a):
            f"failures in {N_SEATS} recorded seats.")
     f = Fig("h", 704, alt)
     f.text(40, 84, "Candidate search", 44, bold=True)
-    f.text(40, 128, f"Scans a Turbopuffer database of profiles to pick {ten} candidates per role,", 24, TEXT2)
-    f.text(40, 160, "checked against hard requirements and soft preferences.", 24, TEXT2)
+    f.text(40, 128, f"Scans a Turbopuffer database of profiles to pick {ten} candidates per role,", 24, INK3)
+    f.text(40, 160, "checked against hard requirements and soft preferences.", 24, INK3)
     top, h, cw = 196, 176, 560  # the two averages, the committed pipeline's first and larger
     f.rect(40, top, 2 * cw, h)
-    f.line(40 + cw, top + 24, 40 + cw, top + h - 24)
-    heads = [(own, 56, ACCENT, ["Pipeline as committed,", f"{COMMITTED[0]} average over {N_CONFIGS} configs"]),
-             (final, 44, TEXT, ["After grader-guided resubmission,", f"Run 5 average over {N_CONFIGS} configs"])]
+    f.line(40 + cw, top + 24, 40 + cw, top + h - 24, PANEL_EDGE)
+    heads = [(own, 56, VIOLET_T, ["Pipeline as committed,", f"{COMMITTED[0]} average over {N_CONFIGS} configs"]),
+             (final, 44, INK, ["After grader-guided resubmission,", f"Run 5 average over {N_CONFIGS} configs"])]
     for i, (value, size, col, label) in enumerate(heads):
         cx = 40 + i * cw
         f.text(cx + 24, top + 76, value, size, col, bold=True, frame=(cx, top, cw, h))
         for j, part in enumerate(label):
-            f.text(cx + 24, top + 118 + 30 * j, part, 23, TEXT2, frame=(cx, top, cw, h))
+            f.text(cx + 24, top + 118 + 30 * j, part, 23, INK3, frame=(cx, top, cw, h))
     f.text(40, top + h + 32, "± is a 95% t-interval for the mean of these ten roles, with no claim about unseen roles.",
-           23, TEXT2)
+           23, MUTE)
     top2, h2, cw2 = 468, 196, 280  # four facts that describe the final submitted slates only
-    f.text(40, top2 - 16, [("Final submitted slates · ", False), ("results/*.json", True)], 23, TEXT2)
+    f.text(40, top2 - 16, [("Final submitted slates · ", False), ("results/*.json", True)], 23, MUTE)
     f.rect(40, top2, 4 * cw2, h2)
     stats = [(f"{a['n_hard']} / {N_CONFIGS}", ["Configs", "passing every", "hard criterion"]),
              (f"{a['n80']} / {N_CONFIGS}", ["Configs at", "80 or above"]),
@@ -344,10 +341,10 @@ def hero(a):
     for i, (value, label) in enumerate(stats):
         cx = 40 + i * cw2
         if i:
-            f.line(cx, top2 + 24, cx, top2 + h2 - 24)
-        f.text(cx + 24, top2 + 55, value, 40, bold=True, frame=(cx, top2, cw2, h2))
+            f.line(cx, top2 + 24, cx, top2 + h2 - 24, PANEL_EDGE)
+        f.text(cx + 24, top2 + 55, value, 40, AQUA, bold=True, frame=(cx, top2, cw2, h2))
         for j, part in enumerate(label):
-            f.text(cx + 24, top2 + 98 + 30 * j, part, 23, TEXT2, frame=(cx, top2, cw2, h2))
+            f.text(cx + 24, top2 + 98 + 30 * j, part, 23, INK3, frame=(cx, top2, cw2, h2))
     return f.svg()
 
 
@@ -363,7 +360,7 @@ def pipeline(a):
            f"scorers, and a run table with averages from {table}.")
     f = Fig("p", 960, alt)
     f.text(40, 80, "Candidate search pipeline", 36, bold=True)
-    f.text(40, 120, f"From a Turbopuffer database to {ten} submitted candidates per role.", 24, TEXT2)
+    f.text(40, 120, f"From a Turbopuffer database to {ten} submitted candidates per role.", 24, INK3)
     stages = [("Scan", "Pages in id order through every profile that",
                "matches the role's attribute filter (pool.py)."),
               ("Prescreen", "Degree, school, field and date checks, then keyword",
@@ -374,19 +371,24 @@ def pipeline(a):
                f"scored {PIN_MIN}+, then to judged hard passes (selection.py)."),
               ("Submit", f"Sends {ten} candidates per role to the live grader,",
                "then records the scores and archives the response.")]
+    # Box fill, edge and name colour per stage. Submit, which records the run, gets the lighter RECORD box.
+    grad = f"url(#nd{f.uid})"
+    looks = {"Scan": (grad, VIOLET, VIOLET_T), "Prescreen": (grad, BLUE, BLUE_T), "Judge": (grad, ORANGE, ORANGE_T),
+             "Select": (grad, AQUA, AQUA_T), "Submit": (RECORD, RECORD_EDGE, INK)}
     for i, (name, line1, line2) in enumerate(stages):
         top = 152 + i * 120
-        f.rect(40, top, 1120, 96)
-        f.text(64, top + 57, name, 26, ACCENT if name == "Select" else TEXT, bold=True, frame=(40, top, 284, 96))
-        f.text(324, top + 39, line1, 23, TEXT2, frame=(308, top, 852, 96))
-        f.text(324, top + 69, line2, 23, TEXT2, frame=(308, top, 852, 96))
+        fill, edge, ink = looks[name]
+        f.rect(40, top, 1120, 96, fill, edge)
+        f.text(64, top + 57, name, 26, ink, bold=True, frame=(40, top, 284, 96))
+        f.text(324, top + 39, line1, 23, MUTE, frame=(308, top, 852, 96))
+        f.text(324, top + 69, line2, 23, MUTE, frame=(308, top, 852, 96))
         if i < len(stages) - 1:
-            f.arrow(f"M 600 {top + 96} V {top + 118}")
+            f.arrow(f"M 600 {top + 96} V {top + 118}", AQUA if name == "Select" else ARROW)
     rec_bottom, oy, oh, gut = 152 + 4 * 120 + 96, 776, 136, 24
     ow = (1120 - 2 * gut) / 3
     centers = [40 + ow / 2 + k * (ow + gut) for k in range(3)]
-    f.line(600, rec_bottom, 600, 752, DATA2, 2)
-    f.line(centers[0], 752, centers[-1], 752, DATA2, 2)
+    f.line(600, rec_bottom, 600, 752, ARROW, 2)
+    f.line(centers[0], 752, centers[-1], 752, ARROW, 2)
     outs = [([("results/*.json", True)], ["One recorded evaluation", "per config"]),
             ("Submission ledger", ["Drops hard failures,", f"pins {PIN_MIN}+ scorers"]),
             ("Run table", ["Average score", table])]
@@ -394,10 +396,10 @@ def pipeline(a):
         bx = 40 + k * (ow + gut)
         frame = (bx, oy, ow, oh)
         f.arrow(f"M {centers[k]:g} 752 V {oy - 2}")
-        f.rect(bx, oy, ow, oh)
-        f.text(bx + 24, oy + 44, heading, 26, bold=True, frame=frame)
+        f.rect(bx, oy, ow, oh, OUTPUT, ORANGE)
+        f.text(bx + 24, oy + 44, heading, 26, ORANGE_T, bold=True, frame=frame)
         for j, part in enumerate(desc):
-            f.text(bx + 24, oy + 82 + 30 * j, part, 23, TEXT2, frame=frame)
+            f.text(bx + 24, oy + 82 + 30 * j, part, 23, MUTE, frame=frame)
     return f.svg()
 
 
@@ -414,30 +416,31 @@ def progression(a):
     y0, y1 = 384, 168  # plot bottom (score 0) and top (score 100)
     ys = lambda v: y0 - v / 100 * (y0 - y1)  # noqa: E731
     f.text(40, 80, "Average final score by run", 36, bold=True)
-    f.text(40, 128, "Average final score", 23, TEXT2)
+    f.text(40, 128, "Average final score", 23, MUTE)
     for t in (0, 50, 100):
         f.line(96, ys(t), 1160, ys(t))
-        f.text(80, ys(t) + 8, str(t), 23, TEXT2, anchor="end")
+        f.text(80, ys(t) + 8, str(t), 23, FAINT, anchor="end")
     # No 90 reference line here: the grader-guided points sit within a unit of it and its dashes would hide theirs.
     pts = [(152 + 224 * i, ys(mean)) for i, (_, _, mean, _, _) in enumerate(runs)]
     first_guided = next(i for i, r in enumerate(runs) if r[4])
     for seg, dash in ((pts[:first_guided], ""), (pts[first_guided - 1:], ' stroke-dasharray="8 7"')):
         f.parts.append('<polyline points="' + " ".join(f"{x:g},{y:.1f}" for x, y in seg)
-                       + f'" fill="none" stroke="{DATA2}" stroke-width="2.5"{dash}/>')
-    for i, ((name, _, _, note, guided), (x, y)) in enumerate(zip(runs, pts)):
+                       + f'" fill="none" stroke="{STROKE}" stroke-width="2.5"{dash}/>')
+    for i, ((name, _, mean, note, guided), (x, y)) in enumerate(zip(runs, pts)):
+        col = AQUA if mean >= 90 else (VIOLET if i >= lead else BLUE)  # aqua at 90 or above, violet from Run 4 on
         if guided:  # hollow: a grader-guided resubmission, not the committed pipeline
-            f.parts.append(f'<circle cx="{x:g}" cy="{y:.1f}" r="7" fill="{CANVAS}" stroke="{DATA2}" stroke-width="3"/>')
+            f.parts.append(f'<circle cx="{x:g}" cy="{y:.1f}" r="7" fill="{BG1}" stroke="{col}" stroke-width="3"/>')
         else:
-            f.parts.append(f'<circle cx="{x:g}" cy="{y:.1f}" r="7" fill="{ACCENT if i == lead else DATA2}"/>')
-        f.text(x, y - 20, vals[i], 26, ACCENT if i == lead else TEXT, "middle", bold=True, halo=True)
+            f.parts.append(f'<circle cx="{x:g}" cy="{y:.1f}" r="7" fill="{col}"/>')
+        f.text(x, y - 20, vals[i], 26, VIOLET_T if i == lead else INK, "middle", bold=True, halo=True)
         frame = (x - 112, 0, 224, f.h)
-        f.text(x, 428, name, 24, anchor="middle", frame=frame)
+        f.text(x, 428, name, 24, INK2, anchor="middle", frame=frame)
         for j, part in enumerate(note):
-            f.text(x, 460 + 30 * j, part, 23, TEXT2, "middle", frame=frame)
-    f.text(600, 594, "Recorded run", 23, TEXT2, "middle")
-    f.text(40, 636, "Hollow points are grader-guided resubmissions. Run 1 has no results file.", 23, TEXT2)
+            f.text(x, 460 + 30 * j, part, 23, MUTE, "middle", frame=frame)
+    f.text(600, 594, "Recorded run", 23, MUTE, "middle")
+    f.text(40, 636, "Hollow points are grader-guided resubmissions. Run 1 has no results file.", 23, MUTE)
     f.text(40, 668, [("Runs 2 to 4 and the resubmission come from git history, Run 5 from ", False),
-                     ("results/*.json", True), (".", False)], 23, TEXT2)
+                     ("results/*.json", True), (".", False)], 23, MUTE)
     return f.svg()
 
 
@@ -453,24 +456,24 @@ def scores(a):
     xs = lambda v: x0 + v / 100 * (x1 - x0)  # noqa: E731
     bottom = top + pitch * (n - 1) + bar
     f.text(40, 80, "Final submitted slates by role", 36, bold=True)
-    f.text(40, 136, "Role", 23, TEXT2)
-    f.text(x0, 136, "Final evaluation score (0 to 100)", 23, TEXT2)
-    f.text(xs(90), 136, "90", 23, TEXT2, "middle")
+    f.text(40, 136, "Role", 23, MUTE)
+    f.text(x0, 136, "Final evaluation score (0 to 100)", 23, MUTE)
+    f.text(xs(90), 136, "90", 23, FAINT, "middle")
     for t in range(0, 101, 20):
         f.line(xs(t), 150, xs(t), bottom + 12)
-        f.text(xs(t), bottom + 44, str(t), 23, TEXT2, "middle")
+        f.text(xs(t), bottom + 44, str(t), 23, FAINT, "middle")
     for i, r in enumerate(rows):
         y = top + i * pitch
-        f.text(40, y + 22, r["name"], 24, frame=(24, 0, x0 - 24, f.h))
-        f.rect(x0, y, xs(r["avg"]) - x0, bar, ACCENT if r["avg"] >= 90 else DATA2, "none", 0)
-    f.line(xs(90), 148, xs(90), bottom + 12, DATA2, 1.5, "6 6")
+        f.text(40, y + 22, r["name"], 24, INK3, frame=(24, 0, x0 - 24, f.h))
+        f.rect(x0, y, xs(r["avg"]) - x0, bar, AQUA if r["avg"] >= 90 else BLUE, "none", 0, opacity=0.9)
+    f.line(xs(90), 148, xs(90), bottom + 12, FAINT, 1.5, "6 6")
     for i, r in enumerate(rows):
         f.text(xs(r["avg"]) + 16, top + i * pitch + 23, tenth(r["avg"]), 26, bold=True, halo=True)
     f.text(40, bottom + 96, f"Final slates after grader-guided resubmission, {_count(SLATE_SIZE)} candidates per config.",
-           23, TEXT2)
+           23, MUTE)
     f.text(40, bottom + 126, f"{a['n90']}/{n} at 90 or above, {a['n80']}/{n} at 80 or above, "
-                             "and every hard criterion passes at 100%.", 23, TEXT2)
-    f.text(40, bottom + 156, [("Recorded live evaluations in ", False), ("results/*.json", True), (".", False)], 23, TEXT2)
+                             "and every hard criterion passes at 100%.", 23, MUTE)
+    f.text(40, bottom + 156, [("Recorded live evaluations in ", False), ("results/*.json", True), (".", False)], 23, MUTE)
     return f.svg()
 
 
