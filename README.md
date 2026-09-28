@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="Candidate search over a Turbopuffer database of profiles. The pipeline as committed averaged 87.7 across 10 configs (Run 4). Grader-guided resubmission raised the average to 90.3 (Run 5). In the final submitted slates, all 10 configs pass every hard criterion, all 10 score 80 or above, 8 score 90 or above, and there are 0 hard failures in 100 recorded seats." width="100%">
+  <img src="assets/hero.svg" alt="Candidate search over a Turbopuffer database of profiles. The pipeline as committed averaged 87.7 ± 5.0 across 10 configs (Run 4). Grader-guided resubmission raised the average to 90.3 ± 1.5 (Run 5). Each ± is a 95% t-interval for the mean of these ten roles, with no claim about unseen roles. In the final submitted slates, all 10 configs pass every hard criterion, all 10 score 80 or above, 8 score 90 or above, and there are 0 hard failures in 100 recorded seats." width="100%">
 </p>
 
 <div align="center">
@@ -111,11 +111,11 @@ python main.py --config tax_lawyer.yml     # one config, always submits and over
   <img src="docs/figures/run_progression.svg" alt="Average final score by run. Runs 2 and 3 retrieved a vector top 200 and averaged 52.1 and 66.7. Run 4, the pipeline as committed with exhaustive scans and an LLM judge, averaged 87.7. Grader-guided resubmission then reached 89.4, and Run 5 reached 90.3. Run 1 has no results file and is not drawn." width="100%">
 </p>
 
-Run as committed, the Run 4 code recorded an average of 87.7 across the ten configs, with every hard criterion passing (`ea8faa6`). After that I chose to keep resubmitting with the live grader in the loop, and the average reached 89.4 and then 90.3. Those resubmissions kept candidates the grader had already scored 85 or above and swapped others in or out by hand, and for Run 5 I picked the Doctors and Anthropology slates under reading standards that are not in the committed code.
+Run as committed, the Run 4 code recorded an average of 87.7 ± 5.0 across the ten configs, with every hard criterion passing (`652bc29`). After that I chose to keep resubmitting with the live grader in the loop, and the average reached 89.4 and then 90.3 ± 1.5. Those resubmissions kept candidates the grader had already scored 85 or above and swapped others in or out by hand, and for Run 5 I picked the Doctors and Anthropology slates under reading standards that are not in the committed code.
 
 Runs 1 to 3 retrieved candidates by vector similarity and ended at 66.7. Exhaustive structured scans and an LLM judge are what moved the score from there.
 
-Every average here is the mean of the ten configs' `average_final_score` in `results/*.json` at the named commit, rounded to one decimal with exact halves rounded down, so Run 2's 52.15 shows as 52.1 and Run 5's 90.35 as 90.3.
+Each ± is a 95% t-interval for the mean, computed from how much these ten roles differ from each other, and it makes no claim about unseen roles. Every average here is the mean of the ten configs' `average_final_score` in `results/*.json` at the named commit, rounded to one decimal with exact halves rounded down, so Run 2's 52.15 shows as 52.1 and Run 5's 90.35 as 90.3.
 
 ### Run 1, not in the repo
 
@@ -123,7 +123,7 @@ Run 1 predates the first commit, so neither its code nor its results are in the 
 
 ### Run 2, relaxed filters and an LLM that checks hard criteria (52.1 avg)
 
-Structured filters can enforce "has JD" or "field contains biology" but cannot evaluate "top U.S. medical school" or "PhD started recently", so Run 2 gave that judgment to the LLM. Its results are recorded in `6142125`, and its pipeline worked this way.
+Structured filters can enforce "has JD" or "field contains biology" but cannot evaluate "top U.S. medical school" or "PhD started recently", so Run 2 gave that judgment to the LLM. Its results are recorded in `0341cfa`, and its pipeline worked this way.
 
 1. The query embedding concatenates the description, hard criteria and soft criteria, so retrieval matches the whole role spec.
 2. The hard filters match degrees by substring and check no experience years, so they remove only obvious mismatches.
@@ -152,7 +152,7 @@ The grader uses an LLM judge for hard criteria, and Run 2's recorded slates show
 
 ### Run 3, database filters and parsed degree strings (66.7 avg)
 
-Run 3 (`6480b44`) kept the vector top 200 and moved hard-criteria checks earlier.
+Run 3 (`170b1a9`) kept the vector top 200 and moved hard-criteria checks earlier.
 
 1. For five configs, degree type, field of study and, for Anthropology, start year became Turbopuffer attribute filters inside the ANN query, so the database narrows retrieval before results reach Python.
 2. For undergraduate location (Mathematics, Biology) and school prestige (Doctors), the pipeline parses the full `yrs_::school_::degree_::fos_::start_::end_` strings to check specific degree entries.
@@ -176,7 +176,7 @@ The biggest gains came from enforcing hard criteria earlier. Configs whose hard 
 
 ### Run 4, exhaustive scans, an LLM judge and a submission ledger (87.7 avg)
 
-Run 3 still lost points in three ways. ANN retrieval dropped qualified candidates that a top-200 vector neighborhood missed. My reranker read structured fields that I assume the grader's judge never sees, so we disagreed about who passes. And each submission threw away what earlier submissions had shown. Run 4 (code in `2fd156c`, results in `ea8faa6`) rebuilt the pipeline around those three problems.
+Run 3 still lost points in three ways. ANN retrieval dropped qualified candidates that a top-200 vector neighborhood missed. My reranker read structured fields that I assume the grader's judge never sees, so we disagreed about who passes. And each submission threw away what earlier submissions had shown. Run 4 (code in `40b6df5`, results in `652bc29`) rebuilt the pipeline around those three problems.
 
 1. Exhaustive structured scans replaced ANN for candidate generation. Paginated, id-ordered scans with Turbopuffer attribute filters return every row that matches the filter, and the degree lists, school lists, keyword checks and caps after the scan limit recall against the hard criteria. Soft-fit order comes from keyword counts and then the judge's predicted score. Scan sizes and timings are not recorded.
 2. The local judge uses the grader's formula, 0 on any hard failure and otherwise the soft mean times ten. It reads only `rerankSummary`, ignores the structured fields, and carries per-config calibration notes learned from earlier verdicts, such as which schools pass as "top", that M7 is literal, and that a residency without a listed MD fails. A general prompt rule fails undated experience on duration criteria, and GPT-4o-mini runs over every pooled candidate.
@@ -200,11 +200,11 @@ Five of ten configs finish at 90 or above, nine at 85 or above, and every hard c
 
 ### Grader-guided resubmission (89.4 avg)
 
-After Run 4 I kept resubmitting with the live grader in the loop. Three commits (`b33bd0b`, `61a6959`, `6628beb`) recorded the resubmitted slates, which kept candidates the grader had already scored 85 or above and swapped others in or out by hand. Their only code change turned the 85 pin threshold into the `PIN_MIN` environment variable. The average reached 89.4, and the table under Run 5 shows each config.
+After Run 4 I kept resubmitting with the live grader in the loop. Three commits (`9cbae95`, `efbc8b2`, `7423943`) recorded the resubmitted slates, which kept candidates the grader had already scored 85 or above and swapped others in or out by hand. Their only code change turned the 85 pin threshold into the `PIN_MIN` environment variable. The average reached 89.4, and the table under Run 5 shows each config.
 
 ### Run 5, Doctors and Anthropology picked under my own reading standards (90.3 avg)
 
-Run 5 (`44f697f`) changed no code. It resubmitted only the Doctors and Anthropology slates, which I picked under the two reading standards below. Doctors rose from 88.0 to 89.5 and Anthropology from 77.2 to 85.0, and the average reached 90.3.
+Run 5 (`749b2d3`) changed no code. It resubmitted only the Doctors and Anthropology slates, which I picked under the two reading standards below. Doctors rose from 88.0 to 89.5 and Anthropology from 77.2 to 85.0, and the average reached 90.3.
 
 | Config | Run 4 | Resubmitted | **Run 5** | Hard Pass |
 |---|---|---|---|---|

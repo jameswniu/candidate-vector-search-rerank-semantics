@@ -10,8 +10,10 @@ source. Any disagreement stops the build.
 import glob
 import html
 import json
+import math
 import os
 import re
+import statistics
 import subprocess
 import sys
 from decimal import ROUND_HALF_DOWN, ROUND_HALF_EVEN, Decimal
@@ -37,18 +39,29 @@ HARD_RATE_TOL = 0.005  # stored pass rates may be rounded to two places; one fli
 # Earlier recorded averages, each the exact mean of results/*.json average_final_score at its commit.
 # history_check() recomputes every one with `git show` and stops the build if one disagrees.
 # Run 1 predates the first commit and has no results file, so it is not drawn.
+# RUN_4_SCORES holds the ten per-config scores of the Run 4 code's own recorded run (652bc29), exactly.
+# history_check() compares each with git. Their mean is Run 4's average and their spread is the hero's range.
+RUN_4_SCORES = {"anthropology": 206 / 3, "bankers": 271 / 3, "biology_expert": 521 / 6, "doctors_md": 87.0,
+                "junior_corporate_lawyer": 274 / 3, "mathematics_phd": 359 / 4, "mechanical_engineers": 92.0,
+                "quantitative_finance": 541 / 6, "radiology": 277 / 3, "tax_lawyer": 265 / 3}
 HISTORY = [  # (x-axis label, commit, exact mean, note lines, grader-guided)
-    ("Run 2", "6142125", 1043 / 20, ["Vector top 200", "LLM checks", "hard criteria"], False),  # 52.15
-    ("Run 3", "6480b44", 200 / 3, ["Vector top 200", "plus database", "filters"], False),  # 66.67
-    ("Run 4", "ea8faa6", 3507 / 40, ["Exhaustive", "scans and an", "LLM judge"], False),  # 87.675, the code's own run
-    ("Resubmitted", "6628beb", 1073 / 12, ["Grader-guided", "resubmission"], True),  # 89.42
+    ("Run 2", "0341cfa", 1043 / 20, ["Vector top 200", "LLM checks", "hard criteria"], False),  # 52.15
+    ("Run 3", "170b1a9", 200 / 3, ["Vector top 200", "plus database", "filters"], False),  # 66.67
+    ("Run 4", "652bc29", sum(RUN_4_SCORES.values()) / len(RUN_4_SCORES),  # 87.675, the code's own run (code 40b6df5)
+     ["Exhaustive", "scans and an", "LLM judge"], False),
+    ("Resubmitted", "7423943", 1073 / 12, ["Grader-guided", "resubmission"], True),  # 89.42
 ]
 COMMITTED = HISTORY[2]  # the Run 4 code's own recorded run, the number the page leads with
 RUN_5_NOTE = ["Grader-guided,", "standards not", "in the code"]  # Run 5 is the live results/*.json
 
+# The hero's ± is a 95% t-interval of the mean over the ten configs, t(0.975, 9) * s / sqrt(10), where s is
+# the sample standard deviation of the ten per-config averages. Its width comes from how much the ten roles differ,
+# and it is a range for the mean, so single roles can sit well outside it (Run 4's Anthropology is 68.7).
+T_975_9 = 2.262  # Student's t, two-sided 95%, 9 degrees of freedom
+
 # Code values the pipeline figure states. code_check() reads both back from the source.
-CAP_RANGE = (250, 550)  # smallest and largest pool cap in pool.py POOL_BUILDERS, unchanged since 2fd156c
-PIN_MIN = 85  # selection.py pins live scores at or above this; hard-coded in 2fd156c, the PIN_MIN default since b33bd0b
+CAP_RANGE = (250, 550)  # smallest and largest pool cap in pool.py POOL_BUILDERS, unchanged since 40b6df5
+PIN_MIN = 85  # selection.py pins live scores at or above this; hard-coded in 40b6df5, the PIN_MIN default since 9cbae95
 
 
 def tenth(x):
@@ -59,6 +72,14 @@ def tenth(x):
     """
     clean = Decimal(repr(x)).quantize(Decimal("0.000001"), rounding=ROUND_HALF_EVEN)
     return str(clean.quantize(Decimal("0.1"), rounding=ROUND_HALF_DOWN))
+
+
+def half_width(values):
+    """Half-width of the 95% t-interval of the mean of values, using the sample standard deviation."""
+    if len(values) != N_CONFIGS:
+        raise SystemExit(f"COUNT FAIL: the range needs {N_CONFIGS} per-config averages, got {len(values)}")
+    return T_975_9 * statistics.stdev(values) / math.sqrt(len(values))
+
 
 # Fit guard. Per-char advances in em are deliberately generous (mono 0.62, sans 0.56, sans bold
 # 0.60), and so are ascent and descent, so SF, Menlo, Courier New, Helvetica and Arial all land
@@ -239,7 +260,7 @@ def _git(*args):
 
 
 def history_check():
-    """Recompute each HISTORY average from git, and stop if one disagrees.
+    """Recompute each HISTORY average and each RUN_4_SCORES value from git, and stop if one disagrees.
 
     Without git, or in a shallow clone or source archive that lacks a commit, the check is skipped
     with a warning, since the constants still carry their commits. A mismatch always stops the build.
@@ -248,18 +269,22 @@ def history_check():
     for label, sha, mean, _, _ in HISTORY:
         try:
             names = [n for n in _git("ls-tree", "--name-only", sha, "results/").split() if n.endswith(".json")]
-            blobs = [_git("show", f"{sha}:{n}") for n in names]
+            blobs = {os.path.basename(n)[:-5]: _git("show", f"{sha}:{n}") for n in names}
         except (OSError, subprocess.CalledProcessError) as e:
             skipped.append(f"{label} ({sha}, {type(e).__name__})")
             continue
         try:
-            scores = [json.loads(b)["eval_result"]["average_final_score"] for b in blobs]
+            scores = {k: json.loads(b)["eval_result"]["average_final_score"] for k, b in blobs.items()}
         except (KeyError, TypeError, ValueError) as e:
             bad.append(f"{label} ({sha}): results/ at this commit lacks average_final_score ({type(e).__name__})")
             continue
-        got = sum(scores) / len(scores) if scores else float("nan")
+        got = sum(scores.values()) / len(scores) if scores else float("nan")
         if len(scores) != N_CONFIGS or not abs(got - mean) < 1e-9:
             bad.append(f"{label} ({sha}): git has {len(scores)} configs averaging {got:.4f}, HISTORY says {mean:.4f}")
+        if sha == COMMITTED[1]:  # the hero's range uses each of these scores, so check each one
+            for k in sorted(set(scores) | set(RUN_4_SCORES)):
+                if k not in scores or k not in RUN_4_SCORES or not abs(scores[k] - RUN_4_SCORES[k]) < 1e-9:
+                    bad.append(f"{label} ({sha}): {k} is {scores.get(k)} in git, {RUN_4_SCORES.get(k)} in RUN_4_SCORES")
     if skipped:
         print("  HISTORY SKIP: this checkout cannot read " + ", ".join(skipped)
               + ". Those averages are drawn from the HISTORY constants unverified; build from a full clone to check them.")
@@ -283,14 +308,17 @@ def code_check():
 
 
 def hero(a):
-    """Title, subtitle, the two averages with the committed pipeline's first, then four facts about the final slates."""
-    ten, own, final = _count(SLATE_SIZE), tenth(COMMITTED[2]), tenth(a["overall"])
+    """Title, subtitle, the two averages with their ranges (the committed pipeline's first), then the final slates."""
+    ten = _count(SLATE_SIZE)
+    own = f"{tenth(COMMITTED[2])} ± {tenth(half_width(list(RUN_4_SCORES.values())))}"
+    final = f"{tenth(a['overall'])} ± {tenth(half_width([r['avg'] for r in a['rows']]))}"
     alt = (f"Candidate search over a Turbopuffer database of profiles. The pipeline as committed averaged {own} "
            f"across {N_CONFIGS} configs ({COMMITTED[0]}). Grader-guided resubmission raised the average to {final} "
-           f"(Run 5). In the final submitted slates, all {a['n_hard']} configs pass every hard criterion, all "
+           f"(Run 5). Each ± is a 95% t-interval for the mean of these ten roles, with no claim about unseen roles. "
+           f"In the final submitted slates, all {a['n_hard']} configs pass every hard criterion, all "
            f"{a['n80']} score 80 or above, {a['n90']} score 90 or above, and there are {a['hard_fail_seats']} hard "
            f"failures in {N_SEATS} recorded seats.")
-    f = Fig("h", 672, alt)
+    f = Fig("h", 704, alt)
     f.text(40, 84, "Candidate search", 44, bold=True)
     f.text(40, 128, f"Scans a Turbopuffer database of profiles to pick {ten} candidates per role,", 24, TEXT2)
     f.text(40, 160, "checked against hard requirements and soft preferences.", 24, TEXT2)
@@ -304,7 +332,9 @@ def hero(a):
         f.text(cx + 24, top + 76, value, size, col, bold=True, frame=(cx, top, cw, h))
         for j, part in enumerate(label):
             f.text(cx + 24, top + 118 + 30 * j, part, 23, TEXT2, frame=(cx, top, cw, h))
-    top2, h2, cw2 = 436, 196, 280  # four facts that describe the final submitted slates only
+    f.text(40, top + h + 32, "± is a 95% t-interval for the mean of these ten roles, with no claim about unseen roles.",
+           23, TEXT2)
+    top2, h2, cw2 = 468, 196, 280  # four facts that describe the final submitted slates only
     f.text(40, top2 - 16, [("Final submitted slates · ", False), ("results/*.json", True)], 23, TEXT2)
     f.rect(40, top2, 4 * cw2, h2)
     stats = [(f"{a['n_hard']} / {N_CONFIGS}", ["Configs", "passing every", "hard criterion"]),
