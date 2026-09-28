@@ -75,7 +75,7 @@ flowchart TD
 
 ## Quick Start
 
-**Prerequisites**: Python 3.9+, API keys for OpenAI, Voyage AI, and Turbopuffer.
+You need Python 3.9+, API keys for OpenAI, Voyage AI and Turbopuffer, and the evaluation endpoint's URL and the email it authorizes.
 
 ```bash
 python -m venv venv && source venv/bin/activate
@@ -84,6 +84,8 @@ pip install -r requirements.txt
 export OPENAI_API_KEY="sk-..."
 export VOYAGE_API_KEY="pa-..."
 export TPUF_API_KEY="tpuf_..."
+export EVAL_URL="<evaluation endpoint URL>"             # read by evaluate.py only when submitting
+export EVAL_AUTH_EMAIL="<email the endpoint authorizes>"
 
 python main.py                              # Run all 10 configs
 python main.py --config tax_lawyer.yml      # Run single config

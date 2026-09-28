@@ -1,20 +1,37 @@
-"""Submit results to the grader evaluation endpoint."""
+"""Submit results to the evaluation endpoint.
+
+The endpoint's URL and the email it authorizes are read from the EVAL_URL and
+EVAL_AUTH_EMAIL environment variables when a slate is submitted, so a dry run
+needs neither.
+"""
+
+import json
+import os
 
 import requests
-import json
+
+ENV_VARS = ("EVAL_URL", "EVAL_AUTH_EMAIL")
 
 
-EVAL_URL = "https://example.invalid/evaluate"
-AUTH_EMAIL = "you@example.com"
+def _endpoint() -> tuple[str, str]:
+    """Return (url, email) from the environment, or stop with a message naming each unset variable."""
+    missing = [name for name in ENV_VARS if not os.environ.get(name)]
+    if missing:
+        names = " and ".join(missing)
+        verb = "is" if len(missing) == 1 else "are"
+        raise SystemExit(f"{names} {verb} not set, so nothing was submitted. Export EVAL_URL (the evaluation "
+                         "endpoint's URL) and EVAL_AUTH_EMAIL (the email it authorizes), then run again.")
+    return os.environ["EVAL_URL"], os.environ["EVAL_AUTH_EMAIL"]
 
 
 def submit(config_path: str, object_ids: list[str]) -> dict:
     """Submit ranked object_ids for a config and return the evaluation result."""
+    url, email = _endpoint()
     resp = requests.post(
-        EVAL_URL,
+        url,
         headers={
             "Content-Type": "application/json",
-            "Authorization": AUTH_EMAIL,
+            "Authorization": email,
         },
         json={
             "config_path": config_path,
