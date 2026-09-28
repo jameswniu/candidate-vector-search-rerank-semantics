@@ -7,10 +7,10 @@
 <h1>Candidate Search for Ten Hiring Roles</h1>
 
 <img alt="python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-dfe3e0?style=flat-square&labelColor=0c1013">
-<img alt="judge model GPT-4o-mini" src="https://img.shields.io/static/v1?label=judge%20model&message=GPT-4o-mini&color=59636e&style=flat-square&labelColor=0c1013">
-<img alt="database Turbopuffer" src="https://img.shields.io/static/v1?label=database&message=Turbopuffer&color=59636e&style=flat-square&labelColor=0c1013">
-<img alt="grader score 87.7 as committed, 90.3 after resubmitting" src="https://img.shields.io/static/v1?label=grader%20score&message=87.7%20as%20committed%2C%2090.3%20after%20resubmitting&color=59636e&style=flat-square&labelColor=0c1013">
-<img alt="license Apache-2.0" src="https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=59636e&style=flat-square&labelColor=0c1013">
+<img alt="judge model GPT-4o-mini" src="https://img.shields.io/static/v1?label=judge%20model&message=GPT-4o-mini&color=8f9491&style=flat-square&labelColor=0c1013">
+<img alt="database Turbopuffer" src="https://img.shields.io/static/v1?label=database&message=Turbopuffer&color=8f9491&style=flat-square&labelColor=0c1013">
+<img alt="grader score 87.7 as committed, 90.3 after resubmitting" src="https://img.shields.io/static/v1?label=grader%20score&message=87.7%20as%20committed%2C%2090.3%20after%20resubmitting&color=8f9491&style=flat-square&labelColor=0c1013">
+<img alt="license Apache-2.0" src="https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=8f9491&style=flat-square&labelColor=0c1013">
 
 </div>
 

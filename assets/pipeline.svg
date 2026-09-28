@@ -1,47 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" width="1200" height="960" role="img" aria-label="Candidate search pipeline over a Turbopuffer database, in five stages. Scan pages in id order through every profile that matches the role&#x27;s attribute filter. Prescreen checks degree, school, field and dates, ranks by keywords and keeps 250 to 550 candidates per role. Judge has GPT-4o-mini score hard and soft criteria from the profile text alone, without live scores. Select seats candidates the live grader already scored 85 or above first, then judged hard passes. Submit sends ten candidates per role to the live grader. Outputs are results/*.json, a submission ledger that drops hard failures and pins 85+ scorers, and a run table with averages from 52.1 to 90.3." font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" style="font-variant-numeric: tabular-nums">
-<defs><marker id="ahp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8795a3"/></marker></defs>
-<rect width="1200" height="960" fill="#101418"/>
-<text x="40" y="80" fill="#f2f4f6" font-size="36" font-weight="700">Candidate search pipeline</text>
-<text x="40" y="120" fill="#b6c0ca" font-size="24">From a Turbopuffer database to ten submitted candidates per role.</text>
-<rect x="40" y="152" width="1120" height="96" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="64" y="209" fill="#f2f4f6" font-size="26" font-weight="700">Scan</text>
-<text x="324" y="191" fill="#b6c0ca" font-size="23">Pages in id order through every profile that</text>
-<text x="324" y="221" fill="#b6c0ca" font-size="23">matches the role&#x27;s attribute filter (pool.py).</text>
-<path d="M 600 248 V 270" fill="none" stroke="#8795a3" stroke-width="2" marker-end="url(#ahp)"/>
-<rect x="40" y="272" width="1120" height="96" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="64" y="329" fill="#f2f4f6" font-size="26" font-weight="700">Prescreen</text>
-<text x="324" y="311" fill="#b6c0ca" font-size="23">Degree, school, field and date checks, then keyword</text>
-<text x="324" y="341" fill="#b6c0ca" font-size="23">ranking, capped at 250 to 550 per role (pool.py).</text>
-<path d="M 600 368 V 390" fill="none" stroke="#8795a3" stroke-width="2" marker-end="url(#ahp)"/>
-<rect x="40" y="392" width="1120" height="96" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="64" y="449" fill="#f2f4f6" font-size="26" font-weight="700">Judge</text>
-<text x="324" y="431" fill="#b6c0ca" font-size="23">GPT-4o-mini scores hard and soft criteria from the profile</text>
-<text x="324" y="461" fill="#b6c0ca" font-size="23">text alone, one candidate per call, without live scores.</text>
-<path d="M 600 488 V 510" fill="none" stroke="#8795a3" stroke-width="2" marker-end="url(#ahp)"/>
-<rect x="40" y="512" width="1120" height="96" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="64" y="569" fill="#8bb8e8" font-size="26" font-weight="700">Select</text>
-<text x="324" y="551" fill="#b6c0ca" font-size="23">Seats go first to candidates the live grader already</text>
-<text x="324" y="581" fill="#b6c0ca" font-size="23">scored 85+, then to judged hard passes (selection.py).</text>
-<path d="M 600 608 V 630" fill="none" stroke="#8795a3" stroke-width="2" marker-end="url(#ahp)"/>
-<rect x="40" y="632" width="1120" height="96" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="64" y="689" fill="#f2f4f6" font-size="26" font-weight="700">Submit</text>
-<text x="324" y="671" fill="#b6c0ca" font-size="23">Sends ten candidates per role to the live grader,</text>
-<text x="324" y="701" fill="#b6c0ca" font-size="23">then records the scores and archives the response.</text>
-<line x1="600" y1="728" x2="600" y2="752" stroke="#8795a3" stroke-width="2"/>
-<line x1="218.667" y1="752" x2="981.333" y2="752" stroke="#8795a3" stroke-width="2"/>
-<path d="M 218.667 752 V 774" fill="none" stroke="#8795a3" stroke-width="2" marker-end="url(#ahp)"/>
-<rect x="40" y="776" width="357.333" height="136" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="64" y="820" fill="#f2f4f6" font-size="26" font-weight="700"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan></text>
-<text x="64" y="858" fill="#b6c0ca" font-size="23">One recorded evaluation</text>
-<text x="64" y="888" fill="#b6c0ca" font-size="23">per config</text>
-<path d="M 600 752 V 774" fill="none" stroke="#8795a3" stroke-width="2" marker-end="url(#ahp)"/>
-<rect x="421.333" y="776" width="357.333" height="136" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="445.333" y="820" fill="#f2f4f6" font-size="26" font-weight="700">Submission ledger</text>
-<text x="445.333" y="858" fill="#b6c0ca" font-size="23">Drops hard failures,</text>
-<text x="445.333" y="888" fill="#b6c0ca" font-size="23">pins 85+ scorers</text>
-<path d="M 981.333 752 V 774" fill="none" stroke="#8795a3" stroke-width="2" marker-end="url(#ahp)"/>
-<rect x="802.667" y="776" width="357.333" height="136" fill="#181e24" stroke="#46515c" stroke-width="1.5"/>
-<text x="826.667" y="820" fill="#f2f4f6" font-size="26" font-weight="700">Run table</text>
-<text x="826.667" y="858" fill="#b6c0ca" font-size="23">Average score</text>
-<text x="826.667" y="888" fill="#b6c0ca" font-size="23">52.1 to 90.3</text>
+<defs>
+<linearGradient id="bgp" x1="0" y1="0" x2="0.75" y2="1"><stop offset="0" stop-color="#12161c"/><stop offset="0.55" stop-color="#0c1013"/><stop offset="1" stop-color="#080a0d"/></linearGradient>
+<pattern id="dotp" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="0.95" fill="#161d26"/></pattern>
+<linearGradient id="ndp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19212b"/><stop offset="1" stop-color="#111820"/></linearGradient>
+<marker id="ahp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5a6673"/></marker>
+<marker id="ahgp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#199e70"/></marker>
+</defs>
+<rect width="1200" height="960" fill="url(#bgp)"/>
+<rect width="1200" height="960" fill="url(#dotp)"/>
+<text x="40" y="80" fill="#f3f6f9" font-size="36" font-weight="700">Candidate search pipeline</text>
+<text x="40" y="120" fill="#9aa5b1" font-size="24">From a Turbopuffer database to ten submitted candidates per role.</text>
+<rect x="40" y="152" width="1120" height="96" fill="url(#ndp)" stroke="#8a63d2" stroke-width="1.5"/>
+<text x="64" y="209" fill="#ab8ce6" font-size="26" font-weight="700">Scan</text>
+<text x="324" y="191" fill="#7d8896" font-size="23">Pages in id order through every profile that</text>
+<text x="324" y="221" fill="#7d8896" font-size="23">matches the role&#x27;s attribute filter (pool.py).</text>
+<path d="M 600 248 V 270" fill="none" stroke="#5a6673" stroke-width="2" marker-end="url(#ahp)"/>
+<rect x="40" y="272" width="1120" height="96" fill="url(#ndp)" stroke="#3987e5" stroke-width="1.5"/>
+<text x="64" y="329" fill="#6fa8ec" font-size="26" font-weight="700">Prescreen</text>
+<text x="324" y="311" fill="#7d8896" font-size="23">Degree, school, field and date checks, then keyword</text>
+<text x="324" y="341" fill="#7d8896" font-size="23">ranking, capped at 250 to 550 per role (pool.py).</text>
+<path d="M 600 368 V 390" fill="none" stroke="#5a6673" stroke-width="2" marker-end="url(#ahp)"/>
+<rect x="40" y="392" width="1120" height="96" fill="url(#ndp)" stroke="#d95926" stroke-width="1.5"/>
+<text x="64" y="449" fill="#e0763f" font-size="26" font-weight="700">Judge</text>
+<text x="324" y="431" fill="#7d8896" font-size="23">GPT-4o-mini scores hard and soft criteria from the profile</text>
+<text x="324" y="461" fill="#7d8896" font-size="23">text alone, one candidate per call, without live scores.</text>
+<path d="M 600 488 V 510" fill="none" stroke="#5a6673" stroke-width="2" marker-end="url(#ahp)"/>
+<rect x="40" y="512" width="1120" height="96" fill="url(#ndp)" stroke="#199e70" stroke-width="1.5"/>
+<text x="64" y="569" fill="#35b183" font-size="26" font-weight="700">Select</text>
+<text x="324" y="551" fill="#7d8896" font-size="23">Seats go first to candidates the live grader already</text>
+<text x="324" y="581" fill="#7d8896" font-size="23">scored 85+, then to judged hard passes (selection.py).</text>
+<path d="M 600 608 V 630" fill="none" stroke="#199e70" stroke-width="2" marker-end="url(#ahgp)"/>
+<rect x="40" y="632" width="1120" height="96" fill="#141d27" stroke="#8f9aa6" stroke-width="1.5"/>
+<text x="64" y="689" fill="#f3f6f9" font-size="26" font-weight="700">Submit</text>
+<text x="324" y="671" fill="#7d8896" font-size="23">Sends ten candidates per role to the live grader,</text>
+<text x="324" y="701" fill="#7d8896" font-size="23">then records the scores and archives the response.</text>
+<line x1="600" y1="728" x2="600" y2="752" stroke="#5a6673" stroke-width="2"/>
+<line x1="218.667" y1="752" x2="981.333" y2="752" stroke="#5a6673" stroke-width="2"/>
+<path d="M 218.667 752 V 774" fill="none" stroke="#5a6673" stroke-width="2" marker-end="url(#ahp)"/>
+<rect x="40" y="776" width="357.333" height="136" fill="#1c130e" stroke="#d95926" stroke-width="1.5"/>
+<text x="64" y="820" fill="#e0763f" font-size="26" font-weight="700"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, monospace">results/*.json</tspan></text>
+<text x="64" y="858" fill="#7d8896" font-size="23">One recorded evaluation</text>
+<text x="64" y="888" fill="#7d8896" font-size="23">per config</text>
+<path d="M 600 752 V 774" fill="none" stroke="#5a6673" stroke-width="2" marker-end="url(#ahp)"/>
+<rect x="421.333" y="776" width="357.333" height="136" fill="#1c130e" stroke="#d95926" stroke-width="1.5"/>
+<text x="445.333" y="820" fill="#e0763f" font-size="26" font-weight="700">Submission ledger</text>
+<text x="445.333" y="858" fill="#7d8896" font-size="23">Drops hard failures,</text>
+<text x="445.333" y="888" fill="#7d8896" font-size="23">pins 85+ scorers</text>
+<path d="M 981.333 752 V 774" fill="none" stroke="#5a6673" stroke-width="2" marker-end="url(#ahp)"/>
+<rect x="802.667" y="776" width="357.333" height="136" fill="#1c130e" stroke="#d95926" stroke-width="1.5"/>
+<text x="826.667" y="820" fill="#e0763f" font-size="26" font-weight="700">Run table</text>
+<text x="826.667" y="858" fill="#7d8896" font-size="23">Average score</text>
+<text x="826.667" y="888" fill="#7d8896" font-size="23">52.1 to 90.3</text>
 </svg>
