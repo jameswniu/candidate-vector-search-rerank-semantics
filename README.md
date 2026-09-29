@@ -14,7 +14,11 @@
 
 </div>
 
-I built a candidate search system that selects ten people per hiring role from roughly 200,000 profiles. The core challenge is that ranking by textual similarity to a job description surfaces people who read close to the role but miss a must-have, such as an MD from a top U.S. medical school, and a hiring manager can't use them. Across ten roles, an outside grader scored the lists from my committed code at 87.7 out of 100 on average, rising to 90.3 after I resubmitted using its feedback, with every must-have met in both. Both numbers depend on that grader, since my code seats people it had already scored 85 or more and I reached the 90.3 by resubmitting against its scores, and ten roles is too small a sample to claim it generalizes to unseen ones.
+I built a candidate search system that selects ten people per hiring role from roughly 200,000 profiles. The core challenge is that ranking by textual similarity to a job description surfaces people who read close to the role but miss a must-have, such as an MD from a top U.S. medical school, and a hiring manager can't use them.
+
+Across ten roles, an outside grader scored the lists from my committed code at 87.7 out of 100 on average, rising to 90.3 after I resubmitted using its feedback, with every must-have met in both.
+
+Both numbers depend on that grader, since my code seats people it had already scored 85 or more and I reached the 90.3 by resubmitting against its scores, and ten roles is too small a sample to claim it generalizes to unseen ones.
 
 How I computed each number, and what would make it wrong, is in [docs/REFEREE.md](docs/REFEREE.md).
 
@@ -212,19 +216,19 @@ I have not built a cross-encoder pass, meaning a model that reads the role and o
 ```
 candidate-vector-search-rerank-semantics/
 ├── pool.py              # Database scans and per-role candidate pools
-├── judge.py             # LLM judge with the grader's formula and per-role calibration notes
+├── judge.py             # LLM judge, grader's formula, per-role calibration notes
 ├── selection.py         # Picks each slate, submits it and keeps the ledger
-├── evaluate.py          # Sends a slate to the grader (reads EVAL_URL and EVAL_AUTH_EMAIL)
-├── main.py              # Runs the Run 3 vector pipeline for all or one role and submits
+├── evaluate.py          # Sends a slate to the grader (EVAL_URL, EVAL_AUTH_EMAIL)
+├── main.py              # Run 3 vector pipeline for one or all roles, then submits
 ├── pipeline.py          # Run 3 pipeline: embed, filter, rerank
 ├── embed.py             # Voyage-3 query embedding (Run 3 pipeline only)
-├── tpuf_client.py       # Turbopuffer client (ANN query for main.py, database handle for pool.py)
+├── tpuf_client.py       # Turbopuffer client: ANN query (main.py), handle (pool.py)
 ├── filters.py           # Per-role hard-requirement filters (Run 3 pipeline)
 ├── rerank.py            # GPT-4o-mini batch reranking (Run 3 pipeline)
 ├── configs/
 │   └── queries.json     # The 10 role configs
 ├── results/             # The grader's reply per role (latest recorded run)
-├── docs/                # REFEREE.md, and generate_visuals.py, which draws the figures from results/ and git history
+├── docs/                # REFEREE.md and generate_visuals.py (draws the figures)
 └── requirements.txt
 ```
 
