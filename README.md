@@ -4,72 +4,52 @@
 
 <div align="center">
 
-<h1>Candidate Search with Attribute-Filtered Scans and an LLM Judge</h1>
-
-<br/>
+<h1>Candidate Search for Ten Hiring Roles</h1>
 
 <img alt="python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-dfe3e0?style=flat-square&labelColor=0c1013">
-<img alt="LLM judge GPT-4o-mini" src="https://img.shields.io/static/v1?label=LLM%20judge&message=GPT-4o-mini&color=8f9491&style=flat-square&labelColor=0c1013">
-<img alt="vector DB Turbopuffer" src="https://img.shields.io/badge/vector_DB-Turbopuffer-8f9491?style=flat-square&labelColor=0c1013">
-<img alt="recorded evals 87.7 as committed, 90.3 grader-guided" src="https://img.shields.io/static/v1?label=recorded%20evals&message=87.7%20as%20committed%2C%2090.3%20grader-guided&color=8f9491&style=flat-square&labelColor=0c1013">
+<img alt="judge model GPT-4o-mini" src="https://img.shields.io/static/v1?label=judge%20model&message=GPT-4o-mini&color=8f9491&style=flat-square&labelColor=0c1013">
+<img alt="database Turbopuffer" src="https://img.shields.io/static/v1?label=database&message=Turbopuffer&color=8f9491&style=flat-square&labelColor=0c1013">
+<img alt="grader score 87.7 as committed, 90.3 after resubmitting" src="https://img.shields.io/static/v1?label=grader%20score&message=87.7%20as%20committed%2C%2090.3%20after%20resubmitting&color=8f9491&style=flat-square&labelColor=0c1013">
 <img alt="license Apache-2.0" src="https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=8f9491&style=flat-square&labelColor=0c1013">
-
-<br/><br/>
-
-<strong>Ten hiring searches over a Turbopuffer database of candidate profiles, each slate scored by a live grader.</strong><br/>
-The pipeline as committed recorded an 87.7 average, and resubmitting with the grader's feedback took the final slates to 90.3.
-
-<br/>
-
-Scan the database, prescreen, judge each candidate, then select ten and submit.
 
 </div>
 
----
+I built a candidate search system that selects ten people per hiring role from roughly 200,000 profiles. The core challenge is that ranking by textual similarity to a job description surfaces people who read close to the role but miss a must-have, such as an MD from a top U.S. medical school, and a hiring manager can't use them.
 
-## The Problem
+Across ten roles, an outside grader scored the lists from my committed code at 87.7 out of 100 on average, rising to 90.3 after I resubmitted using its feedback, with every must-have met in both.
 
-I had a vector database of candidate profiles and ten role specs, each with hard requirements (a JD degree, 3+ years of experience) and soft preferences (IRS audit exposure, legal writing). Ranking by embedding similarity alone mixes the two and returns candidates who read close to the role but miss a hard requirement outright.
+Both numbers depend on that grader, since my code seats people it had already scored 85 or more and I reached the 90.3 by resubmitting against its scores, and ten roles is too small a sample to claim it generalizes to unseen ones.
 
-## What This Does
+How I computed each number, and what would make it wrong, is in [docs/REFEREE.md](docs/REFEREE.md).
 
-The Run 4 pipeline is three scripts, run one config at a time. None of them embeds anything or runs a vector query.
+## How it works
 
-1. `pool.py` scans each config's hard-gate population exhaustively. The config's Turbopuffer attribute filter (degree type, field of study, or country) defines the population, and the scan pages through every matching row in id order.
-2. `pool.py` then cuts that population to a pool. Five configs first check parsed degree entries for a school requirement before full records are fetched. Doctors need an elite-school MD, Mathematics and Biology a bachelor's from the U.S., U.K. or Canada, Quantitative Finance an M7 MBA, and Bankers a U.S. MBA. Every config then keeps the candidates who pass a per-role check on degree entries, summary text, or both, ranks them by keyword counts in the summary, and keeps the top 250 to 550, depending on the role. The scan returns every row that matches the attribute filter, and these school lists, keyword checks and caps can drop qualified candidates after it.
-3. `judge.py` scores every pooled candidate on its own, one candidate per call. It reads only the profile text (`rerankSummary`), which is what I assume the grader reads, adds per-config calibration notes drawn from earlier verdicts, and never sees a live score. Each hard criterion passes or fails, each soft criterion gets 0 to 10, and the predicted score is 0 on any hard failure, otherwise the soft mean times ten. The model is GPT-4o-mini unless `JUDGE_MODEL` names another.
-4. `selection.py` picks the ten to submit, and the grader's earlier verdicts come first. It keeps a per-config ledger of every submission, seeded from the recorded `results/<config>.json`. Anyone the grader hard-failed is out for good, and IDs named with `--exclude` are left out of that run. Anyone the grader already scored 85 or above (the `PIN_MIN` default) is pinned first, IDs named with `--include` come next, and judged candidates who pass every hard criterion fill the remaining seats in order of predicted score. Pinned and `--include` candidates skip the local hard-criteria check. It submits the ten to the evaluation endpoint, writes `results/<config>.json`, archives the response, and folds each outcome back into the ledger.
-
-`main.py` still runs the original vector pipeline as it stood at Run 3, with a Voyage-3 query embedding, a Turbopuffer ANN top 200, Python filters, and GPT-4o-mini reranking in batches of five. It produced none of the Run 4 and Run 5 results.
-
-## Architecture
+Candidate profiles are stored in Turbopuffer, a hosted vector database. Each of the ten roles is a config, an entry in `configs/queries.json` that lists hard requirements, the must-haves a candidate cannot lack (a JD and three years of practice for Tax Lawyer), and soft preferences that are scored for fit (such as IRS audit experience). The code works through one role at a time, in four steps.
 
 <p align="center">
   <img src="assets/pipeline.svg" alt="Candidate search pipeline over a Turbopuffer database, in five stages. Scan pages in id order through every profile that matches the role's attribute filter. Prescreen checks degree, school, field and dates, ranks by keywords and keeps 250 to 550 candidates per role. Judge has GPT-4o-mini score hard and soft criteria from the profile text alone, without live scores. Select seats candidates the live grader already scored 85 or above first, then judged hard passes. Submit sends ten candidates per role to the live grader. Outputs are results/*.json, a submission ledger that drops hard failures and pins 85+ scorers, and a run table with averages from 52.1 to 90.3." width="100%">
 </p>
 
-<details>
-<summary>Graph source, for agents and tooling</summary>
+1. `pool.py` scans the database. Each role has an attribute filter, a condition Turbopuffer applies to a structured field such as degree type, field of study or country, and the scan pages through every profile that matches it, in id order, up to 100,000 rows.
+2. `pool.py` then prescreens, a rule-based cut made before any model reads a profile. Five roles first check school names in the parsed degree entries, before fetching full records. Doctors need an MD from an elite school, Mathematics and Biology a bachelor's from the U.S., U.K. or Canada, Quantitative Finance an MBA from one of the seven schools `pool.py` lists as the M7, and Bankers a U.S. MBA. Every role then keeps the profiles that pass its own check on degree entries, summary text or both, ranks them by keyword counts in the summary, and keeps the top 250 to 550 as its pool. These school lists, keyword checks and caps can drop qualified people.
+3. `judge.py` is the LLM judge, a language model that scores each pooled profile against the role, one profile per call. It uses GPT-4o-mini unless `JUDGE_MODEL` names another model. It reads only the profile text (the `rerankSummary` field), which is what I assume the grader reads, plus per-role calibration notes drawn from the grader's earlier verdicts, such as which schools pass as top. It marks each hard requirement pass or fail, scores each soft preference 0 to 10, and predicts 0 on any hard failure, otherwise the soft average times ten, the same formula the grader uses. It never sees a grader score.
+4. `selection.py` picks the ten to submit for a role, its slate, and sends them to the grader, whose reply is the recorded score. It keeps a ledger, a per-role file holding the grader's latest score for everyone it has scored and whether it ever failed them on a hard requirement, seeded from the committed `results/<config>.json`. Anyone the grader failed on a hard requirement is out for good, and IDs named with `--exclude` are left out of that run. Anyone the grader already scored 85 or above (the `PIN_MIN` default) is pinned, meaning seated first, IDs named with `--include` come next, and judged candidates who pass every hard requirement fill the remaining seats in order of predicted score. Pinned and `--include` candidates skip the local hard-requirement check. It then writes `results/<config>.json`, archives the reply, and folds each outcome back into the ledger.
 
-```mermaid
-flowchart TD
-    Q["Role spec"] ==> SCAN["Scan · pool.py, every row matching the attribute filter, id order"]
-    SCAN ==> PRE["Prescreen · pool.py, degree, school and summary checks, top 250 to 550"]
-    PRE ==> JUDGE["Judge · judge.py, profile text only, hard pass or fail, soft 0 to 10"]
-    JUDGE ==> SEL["Select · selection.py, live 85+ scorers pinned first, then judged hard passes"]
-    SEL ==> SUB["Submit · 10 per config, writes results/*.json, updates the ledger"]
-```
+The pipeline in `main.py` is my older one, as it stood at Run 3, where each run is one version of the pipeline scored by the grader (listed under [Results details](#results-details)). It embeds the role text with Voyage-3, converting it into a vector, a list of numbers that encodes meaning. It then pulls the 200 nearest profiles from Turbopuffer with an approximate nearest-neighbor (ANN) search, which finds close matches without comparing against every record, filters them in Python, and has GPT-4o-mini rerank the survivors, re-sorting them by fit in batches of five. This pipeline produced none of the Run 4 and Run 5 results.
 
-</details>
+The two pipelines drop candidates in different places. In the vector pipeline, Run 3 moved some filters into the ANN query itself, and the Python filters stayed relaxed (`filters.py`) so a borderline candidate still reached the LLM. When fewer than 15 candidates survived a Python filter, it fell back to the results from before that filter. The final pipeline embeds nothing. It applies the attribute filter inside the database scan, then cuts the pool with strict school lists, keyword checks and the 250 to 550 cap before any LLM call, with no fallback. `judge.py` scores one candidate per call, up to 24 at once, and caches each judgment. GPT-4o-mini is the default model in both pipelines.
 
-### Stage details
+## Results
 
-| Stage | What | Candidates |
-|---|---|---|
-| Scan | `pool.py` pages through every row matching the config's Turbopuffer attribute filter, in id order | Every matching row (scan sizes are not recorded) |
-| Prescreen | `pool.py` checks parsed degree entries (5 configs), then degree entries, summary text, or both per role, and ranks by keyword counts | Top 250 to 550 per config |
-| Judge | `judge.py` scores each pooled candidate on profile text alone, hard criteria pass or fail, soft criteria 0 to 10 | Every pooled candidate |
-| Select and submit | `selection.py` drops live hard-fails, pins live scores of 85 or above, adds `--include` IDs, fills by predicted score, submits, and updates the ledger | 10 per config |
+<p align="center">
+  <img src="docs/figures/run_progression.svg" alt="Average final score by run. Runs 2 and 3 retrieved a vector top 200 and averaged 52.1 and 66.7. Run 4, the pipeline as committed with exhaustive scans and an LLM judge, averaged 87.7. Grader-guided resubmission then reached 89.4, and Run 5 reached 90.3. Run 1 has no results file and is not drawn." width="100%">
+</p>
+
+Run 4 (`40b6df5`) scans every profile that matches the role's attribute filter instead of taking the 200 nearest by vector similarity, adds the per-profile LLM judge, and keeps a ledger of the grader's verdicts. Across ten roles it recorded an average of 87.7 ± 5.0 with every hard requirement passing (`652bc29`), up from 66.7 in Run 3. I then kept resubmitting against the grader, keeping the people it had already scored 85 or above and swapping others in or out by hand, which brought the average to 89.4 and then 90.3 ± 1.5 (`749b2d3`). For that final step, Run 5, I picked the Doctors and Anthropology slates under my own readings of two hard requirements. I counted a wider set of U.S. medical schools as top, and I counted current doctoral students, ABD (all but dissertation) included, and 2023-or-later graduates as being in a recent PhD program. Neither reading, nor that hand selection, is in the committed code.
+
+Each ± is a 95% t-interval for the mean, a range computed from how much the ten roles' scores differ from each other, and it says nothing about roles I did not test. Every average here is the mean of the ten roles' `average_final_score` in `results/*.json` at the named commit, rounded to one decimal with exact halves rounded down, so Run 2's 52.15 shows as 52.1 and Run 5's 90.35 as 90.3. `python3 docs/generate_visuals.py` redraws the four figures from those files and git history, and stops if a figure's number disagrees with them.
+
+What changed in each run, with every role's score, is under [Results details](#results-details).
 
 ## Quick Start
 
@@ -103,17 +83,9 @@ python main.py                          # submits, overwrites results
 python main.py --config tax_lawyer.yml  # always submits
 ```
 
-## Results
+## Results details
 
-<p align="center">
-  <img src="docs/figures/run_progression.svg" alt="Average final score by run. Runs 2 and 3 retrieved a vector top 200 and averaged 52.1 and 66.7. Run 4, the pipeline as committed with exhaustive scans and an LLM judge, averaged 87.7. Grader-guided resubmission then reached 89.4, and Run 5 reached 90.3. Run 1 has no results file and is not drawn." width="100%">
-</p>
-
-Run as committed, the Run 4 code recorded an average of 87.7 ± 5.0 across the ten configs, with every hard criterion passing (`652bc29`). After that I chose to keep resubmitting with the live grader in the loop, and the average reached 89.4 and then 90.3 ± 1.5. Those resubmissions kept candidates the grader had already scored 85 or above and swapped others in or out by hand, and for Run 5 I picked the Doctors and Anthropology slates under reading standards that are not in the committed code.
-
-Runs 1 to 3 retrieved candidates by vector similarity and ended at 66.7. Exhaustive structured scans and an LLM judge are what moved the score from there.
-
-Each ± is a 95% t-interval for the mean, computed from how much these ten roles differ from each other, and it makes no claim about unseen roles. Every average here is the mean of the ten configs' `average_final_score` in `results/*.json` at the named commit, rounded to one decimal with exact halves rounded down, so Run 2's 52.15 shows as 52.1 and Run 5's 90.35 as 90.3.
+Each run below says what changed, and each recorded run shows the grader's score for every role at the named commit.
 
 ### Run 1, not in the repo
 
@@ -144,7 +116,7 @@ Structured filters can enforce "has JD" or "field contains biology" but cannot e
 
 The grader uses an LLM judge for hard criteria, and Run 2's recorded slates show what my filters still missed.
 
-- Anthropology scored 0.0, with 100% on "has PhD" and 0% on "PhD started within the last 3 years". My filter had no recency check, and vector retrieval found anthropology PhDs, none of them recent enough.
+- Anthropology scored 0.0, with 100% on "has PhD" and 0% on "PhD started within the last 3 years". My filter had no recency check, and all ten people it submitted had a PhD, but none the grader counted as recent.
 - Doctors scored 8.0, with 10% on "MD from a top U.S. medical school". The `deg_degrees` field says "MD" and carries no signal for school prestige.
 - Mathematics PhD scored 42.5, with 50% on "undergrad from the U.S., U.K. or Canada". That criterion is about undergraduate location, and my filter checked only degree type and field.
 
@@ -170,11 +142,11 @@ Run 3 (`170b1a9`) kept the vector top 200 and moved hard-criteria checks earlier
 | Mathematics PhD | 42.5 | **74.5** | 95% |
 | **Average** | **52.1** | **66.7** | **91%** |
 
-The biggest gains came from enforcing hard criteria earlier. Configs whose hard criteria map cleanly to structured fields (degree type, field of study, school name) improved the most. Anthropology stayed the hardest, at 20.3. My read is that the grader's judge looks for PhD recency in the summary text, and most summaries don't state an enrollment year.
+The five configs that got the new database filters gained 20 to 33 points each, and the other five moved by less than one point. Anthropology stayed the hardest, at 20.3, even with a start-year filter in its database query. My read is that the grader's judge looks for PhD recency in the summary text, and most summaries don't state an enrollment year.
 
 ### Run 4, exhaustive scans, an LLM judge and a submission ledger (87.7 avg)
 
-Run 3 still lost points in three ways. ANN retrieval dropped qualified candidates that a top-200 vector neighborhood missed. My reranker read structured fields that I assume the grader's judge never sees, so we disagreed about who passes. And each submission threw away what earlier submissions had shown. Run 4 (code in `40b6df5`, results in `652bc29`) rebuilt the pipeline around those three problems.
+Run 3 still lost points, and I saw three likely causes, though no recorded run tests any one of them alone. Retrieval kept only the 200 profiles nearest by vector similarity, so anyone qualified outside that set never reached the reranker. My reranker read structured fields that I assume the grader's judge never sees, so the two could disagree about who passes. And each submission threw away what earlier submissions had shown. Run 4 (code in `40b6df5`, results in `652bc29`) rebuilt the pipeline around those three problems.
 
 1. Exhaustive structured scans replaced ANN for candidate generation. Paginated, id-ordered scans with Turbopuffer attribute filters return every row that matches the filter, and the degree lists, school lists, keyword checks and caps after the scan limit recall against the hard criteria. Soft-fit order comes from keyword counts and then the judge's predicted score. Scan sizes and timings are not recorded.
 2. The local judge uses the grader's formula, 0 on any hard failure and otherwise the soft mean times ten. It reads only `rerankSummary`, ignores the structured fields, and carries per-config calibration notes learned from earlier verdicts, such as which schools pass as "top", that M7 is literal, and that a residency without a listed MD fails. A general prompt rule fails undated experience on duration criteria, and GPT-4o-mini runs over every pooled candidate.
@@ -198,7 +170,7 @@ Five of ten configs finish at 90 or above, nine at 85 or above, and every hard c
 
 ### Grader-guided resubmission (89.4 avg)
 
-After Run 4 I kept resubmitting with the live grader in the loop. Three commits (`9cbae95`, `efbc8b2`, `7423943`) recorded the resubmitted slates, which kept candidates the grader had already scored 85 or above and swapped others in or out by hand. Their only code change turned the 85 pin threshold into the `PIN_MIN` environment variable. The average reached 89.4, and the table under Run 5 shows each config.
+After Run 4 I kept resubmitting with the grader in the loop. Three commits (`9cbae95`, `efbc8b2`, `7423943`) recorded the resubmitted slates, which kept candidates the grader had already scored 85 or above and swapped others in or out by hand. Their only code change turned the 85 pin threshold into the `PIN_MIN` environment variable. The average reached 89.4, and the table under Run 5 shows each role.
 
 ### Run 5, Doctors and Anthropology picked under my own reading standards (90.3 avg)
 
@@ -233,39 +205,31 @@ For Run 5 I read two hard criteria the way I believe the roles mean them. These 
 
 The candidates I reviewed under these readings were the ones the live grader had already scored highest, and no code or output from that review is committed.
 
-## The choices in each pipeline
+## What limits it and what I have not built
 
-The vector pipeline of Runs 1 to 3, which `main.py` still runs as it stood at Run 3, embeds the query with Voyage-3 and takes the Turbopuffer ANN top 200. Runs 1 and 2 filtered those 200 in Python, and Run 3 moved some filters into the ANN query. The Python filters stayed relaxed (`filters.py`) so that a borderline candidate still reached the LLM, and when fewer than 15 candidates survived a filter, the pipeline fell back to the results from before it. GPT-4o-mini reranked in batches of five (`rerank.py`).
+Past the attribute filter, exact degree-name lists, school lists, keyword checks and the pool cap limit recall, meaning some qualified candidates are dropped before the judge ever sees them. No stage timings are recorded, so I make no speed claims. `pool.py` and `judge.py` already cache pools and judgments, and `judge.py` issues its LLM calls concurrently, while the `main.py` reranker still makes its batch calls one after another.
 
-The final pipeline embeds nothing. The attribute filter runs inside the database scan, and strict school lists, keyword checks and a 250 to 550 cap cut the pool before any LLM call, with no fallback. `judge.py` scores one candidate per call, up to 24 at once, and caches each judgment. GPT-4o-mini is the default model in both pipelines, and `JUDGE_MODEL` swaps it for the judge.
+I have not built a cross-encoder pass, meaning a model that reads the role and one profile together and returns a single relevance score, or a judge that receives only the fields each requirement needs, so I give no savings numbers for either. For larger scale I would turn the hard requirements into yes-or-no checks over facts extracted from each profile in advance, with no LLM call, and distill the soft scorer into a small fine-tuned model trained to reproduce the LLM's scores, and neither is built. BM25 rank fusion, which merges in a classic keyword-match ranking, is not built either, and neither is LLM query expansion, where a model adds related search terms, or a filter-free pipeline for role types the system has not seen.
 
-## What limits it, and what is not built
-
-Past the attribute filter, recall is limited by exact degree-name lists, school lists, keyword checks and the pool cap, which drop candidates before the judge sees them. No stage timings are recorded, so I make no speed claims. `pool.py` and `judge.py` already cache pools and judgments, and `judge.py` runs its calls concurrently, while the `main.py` reranker still makes sequential batch calls.
-
-A cross-encoder pass and sending the judge only criteria-relevant fields are not built, and their savings are unmeasured here. At real scale the hard criteria would stop needing an LLM at all, becoming boolean filters over pre-extracted features, and the soft-criteria scorer would be distilled into a small fine-tuned model. BM25 rank fusion, LLM query expansion and a filter-free pipeline for unseen role types are not built either.
-
-## Project Structure
+## Files
 
 ```
 candidate-vector-search-rerank-semantics/
-├── pool.py              # Exhaustive structured scans and per-config candidate pools
-├── judge.py             # LLM judge with the grader's formula and per-config calibration notes
-├── selection.py         # Slate selection, submission and the ledger
-├── evaluate.py          # Evaluation endpoint submission (reads EVAL_URL and EVAL_AUTH_EMAIL)
-├── main.py              # Runs the Run 3 vector pipeline for all or one config and submits
+├── pool.py              # Database scans and per-role candidate pools
+├── judge.py             # LLM judge, grader's formula, per-role calibration notes
+├── selection.py         # Picks each slate, submits it and keeps the ledger
+├── evaluate.py          # Sends a slate to the grader (EVAL_URL, EVAL_AUTH_EMAIL)
+├── main.py              # Run 3 vector pipeline for one or all roles, then submits
 ├── pipeline.py          # Run 3 pipeline: embed, filter, rerank
 ├── embed.py             # Voyage-3 query embedding (Run 3 pipeline only)
-├── tpuf_client.py       # Turbopuffer client (ANN query for main.py, namespace for pool.py)
-├── filters.py           # Per-config hard-criteria filters (Run 3 pipeline)
+├── tpuf_client.py       # Turbopuffer client: ANN query (main.py), handle (pool.py)
+├── filters.py           # Per-role hard-requirement filters (Run 3 pipeline)
 ├── rerank.py            # GPT-4o-mini batch reranking (Run 3 pipeline)
 ├── configs/
-│   └── queries.json     # 10 role configurations
-├── results/             # Per-config evaluation results (latest recorded run)
-├── docs/                # generate_visuals.py draws the README figures from results/ and git history
+│   └── queries.json     # The 10 role configs
+├── results/             # The grader's reply per role (latest recorded run)
+├── docs/                # REFEREE.md and generate_visuals.py (draws the figures)
 └── requirements.txt
 ```
 
-## License
-
-Apache-2.0
+The code is licensed under Apache-2.0 (see `LICENSE`).
